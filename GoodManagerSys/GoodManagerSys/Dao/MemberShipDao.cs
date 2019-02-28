@@ -37,7 +37,7 @@ namespace GoodManagerSys.Dao {
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
-        public static int InsertMemberShip(EtMembership membership) {
+        public static int InsertMembership(EtMembership membership) {
             List<EtMembership> memberships = QueryByMsID(membership.MsID);
             if (memberships.Count > 0) return -1;
             DBHelper helper = new DBHelper();
@@ -52,6 +52,18 @@ namespace GoodManagerSys.Dao {
             };
             return helper.RunNonQuerySQL(sql, prams);
         }
+        public static int DeleteByMsID(int msID) {
+            List<EtMembership> memberships = QueryByMsID(msID);
+            if (memberships.Count == 0) return 0;
+            if (memberships[0].IsValid == EValid.eDeleted) return -2;
+            DBHelper helper = new DBHelper();
+            string sql = "UPDATE membership SET isValid = @isValid WHERE msID = @msID;";
+            MySqlParameter[] prams = {
+                new MySqlParameter("@isValid",EValid.eDeleted),
+                new MySqlParameter("@msID",msID)
+            };
+            return helper.RunNonQuerySQL(sql, prams);
+        }
         private static List<EtMembership> GetListByDataReader(MySqlDataReader dr) {
             List<EtMembership> memberships = new List<EtMembership>();
             while (dr.Read()) {
@@ -60,7 +72,7 @@ namespace GoodManagerSys.Dao {
                     MsName = dr["msName"] is DBNull ? null : dr.GetString("msName"),
                     MsPhone = dr["msPhone"] is DBNull ? null : dr.GetString("msPhone"),
                     MsPoint = dr["msPoint"] is DBNull ? 0 : dr.GetInt32("msPoint"),
-                    IsValid = dr["isValid"] is DBNull ? 0 : dr.GetInt32("isValid")
+                    IsValid = (EValid)(dr["isValid"] is DBNull ? 0 : dr.GetInt32("isValid"))
                 };
                 memberships.Add(membership);
             }

@@ -37,7 +37,7 @@ namespace GoodManagerSys.Dao {
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
-        public static List<EtGood> QueryByIsValid(EValid isValid) {
+        public static List<EtGood> QueryByIsValid(EState isValid) {
             DBHelper helper = new DBHelper();
             string sql = "SELECT * FROM good WHERE isValid=@isValid";
             MySqlParameter[] prams = { new MySqlParameter("@isValid", isValid) };
@@ -60,6 +60,18 @@ namespace GoodManagerSys.Dao {
                 new MySqlParameter("@isValid",good.IsValid)
             };
             return helper.RunNonQuerySQL(sql, prams); ;
+        }
+        public static int DeleteByGoodID(int goodID) {
+            List<EtGood> goods = QueryByGoodID(goodID);
+            if (goods.Count == 0) return -1;
+            if (goods[0].IsValid == EState.ePrePutaway) return -2;
+            DBHelper helper = new DBHelper();
+            string sql = "UPDATE good SET isValid = @isValid WHERE goodID = @goodID;";
+            MySqlParameter[] prams = {
+                new MySqlParameter("@isValid",EState.ePrePutaway),
+                new MySqlParameter("@goodID",goodID)
+            };
+            return helper.RunNonQuerySQL(sql, prams);
         }
         private static List<EtGood> GetListByDataReader(MySqlDataReader dr) {
             List<EtGood> goods = new List<EtGood>();
