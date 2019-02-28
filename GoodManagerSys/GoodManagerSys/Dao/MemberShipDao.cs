@@ -33,14 +33,6 @@ namespace GoodManagerSys.Dao {
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
-        public static List<EtMembership> QueryByMsPhone(string msPhone)
-        {
-            DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM membership WHERE msPhone=@msPhone";
-            MySqlParameter[] prams = { new MySqlParameter("@msPhone", msPhone) };
-            MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
-            return GetListByDataReader(dr);
-        }
         public static List<EtMembership> QueryByIsValid(EValid isValid)
         {
             DBHelper helper = new DBHelper();

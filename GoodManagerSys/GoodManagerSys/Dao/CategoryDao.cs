@@ -44,6 +44,15 @@ namespace GoodManagerSys.Dao
             return GetListByDataReader(dr);
         }
 
+        public static List<EtCategory> QueryByIsValid(EValid eValid)
+        {
+            DBHelper helper = new DBHelper();
+            string sql = "SELECT * FROM category WHERE isValid = @isValid;";
+            MySqlParameter[] prams = { new MySqlParameter("@isValid", eValid) };
+            MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
+            return GetListByDataReader(dr);
+        }
+
         public static int InsertCategory(EtCategory category)
         {
             List<EtCategory> categories = QueryByCategoryID(category.CategoryID);

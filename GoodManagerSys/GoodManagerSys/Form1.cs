@@ -21,7 +21,8 @@ namespace GoodManagerSys
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<EtCategory> categories = CategoryDao.QueryAll();
+            //List<EtCategory> categories = CategoryDao.QueryAll();
+            List<EtCategory> categories = CategoryDao.QueryByIsValid(Enums.EValid.eExist);
             foreach(EtCategory category in categories)
             {
                 Console.WriteLine(category.ToString());
