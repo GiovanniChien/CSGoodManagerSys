@@ -76,10 +76,10 @@
     <Compile Include="Entities\EtPurchase.cs" />
     <Compile Include="Entities\EtSale.cs" />
     <Compile Include="Entities\EtStaff.cs" />
-    <Compile Include="Enums\eCategory.cs" />
-    <Compile Include="Enums\eRole.cs" />
+    <Compile Include="Enums\ECategory.cs" />
+    <Compile Include="Enums\ERole.cs" />
     <Compile Include="Enums\EState.cs" />
-    <Compile Include="Enums\eValid.cs" />
+    <Compile Include="Enums\EValid.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

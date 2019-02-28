@@ -4,18 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoodManagerSys.Entities
-{
-    class EtMembership
-    {
+namespace GoodManagerSys.Entities {
+    class EtMembership {
         public int MsID { get; set; }
         public string MsName { get; set; }
         public string MsPhone { get; set; }
         public int MsPoint { get; set; }
         public int IsValid { get; set; }
 
-        public override string ToString()
-        {
+        public override string ToString() {
             StringBuilder sb = new StringBuilder();
             sb.Append(MsID + "\t");
             sb.Append(MsName + "\t");

@@ -5,10 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoodManagerSys.Entities
-{
-    class EtGood
-    {
+namespace GoodManagerSys.Entities {
+    class EtGood {
         public int GoodID { get; set; }
         public int CategoryID { get; set; }
         public string ProductionDate { get; set; }
@@ -17,8 +15,7 @@ namespace GoodManagerSys.Entities
         public double Price { get; set; }
         public EState IsValid { get; set; }
 
-        public override string ToString()
-        {
+        public override string ToString() {
             StringBuilder sb = new StringBuilder();
             sb.Append(GoodID + "\t");
             sb.Append(CategoryID + "\t");

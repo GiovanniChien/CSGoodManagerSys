@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GoodManagerSys.Utils{
+namespace GoodManagerSys.Utils {
     class DBHelper {
 
         //！！！！！！！
@@ -16,87 +16,71 @@ namespace GoodManagerSys.Utils{
          */
         private static String ConnStr = "server=172.22.29.192;port=3306;database=goodmanagesys;user=root;password=root;SslMode=none;";
         private MySqlConnection conn = null;
-        
-        public DBHelper()
-        {
+
+        public DBHelper() {
             conn = new MySqlConnection(ConnStr);
             conn.Open();
         }
-        
+
         //无参查找
-        public MySqlDataReader RunQuerySQL(String sql)
-        {
+        public MySqlDataReader RunQuerySQL(String sql) {
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             MySqlDataReader dr = null;
-            try
-            {
+            try {
                 dr = cmd.ExecuteReader();
             }
-            catch(Exception e)
-            {
+            catch (Exception e) {
                 Console.WriteLine(e.ToString());
             }
             return dr;
         }
 
         //有参查找，详见demo.cs
-        public MySqlDataReader RunQuerySQL(String sql,MySqlParameter[] prams)
-        {
+        public MySqlDataReader RunQuerySQL(String sql, MySqlParameter[] prams) {
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             MySqlDataReader dr = null;
-            try
-            {
-                foreach (MySqlParameter pram in prams)
-                {
+            try {
+                foreach (MySqlParameter pram in prams) {
                     cmd.Parameters.Add(pram);
                 }
                 dr = cmd.ExecuteReader();
             }
-            catch (Exception e)
-            {
+            catch (Exception e) {
                 Console.WriteLine(e.ToString());
             }
             return dr;
         }
 
         //无参增删改
-        public int RunNonQuerySQL(String sql)
-        {
+        public int RunNonQuerySQL(String sql) {
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int res = 0;
-            try
-            {
+            try {
                 res = cmd.ExecuteNonQuery();
             }
-            catch (Exception e)
-            {
+            catch (Exception e) {
                 Console.WriteLine(e.ToString());
             }
             return res;
         }
 
         //有参增删改
-        public int RunNonQuerySQL(String sql,MySqlParameter[] prams)
-        {
+        public int RunNonQuerySQL(String sql, MySqlParameter[] prams) {
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int res = 0;
-            try
-            {
-                foreach (MySqlParameter pram in prams)
-                {
+            try {
+                foreach (MySqlParameter pram in prams) {
                     cmd.Parameters.Add(pram);
                 }
                 res = cmd.ExecuteNonQuery();
             }
-            catch (Exception e)
-            {
+            catch (Exception e) {
                 Console.WriteLine(e.ToString());
             }
             return res;
         }
 
-        ~DBHelper()
-        {
+        ~DBHelper() {
             conn.Close();
         }
 

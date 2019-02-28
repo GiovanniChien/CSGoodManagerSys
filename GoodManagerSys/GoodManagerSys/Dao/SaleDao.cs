@@ -9,20 +9,63 @@ using System.Threading.Tasks;
 
 namespace GoodManagerSys.Dao {
     class SaleDao {
-        public static List<EtSale> QueryAll()
-        {
+        public static List<EtSale> QueryAll() {
             DBHelper helper = new DBHelper();
             string sql = "SELECT * FROM sale";
             MySqlDataReader dr = helper.RunQuerySQL(sql);
             return GetListByDataReader(dr);
         }
-        private static List<EtSale> GetListByDataReader(MySqlDataReader dr)
-        {
+
+        public static List<EtSale> QueryBySaleID(int saleID) {
+            DBHelper helper = new DBHelper();
+            string sql = "SELECT * FROM sale WHERE saleID=@saleID";
+            MySqlParameter[] prams = { new MySqlParameter("@saleID", saleID) };
+            MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
+            return GetListByDataReader(dr);
+        }
+
+        public static List<EtSale> QueryByGoodID(int goodID) {
+            DBHelper helper = new DBHelper();
+            string sql = "SELECT * FROM sale WHERE goodID=@goodID";
+            MySqlParameter[] prams = { new MySqlParameter("@goodID", goodID) };
+            MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
+            return GetListByDataReader(dr);
+        }
+
+        public static List<EtSale> QueryBySaleDate(string saleDate) {
+            DBHelper helper = new DBHelper();
+            string sql = "SELECT * FROM sale WHERE saleDate=@saleDate";
+            MySqlParameter[] prams = { new MySqlParameter("@saleDate", saleDate) };
+            MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
+            return GetListByDataReader(dr);
+        }
+
+        public static List<EtSale> QueryByStaffID(int staffID) {
+            DBHelper helper = new DBHelper();
+            string sql = "SELECT * FROM sale WHERE staffID=@staffID";
+            MySqlParameter[] prams = { new MySqlParameter("@staffID", staffID) };
+            MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
+            return GetListByDataReader(dr);
+        }
+        public static int InsertSale(EtSale sale) {
+            List<EtSale> sales = QueryBySaleID(sale.SaleID);
+            if (sales.Count > 0) return -1;
+            DBHelper helper = new DBHelper();
+            string sql = "INSERT INTO " +
+                "sale(goodID,saleDate,profit,staffID) " +
+                "VALUE(@goodID,@saleDate,@profit,@staffID)";
+            MySqlParameter[] prams = {
+                new MySqlParameter("@goodID",sale.GoodID),
+                new MySqlParameter("@saleDate",sale.SaleDate),
+                new MySqlParameter("@profit",sale.Profit),
+                new MySqlParameter("@staffID",sale.StaffID)
+            };
+            return helper.RunNonQuerySQL(sql, prams);
+        }
+        private static List<EtSale> GetListByDataReader(MySqlDataReader dr) {
             List<EtSale> sales = new List<EtSale>();
-            while (dr.Read())
-            {
-                EtSale sale = new EtSale
-                {
+            while (dr.Read()) {
+                EtSale sale = new EtSale {
                     SaleID = dr.GetInt32("saleID"),
                     GoodID = dr.GetInt32("goodID"),
                     SaleDate = dr["saleDate"] is DBNull ? null : dr.GetString("saleDate"),
@@ -34,40 +77,5 @@ namespace GoodManagerSys.Dao {
             return sales;
         }
 
-        public static List<EtSale> QueryBySaleID(int saleID)
-        {
-            DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM sale WHERE saleID=@saleID";
-            MySqlParameter[] prams = { new MySqlParameter("@saleID", saleID) };
-            MySqlDataReader dr = helper.RunQuerySQL(sql,prams);
-            return GetListByDataReader(dr);
-        }
-
-        public static List<EtSale> QueryByGoodID(int goodID)
-        {
-            DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM sale WHERE goodID=@goodID";
-            MySqlParameter[] prams = { new MySqlParameter("@goodID", goodID) };
-            MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
-            return GetListByDataReader(dr);
-        }
-
-        public static List<EtSale> QueryBySaleDate(string saleDate)
-        {
-            DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM sale WHERE saleDate=@saleDate";
-            MySqlParameter[] prams = { new MySqlParameter("@saleDate", saleDate) };
-            MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
-            return GetListByDataReader(dr);
-        }
-
-        public static List<EtSale> QueryByStaffID(int staffID)
-        {
-            DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM sale WHERE staffID=@staffID";
-            MySqlParameter[] prams = { new MySqlParameter("@staffID", staffID) };
-            MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
-            return GetListByDataReader(dr);
-        }
     }
 }

@@ -19,8 +19,7 @@ namespace GoodManagerSys.Entities {
         public int ExpirationDate { get; set; }
         public EValid IsValid { get; set; }
 
-        public override string ToString()
-        {
+        public override string ToString() {
             StringBuilder sb = new StringBuilder();
             sb.Append(CategoryID + " ");
             sb.Append(CategoryName + " ");
