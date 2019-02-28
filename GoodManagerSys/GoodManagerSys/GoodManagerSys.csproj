@@ -48,8 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="MySql.Data">
       <HintPath>bin\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -66,6 +65,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Dao\CategoryDao.cs" />
+    <Compile Include="Dao\GoodDao.cs" />
+    <Compile Include="Dao\MemberShipDao.cs" />
+    <Compile Include="Dao\PurchaseDao.cs" />
+    <Compile Include="Dao\SaleDao.cs" />
+    <Compile Include="Dao\StaffDao.cs" />
     <Compile Include="Entities\EtCategory.cs" />
     <Compile Include="Entities\EtGood.cs" />
     <Compile Include="Entities\EtMembership.cs" />
