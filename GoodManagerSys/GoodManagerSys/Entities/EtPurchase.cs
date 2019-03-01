@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace GoodManagerSys.Entities {
     class EtPurchase {
         public int PurchaseID { get; set; }
-        public int CategoryID { get; set; }
+        public EtCategory Category { get; set; }
         public string PurchaseDate { get; set; }
         public int Quantity { get; set; }
         public double Cost { get; set; }
@@ -16,7 +16,7 @@ namespace GoodManagerSys.Entities {
         public override string ToString() {
             StringBuilder sb = new StringBuilder();
             sb.Append(PurchaseID + "\t");
-            sb.Append(CategoryID + "\t");
+            sb.Append(Category.ToString() + "\t");
             sb.Append(PurchaseDate + "\t");
             sb.Append(Quantity + "\t");
             sb.Append(Cost + "\t");

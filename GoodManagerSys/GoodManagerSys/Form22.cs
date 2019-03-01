@@ -21,16 +21,30 @@ namespace GoodManagerSys
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<EtSale> sales;
-            //sales = SaleDao.QueryAll();
-            //sales = SaleDao.QueryBySaleID(6001);
-            //sales = SaleDao.QueryByGoodID(1002);
-            sales = SaleDao.QueryByPrimaryID(6001, 10002);
-            foreach (EtSale sale in sales)
+            List<EtPurchase> purchases;
+            //purchases = PurchaseDao.QueryAll();
+            purchases = PurchaseDao.QueryByPurchaseID(22001);
+            //purchases = PurchaseDao.QueryByCategoryID();
+            //purchases = PurchaseDao.QueryByPurchaseDate("");
+            //purchases = PurchaseDao.QueryByStaffID();
+            //EtPurchase purchase = new EtPurchase
+            //{
+            //    PurchaseID =,
+            //    Category = new EtCategory
+            //    {
+
+            //    }
+            //    PurchaseDate = "",
+            //    Quantity = 3,
+            //    Cost = 2,
+            //    StaffID =
+            //};
+            //int res= PurchaseDao.InsertPurchase(purchase);
+            foreach (EtPurchase purchase in purchases)
             {
-                Console.WriteLine(sale.ToString());
+                Console.WriteLine(purchase.ToString());
             }
-            Console.WriteLine(sales.Count);
+            Console.WriteLine(purchases.Count);
         }
     }
 }
