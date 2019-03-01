@@ -15,7 +15,6 @@ namespace GoodManagerSys.Dao {
             MySqlDataReader dr = helper.RunQuerySQL(sql);
             return GetListByDataReader(dr);
         }
-
         public static List<EtPurchase> QueryByPurchaseID(int purchaseID) {
             DBHelper helper = new DBHelper();
             string sql = "SELECT * FROM purchase WHERE purchaseID = @purchaseID";
@@ -23,7 +22,6 @@ namespace GoodManagerSys.Dao {
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
-
         public static List<EtPurchase> QueryByCategoryID(int categoryID) {
             DBHelper helper = new DBHelper();
             string sql = "SELECT * FROM purchase WHERE categoryID = @categoryID";
@@ -31,7 +29,6 @@ namespace GoodManagerSys.Dao {
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
-
         public static List<EtPurchase> QueryByPurchaseDate(string purchaseDate) {
             DBHelper helper = new DBHelper();
             string sql = "SELECT * FROM purchase WHERE purchaseDate = @purchaseDate";
@@ -39,7 +36,6 @@ namespace GoodManagerSys.Dao {
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
-
         public static List<EtPurchase> QueryByStaffID(int staffID) {
             DBHelper helper = new DBHelper();
             string sql = "SELECT * FROM purchase WHERE staffID = @staffID";
@@ -47,14 +43,24 @@ namespace GoodManagerSys.Dao {
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
+        public static List<EtPurchase> QueryByPurchase(EtPurchase purchase)
+        {
+            DBHelper helper = new DBHelper();
+            string sql = "SELECT * FROM purchase WHERE purchaseID = @purchaseID AND categoryID = @categoryID";
+            MySqlParameter[] prams = { new MySqlParameter("@purchaseID", purchase.PurchaseID),new MySqlParameter("@categoryID",purchase.CategoryID) };
+            MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
+            return GetListByDataReader(dr);
+        }
+
         public static int InsertPurchase(EtPurchase purchase) {
-            List<EtPurchase> purchases = QueryByPurchaseID(purchase.PurchaseID);
+            List<EtPurchase> purchases = QueryByPurchase(purchase);
             if (purchases.Count > 0) return -1;
             DBHelper helper = new DBHelper();
             string sql = "INSERT INTO " +
-                "purchase(categoryID,purchaseDate,quantity,cost,staffID) " +
-                "VALUE(@categoryID,@purchaseDate,@quantity,@cost,@staffID)";
+                "purchase(purchaseID,categoryID,purchaseDate,quantity,cost,staffID) " +
+                "VALUE(@purchaseID,@categoryID,@purchaseDate,@quantity,@cost,@staffID)";
             MySqlParameter[] prams = {
+                new MySqlParameter("@purchaseID",purchase.PurchaseID),
                 new MySqlParameter("@categoryID",purchase.CategoryID),
                 new MySqlParameter("@purchaseDate",purchase.PurchaseDate??(object)DBNull.Value),
                 new MySqlParameter("@quantity",purchase.Quantity),

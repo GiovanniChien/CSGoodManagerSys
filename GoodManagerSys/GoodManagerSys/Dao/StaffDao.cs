@@ -15,7 +15,6 @@ namespace GoodManagerSys.Dao {
             MySqlDataReader dr = helper.RunQuerySQL(sql);
             return GetListByDataReader(dr);
         }
-
         public static List<EtStaff> QueryByStaffID(int staffID) {
             DBHelper helper = new DBHelper();
             string sql = "SELECT * FROM staff WHERE staffID = @staffID";
@@ -23,7 +22,6 @@ namespace GoodManagerSys.Dao {
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
-
         public static List<EtStaff> QueryByStaffName(string staffName) {
             DBHelper helper = new DBHelper();
             string sql = "SELECT * FROM staff WHERE staffName = @staffName";
@@ -31,7 +29,6 @@ namespace GoodManagerSys.Dao {
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
-
         public static List<EtStaff> QueryByRole(int role) {
             DBHelper helper = new DBHelper();
             string sql = "SELECT * FROM staff WHERE role = @role";
@@ -39,14 +36,16 @@ namespace GoodManagerSys.Dao {
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
+
         public static int InsertStaff(EtStaff staff) {
             List<EtStaff> staffs = QueryByStaffID(staff.StaffID);
             if (staffs.Count > 0) return -1;
             DBHelper helper = new DBHelper();
             string sql = "INSERT INTO " +
-                "staff(staffName,pwd,staffPhone,role) " +
-                "VALUE(@staffName,@pwd,@staffPhone,@role)";
+                "staff(staffID,staffName,pwd,staffPhone,role) " +
+                "VALUE(@staffID,@staffName,@pwd,@staffPhone,@role)";
             MySqlParameter[] prams = {
+                new MySqlParameter("@staffID",staff.StaffID),
                 new MySqlParameter("@staffName",staff.StaffName??(object)DBNull.Value),
                 new MySqlParameter("@pwd",staff.Pwd??(object)DBNull.Value),
                 new MySqlParameter("@staffPhone",staff.StaffPhone??(object)DBNull.Value),
@@ -58,14 +57,27 @@ namespace GoodManagerSys.Dao {
             List<EtStaff> staffs = QueryByStaffID(staff.StaffID);
             if (staffs.Count == 0) return -1;
             DBHelper helper = new DBHelper();
-            string sql = "UPDATE category SET staffName = @staffName," +
+            string sql = "UPDATE staff SET staffName = @staffName," +
                 "pwd = @pwd,staffPhone = @staffPhone," +
-                "role = @role";
+                "role = @role "+
+                "WHERE staffID = @staffID";
             MySqlParameter[] prams = {
                 new MySqlParameter("@staffName",staff.StaffName),
                 new MySqlParameter("@pwd",staff.Pwd),
                 new MySqlParameter("@staffPhone",staff.StaffPhone),
-                new MySqlParameter("@role",staff.Role)
+                new MySqlParameter("@role",staff.Role),
+                new MySqlParameter("@staffID",staff.StaffID)
+            };
+            return helper.RunNonQuerySQL(sql, prams);
+        }
+        public static int DeleteByStaffID(int staffID)
+        {
+            List<EtStaff> staffs = QueryByStaffID(staffID);
+            if (staffs.Count == 0) return -1;
+            DBHelper helper = new DBHelper();
+            string sql = "DELETE FROM staff WHERE staffID = @staffID;";
+            MySqlParameter[] prams ={
+                new MySqlParameter("@staffID",staffID),
             };
             return helper.RunNonQuerySQL(sql, prams);
         }
