@@ -12,34 +12,40 @@ namespace GoodManagerSys.Dao {
     class GoodDao {
         public static List<EtGood> QueryAll() {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM good";
+            string sql = "SELECT * FROM good LEFT JOIN category " +
+                "ON good.categoryID = category.categoryID";
             MySqlDataReader dr = helper.RunQuerySQL(sql);
             return GetListByDataReader(dr);
         }
         public static List<EtGood> QueryByGoodID(int goodID) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM good WHERE goodID = @goodID";
+            string sql = "SELECT * FROM good LEFT JOIN category " +
+                "ON good.categoryID = category.categoryID WHERE goodID = @goodID";
             MySqlParameter[] prams = { new MySqlParameter("@goodID", goodID) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
         public static List<EtGood> QueryByCategoryID(int categoryID) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM good WHERE categoryID = @categoryID";
+            string sql = "SELECT * FROM good LEFT JOIN category " +
+                "ON good.categoryID = category.categoryID " +
+                "WHERE good.categoryID = @categoryID";
             MySqlParameter[] prams = { new MySqlParameter("@categoryID", categoryID) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
         public static List<EtGood> QueryByPurchaseDate(string purchaseDate) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM good WHERE purchaseDate = @purchaseDate";
+            string sql = "SELECT * FROM good LEFT JOIN category " +
+                "ON good.categoryID = category.categoryID WHERE purchaseDate = @purchaseDate";
             MySqlParameter[] prams = { new MySqlParameter("@purchaseDate", purchaseDate) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
         public static List<EtGood> QueryByState(EState State) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM good WHERE state = @State";
+            string sql = "SELECT * FROM good LEFT JOIN category " +
+                "ON good.categoryID = category.categoryID WHERE state = @State";
             MySqlParameter[] prams = { new MySqlParameter("@State", State) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
@@ -52,7 +58,7 @@ namespace GoodManagerSys.Dao {
                 "good(categoryID,productionDate,purchaseDate,cost,price,state) " +
                 "VALUE(@categoryID,@productionDate,@purchaseDate,@cost,@price,@state)";
             MySqlParameter[] prams = {
-                new MySqlParameter("@categoryID",good.CategoryID),
+                new MySqlParameter("@categoryID",good.Category.CategoryID),
                 new MySqlParameter("@productionDate",good.ProductionDate??(object)DBNull.Value),
                 new MySqlParameter("@purchaseDate",good.PurchaseDate??(object)DBNull.Value),
                 new MySqlParameter("@cost",good.Cost),
@@ -82,7 +88,7 @@ namespace GoodManagerSys.Dao {
                 "productionDate = @ProductionDate, purchaseDate = @PurchaseDate, cost = @Cost, " +
                 "price = @price, state = @state WHERE goodID = @goodID";
             MySqlParameter[] prams = {
-                new MySqlParameter("@categoryID",good.CategoryID),
+                new MySqlParameter("@categoryID",good.Category.CategoryID),
                 new MySqlParameter("@productionDate",good.ProductionDate??(object)DBNull.Value),
                 new MySqlParameter("@purchaseDate",good.PurchaseDate??(object)DBNull.Value),
                 new MySqlParameter("@cost",good.Cost),
@@ -101,7 +107,20 @@ namespace GoodManagerSys.Dao {
                     EtGood good = new EtGood
                     {
                         GoodID = dr.GetInt32("goodID"),
-                        CategoryID = dr.GetInt32("categoryID"),
+                        Category = new EtCategory
+                        {
+                            CategoryID = dr.GetInt32("categoryID"),
+                            CategoryName = dr["categoryName"] is DBNull ? null : dr.GetString("categoryName"),
+                            ParentCategoryID = dr["parentCategoryID"] is DBNull ? ECategory.eUndefined : (ECategory)dr.GetInt16("parentCategoryID"),
+                            ParentCategoryName = dr["parentCategoryName"] is DBNull ? null : dr.GetString("parentCategoryName"),
+                            Unit = dr["unit"] is DBNull ? null : dr.GetString("unit"),
+                            Color = dr["color"] is DBNull ? null : dr.GetString("color"),
+                            Firm = dr["firm"] is DBNull ? null : dr.GetString("firm"),
+                            MinStock = dr["minStock"] is DBNull ? 0 : dr.GetInt32("minStock"),
+                            MaxStock = dr["maxStock"] is DBNull ? 0 : dr.GetInt32("maxStock"),
+                            ExpirationDate = dr["expirationDate"] is DBNull ? 0 : dr.GetInt32("expirationDate"),
+                            IsValid = dr["isValid"] is DBNull ? EValid.eDeleted : (EValid)dr.GetInt16("isValid")
+                        },
                         ProductionDate = dr["productionDate"] is DBNull ? null : dr.GetString("productionDate"),
                         PurchaseDate = dr["purchaseDate"] is DBNull ? null : dr.GetString("purchaseDate"),
                         Cost = dr["cost"] is DBNull ? 0 : dr.GetDouble("cost"),
