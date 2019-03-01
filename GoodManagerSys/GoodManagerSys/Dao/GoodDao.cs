@@ -37,7 +37,7 @@ namespace GoodManagerSys.Dao {
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
-        public static List<EtGood> QueryByIsState(EState State) {
+        public static List<EtGood> QueryByState(EState State) {
             DBHelper helper = new DBHelper();
             string sql = "SELECT * FROM good WHERE state = @State";
             MySqlParameter[] prams = { new MySqlParameter("@State", State) };
@@ -53,8 +53,8 @@ namespace GoodManagerSys.Dao {
                 "VALUE(@categoryID,@productionDate,@purchaseDate,@cost,@price,@state)";
             MySqlParameter[] prams = {
                 new MySqlParameter("@categoryID",good.CategoryID),
-                new MySqlParameter("@productionDate",good.ProductionDate),
-                new MySqlParameter("@purchaseDate",good.PurchaseDate),
+                new MySqlParameter("@productionDate",good.ProductionDate??(object)DBNull.Value),
+                new MySqlParameter("@purchaseDate",good.PurchaseDate??(object)DBNull.Value),
                 new MySqlParameter("@cost",good.Cost),
                 new MySqlParameter("@price",good.Price),
                 new MySqlParameter("@state",good.State)
@@ -70,6 +70,25 @@ namespace GoodManagerSys.Dao {
             MySqlParameter[] prams = {
                 new MySqlParameter("@state",EState.ePrePutaway),
                 new MySqlParameter("@goodID",goodID)
+            };
+            return helper.RunNonQuerySQL(sql, prams);
+        }
+        public static int UpdateGood(EtGood good)
+        {
+            List<EtGood> goods = QueryByGoodID(good.GoodID);
+            if (goods.Count == 0) return -1;
+            DBHelper helper = new DBHelper();
+            string sql = "UPDATE good SET categoryID = @CategoryID, " +
+                "productionDate = @ProductionDate, purchaseDate = @PurchaseDate, cost = @Cost, " +
+                "price = @price, state = @state WHERE goodID = @goodID";
+            MySqlParameter[] prams = {
+                new MySqlParameter("@categoryID",good.CategoryID),
+                new MySqlParameter("@productionDate",good.ProductionDate??(object)DBNull.Value),
+                new MySqlParameter("@purchaseDate",good.PurchaseDate??(object)DBNull.Value),
+                new MySqlParameter("@cost",good.Cost),
+                new MySqlParameter("@price",good.Price),
+                new MySqlParameter("@state",good.State),
+                new MySqlParameter("@goodID",good.GoodID)
             };
             return helper.RunNonQuerySQL(sql, prams);
         }

@@ -2,12 +2,6 @@
 using GoodManagerSys.Entities;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GoodManagerSys
@@ -39,7 +33,30 @@ namespace GoodManagerSys
             //EtMembership membership = MemberShipDao.QueryByMsID(29006)[0];
             //membership.MsPoint = 89;
             //int res = MemberShipDao.UpdateMembership(membership);
-            int res = MemberShipDao.DeleteByMsID(29006);
+            //int res = MemberShipDao.DeleteByMsID(29006);
+            //Console.WriteLine(res);
+            //List<EtGood> goods;
+            //goods = GoodDao.QueryAll();
+            //goods = GoodDao.QueryByState(Enums.EState.eSaled);
+            //foreach(EtGood good in goods)
+            //{
+            //    Console.WriteLine(good.ToString());
+            //}
+            //EtGood good = new EtGood
+            //{
+            //    CategoryID = 19001,
+            //    ProductionDate = "91020301",
+            //    PurchaseDate = "20190301",
+            //    Cost = 8.0,
+            //    Price = 9.0,
+            //    State = Enums.EState.ePrePutaway
+            //};
+            int res;
+            //res = GoodDao.InsertGood(good);
+            //EtGood good = GoodDao.QueryByGoodID(1009)[0];
+            //good.Price = 9.99;
+            //res = GoodDao.UpdateGood(good);
+            res = GoodDao.DeleteByGoodID(1009);
             Console.WriteLine(res);
         }
     }
