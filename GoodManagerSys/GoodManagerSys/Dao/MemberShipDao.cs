@@ -37,6 +37,23 @@ namespace GoodManagerSys.Dao {
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
+        public static int UpdateMembership(EtMembership membership)
+        {
+            List<EtMembership> memberships = QueryByMsID(membership.MsID);
+            if (memberships.Count == 0) return -1;
+            DBHelper helper = new DBHelper();
+            string sql = "UPDATE membership SET msName = @MsName, msPhone = @MsPhone," +
+                "msPoint = @MsPoint, isValid = @IsValid " +
+                "WHERE msID = @MsID;";
+            MySqlParameter[] prams ={
+                new MySqlParameter("@MsName",membership.MsName??(object)DBNull.Value),
+                new MySqlParameter("@MsPhone",membership.MsPhone??(object)DBNull.Value),
+                new MySqlParameter("@MsPoint",membership.MsPoint),
+                new MySqlParameter("@IsValid",membership.IsValid),
+                new MySqlParameter("@MsID",membership.MsID)
+            };
+            return helper.RunNonQuerySQL(sql, prams);
+        }
         public static int InsertMembership(EtMembership membership) {
             List<EtMembership> memberships = QueryByMsID(membership.MsID);
             if (memberships.Count > 0) return -1;
@@ -45,8 +62,8 @@ namespace GoodManagerSys.Dao {
                 "membership(msName,msPhone,msPoint,isValid) " +
                 "VALUE(@msName,@msPhone,@msPoint,@isValid)";
             MySqlParameter[] prams = {
-                new MySqlParameter("@msName",membership.MsName),
-                new MySqlParameter("@msPhone",membership.MsPhone),
+                new MySqlParameter("@MsName",membership.MsName??(object)DBNull.Value),
+                new MySqlParameter("@MsPhone",membership.MsPhone??(object)DBNull.Value),
                 new MySqlParameter("@msPoint",membership.MsPoint),
                 new MySqlParameter("@isValid",membership.IsValid)
             };

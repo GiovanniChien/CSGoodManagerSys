@@ -16,7 +16,6 @@ namespace GoodManagerSys.Dao {
             return GetListByDataReader(dr);
         }
 
-
         public static List<EtPurchase> QueryByPurchaseID(int purchaseID) {
             DBHelper helper = new DBHelper();
             string sql = "SELECT * FROM purchase WHERE purchaseID=@purchaseID";
