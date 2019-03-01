@@ -83,15 +83,24 @@ namespace GoodManagerSys.Dao {
         }
         private static List<EtStaff> GetListByDataReader(MySqlDataReader dr) {
             List<EtStaff> staffs = new List<EtStaff>();
-            while (dr.Read()) {
-                EtStaff staff = new EtStaff {
-                    StaffID = dr.GetInt32("staffID"),
-                    StaffName = dr["staffName"] is DBNull ? null : dr.GetString("staffName"),
-                    Pwd = dr["pwd"] is DBNull ? null : dr.GetString("pwd"),
-                    StaffPhone = dr["staffPhone"] is DBNull ? null : dr.GetString("staffPhone"),
-                    Role = dr["role"] is DBNull ? 0 : dr.GetInt32("role")
-                };
-                staffs.Add(staff);
+            try
+            {
+                while (dr.Read())
+                {
+                    EtStaff staff = new EtStaff
+                    {
+                        StaffID = dr.GetInt32("staffID"),
+                        StaffName = dr["staffName"] is DBNull ? null : dr.GetString("staffName"),
+                        Pwd = dr["pwd"] is DBNull ? null : dr.GetString("pwd"),
+                        StaffPhone = dr["staffPhone"] is DBNull ? null : dr.GetString("staffPhone"),
+                        Role = dr["role"] is DBNull ? 0 : dr.GetInt32("role")
+                    };
+                    staffs.Add(staff);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
             }
             return staffs;
         }

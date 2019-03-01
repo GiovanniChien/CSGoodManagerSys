@@ -21,13 +21,16 @@ namespace GoodManagerSys
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int res = StaffDao.DeleteByStaffID(18009);
-            Console.WriteLine(res);
-            List<EtStaff> staffs = StaffDao.QueryAll();
-            for(int i = 0; i < staffs.Count; i++)
+            List<EtSale> sales;
+            //sales = SaleDao.QueryAll();
+            //sales = SaleDao.QueryBySaleID(6001);
+            //sales = SaleDao.QueryByGoodID(1002);
+            sales = SaleDao.QueryByPrimaryID(6001, 10002);
+            foreach (EtSale sale in sales)
             {
-                Console.WriteLine(staffs[i].ToString());
+                Console.WriteLine(sale.ToString());
             }
+            Console.WriteLine(sales.Count);
         }
     }
 }

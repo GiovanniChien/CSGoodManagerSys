@@ -83,15 +83,23 @@ namespace GoodManagerSys.Dao {
         }
         private static List<EtMembership> GetListByDataReader(MySqlDataReader dr) {
             List<EtMembership> memberships = new List<EtMembership>();
-            while (dr.Read()) {
-                EtMembership membership = new EtMembership {
-                    MsID = dr.GetInt32("msID"),
-                    MsName = dr["msName"] is DBNull ? null : dr.GetString("msName"),
-                    MsPhone = dr["msPhone"] is DBNull ? null : dr.GetString("msPhone"),
-                    MsPoint = dr["msPoint"] is DBNull ? 0 : dr.GetInt32("msPoint"),
-                    IsValid = (EValid)(dr["isValid"] is DBNull ? 0 : dr.GetInt32("isValid"))
-                };
-                memberships.Add(membership);
+            try
+            {
+                while (dr.Read())
+                {
+                    EtMembership membership = new EtMembership
+                    {
+                        MsID = dr.GetInt32("msID"),
+                        MsName = dr["msName"] is DBNull ? null : dr.GetString("msName"),
+                        MsPhone = dr["msPhone"] is DBNull ? null : dr.GetString("msPhone"),
+                        MsPoint = dr["msPoint"] is DBNull ? 0 : dr.GetInt32("msPoint"),
+                        IsValid = (EValid)(dr["isValid"] is DBNull ? 0 : dr.GetInt32("isValid"))
+                    };
+                    memberships.Add(membership);
+                }
+            }
+            catch(Exception e) {
+                Console.WriteLine(e.ToString());
             }
             return memberships;
         }
