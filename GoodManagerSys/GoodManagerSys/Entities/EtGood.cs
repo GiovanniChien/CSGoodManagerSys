@@ -13,7 +13,7 @@ namespace GoodManagerSys.Entities {
         public string PurchaseDate { get; set; }
         public double Cost { get; set; }
         public double Price { get; set; }
-        public EState IsState { get; set; }
+        public EState State { get; set; }
 
         public override string ToString() {
             StringBuilder sb = new StringBuilder();
@@ -23,7 +23,7 @@ namespace GoodManagerSys.Entities {
             sb.Append(PurchaseDate + "\t");
             sb.Append(Cost + "\t");
             sb.Append(Price + "\t");
-            sb.Append(IsState + "\t");
+            sb.Append(State + "\t");
             return sb.ToString();
         }
     }
