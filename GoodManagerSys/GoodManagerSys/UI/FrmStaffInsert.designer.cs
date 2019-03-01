@@ -37,9 +37,9 @@
             this.LblStaffPwd = new System.Windows.Forms.Label();
             this.LblStaffPhone = new System.Windows.Forms.Label();
             this.LblStaffRole = new System.Windows.Forms.Label();
-            this.BtnStaffInsert = new System.Windows.Forms.Button();
+            this.BtnInsert = new System.Windows.Forms.Button();
             this.CmbStaffRole = new System.Windows.Forms.ComboBox();
-            this.BtnStaffBack = new System.Windows.Forms.Button();
+            this.BtnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TxtStaffID
@@ -124,16 +124,16 @@
             this.LblStaffRole.TabIndex = 9;
             this.LblStaffRole.Text = "员工权限";
             // 
-            // BtnStaffInsert
+            // BtnInsert
             // 
-            this.BtnStaffInsert.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BtnStaffInsert.Location = new System.Drawing.Point(67, 182);
-            this.BtnStaffInsert.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnStaffInsert.Name = "BtnStaffInsert";
-            this.BtnStaffInsert.Size = new System.Drawing.Size(83, 26);
-            this.BtnStaffInsert.TabIndex = 10;
-            this.BtnStaffInsert.Text = "添加";
-            this.BtnStaffInsert.UseVisualStyleBackColor = true;
+            this.BtnInsert.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BtnInsert.Location = new System.Drawing.Point(67, 182);
+            this.BtnInsert.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnInsert.Name = "BtnInsert";
+            this.BtnInsert.Size = new System.Drawing.Size(83, 26);
+            this.BtnInsert.TabIndex = 10;
+            this.BtnInsert.Text = "添加";
+            this.BtnInsert.UseVisualStyleBackColor = true;
             // 
             // CmbStaffRole
             // 
@@ -148,16 +148,16 @@
             this.CmbStaffRole.Size = new System.Drawing.Size(110, 20);
             this.CmbStaffRole.TabIndex = 12;
             // 
-            // BtnStaffBack
+            // BtnBack
             // 
-            this.BtnStaffBack.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BtnStaffBack.Location = new System.Drawing.Point(154, 182);
-            this.BtnStaffBack.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnStaffBack.Name = "BtnStaffBack";
-            this.BtnStaffBack.Size = new System.Drawing.Size(82, 26);
-            this.BtnStaffBack.TabIndex = 10;
-            this.BtnStaffBack.Text = "返回";
-            this.BtnStaffBack.UseVisualStyleBackColor = true;
+            this.BtnBack.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BtnBack.Location = new System.Drawing.Point(154, 182);
+            this.BtnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnBack.Name = "BtnBack";
+            this.BtnBack.Size = new System.Drawing.Size(82, 26);
+            this.BtnBack.TabIndex = 10;
+            this.BtnBack.Text = "返回";
+            this.BtnBack.UseVisualStyleBackColor = true;
             // 
             // FrmStaffInsert
             // 
@@ -165,8 +165,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(315, 277);
             this.Controls.Add(this.CmbStaffRole);
-            this.Controls.Add(this.BtnStaffBack);
-            this.Controls.Add(this.BtnStaffInsert);
+            this.Controls.Add(this.BtnBack);
+            this.Controls.Add(this.BtnInsert);
             this.Controls.Add(this.LblStaffRole);
             this.Controls.Add(this.LblStaffPhone);
             this.Controls.Add(this.LblStaffPwd);
@@ -195,8 +195,8 @@
         private System.Windows.Forms.Label LblStaffPwd;
         private System.Windows.Forms.Label LblStaffPhone;
         private System.Windows.Forms.Label LblStaffRole;
-        private System.Windows.Forms.Button BtnStaffInsert;
+        private System.Windows.Forms.Button BtnInsert;
         private System.Windows.Forms.ComboBox CmbStaffRole;
-        private System.Windows.Forms.Button BtnStaffBack;
+        private System.Windows.Forms.Button BtnBack;
     }
 }

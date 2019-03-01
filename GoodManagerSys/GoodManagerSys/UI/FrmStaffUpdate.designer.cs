@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BtnStaffSubmit = new System.Windows.Forms.Button();
-            this.BtnStaffBack = new System.Windows.Forms.Button();
+            this.BtnSubmit = new System.Windows.Forms.Button();
+            this.BtnBack = new System.Windows.Forms.Button();
             this.CmbStaffRole = new System.Windows.Forms.ComboBox();
             this.LblStaffRole = new System.Windows.Forms.Label();
             this.LblStaffPhone = new System.Windows.Forms.Label();
@@ -42,27 +42,27 @@
             this.TxtStaffID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // BtnStaffSubmit
+            // BtnSubmit
             // 
-            this.BtnStaffSubmit.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BtnStaffSubmit.Location = new System.Drawing.Point(62, 209);
-            this.BtnStaffSubmit.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnStaffSubmit.Name = "BtnStaffSubmit";
-            this.BtnStaffSubmit.Size = new System.Drawing.Size(80, 26);
-            this.BtnStaffSubmit.TabIndex = 4;
-            this.BtnStaffSubmit.Text = "提交修改";
-            this.BtnStaffSubmit.UseVisualStyleBackColor = true;
+            this.BtnSubmit.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BtnSubmit.Location = new System.Drawing.Point(62, 209);
+            this.BtnSubmit.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnSubmit.Name = "BtnSubmit";
+            this.BtnSubmit.Size = new System.Drawing.Size(80, 26);
+            this.BtnSubmit.TabIndex = 4;
+            this.BtnSubmit.Text = "提交修改";
+            this.BtnSubmit.UseVisualStyleBackColor = true;
             // 
-            // BtnStaffBack
+            // BtnBack
             // 
-            this.BtnStaffBack.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BtnStaffBack.Location = new System.Drawing.Point(169, 209);
-            this.BtnStaffBack.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnStaffBack.Name = "BtnStaffBack";
-            this.BtnStaffBack.Size = new System.Drawing.Size(80, 26);
-            this.BtnStaffBack.TabIndex = 5;
-            this.BtnStaffBack.Text = "返回";
-            this.BtnStaffBack.UseVisualStyleBackColor = true;
+            this.BtnBack.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BtnBack.Location = new System.Drawing.Point(169, 209);
+            this.BtnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnBack.Name = "BtnBack";
+            this.BtnBack.Size = new System.Drawing.Size(80, 26);
+            this.BtnBack.TabIndex = 5;
+            this.BtnBack.Text = "返回";
+            this.BtnBack.UseVisualStyleBackColor = true;
             // 
             // CmbStaffRole
             // 
@@ -174,8 +174,8 @@
             this.Controls.Add(this.TxtStaffPwd);
             this.Controls.Add(this.TxtStaffName);
             this.Controls.Add(this.TxtStaffID);
-            this.Controls.Add(this.BtnStaffBack);
-            this.Controls.Add(this.BtnStaffSubmit);
+            this.Controls.Add(this.BtnBack);
+            this.Controls.Add(this.BtnSubmit);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmStaffUpdate";
             this.Text = "员工信息修改";
@@ -185,8 +185,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button BtnStaffSubmit;
-        private System.Windows.Forms.Button BtnStaffBack;
+        private System.Windows.Forms.Button BtnSubmit;
+        private System.Windows.Forms.Button BtnBack;
         private System.Windows.Forms.ComboBox CmbStaffRole;
         private System.Windows.Forms.Label LblStaffRole;
         private System.Windows.Forms.Label LblStaffPhone;
