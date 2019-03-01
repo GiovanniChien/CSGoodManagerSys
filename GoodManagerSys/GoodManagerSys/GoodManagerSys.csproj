@@ -181,6 +181,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -235,6 +236,24 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Membership.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Sale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Staff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Warehouse.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,138 +8,118 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1
-{
-    public partial class FrmMain : Form
-    {
-        public FrmMain()
-        {
+namespace GoodManagerSys {
+    public partial class FrmMain : Form {
+        public FrmMain() {
             InitializeComponent();
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
+        private void BtnStaff_Click(object sender, EventArgs e) {
+            TlpMainMenu.Visible = false;
+            TlpStaffMenu.Visible = true;
+            TlpStaffSubmenu.Visible = true;
+        }
+
+        private void BtnWarehouse_Click(object sender, EventArgs e) {
+            TlpMainMenu.Visible = false;
+            TlpWarehouseMenu.Visible = true;
+        }
+
+        private void BtnSale_Click(object sender, EventArgs e) {
+            TlpMainMenu.Visible = false;
+            TlpSaleMenu.Visible = true;
+        }
+
+        private void BtnMembership_Click(object sender, EventArgs e) {
+            TlpMainMenu.Visible = false;
+            TlpMsMenu.Visible = true;
+        }
+
+        private void BtnTable_Click(object sender, EventArgs e) {
+            TlpMainMenu.Visible = false;
+            TlpTableMenu.Visible = true;
+        }
+
+        private void BtnStaffBack_Click(object sender, EventArgs e) {
+            TlpStaffMenu.Visible = false;
+            TlpMainMenu.Visible = true;
+            TlpStaffSubmenu.Visible = false;
+        }
+
+        private void BtnWarehouseBack_Click(object sender, EventArgs e) {
+            TlpWarehouseMenu.Visible = false;
+            TlpMainMenu.Visible = true;
+        }
+
+        private void BtnSaleBack_Click(object sender, EventArgs e) {
+            TlpSaleMenu.Visible = false;
+            TlpMainMenu.Visible = true;
+        }
+
+        private void BtnMsBack_Click(object sender, EventArgs e) {
+            TlpMsMenu.Visible = false;
+            TlpMainMenu.Visible = true;
+        }
+
+        private void BtnTableBack_Click(object sender, EventArgs e) {
+            TlpTableMenu.Visible = false;
+            TlpMainMenu.Visible = true;
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e) {
+            FrmLogin frmLogin = new FrmLogin();
+            this.Hide();
+            frmLogin.ShowDialog();
             this.Close();
         }
 
-        private void button7_Click(object sender, EventArgs e)
-        {
-            FrmStaffInsert f = new FrmStaffInsert();
-            f.Show();
+        private void BtnStaffInsert_Click(object sender, EventArgs e) {
+            //FrmStaffInsert
         }
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-            FrmStaffUpdate f = new FrmStaffUpdate();
-            f.Show();
+        private void BtnStaffDelete_Click(object sender, EventArgs e) {
+            //FrmStaffDelete
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            FrmStaffDelete f = new FrmStaffDelete();
-            f.Show();
+        private void BtnGoodIncome_Click(object sender, EventArgs e) {
+            TlpWarehouseMenu.Visible = false;
+            TlpWarehouseSSubmenu.Visible = true;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            FrmStaffUpdate f = new FrmStaffUpdate();
-            f.Show();
+        private void BtnWarehouseSubmenu_Click(object sender, EventArgs e) {
+            TlpWarehouseSSubmenu.Visible = false;
+            TlpWarehouseMenu.Visible = true;
         }
 
-        private void dataGridView1_MouseClick(object sender, MouseEventArgs e)
-        {
-            FrmStaffUpdate f = new FrmStaffUpdate();
-            f.Show();
+        private void BtnStaffUpdate_Click(object sender, EventArgs e) {
+            //if a row of Dgv is selected
+            //FrmStaffUpdate
         }
 
-        private void button11_Click(object sender, EventArgs e)
-        {
-            FrmGoodInsert f = new FrmGoodInsert();
-            f.Show();
+        private void BtnSingleIncome_Click(object sender, EventArgs e) {
+            //FrmGoodInsert
         }
 
-        private void button12_Click(object sender, EventArgs e)
-        {
-            FrmCategory f = new FrmCategory();
-            f.Show();
+        private void BtnFileIncome_Click(object sender, EventArgs e) {
+            //FrmGoodPath
         }
 
-        private void button10_Click(object sender, EventArgs e)
-        {
-            FrmWarehouseWarning f = new FrmWarehouseWarning();
-            f.Show();
+        private void BtnWarehouseSubmit_Click(object sender, EventArgs e) {
+            //写入数据库
         }
 
-        private void button14_Click(object sender, EventArgs e)
-        {
-            FrmSaleInsert f = new FrmSaleInsert();
-            f.Show();
+        private void BtnWarehouseCancel_Click(object sender, EventArgs e) {
+            //从数据库重新读取数据
         }
 
-        private void button17_Click(object sender, EventArgs e)
-        {
-            FrmMsInsert f = new FrmMsInsert();
-            f.Show();
+        private void BtnGoodManager_Click(object sender, EventArgs e) {
+            if (TlpWarehouseSubmenu.Visible == false)
+                TlpWarehouseSubmenu.Visible = true;
+            //读取
         }
 
-        private void Form2_Load(object sender, EventArgs e)
-        {
-            PnlStaff.Parent = PicMainBackground;
-            PnlWarehouse.Parent = PicMainBackground;
-            PnlSale.Parent = PicMainBackground;
-            PnlMembership.Parent = PicMainBackground;
-            PnlTable.Parent = PicMainBackground;
-        }
-
-        private void TsbStaff_Click(object sender, EventArgs e)
-        {
-            PnlStaff.Visible = false;
-            PnlWarehouse.Visible = false;
-            PnlSale.Visible = false;
-            PnlMembership.Visible = false;
-            PnlTable.Visible = false;
-            PnlStaff.Visible = true;
-        }
-
-        private void TsbWarehouse_Click(object sender, EventArgs e)
-        {
-
-            PnlStaff.Visible = false;
-            PnlWarehouse.Visible = false;
-            PnlSale.Visible = false;
-            PnlMembership.Visible = false;
-            PnlTable.Visible = false;
-            PnlWarehouse.Visible = true;
-        }
-
-        private void TsbSale_Click(object sender, EventArgs e)
-        {
-            PnlStaff.Visible = false;
-            PnlWarehouse.Visible = false;
-            PnlSale.Visible = false;
-            PnlMembership.Visible = false;
-            PnlTable.Visible = false;
-            PnlSale.Visible = true;
-        }
-
-        private void TsbMembership_Click(object sender, EventArgs e)
-        {
-            PnlStaff.Visible = false;
-            PnlWarehouse.Visible = false;
-            PnlSale.Visible = false;
-            PnlMembership.Visible = false;
-            PnlTable.Visible = false;
-            PnlMembership.Visible = true;
-        }
-
-        private void TsbTable_Click(object sender, EventArgs e)
-        {
-            PnlStaff.Visible = false;
-            PnlWarehouse.Visible = false;
-            PnlSale.Visible = false;
-            PnlMembership.Visible = false;
-            PnlTable.Visible = false;
-            PnlTable.Visible = true;
+        private void BtnSaleGood_Click(object sender, EventArgs e) {
+            //FrmSaleInsert
         }
     }
 }
