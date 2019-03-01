@@ -1,4 +1,5 @@
 ﻿using GoodManagerSys.Entities;
+using GoodManagerSys.Enums;
 using GoodManagerSys.Utils;
 using MySql.Data.MySqlClient;
 using System;
@@ -11,7 +12,7 @@ namespace GoodManagerSys.Dao {
     class SaleDao {
         public static List<EtSale> QueryAll() {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM sale";
+            string sql = "SELECT * FROM sale LEFT JOIN good ON sale.goodID = good.goodID;";
             MySqlDataReader dr = helper.RunQuerySQL(sql);
             return GetListByDataReader(dr);
         }
@@ -55,7 +56,7 @@ namespace GoodManagerSys.Dao {
                 "sale(goodID,saleDate,profit,staffID) " +
                 "VALUE(@goodID,@saleDate,@profit,@staffID)";
             MySqlParameter[] prams = {
-                new MySqlParameter("@goodID",sale.GoodID),
+                new MySqlParameter("@goodID",sale.Good),
                 new MySqlParameter("@saleDate",sale.SaleDate??(object)DBNull.Value),
                 new MySqlParameter("@profit",sale.Profit),
                 new MySqlParameter("@staffID",sale.StaffID)
@@ -65,9 +66,19 @@ namespace GoodManagerSys.Dao {
         private static List<EtSale> GetListByDataReader(MySqlDataReader dr) {
             List<EtSale> sales = new List<EtSale>();
             while (dr.Read()) {
-                EtSale sale = new EtSale {
+                EtSale sale = new EtSale
+                {
                     SaleID = dr.GetInt32("saleID"),
-                    GoodID = dr.GetInt32("goodID"),
+                    Good = new EtGood
+                    {
+                        GoodID = dr.GetInt32("goodID"),
+                        CategoryID = dr.GetInt32("categoryID"),
+                        ProductionDate = dr["productionDate"] is DBNull ? null : dr.GetString("productionDate"),
+                        PurchaseDate = dr["purchaseDate"] is DBNull ? null : dr.GetString("purchaseDate"),
+                        Cost = dr["cost"] is DBNull ? 0 : dr.GetDouble("cost"),
+                        Price = dr["price"] is DBNull ? 0 : dr.GetDouble("price"),
+                        State = (EState)(dr["state"] is DBNull ? 0 : dr.GetInt32("state"))
+                    },
                     SaleDate = dr["saleDate"] is DBNull ? null : dr.GetString("saleDate"),
                     Profit = dr["profit"] is DBNull ? 0 : dr.GetDouble("profit"),
                     StaffID = dr.GetInt32("staffID")
