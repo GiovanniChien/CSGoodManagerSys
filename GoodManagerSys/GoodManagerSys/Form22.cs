@@ -21,40 +21,30 @@ namespace GoodManagerSys
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //List<EtSale> sales;
-            ////sales = SaleDao.QueryAll();
-            ////sales = SaleDao.QueryBySaleID(6001);
-            ////sales = SaleDao.QueryByGoodID(1002);
-            //sales = SaleDao.QueryByPrimaryID(6001, 1002);
-            //foreach (EtSale sale in sales)
+            List<EtPurchase> purchases;
+            //purchases = PurchaseDao.QueryAll();
+            purchases = PurchaseDao.QueryByPurchaseID(22001);
+            //purchases = PurchaseDao.QueryByCategoryID();
+            //purchases = PurchaseDao.QueryByPurchaseDate("");
+            //purchases = PurchaseDao.QueryByStaffID();
+            //EtPurchase purchase = new EtPurchase
             //{
-            //    Console.WriteLine(sale.ToString());
-            //}
-            //Console.WriteLine(sales.Count);
-            List<EtGood> goods;
-            //goods = GoodDao.QueryAll();
-            //goods = GoodDao.QueryByGoodID(1001);
-            //goods = GoodDao.QueryByCategoryID(19001);
-            //goods = GoodDao.QueryByPurchaseDate("20190228");
-            //goods = GoodDao.QueryByState(Enums.EState.ePrePutaway);
-            //foreach(EtGood good in goods)
-            //{
-            //    Console.WriteLine(good.ToString());
-            //}
-            EtGood good = new EtGood
-            {
-                Category = new EtCategory
-                {
-                    CategoryID = 19001,
-                },
-                ProductionDate = "91020301",
-                PurchaseDate = "91020301",
-                Cost = 8.00,
-                Price = 9.99,
-                State = Enums.EState.eSaled
-            };
-            Console.WriteLine(GoodDao.InsertGood(good));
+            //    PurchaseID =,
+            //    Category = new EtCategory
+            //    {
 
+            //    }
+            //    PurchaseDate = "",
+            //    Quantity = 3,
+            //    Cost = 2,
+            //    StaffID =
+            //};
+            //int res= PurchaseDao.InsertPurchase(purchase);
+            foreach (EtPurchase purchase in purchases)
+            {
+                Console.WriteLine(purchase.ToString());
+            }
+            Console.WriteLine(purchases.Count);
         }
     }
 }

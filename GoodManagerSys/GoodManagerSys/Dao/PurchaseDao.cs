@@ -1,4 +1,5 @@
 ﻿using GoodManagerSys.Entities;
+using GoodManagerSys.Enums;
 using GoodManagerSys.Utils;
 using MySql.Data.MySqlClient;
 using System;
@@ -11,43 +12,43 @@ namespace GoodManagerSys.Dao {
     class PurchaseDao {
         public static List<EtPurchase> QueryAll() {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM purchase";
+            string sql = "SELECT * FROM purchase LEFT JOIN category ON purchase.categoryID = category.categoryID";
             MySqlDataReader dr = helper.RunQuerySQL(sql);
             return GetListByDataReader(dr);
         }
         public static List<EtPurchase> QueryByPurchaseID(int purchaseID) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM purchase WHERE purchaseID = @purchaseID";
+            string sql = "SELECT * FROM purchase LEFT JOIN category ON purchase.categoryID = category.categoryID WHERE purchaseID = @purchaseID";
             MySqlParameter[] prams = { new MySqlParameter("@purchaseID", purchaseID) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
         public static List<EtPurchase> QueryByCategoryID(int categoryID) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM purchase WHERE categoryID = @categoryID";
+            string sql = "SELECT * FROM purchase LEFT JOIN category ON purchase.categoryID = category.categoryID WHERE purchase.categoryID = @categoryID";
             MySqlParameter[] prams = { new MySqlParameter("@categoryID", categoryID) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
         public static List<EtPurchase> QueryByPurchaseDate(string purchaseDate) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM purchase WHERE purchaseDate = @purchaseDate";
+            string sql = "SELECT * FROM purchase LEFT JOIN category ON purchase.categoryID = category.categoryID WHERE purchaseDate = @purchaseDate";
             MySqlParameter[] prams = { new MySqlParameter("@purchaseDate", purchaseDate) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
         public static List<EtPurchase> QueryByStaffID(int staffID) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM purchase WHERE staffID = @staffID";
+            string sql = "SELECT * FROM purchase LEFT JOIN category ON purchase.categoryID = category.categoryID WHERE staffID = @staffID";
             MySqlParameter[] prams = { new MySqlParameter("@staffID", staffID) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
-        public static List<EtPurchase> QueryByPurchase(EtPurchase purchase)
+        private static List<EtPurchase> QueryByPurchase(EtPurchase purchase)
         {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM purchase WHERE purchaseID = @purchaseID AND categoryID = @categoryID";
-            MySqlParameter[] prams = { new MySqlParameter("@purchaseID", purchase.PurchaseID),new MySqlParameter("@categoryID",purchase.CategoryID) };
+            string sql = "SELECT * FROM purchase LEFT JOIN category ON purchase.categoryID = category.categoryID WHERE purchaseID = @purchaseID AND purchase.categoryID = @categoryID";
+            MySqlParameter[] prams = { new MySqlParameter("@purchaseID", purchase.PurchaseID),new MySqlParameter("@categoryID",purchase.Category.CategoryID) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
@@ -61,7 +62,7 @@ namespace GoodManagerSys.Dao {
                 "VALUE(@purchaseID,@categoryID,@purchaseDate,@quantity,@cost,@staffID)";
             MySqlParameter[] prams = {
                 new MySqlParameter("@purchaseID",purchase.PurchaseID),
-                new MySqlParameter("@categoryID",purchase.CategoryID),
+                new MySqlParameter("@categoryID",purchase.Category.CategoryID),
                 new MySqlParameter("@purchaseDate",purchase.PurchaseDate??(object)DBNull.Value),
                 new MySqlParameter("@quantity",purchase.Quantity),
                 new MySqlParameter("@cost",purchase.Cost),
@@ -78,7 +79,20 @@ namespace GoodManagerSys.Dao {
                     EtPurchase purchase = new EtPurchase
                     {
                         PurchaseID = dr.GetInt32("purchaseID"),
-                        CategoryID = dr.GetInt32("categoryID"),
+                        Category=new EtCategory
+                        {
+                            CategoryID = dr.GetInt32("categoryID"),
+                            CategoryName = dr["categoryName"] is DBNull ? null : dr.GetString("categoryName"),
+                            ParentCategoryID = dr["parentCategoryID"] is DBNull ? ECategory.eUndefined : (ECategory)dr.GetInt16("parentCategoryID"),
+                            ParentCategoryName = dr["parentCategoryName"] is DBNull ? null : dr.GetString("parentCategoryName"),
+                            Unit = dr["unit"] is DBNull ? null : dr.GetString("unit"),
+                            Color = dr["color"] is DBNull ? null : dr.GetString("color"),
+                            Firm = dr["firm"] is DBNull ? null : dr.GetString("firm"),
+                            MinStock = dr["minStock"] is DBNull ? 0 : dr.GetInt32("minStock"),
+                            MaxStock = dr["maxStock"] is DBNull ? 0 : dr.GetInt32("maxStock"),
+                            ExpirationDate = dr["expirationDate"] is DBNull ? 0 : dr.GetInt32("expirationDate"),
+                            IsValid = dr["isValid"] is DBNull ? EValid.eDeleted : (EValid)dr.GetInt16("isValid")
+                        },
                         PurchaseDate = dr["purchaseDate"] is DBNull ? null : dr.GetString("purchaseDate"),
                         Quantity = dr["quantity"] is DBNull ? 0 : dr.GetInt32("quantity"),
                         Cost = dr["cost"] is DBNull ? 0 : dr.GetInt32("cost"),
