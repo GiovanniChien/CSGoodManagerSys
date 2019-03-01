@@ -21,11 +21,12 @@ namespace GoodManagerSys
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<EtSale> sales;
-            sales = SaleDao.QueryAll();
-            foreach(EtSale sale in sales)
+            int res = StaffDao.DeleteByStaffID(18009);
+            Console.WriteLine(res);
+            List<EtStaff> staffs = StaffDao.QueryAll();
+            for(int i = 0; i < staffs.Count; i++)
             {
-                Console.WriteLine(sale.ToString());
+                Console.WriteLine(staffs[i].ToString());
             }
         }
     }
