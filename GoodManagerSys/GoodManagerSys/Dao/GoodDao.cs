@@ -18,29 +18,29 @@ namespace GoodManagerSys.Dao {
         }
         public static List<EtGood> QueryByGoodID(int goodID) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM good WHERE goodID=@goodID";
+            string sql = "SELECT * FROM good WHERE goodID = @goodID";
             MySqlParameter[] prams = { new MySqlParameter("@goodID", goodID) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
         public static List<EtGood> QueryByCategoryID(int categoryID) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM good WHERE categoryID=@categoryID";
+            string sql = "SELECT * FROM good WHERE categoryID = @categoryID";
             MySqlParameter[] prams = { new MySqlParameter("@categoryID", categoryID) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
         public static List<EtGood> QueryByPurchaseDate(string purchaseDate) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM good WHERE purchaseDate=@purchaseDate";
+            string sql = "SELECT * FROM good WHERE purchaseDate = @purchaseDate";
             MySqlParameter[] prams = { new MySqlParameter("@purchaseDate", purchaseDate) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
-        public static List<EtGood> QueryByIsValid(EState isValid) {
+        public static List<EtGood> QueryByIsState(EState isState) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM good WHERE isValid=@isValid";
-            MySqlParameter[] prams = { new MySqlParameter("@isValid", isValid) };
+            string sql = "SELECT * FROM good WHERE isState = @isState";
+            MySqlParameter[] prams = { new MySqlParameter("@isState", isState) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
@@ -49,26 +49,26 @@ namespace GoodManagerSys.Dao {
             if (goods.Count > 0) return -1;
             DBHelper helper = new DBHelper();
             string sql = "INSERT INTO " +
-                "good(categoryID,productionDate,purchaseDate,cost,price,isValid) " +
-                "VALUE(@categoryID,@productionDate,@purchaseDate,@cost,@price,@isValid)";
+                "good(categoryID,productionDate,purchaseDate,cost,price,isState) " +
+                "VALUE(@categoryID,@productionDate,@purchaseDate,@cost,@price,@isState)";
             MySqlParameter[] prams = {
                 new MySqlParameter("@categoryID",good.CategoryID),
                 new MySqlParameter("@productionDate",good.ProductionDate),
                 new MySqlParameter("@purchaseDate",good.PurchaseDate),
                 new MySqlParameter("@cost",good.Cost),
                 new MySqlParameter("@price",good.Price),
-                new MySqlParameter("@isValid",good.IsValid)
+                new MySqlParameter("@isState",good.IsState)
             };
             return helper.RunNonQuerySQL(sql, prams); ;
         }
         public static int DeleteByGoodID(int goodID) {
             List<EtGood> goods = QueryByGoodID(goodID);
             if (goods.Count == 0) return -1;
-            if (goods[0].IsValid == EState.ePrePutaway) return -2;
+            if (goods[0].IsState == EState.ePrePutaway) return -2;
             DBHelper helper = new DBHelper();
-            string sql = "UPDATE good SET isValid = @isValid WHERE goodID = @goodID;";
+            string sql = "UPDATE good SET isState = @isState WHERE goodID = @goodID;";
             MySqlParameter[] prams = {
-                new MySqlParameter("@isValid",EState.ePrePutaway),
+                new MySqlParameter("@isState",EState.ePrePutaway),
                 new MySqlParameter("@goodID",goodID)
             };
             return helper.RunNonQuerySQL(sql, prams);
@@ -83,7 +83,7 @@ namespace GoodManagerSys.Dao {
                     PurchaseDate = dr["purchaseDate"] is DBNull ? null : dr.GetString("purchaseDate"),
                     Cost = dr["cost"] is DBNull ? 0 : dr.GetDouble("cost"),
                     Price = dr["price"] is DBNull ? 0 : dr.GetDouble("price"),
-                    IsValid = (EState)(dr["isValid"] is DBNull ? 0 : dr.GetInt32("isValid"))
+                    IsState = (EState)(dr["isState"] is DBNull ? 0 : dr.GetInt32("isState"))
                 };
                 goods.Add(good);
             }

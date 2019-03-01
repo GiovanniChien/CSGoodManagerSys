@@ -18,7 +18,7 @@ namespace GoodManagerSys.Dao {
 
         public static List<EtSale> QueryBySaleID(int saleID) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM sale WHERE saleID=@saleID";
+            string sql = "SELECT * FROM sale WHERE saleID = @saleID";
             MySqlParameter[] prams = { new MySqlParameter("@saleID", saleID) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
@@ -26,7 +26,7 @@ namespace GoodManagerSys.Dao {
 
         public static List<EtSale> QueryByGoodID(int goodID) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM sale WHERE goodID=@goodID";
+            string sql = "SELECT * FROM sale WHERE goodID = @goodID";
             MySqlParameter[] prams = { new MySqlParameter("@goodID", goodID) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
@@ -34,7 +34,7 @@ namespace GoodManagerSys.Dao {
 
         public static List<EtSale> QueryBySaleDate(string saleDate) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM sale WHERE saleDate=@saleDate";
+            string sql = "SELECT * FROM sale WHERE saleDate = @saleDate";
             MySqlParameter[] prams = { new MySqlParameter("@saleDate", saleDate) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
@@ -42,7 +42,7 @@ namespace GoodManagerSys.Dao {
 
         public static List<EtSale> QueryByStaffID(int staffID) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM sale WHERE staffID=@staffID";
+            string sql = "SELECT * FROM sale WHERE staffID = @staffID";
             MySqlParameter[] prams = { new MySqlParameter("@staffID", staffID) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
@@ -56,7 +56,7 @@ namespace GoodManagerSys.Dao {
                 "VALUE(@goodID,@saleDate,@profit,@staffID)";
             MySqlParameter[] prams = {
                 new MySqlParameter("@goodID",sale.GoodID),
-                new MySqlParameter("@saleDate",sale.SaleDate),
+                new MySqlParameter("@saleDate",sale.SaleDate??(object)DBNull.Value),
                 new MySqlParameter("@profit",sale.Profit),
                 new MySqlParameter("@staffID",sale.StaffID)
             };
