@@ -10,17 +10,12 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form3 : Form
+    public partial class FrmStaffInsert : Form
     {
-        public Form3()
+        public FrmStaffInsert()
         {
             InitializeComponent();
         }
 
-
-        private void Form3_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

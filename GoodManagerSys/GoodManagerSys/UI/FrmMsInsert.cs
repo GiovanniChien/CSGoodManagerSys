@@ -10,16 +10,15 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form4 : Form
+    public partial class FrmMsInsert : Form
     {
-        public Form4()
+        public FrmMsInsert()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            panel1.Visible = true;
+        private void FrmMembershipInsert_Load(object sender, EventArgs e) {
+
         }
     }
 }
