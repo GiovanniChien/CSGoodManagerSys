@@ -18,7 +18,7 @@ namespace GoodManagerSys.Dao {
 
         public static List<EtPurchase> QueryByPurchaseID(int purchaseID) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM purchase WHERE purchaseID=@purchaseID";
+            string sql = "SELECT * FROM purchase WHERE purchaseID = @purchaseID";
             MySqlParameter[] prams = { new MySqlParameter("@purchaseID", purchaseID) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
@@ -26,7 +26,7 @@ namespace GoodManagerSys.Dao {
 
         public static List<EtPurchase> QueryByCategoryID(int categoryID) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM purchase WHERE categoryID=@categoryID";
+            string sql = "SELECT * FROM purchase WHERE categoryID = @categoryID";
             MySqlParameter[] prams = { new MySqlParameter("@categoryID", categoryID) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
@@ -34,7 +34,7 @@ namespace GoodManagerSys.Dao {
 
         public static List<EtPurchase> QueryByPurchaseDate(string purchaseDate) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM purchase WHERE purchaseDate=@purchaseDate";
+            string sql = "SELECT * FROM purchase WHERE purchaseDate = @purchaseDate";
             MySqlParameter[] prams = { new MySqlParameter("@purchaseDate", purchaseDate) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
@@ -42,7 +42,7 @@ namespace GoodManagerSys.Dao {
 
         public static List<EtPurchase> QueryByStaffID(int staffID) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM purchase WHERE staffID=@staffID";
+            string sql = "SELECT * FROM purchase WHERE staffID = @staffID";
             MySqlParameter[] prams = { new MySqlParameter("@staffID", staffID) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
@@ -56,7 +56,7 @@ namespace GoodManagerSys.Dao {
                 "VALUE(@categoryID,@purchaseDate,@quantity,@cost,@staffID)";
             MySqlParameter[] prams = {
                 new MySqlParameter("@categoryID",purchase.CategoryID),
-                new MySqlParameter("@purchaseDate",purchase.PurchaseDate),
+                new MySqlParameter("@purchaseDate",purchase.PurchaseDate??(object)DBNull.Value),
                 new MySqlParameter("@quantity",purchase.Quantity),
                 new MySqlParameter("@cost",purchase.Cost),
                 new MySqlParameter("@staffID",purchase.StaffID)
