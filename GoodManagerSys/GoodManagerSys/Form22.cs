@@ -22,11 +22,15 @@ namespace GoodManagerSys
         private void button1_Click(object sender, EventArgs e)
         {
             List<EtSale> sales;
-            sales = SaleDao.QueryAll();
-            foreach(EtSale sale in sales)
+            //sales = SaleDao.QueryAll();
+            //sales = SaleDao.QueryBySaleID(6001);
+            //sales = SaleDao.QueryByGoodID(1002);
+            sales = SaleDao.QueryByPrimaryID(6001, 10002);
+            foreach (EtSale sale in sales)
             {
                 Console.WriteLine(sale.ToString());
             }
+            Console.WriteLine(sales.Count);
         }
     }
 }

@@ -71,16 +71,24 @@ namespace GoodManagerSys.Dao {
         }
         private static List<EtPurchase> GetListByDataReader(MySqlDataReader dr) {
             List<EtPurchase> purchases = new List<EtPurchase>();
-            while (dr.Read()) {
-                EtPurchase purchase = new EtPurchase {
-                    PurchaseID = dr.GetInt32("purchaseID"),
-                    CategoryID = dr.GetInt32("categoryID"),
-                    PurchaseDate = dr["purchaseDate"] is DBNull ? null : dr.GetString("purchaseDate"),
-                    Quantity = dr["quantity"] is DBNull ? 0 : dr.GetInt32("quantity"),
-                    Cost = dr["cost"] is DBNull ? 0 : dr.GetInt32("cost"),
-                    StaffID = dr.GetInt32("staffID")
-                };
-                purchases.Add(purchase);
+            try
+            {
+                while (dr.Read())
+                {
+                    EtPurchase purchase = new EtPurchase
+                    {
+                        PurchaseID = dr.GetInt32("purchaseID"),
+                        CategoryID = dr.GetInt32("categoryID"),
+                        PurchaseDate = dr["purchaseDate"] is DBNull ? null : dr.GetString("purchaseDate"),
+                        Quantity = dr["quantity"] is DBNull ? 0 : dr.GetInt32("quantity"),
+                        Cost = dr["cost"] is DBNull ? 0 : dr.GetInt32("cost"),
+                        StaffID = dr.GetInt32("staffID")
+                    };
+                    purchases.Add(purchase);
+                }
+            }catch(Exception e)
+            {
+                Console.WriteLine(e.ToString());
             }
             return purchases;
         }

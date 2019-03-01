@@ -94,17 +94,26 @@ namespace GoodManagerSys.Dao {
         }
         private static List<EtGood> GetListByDataReader(MySqlDataReader dr) {
             List<EtGood> goods = new List<EtGood>();
-            while (dr.Read()) {
-                EtGood good = new EtGood {
-                    GoodID = dr.GetInt32("goodID"),
-                    CategoryID = dr.GetInt32("categoryID"),
-                    ProductionDate = dr["productionDate"] is DBNull ? null : dr.GetString("productionDate"),
-                    PurchaseDate = dr["purchaseDate"] is DBNull ? null : dr.GetString("purchaseDate"),
-                    Cost = dr["cost"] is DBNull ? 0 : dr.GetDouble("cost"),
-                    Price = dr["price"] is DBNull ? 0 : dr.GetDouble("price"),
-                    State = (EState)(dr["state"] is DBNull ? 0 : dr.GetInt32("state"))
-                };
-                goods.Add(good);
+            try
+            {
+                while (dr.Read())
+                {
+                    EtGood good = new EtGood
+                    {
+                        GoodID = dr.GetInt32("goodID"),
+                        CategoryID = dr.GetInt32("categoryID"),
+                        ProductionDate = dr["productionDate"] is DBNull ? null : dr.GetString("productionDate"),
+                        PurchaseDate = dr["purchaseDate"] is DBNull ? null : dr.GetString("purchaseDate"),
+                        Cost = dr["cost"] is DBNull ? 0 : dr.GetDouble("cost"),
+                        Price = dr["price"] is DBNull ? 0 : dr.GetDouble("price"),
+                        State = (EState)(dr["state"] is DBNull ? 0 : dr.GetInt32("state"))
+                    };
+                    goods.Add(good);
+                }
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.ToString());
             }
             return goods;
         }

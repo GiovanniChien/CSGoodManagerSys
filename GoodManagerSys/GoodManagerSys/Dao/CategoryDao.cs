@@ -112,21 +112,30 @@ namespace GoodManagerSys.Dao {
 
         private static List<EtCategory> GetListByDataReader(MySqlDataReader dr) {
             List<EtCategory> categories = new List<EtCategory>();
-            while (dr.Read()) {
-                EtCategory category = new EtCategory {
-                    CategoryID = dr.GetInt32("categoryID"),
-                    CategoryName = dr["categoryName"] is DBNull ? null : dr.GetString("categoryName"),
-                    ParentCategoryID = dr["parentCategoryID"] is DBNull ? ECategory.eUndefined : (ECategory)dr.GetInt16("parentCategoryID"),
-                    ParentCategoryName = dr["parentCategoryName"] is DBNull ? null : dr.GetString("parentCategoryName"),
-                    Unit = dr["unit"] is DBNull ? null : dr.GetString("unit"),
-                    Color = dr["color"] is DBNull ? null : dr.GetString("color"),
-                    Firm = dr["firm"] is DBNull ? null : dr.GetString("firm"),
-                    MinStock = dr["minStock"] is DBNull ? 0 : dr.GetInt32("minStock"),
-                    MaxStock = dr["maxStock"] is DBNull ? 0 : dr.GetInt32("maxStock"),
-                    ExpirationDate = dr["expirationDate"] is DBNull ? 0 : dr.GetInt32("expirationDate"),
-                    IsValid = dr["isValid"] is DBNull ? EValid.eDeleted : (EValid)dr.GetInt16("isValid")
-                };
-                categories.Add(category);
+            try
+            {
+                while (dr.Read())
+                {
+                    EtCategory category = new EtCategory
+                    {
+                        CategoryID = dr.GetInt32("categoryID"),
+                        CategoryName = dr["categoryName"] is DBNull ? null : dr.GetString("categoryName"),
+                        ParentCategoryID = dr["parentCategoryID"] is DBNull ? ECategory.eUndefined : (ECategory)dr.GetInt16("parentCategoryID"),
+                        ParentCategoryName = dr["parentCategoryName"] is DBNull ? null : dr.GetString("parentCategoryName"),
+                        Unit = dr["unit"] is DBNull ? null : dr.GetString("unit"),
+                        Color = dr["color"] is DBNull ? null : dr.GetString("color"),
+                        Firm = dr["firm"] is DBNull ? null : dr.GetString("firm"),
+                        MinStock = dr["minStock"] is DBNull ? 0 : dr.GetInt32("minStock"),
+                        MaxStock = dr["maxStock"] is DBNull ? 0 : dr.GetInt32("maxStock"),
+                        ExpirationDate = dr["expirationDate"] is DBNull ? 0 : dr.GetInt32("expirationDate"),
+                        IsValid = dr["isValid"] is DBNull ? EValid.eDeleted : (EValid)dr.GetInt16("isValid")
+                    };
+                    categories.Add(category);
+                }
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.ToString());
             }
             return categories;
         }
