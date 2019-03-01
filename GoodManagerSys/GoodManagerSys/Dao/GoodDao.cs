@@ -37,10 +37,10 @@ namespace GoodManagerSys.Dao {
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
-        public static List<EtGood> QueryByIsState(EState isState) {
+        public static List<EtGood> QueryByState(EState State) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM good WHERE isState = @isState";
-            MySqlParameter[] prams = { new MySqlParameter("@isState", isState) };
+            string sql = "SELECT * FROM good WHERE state = @State";
+            MySqlParameter[] prams = { new MySqlParameter("@State", State) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
@@ -49,27 +49,46 @@ namespace GoodManagerSys.Dao {
             if (goods.Count > 0) return -1;
             DBHelper helper = new DBHelper();
             string sql = "INSERT INTO " +
-                "good(categoryID,productionDate,purchaseDate,cost,price,isState) " +
-                "VALUE(@categoryID,@productionDate,@purchaseDate,@cost,@price,@isState)";
+                "good(categoryID,productionDate,purchaseDate,cost,price,state) " +
+                "VALUE(@categoryID,@productionDate,@purchaseDate,@cost,@price,@state)";
             MySqlParameter[] prams = {
                 new MySqlParameter("@categoryID",good.CategoryID),
-                new MySqlParameter("@productionDate",good.ProductionDate),
-                new MySqlParameter("@purchaseDate",good.PurchaseDate),
+                new MySqlParameter("@productionDate",good.ProductionDate??(object)DBNull.Value),
+                new MySqlParameter("@purchaseDate",good.PurchaseDate??(object)DBNull.Value),
                 new MySqlParameter("@cost",good.Cost),
                 new MySqlParameter("@price",good.Price),
-                new MySqlParameter("@isState",good.IsState)
+                new MySqlParameter("@state",good.State)
             };
             return helper.RunNonQuerySQL(sql, prams); ;
         }
         public static int DeleteByGoodID(int goodID) {
             List<EtGood> goods = QueryByGoodID(goodID);
             if (goods.Count == 0) return -1;
-            if (goods[0].IsState == EState.ePrePutaway) return -2;
+            if (goods[0].State == EState.ePrePutaway) return -2;
             DBHelper helper = new DBHelper();
-            string sql = "UPDATE good SET isState = @isState WHERE goodID = @goodID;";
+            string sql = "UPDATE good SET state = @state WHERE goodID = @goodID;";
             MySqlParameter[] prams = {
-                new MySqlParameter("@isState",EState.ePrePutaway),
+                new MySqlParameter("@state",EState.ePrePutaway),
                 new MySqlParameter("@goodID",goodID)
+            };
+            return helper.RunNonQuerySQL(sql, prams);
+        }
+        public static int UpdateGood(EtGood good)
+        {
+            List<EtGood> goods = QueryByGoodID(good.GoodID);
+            if (goods.Count == 0) return -1;
+            DBHelper helper = new DBHelper();
+            string sql = "UPDATE good SET categoryID = @CategoryID, " +
+                "productionDate = @ProductionDate, purchaseDate = @PurchaseDate, cost = @Cost, " +
+                "price = @price, state = @state WHERE goodID = @goodID";
+            MySqlParameter[] prams = {
+                new MySqlParameter("@categoryID",good.CategoryID),
+                new MySqlParameter("@productionDate",good.ProductionDate??(object)DBNull.Value),
+                new MySqlParameter("@purchaseDate",good.PurchaseDate??(object)DBNull.Value),
+                new MySqlParameter("@cost",good.Cost),
+                new MySqlParameter("@price",good.Price),
+                new MySqlParameter("@state",good.State),
+                new MySqlParameter("@goodID",good.GoodID)
             };
             return helper.RunNonQuerySQL(sql, prams);
         }
@@ -83,7 +102,7 @@ namespace GoodManagerSys.Dao {
                     PurchaseDate = dr["purchaseDate"] is DBNull ? null : dr.GetString("purchaseDate"),
                     Cost = dr["cost"] is DBNull ? 0 : dr.GetDouble("cost"),
                     Price = dr["price"] is DBNull ? 0 : dr.GetDouble("price"),
-                    IsState = (EState)(dr["isState"] is DBNull ? 0 : dr.GetInt32("isState"))
+                    State = (EState)(dr["state"] is DBNull ? 0 : dr.GetInt32("state"))
                 };
                 goods.Add(good);
             }
