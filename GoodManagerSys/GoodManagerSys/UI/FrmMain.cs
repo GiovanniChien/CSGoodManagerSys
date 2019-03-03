@@ -18,26 +18,31 @@ namespace GoodManagerSys {
             TlpMainMenu.Visible = false;
             TlpStaffMenu.Visible = true;
             TlpStaffSubmenu.Visible = true;
+            TlpMsMenu.Visible = true;
         }
 
         private void BtnWarehouse_Click(object sender, EventArgs e) {
             TlpMainMenu.Visible = false;
             TlpWarehouseMenu.Visible = true;
+            TlpMsMenu.Visible = false;
         }
 
         private void BtnSale_Click(object sender, EventArgs e) {
             TlpMainMenu.Visible = false;
             TlpSaleMenu.Visible = true;
+            TlpMsMenu.Visible = false;
         }
 
         private void BtnMembership_Click(object sender, EventArgs e) {
             TlpMainMenu.Visible = false;
+            TlpMembershipMenu.Visible = true;
             TlpMsMenu.Visible = true;
         }
 
         private void BtnTable_Click(object sender, EventArgs e) {
             TlpMainMenu.Visible = false;
             TlpTableMenu.Visible = true;
+            TlpMsMenu.Visible = false;
         }
 
         private void BtnStaffBack_Click(object sender, EventArgs e) {
@@ -49,15 +54,19 @@ namespace GoodManagerSys {
         private void BtnWarehouseBack_Click(object sender, EventArgs e) {
             TlpWarehouseMenu.Visible = false;
             TlpMainMenu.Visible = true;
+            TlpWarehouseSubmenu.Visible = false;
+            TlpIncomeEmptyMenu.Visible = false;
         }
 
         private void BtnSaleBack_Click(object sender, EventArgs e) {
             TlpSaleMenu.Visible = false;
             TlpMainMenu.Visible = true;
+            TlpSaleEmptyMenu.Visible = false;
+            TlpSaleSearchMenu.Visible = true;
         }
 
         private void BtnMsBack_Click(object sender, EventArgs e) {
-            TlpMsMenu.Visible = false;
+            TlpMembershipMenu.Visible = false;
             TlpMainMenu.Visible = true;
         }
 
@@ -67,10 +76,7 @@ namespace GoodManagerSys {
         }
 
         private void BtnExit_Click(object sender, EventArgs e) {
-            FrmLogin frmLogin = new FrmLogin();
-            this.Hide();
-            frmLogin.ShowDialog();
-            this.Close();
+            Application.Exit();
         }
 
         private void BtnStaffInsert_Click(object sender, EventArgs e) {
@@ -84,11 +90,14 @@ namespace GoodManagerSys {
         private void BtnGoodIncome_Click(object sender, EventArgs e) {
             TlpWarehouseMenu.Visible = false;
             TlpWarehouseSSubmenu.Visible = true;
+            TlpWarehouseSubmenu.Visible = false;
+            TlpIncomeEmptyMenu.Visible = true;
         }
 
         private void BtnWarehouseSubmenu_Click(object sender, EventArgs e) {
             TlpWarehouseSSubmenu.Visible = false;
             TlpWarehouseMenu.Visible = true;
+            TlpIncomeEmptyMenu.Visible = false;
         }
 
         private void BtnStaffUpdate_Click(object sender, EventArgs e) {
@@ -113,13 +122,33 @@ namespace GoodManagerSys {
         }
 
         private void BtnGoodManager_Click(object sender, EventArgs e) {
-            if (TlpWarehouseSubmenu.Visible == false)
-                TlpWarehouseSubmenu.Visible = true;
-            //读取
+            TlpIncomeEmptyMenu.Visible = false;
+            TlpWarehouseSubmenu.Visible = true;
+            //刷新数据
         }
 
         private void BtnSaleGood_Click(object sender, EventArgs e) {
+            TlpSaleEmptyMenu.Visible = true;
+            TlpSaleSearchMenu.Visible = false;
             //FrmSaleInsert
+        }
+
+        private void BtnWareSearch_Click(object sender, EventArgs e) {
+            TlpIncomeEmptyMenu.Visible = false;
+            TlpWarehouseSubmenu.Visible = true;
+            //按isValid==EExist查询
+        }
+
+        private void BtnWarehouseWarning_Click(object sender, EventArgs e) {
+            TlpIncomeEmptyMenu.Visible = false;
+                TlpWarehouseSubmenu.Visible = true;
+            //按数量<minStock查询
+        }
+
+        private void BtnSaleSearch_Click(object sender, EventArgs e) {
+            TlpSaleEmptyMenu.Visible = false;
+            TlpSaleSearchMenu.Visible = true;
+            //刷新数据
         }
     }
 }
