@@ -61,12 +61,30 @@
             this.BtnSaleGood = new System.Windows.Forms.Button();
             this.BtnSaleSearch = new System.Windows.Forms.Button();
             this.TlpMainMenu = new System.Windows.Forms.TableLayoutPanel();
+            this.BtnStaff = new System.Windows.Forms.Button();
+            this.BtnWarehouse = new System.Windows.Forms.Button();
+            this.BtnSale = new System.Windows.Forms.Button();
+            this.BtnMembership = new System.Windows.Forms.Button();
+            this.BtnTable = new System.Windows.Forms.Button();
+            this.BtnExit = new System.Windows.Forms.Button();
             this.TlpWarehouseMenu = new System.Windows.Forms.TableLayoutPanel();
             this.BtnWarehouseBack = new System.Windows.Forms.Button();
             this.BtnGoodIncome = new System.Windows.Forms.Button();
             this.BtnGoodManager = new System.Windows.Forms.Button();
             this.BtnWarehouseWarning = new System.Windows.Forms.Button();
             this.BtnWareSearch = new System.Windows.Forms.Button();
+            this.TabProfit = new System.Windows.Forms.TabControl();
+            this.TapProfitBar = new System.Windows.Forms.TabPage();
+            this.TapProfitLine = new System.Windows.Forms.TabPage();
+            this.TapProfitPie = new System.Windows.Forms.TabPage();
+            this.TabSale = new System.Windows.Forms.TabControl();
+            this.TapSaleBar = new System.Windows.Forms.TabPage();
+            this.TapSaleLine = new System.Windows.Forms.TabPage();
+            this.TapSalePie = new System.Windows.Forms.TabPage();
+            this.TabPurchase = new System.Windows.Forms.TabControl();
+            this.TapPurchaseBar = new System.Windows.Forms.TabPage();
+            this.TapPurchaseLine = new System.Windows.Forms.TabPage();
+            this.TapPurchasePie = new System.Windows.Forms.TabPage();
             this.TlpMsMenu = new System.Windows.Forms.TableLayoutPanel();
             this.TlpMsControllerMenu = new System.Windows.Forms.TableLayoutPanel();
             this.button4 = new System.Windows.Forms.Button();
@@ -105,30 +123,12 @@
             this.BtnStaffCancel = new System.Windows.Forms.Button();
             this.BtnStaffSubmit = new System.Windows.Forms.Button();
             this.TlpStaffControllerMenu = new System.Windows.Forms.TableLayoutPanel();
-            this.DgvStaffData = new System.Windows.Forms.DataGridView();
             this.BtnStaffInsert = new System.Windows.Forms.Button();
             this.BtnStaffUpdate = new System.Windows.Forms.Button();
             this.TxtStaffSearch = new System.Windows.Forms.TextBox();
             this.BtnStaffSearch = new System.Windows.Forms.Button();
             this.BtnStaffDelete = new System.Windows.Forms.Button();
-            this.TabPurchase = new System.Windows.Forms.TabControl();
-            this.TapPurchaseBar = new System.Windows.Forms.TabPage();
-            this.TapPurchaseLine = new System.Windows.Forms.TabPage();
-            this.BtnStaff = new System.Windows.Forms.Button();
-            this.BtnWarehouse = new System.Windows.Forms.Button();
-            this.BtnSale = new System.Windows.Forms.Button();
-            this.BtnMembership = new System.Windows.Forms.Button();
-            this.BtnTable = new System.Windows.Forms.Button();
-            this.BtnExit = new System.Windows.Forms.Button();
-            this.TapPurchasePie = new System.Windows.Forms.TabPage();
-            this.TabSale = new System.Windows.Forms.TabControl();
-            this.TapSaleBar = new System.Windows.Forms.TabPage();
-            this.TapSaleLine = new System.Windows.Forms.TabPage();
-            this.TapSalePie = new System.Windows.Forms.TabPage();
-            this.TabProfit = new System.Windows.Forms.TabControl();
-            this.TapProfitBar = new System.Windows.Forms.TabPage();
-            this.TapProfitLine = new System.Windows.Forms.TabPage();
-            this.TapProfitPie = new System.Windows.Forms.TabPage();
+            this.DgvStaffData = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.SplMainInterface)).BeginInit();
             this.SplMainInterface.Panel1.SuspendLayout();
             this.SplMainInterface.Panel2.SuspendLayout();
@@ -137,6 +137,9 @@
             this.TlpSaleMenu.SuspendLayout();
             this.TlpMainMenu.SuspendLayout();
             this.TlpWarehouseMenu.SuspendLayout();
+            this.TabProfit.SuspendLayout();
+            this.TabSale.SuspendLayout();
+            this.TabPurchase.SuspendLayout();
             this.TlpMsMenu.SuspendLayout();
             this.TlpMsControllerMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvMembership)).BeginInit();
@@ -158,9 +161,6 @@
             this.TlpStaffSubmitMenu.SuspendLayout();
             this.TlpStaffControllerMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvStaffData)).BeginInit();
-            this.TabPurchase.SuspendLayout();
-            this.TabSale.SuspendLayout();
-            this.TabProfit.SuspendLayout();
             this.SuspendLayout();
             // 
             // Column1
@@ -334,7 +334,7 @@
             this.TlpTableMenu.Controls.Add(this.BtnSaleTable, 0, 1);
             this.TlpTableMenu.Controls.Add(this.BtnProfitTable, 0, 2);
             this.TlpTableMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.TlpTableMenu.Location = new System.Drawing.Point(244, 0);
+            this.TlpTableMenu.Location = new System.Drawing.Point(247, 0);
             this.TlpTableMenu.Name = "TlpTableMenu";
             this.TlpTableMenu.RowCount = 5;
             this.TlpTableMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66882F));
@@ -342,16 +342,20 @@
             this.TlpTableMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66882F));
             this.TlpTableMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33236F));
             this.TlpTableMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66118F));
-            this.TlpTableMenu.Size = new System.Drawing.Size(50, 410);
+            this.TlpTableMenu.Size = new System.Drawing.Size(82, 410);
             this.TlpTableMenu.TabIndex = 21;
             this.TlpTableMenu.Visible = false;
             // 
             // BtnTableBack
             // 
+            this.BtnTableBack.BackgroundImage = global::GoodManagerSys.Properties.Resources.Button;
+            this.BtnTableBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnTableBack.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnTableBack.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BtnTableBack.ForeColor = System.Drawing.Color.DodgerBlue;
             this.BtnTableBack.Location = new System.Drawing.Point(3, 343);
             this.BtnTableBack.Name = "BtnTableBack";
-            this.BtnTableBack.Size = new System.Drawing.Size(44, 64);
+            this.BtnTableBack.Size = new System.Drawing.Size(76, 64);
             this.BtnTableBack.TabIndex = 23;
             this.BtnTableBack.Text = "返回";
             this.BtnTableBack.UseVisualStyleBackColor = true;
@@ -359,10 +363,14 @@
             // 
             // BtnPurchaseTable
             // 
+            this.BtnPurchaseTable.BackgroundImage = global::GoodManagerSys.Properties.Resources.Button;
+            this.BtnPurchaseTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnPurchaseTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnPurchaseTable.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BtnPurchaseTable.ForeColor = System.Drawing.Color.DodgerBlue;
             this.BtnPurchaseTable.Location = new System.Drawing.Point(3, 3);
             this.BtnPurchaseTable.Name = "BtnPurchaseTable";
-            this.BtnPurchaseTable.Size = new System.Drawing.Size(44, 62);
+            this.BtnPurchaseTable.Size = new System.Drawing.Size(76, 62);
             this.BtnPurchaseTable.TabIndex = 0;
             this.BtnPurchaseTable.Text = "采购报表";
             this.BtnPurchaseTable.UseVisualStyleBackColor = true;
@@ -370,10 +378,14 @@
             // 
             // BtnSaleTable
             // 
+            this.BtnSaleTable.BackgroundImage = global::GoodManagerSys.Properties.Resources.Button;
+            this.BtnSaleTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnSaleTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnSaleTable.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BtnSaleTable.ForeColor = System.Drawing.Color.DodgerBlue;
             this.BtnSaleTable.Location = new System.Drawing.Point(3, 71);
             this.BtnSaleTable.Name = "BtnSaleTable";
-            this.BtnSaleTable.Size = new System.Drawing.Size(44, 62);
+            this.BtnSaleTable.Size = new System.Drawing.Size(76, 62);
             this.BtnSaleTable.TabIndex = 1;
             this.BtnSaleTable.Text = "销售报表";
             this.BtnSaleTable.UseVisualStyleBackColor = true;
@@ -381,10 +393,14 @@
             // 
             // BtnProfitTable
             // 
+            this.BtnProfitTable.BackgroundImage = global::GoodManagerSys.Properties.Resources.Button;
+            this.BtnProfitTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnProfitTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnProfitTable.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BtnProfitTable.ForeColor = System.Drawing.Color.DodgerBlue;
             this.BtnProfitTable.Location = new System.Drawing.Point(3, 139);
             this.BtnProfitTable.Name = "BtnProfitTable";
-            this.BtnProfitTable.Size = new System.Drawing.Size(44, 62);
+            this.BtnProfitTable.Size = new System.Drawing.Size(76, 62);
             this.BtnProfitTable.TabIndex = 2;
             this.BtnProfitTable.Text = "营收报表";
             this.BtnProfitTable.UseVisualStyleBackColor = true;
@@ -399,23 +415,27 @@
             this.TlpSaleMenu.Controls.Add(this.BtnSaleGood, 0, 0);
             this.TlpSaleMenu.Controls.Add(this.BtnSaleSearch, 0, 1);
             this.TlpSaleMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.TlpSaleMenu.Location = new System.Drawing.Point(194, 0);
+            this.TlpSaleMenu.Location = new System.Drawing.Point(163, 0);
             this.TlpSaleMenu.Name = "TlpSaleMenu";
             this.TlpSaleMenu.RowCount = 4;
             this.TlpSaleMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66876F));
             this.TlpSaleMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66877F));
             this.TlpSaleMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.00185F));
             this.TlpSaleMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66062F));
-            this.TlpSaleMenu.Size = new System.Drawing.Size(50, 410);
+            this.TlpSaleMenu.Size = new System.Drawing.Size(84, 410);
             this.TlpSaleMenu.TabIndex = 19;
             this.TlpSaleMenu.Visible = false;
             // 
             // BtnSaleBack
             // 
+            this.BtnSaleBack.BackgroundImage = global::GoodManagerSys.Properties.Resources.Button;
+            this.BtnSaleBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnSaleBack.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnSaleBack.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BtnSaleBack.ForeColor = System.Drawing.Color.DodgerBlue;
             this.BtnSaleBack.Location = new System.Drawing.Point(3, 344);
             this.BtnSaleBack.Name = "BtnSaleBack";
-            this.BtnSaleBack.Size = new System.Drawing.Size(44, 63);
+            this.BtnSaleBack.Size = new System.Drawing.Size(78, 63);
             this.BtnSaleBack.TabIndex = 23;
             this.BtnSaleBack.Text = "返回";
             this.BtnSaleBack.UseVisualStyleBackColor = true;
@@ -423,10 +443,14 @@
             // 
             // BtnSaleGood
             // 
+            this.BtnSaleGood.BackgroundImage = global::GoodManagerSys.Properties.Resources.Button;
+            this.BtnSaleGood.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnSaleGood.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnSaleGood.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BtnSaleGood.ForeColor = System.Drawing.Color.DodgerBlue;
             this.BtnSaleGood.Location = new System.Drawing.Point(3, 3);
             this.BtnSaleGood.Name = "BtnSaleGood";
-            this.BtnSaleGood.Size = new System.Drawing.Size(44, 62);
+            this.BtnSaleGood.Size = new System.Drawing.Size(78, 62);
             this.BtnSaleGood.TabIndex = 0;
             this.BtnSaleGood.Text = "销售商品";
             this.BtnSaleGood.UseVisualStyleBackColor = true;
@@ -434,10 +458,14 @@
             // 
             // BtnSaleSearch
             // 
+            this.BtnSaleSearch.BackgroundImage = global::GoodManagerSys.Properties.Resources.Button;
+            this.BtnSaleSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnSaleSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnSaleSearch.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BtnSaleSearch.ForeColor = System.Drawing.Color.DodgerBlue;
             this.BtnSaleSearch.Location = new System.Drawing.Point(3, 71);
             this.BtnSaleSearch.Name = "BtnSaleSearch";
-            this.BtnSaleSearch.Size = new System.Drawing.Size(44, 62);
+            this.BtnSaleSearch.Size = new System.Drawing.Size(78, 62);
             this.BtnSaleSearch.TabIndex = 1;
             this.BtnSaleSearch.Text = "销售单查询";
             this.BtnSaleSearch.UseVisualStyleBackColor = true;
@@ -455,7 +483,7 @@
             this.TlpMainMenu.Controls.Add(this.BtnTable, 0, 4);
             this.TlpMainMenu.Controls.Add(this.BtnExit, 0, 5);
             this.TlpMainMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.TlpMainMenu.Location = new System.Drawing.Point(50, 0);
+            this.TlpMainMenu.Location = new System.Drawing.Point(83, 0);
             this.TlpMainMenu.Name = "TlpMainMenu";
             this.TlpMainMenu.RowCount = 6;
             this.TlpMainMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.67668F));
@@ -464,8 +492,81 @@
             this.TlpMainMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.67668F));
             this.TlpMainMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.67668F));
             this.TlpMainMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.61662F));
-            this.TlpMainMenu.Size = new System.Drawing.Size(144, 410);
+            this.TlpMainMenu.Size = new System.Drawing.Size(80, 410);
             this.TlpMainMenu.TabIndex = 18;
+            // 
+            // BtnStaff
+            // 
+            this.BtnStaff.AutoSize = true;
+            this.BtnStaff.BackgroundImage = global::GoodManagerSys.Properties.Resources.Staff;
+            this.BtnStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnStaff.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnStaff.Location = new System.Drawing.Point(3, 3);
+            this.BtnStaff.Name = "BtnStaff";
+            this.BtnStaff.Size = new System.Drawing.Size(74, 62);
+            this.BtnStaff.TabIndex = 0;
+            this.BtnStaff.UseVisualStyleBackColor = true;
+            this.BtnStaff.Click += new System.EventHandler(this.BtnStaff_Click);
+            // 
+            // BtnWarehouse
+            // 
+            this.BtnWarehouse.BackgroundImage = global::GoodManagerSys.Properties.Resources.Warehouse;
+            this.BtnWarehouse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnWarehouse.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnWarehouse.Location = new System.Drawing.Point(3, 71);
+            this.BtnWarehouse.Name = "BtnWarehouse";
+            this.BtnWarehouse.Size = new System.Drawing.Size(74, 62);
+            this.BtnWarehouse.TabIndex = 1;
+            this.BtnWarehouse.UseVisualStyleBackColor = true;
+            this.BtnWarehouse.Click += new System.EventHandler(this.BtnWarehouse_Click);
+            // 
+            // BtnSale
+            // 
+            this.BtnSale.BackgroundImage = global::GoodManagerSys.Properties.Resources.Sale;
+            this.BtnSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnSale.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnSale.Location = new System.Drawing.Point(3, 139);
+            this.BtnSale.Name = "BtnSale";
+            this.BtnSale.Size = new System.Drawing.Size(74, 62);
+            this.BtnSale.TabIndex = 2;
+            this.BtnSale.UseVisualStyleBackColor = true;
+            this.BtnSale.Click += new System.EventHandler(this.BtnSale_Click);
+            // 
+            // BtnMembership
+            // 
+            this.BtnMembership.BackgroundImage = global::GoodManagerSys.Properties.Resources.Membership;
+            this.BtnMembership.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnMembership.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnMembership.Location = new System.Drawing.Point(3, 207);
+            this.BtnMembership.Name = "BtnMembership";
+            this.BtnMembership.Size = new System.Drawing.Size(74, 62);
+            this.BtnMembership.TabIndex = 3;
+            this.BtnMembership.UseVisualStyleBackColor = true;
+            this.BtnMembership.Click += new System.EventHandler(this.BtnMembership_Click);
+            // 
+            // BtnTable
+            // 
+            this.BtnTable.BackgroundImage = global::GoodManagerSys.Properties.Resources.Table;
+            this.BtnTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnTable.Location = new System.Drawing.Point(3, 275);
+            this.BtnTable.Name = "BtnTable";
+            this.BtnTable.Size = new System.Drawing.Size(74, 62);
+            this.BtnTable.TabIndex = 4;
+            this.BtnTable.UseVisualStyleBackColor = true;
+            this.BtnTable.Click += new System.EventHandler(this.BtnTable_Click);
+            // 
+            // BtnExit
+            // 
+            this.BtnExit.BackgroundImage = global::GoodManagerSys.Properties.Resources.Exit;
+            this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnExit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnExit.Location = new System.Drawing.Point(3, 343);
+            this.BtnExit.Name = "BtnExit";
+            this.BtnExit.Size = new System.Drawing.Size(74, 64);
+            this.BtnExit.TabIndex = 5;
+            this.BtnExit.UseVisualStyleBackColor = true;
+            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // TlpWarehouseMenu
             // 
@@ -487,16 +588,20 @@
             this.TlpWarehouseMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66907F));
             this.TlpWarehouseMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66185F));
             this.TlpWarehouseMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66185F));
-            this.TlpWarehouseMenu.Size = new System.Drawing.Size(50, 410);
+            this.TlpWarehouseMenu.Size = new System.Drawing.Size(83, 410);
             this.TlpWarehouseMenu.TabIndex = 17;
             this.TlpWarehouseMenu.Visible = false;
             // 
             // BtnWarehouseBack
             // 
+            this.BtnWarehouseBack.BackgroundImage = global::GoodManagerSys.Properties.Resources.Button;
+            this.BtnWarehouseBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnWarehouseBack.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnWarehouseBack.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BtnWarehouseBack.ForeColor = System.Drawing.Color.DodgerBlue;
             this.BtnWarehouseBack.Location = new System.Drawing.Point(3, 343);
             this.BtnWarehouseBack.Name = "BtnWarehouseBack";
-            this.BtnWarehouseBack.Size = new System.Drawing.Size(44, 64);
+            this.BtnWarehouseBack.Size = new System.Drawing.Size(77, 64);
             this.BtnWarehouseBack.TabIndex = 23;
             this.BtnWarehouseBack.Text = "返回";
             this.BtnWarehouseBack.UseVisualStyleBackColor = true;
@@ -504,10 +609,14 @@
             // 
             // BtnGoodIncome
             // 
+            this.BtnGoodIncome.BackgroundImage = global::GoodManagerSys.Properties.Resources.Button;
+            this.BtnGoodIncome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnGoodIncome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnGoodIncome.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BtnGoodIncome.ForeColor = System.Drawing.Color.DodgerBlue;
             this.BtnGoodIncome.Location = new System.Drawing.Point(3, 3);
             this.BtnGoodIncome.Name = "BtnGoodIncome";
-            this.BtnGoodIncome.Size = new System.Drawing.Size(44, 62);
+            this.BtnGoodIncome.Size = new System.Drawing.Size(77, 62);
             this.BtnGoodIncome.TabIndex = 0;
             this.BtnGoodIncome.Text = "入库";
             this.BtnGoodIncome.UseVisualStyleBackColor = true;
@@ -515,10 +624,14 @@
             // 
             // BtnGoodManager
             // 
+            this.BtnGoodManager.BackgroundImage = global::GoodManagerSys.Properties.Resources.Button;
+            this.BtnGoodManager.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnGoodManager.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnGoodManager.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BtnGoodManager.ForeColor = System.Drawing.Color.DodgerBlue;
             this.BtnGoodManager.Location = new System.Drawing.Point(3, 71);
             this.BtnGoodManager.Name = "BtnGoodManager";
-            this.BtnGoodManager.Size = new System.Drawing.Size(44, 62);
+            this.BtnGoodManager.Size = new System.Drawing.Size(77, 62);
             this.BtnGoodManager.TabIndex = 1;
             this.BtnGoodManager.Text = "商品管理";
             this.BtnGoodManager.UseVisualStyleBackColor = true;
@@ -526,10 +639,14 @@
             // 
             // BtnWarehouseWarning
             // 
+            this.BtnWarehouseWarning.BackgroundImage = global::GoodManagerSys.Properties.Resources.Button;
+            this.BtnWarehouseWarning.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnWarehouseWarning.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnWarehouseWarning.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BtnWarehouseWarning.ForeColor = System.Drawing.Color.DodgerBlue;
             this.BtnWarehouseWarning.Location = new System.Drawing.Point(3, 139);
             this.BtnWarehouseWarning.Name = "BtnWarehouseWarning";
-            this.BtnWarehouseWarning.Size = new System.Drawing.Size(44, 62);
+            this.BtnWarehouseWarning.Size = new System.Drawing.Size(77, 62);
             this.BtnWarehouseWarning.TabIndex = 2;
             this.BtnWarehouseWarning.Text = "库存预警";
             this.BtnWarehouseWarning.UseVisualStyleBackColor = true;
@@ -537,14 +654,144 @@
             // 
             // BtnWareSearch
             // 
+            this.BtnWareSearch.BackgroundImage = global::GoodManagerSys.Properties.Resources.Button;
+            this.BtnWareSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BtnWareSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnWareSearch.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.BtnWareSearch.ForeColor = System.Drawing.Color.DodgerBlue;
             this.BtnWareSearch.Location = new System.Drawing.Point(3, 207);
             this.BtnWareSearch.Name = "BtnWareSearch";
-            this.BtnWareSearch.Size = new System.Drawing.Size(44, 62);
+            this.BtnWareSearch.Size = new System.Drawing.Size(77, 62);
             this.BtnWareSearch.TabIndex = 3;
             this.BtnWareSearch.Text = "库存查询";
             this.BtnWareSearch.UseVisualStyleBackColor = true;
             this.BtnWareSearch.Click += new System.EventHandler(this.BtnWareSearch_Click);
+            // 
+            // TabProfit
+            // 
+            this.TabProfit.Controls.Add(this.TapProfitBar);
+            this.TabProfit.Controls.Add(this.TapProfitLine);
+            this.TabProfit.Controls.Add(this.TapProfitPie);
+            this.TabProfit.Location = new System.Drawing.Point(474, 298);
+            this.TabProfit.Name = "TabProfit";
+            this.TabProfit.SelectedIndex = 0;
+            this.TabProfit.Size = new System.Drawing.Size(200, 100);
+            this.TabProfit.TabIndex = 8;
+            this.TabProfit.Visible = false;
+            // 
+            // TapProfitBar
+            // 
+            this.TapProfitBar.Location = new System.Drawing.Point(4, 22);
+            this.TapProfitBar.Name = "TapProfitBar";
+            this.TapProfitBar.Padding = new System.Windows.Forms.Padding(3);
+            this.TapProfitBar.Size = new System.Drawing.Size(192, 74);
+            this.TapProfitBar.TabIndex = 1;
+            this.TapProfitBar.Text = "柱状图";
+            this.TapProfitBar.UseVisualStyleBackColor = true;
+            // 
+            // TapProfitLine
+            // 
+            this.TapProfitLine.Location = new System.Drawing.Point(4, 22);
+            this.TapProfitLine.Name = "TapProfitLine";
+            this.TapProfitLine.Padding = new System.Windows.Forms.Padding(3);
+            this.TapProfitLine.Size = new System.Drawing.Size(192, 74);
+            this.TapProfitLine.TabIndex = 2;
+            this.TapProfitLine.Text = "折线图";
+            this.TapProfitLine.UseVisualStyleBackColor = true;
+            // 
+            // TapProfitPie
+            // 
+            this.TapProfitPie.Location = new System.Drawing.Point(4, 22);
+            this.TapProfitPie.Name = "TapProfitPie";
+            this.TapProfitPie.Padding = new System.Windows.Forms.Padding(3);
+            this.TapProfitPie.Size = new System.Drawing.Size(192, 74);
+            this.TapProfitPie.TabIndex = 3;
+            this.TapProfitPie.Text = "饼图";
+            this.TapProfitPie.UseVisualStyleBackColor = true;
+            // 
+            // TabSale
+            // 
+            this.TabSale.Controls.Add(this.TapSaleBar);
+            this.TabSale.Controls.Add(this.TapSaleLine);
+            this.TabSale.Controls.Add(this.TapSalePie);
+            this.TabSale.Location = new System.Drawing.Point(479, 156);
+            this.TabSale.Name = "TabSale";
+            this.TabSale.SelectedIndex = 0;
+            this.TabSale.Size = new System.Drawing.Size(200, 100);
+            this.TabSale.TabIndex = 7;
+            this.TabSale.Visible = false;
+            // 
+            // TapSaleBar
+            // 
+            this.TapSaleBar.Location = new System.Drawing.Point(4, 22);
+            this.TapSaleBar.Name = "TapSaleBar";
+            this.TapSaleBar.Padding = new System.Windows.Forms.Padding(3);
+            this.TapSaleBar.Size = new System.Drawing.Size(192, 74);
+            this.TapSaleBar.TabIndex = 1;
+            this.TapSaleBar.Text = "柱状图";
+            this.TapSaleBar.UseVisualStyleBackColor = true;
+            // 
+            // TapSaleLine
+            // 
+            this.TapSaleLine.Location = new System.Drawing.Point(4, 22);
+            this.TapSaleLine.Name = "TapSaleLine";
+            this.TapSaleLine.Padding = new System.Windows.Forms.Padding(3);
+            this.TapSaleLine.Size = new System.Drawing.Size(192, 74);
+            this.TapSaleLine.TabIndex = 2;
+            this.TapSaleLine.Text = "折线图";
+            this.TapSaleLine.UseVisualStyleBackColor = true;
+            // 
+            // TapSalePie
+            // 
+            this.TapSalePie.Location = new System.Drawing.Point(4, 22);
+            this.TapSalePie.Name = "TapSalePie";
+            this.TapSalePie.Padding = new System.Windows.Forms.Padding(3);
+            this.TapSalePie.Size = new System.Drawing.Size(192, 74);
+            this.TapSalePie.TabIndex = 3;
+            this.TapSalePie.Text = "饼图";
+            this.TapSalePie.UseVisualStyleBackColor = true;
+            // 
+            // TabPurchase
+            // 
+            this.TabPurchase.Controls.Add(this.TapPurchaseBar);
+            this.TabPurchase.Controls.Add(this.TapPurchaseLine);
+            this.TabPurchase.Controls.Add(this.TapPurchasePie);
+            this.TabPurchase.Location = new System.Drawing.Point(474, 17);
+            this.TabPurchase.Name = "TabPurchase";
+            this.TabPurchase.SelectedIndex = 0;
+            this.TabPurchase.Size = new System.Drawing.Size(200, 100);
+            this.TabPurchase.TabIndex = 6;
+            this.TabPurchase.Visible = false;
+            // 
+            // TapPurchaseBar
+            // 
+            this.TapPurchaseBar.Location = new System.Drawing.Point(4, 22);
+            this.TapPurchaseBar.Name = "TapPurchaseBar";
+            this.TapPurchaseBar.Padding = new System.Windows.Forms.Padding(3);
+            this.TapPurchaseBar.Size = new System.Drawing.Size(192, 74);
+            this.TapPurchaseBar.TabIndex = 1;
+            this.TapPurchaseBar.Text = "柱状图";
+            this.TapPurchaseBar.UseVisualStyleBackColor = true;
+            // 
+            // TapPurchaseLine
+            // 
+            this.TapPurchaseLine.Location = new System.Drawing.Point(4, 22);
+            this.TapPurchaseLine.Name = "TapPurchaseLine";
+            this.TapPurchaseLine.Padding = new System.Windows.Forms.Padding(3);
+            this.TapPurchaseLine.Size = new System.Drawing.Size(192, 74);
+            this.TapPurchaseLine.TabIndex = 2;
+            this.TapPurchaseLine.Text = "折线图";
+            this.TapPurchaseLine.UseVisualStyleBackColor = true;
+            // 
+            // TapPurchasePie
+            // 
+            this.TapPurchasePie.Location = new System.Drawing.Point(4, 22);
+            this.TapPurchasePie.Name = "TapPurchasePie";
+            this.TapPurchasePie.Padding = new System.Windows.Forms.Padding(3);
+            this.TapPurchasePie.Size = new System.Drawing.Size(192, 74);
+            this.TapPurchasePie.TabIndex = 3;
+            this.TapPurchasePie.Text = "饼图";
+            this.TapPurchasePie.UseVisualStyleBackColor = true;
             // 
             // TlpMsMenu
             // 
@@ -552,7 +799,7 @@
             this.TlpMsMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TlpMsMenu.Controls.Add(this.TlpMsControllerMenu, 0, 0);
             this.TlpMsMenu.Controls.Add(this.DgvMembership, 0, 1);
-            this.TlpMsMenu.Location = new System.Drawing.Point(183, 199);
+            this.TlpMsMenu.Location = new System.Drawing.Point(187, 241);
             this.TlpMsMenu.Name = "TlpMsMenu";
             this.TlpMsMenu.RowCount = 2;
             this.TlpMsMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41F));
@@ -636,7 +883,7 @@
             this.TlpSaleSearchMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.TlpSaleSearchMenu.Controls.Add(this.DgvSaleResult, 0, 0);
             this.TlpSaleSearchMenu.Controls.Add(this.DgvGoodInfo, 0, 1);
-            this.TlpSaleSearchMenu.Location = new System.Drawing.Point(269, 100);
+            this.TlpSaleSearchMenu.Location = new System.Drawing.Point(269, 129);
             this.TlpSaleSearchMenu.Name = "TlpSaleSearchMenu";
             this.TlpSaleSearchMenu.RowCount = 2;
             this.TlpSaleSearchMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -672,7 +919,7 @@
             this.TlpSaleEmptyMenu.Controls.Add(this.TlpSaleSubmitMenu, 0, 2);
             this.TlpSaleEmptyMenu.Controls.Add(this.BtnSaleInsert, 0, 0);
             this.TlpSaleEmptyMenu.Controls.Add(this.DgvSaleInsert, 0, 1);
-            this.TlpSaleEmptyMenu.Location = new System.Drawing.Point(269, 0);
+            this.TlpSaleEmptyMenu.Location = new System.Drawing.Point(272, 17);
             this.TlpSaleEmptyMenu.Name = "TlpSaleEmptyMenu";
             this.TlpSaleEmptyMenu.RowCount = 3;
             this.TlpSaleEmptyMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.13044F));
@@ -744,7 +991,7 @@
             this.TlpIncomeEmptyMenu.Controls.Add(this.TlpIncomeSubmitMenu, 0, 2);
             this.TlpIncomeEmptyMenu.Controls.Add(this.TlpIncomeControllerMenu, 0, 0);
             this.TlpIncomeEmptyMenu.Controls.Add(this.DgvCategoryInsert, 0, 1);
-            this.TlpIncomeEmptyMenu.Location = new System.Drawing.Point(3, 231);
+            this.TlpIncomeEmptyMenu.Location = new System.Drawing.Point(6, 275);
             this.TlpIncomeEmptyMenu.Name = "TlpIncomeEmptyMenu";
             this.TlpIncomeEmptyMenu.RowCount = 3;
             this.TlpIncomeEmptyMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.10526F));
@@ -841,7 +1088,7 @@
             this.TlpWarehouseSubmenu.Controls.Add(this.DgvWarehouseData, 0, 1);
             this.TlpWarehouseSubmenu.Controls.Add(this.TlpWarehouseSubmitMenu, 0, 2);
             this.TlpWarehouseSubmenu.Controls.Add(this.TlpWarehouseControllerMenu, 0, 0);
-            this.TlpWarehouseSubmenu.Location = new System.Drawing.Point(3, 123);
+            this.TlpWarehouseSubmenu.Location = new System.Drawing.Point(6, 139);
             this.TlpWarehouseSubmenu.Name = "TlpWarehouseSubmenu";
             this.TlpWarehouseSubmenu.RowCount = 3;
             this.TlpWarehouseSubmenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.57143F));
@@ -903,7 +1150,7 @@
             this.TlpWarehouseControllerMenu.ColumnCount = 3;
             this.TlpWarehouseControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.77483F));
             this.TlpWarehouseControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.22517F));
-            this.TlpWarehouseControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.TlpWarehouseControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 51F));
             this.TlpWarehouseControllerMenu.Controls.Add(this.BtnWarehouseSearch, 0, 0);
             this.TlpWarehouseControllerMenu.Controls.Add(this.TxtWarehouseSearch, 0, 0);
             this.TlpWarehouseControllerMenu.Controls.Add(this.BtnWarehouseUpdate, 0, 0);
@@ -917,9 +1164,9 @@
             // BtnWarehouseSearch
             // 
             this.BtnWarehouseSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnWarehouseSearch.Location = new System.Drawing.Point(129, 3);
+            this.BtnWarehouseSearch.Location = new System.Drawing.Point(123, 3);
             this.BtnWarehouseSearch.Name = "BtnWarehouseSearch";
-            this.BtnWarehouseSearch.Size = new System.Drawing.Size(40, 22);
+            this.BtnWarehouseSearch.Size = new System.Drawing.Size(46, 22);
             this.BtnWarehouseSearch.TabIndex = 6;
             this.BtnWarehouseSearch.Text = "查询";
             this.BtnWarehouseSearch.UseVisualStyleBackColor = true;
@@ -927,9 +1174,9 @@
             // TxtWarehouseSearch
             // 
             this.TxtWarehouseSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TxtWarehouseSearch.Location = new System.Drawing.Point(45, 3);
+            this.TxtWarehouseSearch.Location = new System.Drawing.Point(43, 3);
             this.TxtWarehouseSearch.Name = "TxtWarehouseSearch";
-            this.TxtWarehouseSearch.Size = new System.Drawing.Size(78, 21);
+            this.TxtWarehouseSearch.Size = new System.Drawing.Size(74, 21);
             this.TxtWarehouseSearch.TabIndex = 5;
             // 
             // BtnWarehouseUpdate
@@ -937,7 +1184,7 @@
             this.BtnWarehouseUpdate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BtnWarehouseUpdate.Location = new System.Drawing.Point(3, 3);
             this.BtnWarehouseUpdate.Name = "BtnWarehouseUpdate";
-            this.BtnWarehouseUpdate.Size = new System.Drawing.Size(36, 22);
+            this.BtnWarehouseUpdate.Size = new System.Drawing.Size(34, 22);
             this.BtnWarehouseUpdate.TabIndex = 4;
             this.BtnWarehouseUpdate.Text = "修改";
             this.BtnWarehouseUpdate.UseVisualStyleBackColor = true;
@@ -949,7 +1196,7 @@
             this.TlpStaffMenu.Controls.Add(this.TlpStaffSubmitMenu, 0, 2);
             this.TlpStaffMenu.Controls.Add(this.TlpStaffControllerMenu, 0, 0);
             this.TlpStaffMenu.Controls.Add(this.DgvStaffData, 0, 1);
-            this.TlpStaffMenu.Location = new System.Drawing.Point(3, 3);
+            this.TlpStaffMenu.Location = new System.Drawing.Point(3, 12);
             this.TlpStaffMenu.Name = "TlpStaffMenu";
             this.TlpStaffMenu.RowCount = 3;
             this.TlpStaffMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.03798F));
@@ -1015,16 +1262,6 @@
             this.TlpStaffControllerMenu.Size = new System.Drawing.Size(260, 31);
             this.TlpStaffControllerMenu.TabIndex = 0;
             // 
-            // DgvStaffData
-            // 
-            this.DgvStaffData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvStaffData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvStaffData.Location = new System.Drawing.Point(3, 40);
-            this.DgvStaffData.Name = "DgvStaffData";
-            this.DgvStaffData.RowTemplate.Height = 23;
-            this.DgvStaffData.Size = new System.Drawing.Size(260, 43);
-            this.DgvStaffData.TabIndex = 1;
-            // 
             // BtnStaffInsert
             // 
             this.BtnStaffInsert.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1073,204 +1310,15 @@
             this.BtnStaffDelete.Text = "删除员工";
             this.BtnStaffDelete.UseVisualStyleBackColor = true;
             // 
-            // TabPurchase
+            // DgvStaffData
             // 
-            this.TabPurchase.Controls.Add(this.TapPurchaseBar);
-            this.TabPurchase.Controls.Add(this.TapPurchaseLine);
-            this.TabPurchase.Controls.Add(this.TapPurchasePie);
-            this.TabPurchase.Location = new System.Drawing.Point(478, 0);
-            this.TabPurchase.Name = "TabPurchase";
-            this.TabPurchase.SelectedIndex = 0;
-            this.TabPurchase.Size = new System.Drawing.Size(200, 100);
-            this.TabPurchase.TabIndex = 6;
-            this.TabPurchase.Visible = false;
-            // 
-            // TapPurchaseBar
-            // 
-            this.TapPurchaseBar.Location = new System.Drawing.Point(4, 22);
-            this.TapPurchaseBar.Name = "TapPurchaseBar";
-            this.TapPurchaseBar.Padding = new System.Windows.Forms.Padding(3);
-            this.TapPurchaseBar.Size = new System.Drawing.Size(192, 74);
-            this.TapPurchaseBar.TabIndex = 1;
-            this.TapPurchaseBar.Text = "柱状图";
-            this.TapPurchaseBar.UseVisualStyleBackColor = true;
-            // 
-            // TapPurchaseLine
-            // 
-            this.TapPurchaseLine.Location = new System.Drawing.Point(4, 22);
-            this.TapPurchaseLine.Name = "TapPurchaseLine";
-            this.TapPurchaseLine.Padding = new System.Windows.Forms.Padding(3);
-            this.TapPurchaseLine.Size = new System.Drawing.Size(192, 74);
-            this.TapPurchaseLine.TabIndex = 2;
-            this.TapPurchaseLine.Text = "折线图";
-            this.TapPurchaseLine.UseVisualStyleBackColor = true;
-            // 
-            // BtnStaff
-            // 
-            this.BtnStaff.AutoSize = true;
-            this.BtnStaff.BackgroundImage = global::GoodManagerSys.Properties.Resources.Staff;
-            this.BtnStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnStaff.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnStaff.Location = new System.Drawing.Point(3, 3);
-            this.BtnStaff.Name = "BtnStaff";
-            this.BtnStaff.Size = new System.Drawing.Size(138, 62);
-            this.BtnStaff.TabIndex = 0;
-            this.BtnStaff.UseVisualStyleBackColor = true;
-            this.BtnStaff.Click += new System.EventHandler(this.BtnStaff_Click);
-            // 
-            // BtnWarehouse
-            // 
-            this.BtnWarehouse.BackgroundImage = global::GoodManagerSys.Properties.Resources.Warehouse;
-            this.BtnWarehouse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnWarehouse.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnWarehouse.Location = new System.Drawing.Point(3, 71);
-            this.BtnWarehouse.Name = "BtnWarehouse";
-            this.BtnWarehouse.Size = new System.Drawing.Size(138, 62);
-            this.BtnWarehouse.TabIndex = 1;
-            this.BtnWarehouse.UseVisualStyleBackColor = true;
-            this.BtnWarehouse.Click += new System.EventHandler(this.BtnWarehouse_Click);
-            // 
-            // BtnSale
-            // 
-            this.BtnSale.BackgroundImage = global::GoodManagerSys.Properties.Resources.Sale;
-            this.BtnSale.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnSale.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnSale.Location = new System.Drawing.Point(3, 139);
-            this.BtnSale.Name = "BtnSale";
-            this.BtnSale.Size = new System.Drawing.Size(138, 62);
-            this.BtnSale.TabIndex = 2;
-            this.BtnSale.UseVisualStyleBackColor = true;
-            this.BtnSale.Click += new System.EventHandler(this.BtnSale_Click);
-            // 
-            // BtnMembership
-            // 
-            this.BtnMembership.BackgroundImage = global::GoodManagerSys.Properties.Resources.Membership;
-            this.BtnMembership.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnMembership.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnMembership.Location = new System.Drawing.Point(3, 207);
-            this.BtnMembership.Name = "BtnMembership";
-            this.BtnMembership.Size = new System.Drawing.Size(138, 62);
-            this.BtnMembership.TabIndex = 3;
-            this.BtnMembership.UseVisualStyleBackColor = true;
-            this.BtnMembership.Click += new System.EventHandler(this.BtnMembership_Click);
-            // 
-            // BtnTable
-            // 
-            this.BtnTable.BackgroundImage = global::GoodManagerSys.Properties.Resources.Table;
-            this.BtnTable.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnTable.Location = new System.Drawing.Point(3, 275);
-            this.BtnTable.Name = "BtnTable";
-            this.BtnTable.Size = new System.Drawing.Size(138, 62);
-            this.BtnTable.TabIndex = 4;
-            this.BtnTable.UseVisualStyleBackColor = true;
-            this.BtnTable.Click += new System.EventHandler(this.BtnTable_Click);
-            // 
-            // BtnExit
-            // 
-            this.BtnExit.BackgroundImage = global::GoodManagerSys.Properties.Resources.Exit;
-            this.BtnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnExit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnExit.Location = new System.Drawing.Point(3, 343);
-            this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(138, 64);
-            this.BtnExit.TabIndex = 5;
-            this.BtnExit.UseVisualStyleBackColor = true;
-            this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
-            // 
-            // TapPurchasePie
-            // 
-            this.TapPurchasePie.Location = new System.Drawing.Point(4, 22);
-            this.TapPurchasePie.Name = "TapPurchasePie";
-            this.TapPurchasePie.Padding = new System.Windows.Forms.Padding(3);
-            this.TapPurchasePie.Size = new System.Drawing.Size(192, 74);
-            this.TapPurchasePie.TabIndex = 3;
-            this.TapPurchasePie.Text = "饼图";
-            this.TapPurchasePie.UseVisualStyleBackColor = true;
-            // 
-            // TabSale
-            // 
-            this.TabSale.Controls.Add(this.TapSaleBar);
-            this.TabSale.Controls.Add(this.TapSaleLine);
-            this.TabSale.Controls.Add(this.TapSalePie);
-            this.TabSale.Location = new System.Drawing.Point(478, 129);
-            this.TabSale.Name = "TabSale";
-            this.TabSale.SelectedIndex = 0;
-            this.TabSale.Size = new System.Drawing.Size(200, 100);
-            this.TabSale.TabIndex = 7;
-            this.TabSale.Visible = false;
-            // 
-            // TapSaleBar
-            // 
-            this.TapSaleBar.Location = new System.Drawing.Point(4, 22);
-            this.TapSaleBar.Name = "TapSaleBar";
-            this.TapSaleBar.Padding = new System.Windows.Forms.Padding(3);
-            this.TapSaleBar.Size = new System.Drawing.Size(192, 74);
-            this.TapSaleBar.TabIndex = 1;
-            this.TapSaleBar.Text = "柱状图";
-            this.TapSaleBar.UseVisualStyleBackColor = true;
-            // 
-            // TapSaleLine
-            // 
-            this.TapSaleLine.Location = new System.Drawing.Point(4, 22);
-            this.TapSaleLine.Name = "TapSaleLine";
-            this.TapSaleLine.Padding = new System.Windows.Forms.Padding(3);
-            this.TapSaleLine.Size = new System.Drawing.Size(192, 74);
-            this.TapSaleLine.TabIndex = 2;
-            this.TapSaleLine.Text = "折线图";
-            this.TapSaleLine.UseVisualStyleBackColor = true;
-            // 
-            // TapSalePie
-            // 
-            this.TapSalePie.Location = new System.Drawing.Point(4, 22);
-            this.TapSalePie.Name = "TapSalePie";
-            this.TapSalePie.Padding = new System.Windows.Forms.Padding(3);
-            this.TapSalePie.Size = new System.Drawing.Size(192, 74);
-            this.TapSalePie.TabIndex = 3;
-            this.TapSalePie.Text = "饼图";
-            this.TapSalePie.UseVisualStyleBackColor = true;
-            // 
-            // TabProfit
-            // 
-            this.TabProfit.Controls.Add(this.TapProfitBar);
-            this.TabProfit.Controls.Add(this.TapProfitLine);
-            this.TabProfit.Controls.Add(this.TapProfitPie);
-            this.TabProfit.Location = new System.Drawing.Point(478, 252);
-            this.TabProfit.Name = "TabProfit";
-            this.TabProfit.SelectedIndex = 0;
-            this.TabProfit.Size = new System.Drawing.Size(200, 100);
-            this.TabProfit.TabIndex = 8;
-            this.TabProfit.Visible = false;
-            // 
-            // TapProfitBar
-            // 
-            this.TapProfitBar.Location = new System.Drawing.Point(4, 22);
-            this.TapProfitBar.Name = "TapProfitBar";
-            this.TapProfitBar.Padding = new System.Windows.Forms.Padding(3);
-            this.TapProfitBar.Size = new System.Drawing.Size(192, 74);
-            this.TapProfitBar.TabIndex = 1;
-            this.TapProfitBar.Text = "柱状图";
-            this.TapProfitBar.UseVisualStyleBackColor = true;
-            // 
-            // TapProfitLine
-            // 
-            this.TapProfitLine.Location = new System.Drawing.Point(4, 22);
-            this.TapProfitLine.Name = "TapProfitLine";
-            this.TapProfitLine.Padding = new System.Windows.Forms.Padding(3);
-            this.TapProfitLine.Size = new System.Drawing.Size(192, 74);
-            this.TapProfitLine.TabIndex = 2;
-            this.TapProfitLine.Text = "折线图";
-            this.TapProfitLine.UseVisualStyleBackColor = true;
-            // 
-            // TapProfitPie
-            // 
-            this.TapProfitPie.Location = new System.Drawing.Point(4, 22);
-            this.TapProfitPie.Name = "TapProfitPie";
-            this.TapProfitPie.Padding = new System.Windows.Forms.Padding(3);
-            this.TapProfitPie.Size = new System.Drawing.Size(192, 74);
-            this.TapProfitPie.TabIndex = 3;
-            this.TapProfitPie.Text = "饼图";
-            this.TapProfitPie.UseVisualStyleBackColor = true;
+            this.DgvStaffData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvStaffData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvStaffData.Location = new System.Drawing.Point(3, 40);
+            this.DgvStaffData.Name = "DgvStaffData";
+            this.DgvStaffData.RowTemplate.Height = 23;
+            this.DgvStaffData.Size = new System.Drawing.Size(260, 43);
+            this.DgvStaffData.TabIndex = 1;
             // 
             // FrmMain
             // 
@@ -1292,6 +1340,9 @@
             this.TlpMainMenu.ResumeLayout(false);
             this.TlpMainMenu.PerformLayout();
             this.TlpWarehouseMenu.ResumeLayout(false);
+            this.TabProfit.ResumeLayout(false);
+            this.TabSale.ResumeLayout(false);
+            this.TabPurchase.ResumeLayout(false);
             this.TlpMsMenu.ResumeLayout(false);
             this.TlpMsControllerMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvMembership)).EndInit();
@@ -1315,9 +1366,6 @@
             this.TlpStaffControllerMenu.ResumeLayout(false);
             this.TlpStaffControllerMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvStaffData)).EndInit();
-            this.TabPurchase.ResumeLayout(false);
-            this.TabSale.ResumeLayout(false);
-            this.TabProfit.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1424,5 +1472,6 @@
         private System.Windows.Forms.TabPage TapSaleLine;
         private System.Windows.Forms.TabPage TapSalePie;
         private System.Windows.Forms.TabPage TapPurchasePie;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

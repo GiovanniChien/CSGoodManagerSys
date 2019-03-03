@@ -258,5 +258,8 @@
   <ItemGroup>
     <None Include="Properties\Interface.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Button.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
