@@ -255,5 +255,8 @@
   <ItemGroup>
     <None Include="Properties\Warehouse.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Interface.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

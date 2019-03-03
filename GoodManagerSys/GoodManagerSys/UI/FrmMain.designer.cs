@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,118 +51,116 @@
             this.Column23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SplMainInterface = new System.Windows.Forms.SplitContainer();
-            this.TlpWarehouseSSubmenu = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnWarehouseSubmenu = new System.Windows.Forms.Button();
-            this.BtnSingleIncome = new System.Windows.Forms.Button();
-            this.BtnFileIncome = new System.Windows.Forms.Button();
             this.TlpTableMenu = new System.Windows.Forms.TableLayoutPanel();
             this.BtnTableBack = new System.Windows.Forms.Button();
             this.BtnPurchaseTable = new System.Windows.Forms.Button();
             this.BtnSaleTable = new System.Windows.Forms.Button();
             this.BtnProfitTable = new System.Windows.Forms.Button();
-            this.TlpMembershipMenu = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnMsBack = new System.Windows.Forms.Button();
-            this.BtnMsDelete = new System.Windows.Forms.Button();
-            this.BtnMsSignup = new System.Windows.Forms.Button();
-            this.BtnMsUpdate = new System.Windows.Forms.Button();
-            this.BtnMsPoint = new System.Windows.Forms.Button();
             this.TlpSaleMenu = new System.Windows.Forms.TableLayoutPanel();
             this.BtnSaleBack = new System.Windows.Forms.Button();
             this.BtnSaleGood = new System.Windows.Forms.Button();
             this.BtnSaleSearch = new System.Windows.Forms.Button();
             this.TlpMainMenu = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnStaff = new System.Windows.Forms.Button();
-            this.BtnWarehouse = new System.Windows.Forms.Button();
-            this.BtnSale = new System.Windows.Forms.Button();
-            this.BtnMembership = new System.Windows.Forms.Button();
-            this.BtnTable = new System.Windows.Forms.Button();
-            this.BtnExit = new System.Windows.Forms.Button();
             this.TlpWarehouseMenu = new System.Windows.Forms.TableLayoutPanel();
             this.BtnWarehouseBack = new System.Windows.Forms.Button();
             this.BtnGoodIncome = new System.Windows.Forms.Button();
             this.BtnGoodManager = new System.Windows.Forms.Button();
             this.BtnWarehouseWarning = new System.Windows.Forms.Button();
             this.BtnWareSearch = new System.Windows.Forms.Button();
-            this.TlpStaffMenu = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnStaffBack = new System.Windows.Forms.Button();
-            this.BtnStaffDelete = new System.Windows.Forms.Button();
-            this.BtnStaffInsert = new System.Windows.Forms.Button();
-            this.TlpStaffSubmenu = new System.Windows.Forms.TableLayoutPanel();
-            this.TlpStaffControllerMenu = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnStaffUpdate = new System.Windows.Forms.Button();
-            this.TxtStaffSearch = new System.Windows.Forms.TextBox();
-            this.BtnStaffSearch = new System.Windows.Forms.Button();
-            this.DgvStaffData = new System.Windows.Forms.DataGridView();
-            this.PicMainBackground = new System.Windows.Forms.PictureBox();
-            this.TlpWarehouseSubmitMenu = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnWarehouseSubmit = new System.Windows.Forms.Button();
-            this.BtnWarehouseCancel = new System.Windows.Forms.Button();
-            this.DgvWarehouseData = new System.Windows.Forms.DataGridView();
-            this.TlpWarehouseSubmenu = new System.Windows.Forms.TableLayoutPanel();
-            this.TlpWarehouseControllerMenu = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnWarehouseUpdate = new System.Windows.Forms.Button();
-            this.TxtWarehouseSearch = new System.Windows.Forms.TextBox();
-            this.BtnWarehouseSearch = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnStaffCancel = new System.Windows.Forms.Button();
-            this.BtnStaffSubmit = new System.Windows.Forms.Button();
-            this.TlpIncomeEmptyMenu = new System.Windows.Forms.TableLayoutPanel();
-            this.TlpIncomeControllerMenu = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnSIncome = new System.Windows.Forms.Button();
-            this.BtnFIncome = new System.Windows.Forms.Button();
-            this.DgvCategoryInsert = new System.Windows.Forms.DataGridView();
-            this.TlpIncomeSubmitMenu = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnIncomeCancel = new System.Windows.Forms.Button();
-            this.BtnIncomeSubmit = new System.Windows.Forms.Button();
-            this.TlpSaleEmptyMenu = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnSaleInsert = new System.Windows.Forms.Button();
-            this.DgvSaleInsert = new System.Windows.Forms.DataGridView();
-            this.TlpSaleSubmitMenu = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnSaleCancel = new System.Windows.Forms.Button();
-            this.BtnSaleSubmit = new System.Windows.Forms.Button();
+            this.TlpMsMenu = new System.Windows.Forms.TableLayoutPanel();
+            this.TlpMsControllerMenu = new System.Windows.Forms.TableLayoutPanel();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.DgvMembership = new System.Windows.Forms.DataGridView();
             this.TlpSaleSearchMenu = new System.Windows.Forms.TableLayoutPanel();
             this.DgvSaleResult = new System.Windows.Forms.DataGridView();
             this.DgvGoodInfo = new System.Windows.Forms.DataGridView();
-            this.TlpMsMenu = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.DgvMembership = new System.Windows.Forms.DataGridView();
+            this.TlpSaleEmptyMenu = new System.Windows.Forms.TableLayoutPanel();
+            this.TlpSaleSubmitMenu = new System.Windows.Forms.TableLayoutPanel();
+            this.BtnSaleCancel = new System.Windows.Forms.Button();
+            this.BtnSaleSubmit = new System.Windows.Forms.Button();
+            this.BtnSaleInsert = new System.Windows.Forms.Button();
+            this.DgvSaleInsert = new System.Windows.Forms.DataGridView();
+            this.TlpIncomeEmptyMenu = new System.Windows.Forms.TableLayoutPanel();
+            this.TlpIncomeSubmitMenu = new System.Windows.Forms.TableLayoutPanel();
+            this.BtnIncomeCancel = new System.Windows.Forms.Button();
+            this.BtnIncomeSubmit = new System.Windows.Forms.Button();
+            this.TlpIncomeControllerMenu = new System.Windows.Forms.TableLayoutPanel();
+            this.BtnFIncome = new System.Windows.Forms.Button();
+            this.BtnSIncome = new System.Windows.Forms.Button();
+            this.DgvCategoryInsert = new System.Windows.Forms.DataGridView();
+            this.TlpWarehouseSubmenu = new System.Windows.Forms.TableLayoutPanel();
+            this.DgvWarehouseData = new System.Windows.Forms.DataGridView();
+            this.TlpWarehouseSubmitMenu = new System.Windows.Forms.TableLayoutPanel();
+            this.BtnWarehouseCancel = new System.Windows.Forms.Button();
+            this.BtnWarehouseSubmit = new System.Windows.Forms.Button();
+            this.TlpWarehouseControllerMenu = new System.Windows.Forms.TableLayoutPanel();
+            this.BtnWarehouseSearch = new System.Windows.Forms.Button();
+            this.TxtWarehouseSearch = new System.Windows.Forms.TextBox();
+            this.BtnWarehouseUpdate = new System.Windows.Forms.Button();
+            this.TlpStaffMenu = new System.Windows.Forms.TableLayoutPanel();
+            this.TlpStaffSubmitMenu = new System.Windows.Forms.TableLayoutPanel();
+            this.BtnStaffCancel = new System.Windows.Forms.Button();
+            this.BtnStaffSubmit = new System.Windows.Forms.Button();
+            this.TlpStaffControllerMenu = new System.Windows.Forms.TableLayoutPanel();
+            this.DgvStaffData = new System.Windows.Forms.DataGridView();
+            this.BtnStaffInsert = new System.Windows.Forms.Button();
+            this.BtnStaffUpdate = new System.Windows.Forms.Button();
+            this.TxtStaffSearch = new System.Windows.Forms.TextBox();
+            this.BtnStaffSearch = new System.Windows.Forms.Button();
+            this.BtnStaffDelete = new System.Windows.Forms.Button();
+            this.TabPurchase = new System.Windows.Forms.TabControl();
+            this.TapPurchaseBar = new System.Windows.Forms.TabPage();
+            this.TapPurchaseLine = new System.Windows.Forms.TabPage();
+            this.BtnStaff = new System.Windows.Forms.Button();
+            this.BtnWarehouse = new System.Windows.Forms.Button();
+            this.BtnSale = new System.Windows.Forms.Button();
+            this.BtnMembership = new System.Windows.Forms.Button();
+            this.BtnTable = new System.Windows.Forms.Button();
+            this.BtnExit = new System.Windows.Forms.Button();
+            this.TapPurchasePie = new System.Windows.Forms.TabPage();
+            this.TabSale = new System.Windows.Forms.TabControl();
+            this.TapSaleBar = new System.Windows.Forms.TabPage();
+            this.TapSaleLine = new System.Windows.Forms.TabPage();
+            this.TapSalePie = new System.Windows.Forms.TabPage();
+            this.TabProfit = new System.Windows.Forms.TabControl();
+            this.TapProfitBar = new System.Windows.Forms.TabPage();
+            this.TapProfitLine = new System.Windows.Forms.TabPage();
+            this.TapProfitPie = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.SplMainInterface)).BeginInit();
             this.SplMainInterface.Panel1.SuspendLayout();
             this.SplMainInterface.Panel2.SuspendLayout();
             this.SplMainInterface.SuspendLayout();
-            this.TlpWarehouseSSubmenu.SuspendLayout();
             this.TlpTableMenu.SuspendLayout();
-            this.TlpMembershipMenu.SuspendLayout();
             this.TlpSaleMenu.SuspendLayout();
             this.TlpMainMenu.SuspendLayout();
             this.TlpWarehouseMenu.SuspendLayout();
-            this.TlpStaffMenu.SuspendLayout();
-            this.TlpStaffSubmenu.SuspendLayout();
-            this.TlpStaffControllerMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvStaffData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicMainBackground)).BeginInit();
-            this.TlpWarehouseSubmitMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvWarehouseData)).BeginInit();
-            this.TlpWarehouseSubmenu.SuspendLayout();
-            this.TlpWarehouseControllerMenu.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.TlpIncomeEmptyMenu.SuspendLayout();
-            this.TlpIncomeControllerMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvCategoryInsert)).BeginInit();
-            this.TlpIncomeSubmitMenu.SuspendLayout();
-            this.TlpSaleEmptyMenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvSaleInsert)).BeginInit();
-            this.TlpSaleSubmitMenu.SuspendLayout();
+            this.TlpMsMenu.SuspendLayout();
+            this.TlpMsControllerMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvMembership)).BeginInit();
             this.TlpSaleSearchMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvSaleResult)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvGoodInfo)).BeginInit();
-            this.TlpMsMenu.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvMembership)).BeginInit();
+            this.TlpSaleEmptyMenu.SuspendLayout();
+            this.TlpSaleSubmitMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvSaleInsert)).BeginInit();
+            this.TlpIncomeEmptyMenu.SuspendLayout();
+            this.TlpIncomeSubmitMenu.SuspendLayout();
+            this.TlpIncomeControllerMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvCategoryInsert)).BeginInit();
+            this.TlpWarehouseSubmenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvWarehouseData)).BeginInit();
+            this.TlpWarehouseSubmitMenu.SuspendLayout();
+            this.TlpWarehouseControllerMenu.SuspendLayout();
+            this.TlpStaffMenu.SuspendLayout();
+            this.TlpStaffSubmitMenu.SuspendLayout();
+            this.TlpStaffControllerMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvStaffData)).BeginInit();
+            this.TabPurchase.SuspendLayout();
+            this.TabSale.SuspendLayout();
+            this.TabProfit.SuspendLayout();
             this.SuspendLayout();
             // 
             // Column1
@@ -307,79 +304,25 @@
             // 
             // SplMainInterface.Panel1
             // 
-            this.SplMainInterface.Panel1.Controls.Add(this.TlpWarehouseSSubmenu);
             this.SplMainInterface.Panel1.Controls.Add(this.TlpTableMenu);
-            this.SplMainInterface.Panel1.Controls.Add(this.TlpMembershipMenu);
             this.SplMainInterface.Panel1.Controls.Add(this.TlpSaleMenu);
             this.SplMainInterface.Panel1.Controls.Add(this.TlpMainMenu);
             this.SplMainInterface.Panel1.Controls.Add(this.TlpWarehouseMenu);
-            this.SplMainInterface.Panel1.Controls.Add(this.TlpStaffMenu);
             // 
             // SplMainInterface.Panel2
             // 
+            this.SplMainInterface.Panel2.Controls.Add(this.TabProfit);
+            this.SplMainInterface.Panel2.Controls.Add(this.TabSale);
+            this.SplMainInterface.Panel2.Controls.Add(this.TabPurchase);
             this.SplMainInterface.Panel2.Controls.Add(this.TlpMsMenu);
             this.SplMainInterface.Panel2.Controls.Add(this.TlpSaleSearchMenu);
             this.SplMainInterface.Panel2.Controls.Add(this.TlpSaleEmptyMenu);
             this.SplMainInterface.Panel2.Controls.Add(this.TlpIncomeEmptyMenu);
             this.SplMainInterface.Panel2.Controls.Add(this.TlpWarehouseSubmenu);
-            this.SplMainInterface.Panel2.Controls.Add(this.TlpStaffSubmenu);
+            this.SplMainInterface.Panel2.Controls.Add(this.TlpStaffMenu);
             this.SplMainInterface.Size = new System.Drawing.Size(1031, 410);
-            this.SplMainInterface.SplitterDistance = 626;
+            this.SplMainInterface.SplitterDistance = 349;
             this.SplMainInterface.TabIndex = 15;
-            // 
-            // TlpWarehouseSSubmenu
-            // 
-            this.TlpWarehouseSSubmenu.BackColor = System.Drawing.Color.Transparent;
-            this.TlpWarehouseSSubmenu.ColumnCount = 1;
-            this.TlpWarehouseSSubmenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TlpWarehouseSSubmenu.Controls.Add(this.BtnWarehouseSubmenu, 0, 3);
-            this.TlpWarehouseSSubmenu.Controls.Add(this.BtnSingleIncome, 0, 0);
-            this.TlpWarehouseSSubmenu.Controls.Add(this.BtnFileIncome, 0, 1);
-            this.TlpWarehouseSSubmenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.TlpWarehouseSSubmenu.Location = new System.Drawing.Point(388, 0);
-            this.TlpWarehouseSSubmenu.Name = "TlpWarehouseSSubmenu";
-            this.TlpWarehouseSSubmenu.RowCount = 4;
-            this.TlpWarehouseSSubmenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66902F));
-            this.TlpWarehouseSSubmenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66902F));
-            this.TlpWarehouseSSubmenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.00059F));
-            this.TlpWarehouseSSubmenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66138F));
-            this.TlpWarehouseSSubmenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.TlpWarehouseSSubmenu.Size = new System.Drawing.Size(50, 410);
-            this.TlpWarehouseSSubmenu.TabIndex = 22;
-            this.TlpWarehouseSSubmenu.Visible = false;
-            // 
-            // BtnWarehouseSubmenu
-            // 
-            this.BtnWarehouseSubmenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnWarehouseSubmenu.Location = new System.Drawing.Point(3, 344);
-            this.BtnWarehouseSubmenu.Name = "BtnWarehouseSubmenu";
-            this.BtnWarehouseSubmenu.Size = new System.Drawing.Size(44, 63);
-            this.BtnWarehouseSubmenu.TabIndex = 23;
-            this.BtnWarehouseSubmenu.Text = "返回";
-            this.BtnWarehouseSubmenu.UseVisualStyleBackColor = true;
-            this.BtnWarehouseSubmenu.Click += new System.EventHandler(this.BtnWarehouseSubmenu_Click);
-            // 
-            // BtnSingleIncome
-            // 
-            this.BtnSingleIncome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnSingleIncome.Location = new System.Drawing.Point(3, 3);
-            this.BtnSingleIncome.Name = "BtnSingleIncome";
-            this.BtnSingleIncome.Size = new System.Drawing.Size(44, 62);
-            this.BtnSingleIncome.TabIndex = 0;
-            this.BtnSingleIncome.Text = "单例商品入库";
-            this.BtnSingleIncome.UseVisualStyleBackColor = true;
-            this.BtnSingleIncome.Click += new System.EventHandler(this.BtnSingleIncome_Click);
-            // 
-            // BtnFileIncome
-            // 
-            this.BtnFileIncome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnFileIncome.Location = new System.Drawing.Point(3, 71);
-            this.BtnFileIncome.Name = "BtnFileIncome";
-            this.BtnFileIncome.Size = new System.Drawing.Size(44, 62);
-            this.BtnFileIncome.TabIndex = 1;
-            this.BtnFileIncome.Text = "批量入库";
-            this.BtnFileIncome.UseVisualStyleBackColor = true;
-            this.BtnFileIncome.Click += new System.EventHandler(this.BtnFileIncome_Click);
             // 
             // TlpTableMenu
             // 
@@ -391,7 +334,7 @@
             this.TlpTableMenu.Controls.Add(this.BtnSaleTable, 0, 1);
             this.TlpTableMenu.Controls.Add(this.BtnProfitTable, 0, 2);
             this.TlpTableMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.TlpTableMenu.Location = new System.Drawing.Point(338, 0);
+            this.TlpTableMenu.Location = new System.Drawing.Point(244, 0);
             this.TlpTableMenu.Name = "TlpTableMenu";
             this.TlpTableMenu.RowCount = 5;
             this.TlpTableMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66882F));
@@ -423,6 +366,7 @@
             this.BtnPurchaseTable.TabIndex = 0;
             this.BtnPurchaseTable.Text = "采购报表";
             this.BtnPurchaseTable.UseVisualStyleBackColor = true;
+            this.BtnPurchaseTable.Click += new System.EventHandler(this.BtnPurchaseTable_Click);
             // 
             // BtnSaleTable
             // 
@@ -433,6 +377,7 @@
             this.BtnSaleTable.TabIndex = 1;
             this.BtnSaleTable.Text = "销售报表";
             this.BtnSaleTable.UseVisualStyleBackColor = true;
+            this.BtnSaleTable.Click += new System.EventHandler(this.BtnSaleTable_Click);
             // 
             // BtnProfitTable
             // 
@@ -443,81 +388,7 @@
             this.BtnProfitTable.TabIndex = 2;
             this.BtnProfitTable.Text = "营收报表";
             this.BtnProfitTable.UseVisualStyleBackColor = true;
-            // 
-            // TlpMembershipMenu
-            // 
-            this.TlpMembershipMenu.BackColor = System.Drawing.Color.Transparent;
-            this.TlpMembershipMenu.ColumnCount = 1;
-            this.TlpMembershipMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TlpMembershipMenu.Controls.Add(this.BtnMsBack, 0, 5);
-            this.TlpMembershipMenu.Controls.Add(this.BtnMsDelete, 0, 4);
-            this.TlpMembershipMenu.Controls.Add(this.BtnMsSignup, 0, 0);
-            this.TlpMembershipMenu.Controls.Add(this.BtnMsUpdate, 0, 1);
-            this.TlpMembershipMenu.Controls.Add(this.BtnMsPoint, 0, 2);
-            this.TlpMembershipMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.TlpMembershipMenu.Location = new System.Drawing.Point(288, 0);
-            this.TlpMembershipMenu.Name = "TlpMembershipMenu";
-            this.TlpMembershipMenu.RowCount = 6;
-            this.TlpMembershipMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.67074F));
-            this.TlpMembershipMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.67074F));
-            this.TlpMembershipMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.67074F));
-            this.TlpMembershipMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66213F));
-            this.TlpMembershipMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66352F));
-            this.TlpMembershipMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66213F));
-            this.TlpMembershipMenu.Size = new System.Drawing.Size(50, 410);
-            this.TlpMembershipMenu.TabIndex = 20;
-            this.TlpMembershipMenu.Visible = false;
-            // 
-            // BtnMsBack
-            // 
-            this.BtnMsBack.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnMsBack.Location = new System.Drawing.Point(3, 343);
-            this.BtnMsBack.Name = "BtnMsBack";
-            this.BtnMsBack.Size = new System.Drawing.Size(44, 64);
-            this.BtnMsBack.TabIndex = 23;
-            this.BtnMsBack.Text = "返回";
-            this.BtnMsBack.UseVisualStyleBackColor = true;
-            this.BtnMsBack.Click += new System.EventHandler(this.BtnMsBack_Click);
-            // 
-            // BtnMsDelete
-            // 
-            this.BtnMsDelete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnMsDelete.Location = new System.Drawing.Point(3, 275);
-            this.BtnMsDelete.Name = "BtnMsDelete";
-            this.BtnMsDelete.Size = new System.Drawing.Size(44, 62);
-            this.BtnMsDelete.TabIndex = 4;
-            this.BtnMsDelete.Text = "销户";
-            this.BtnMsDelete.UseVisualStyleBackColor = true;
-            // 
-            // BtnMsSignup
-            // 
-            this.BtnMsSignup.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnMsSignup.Location = new System.Drawing.Point(3, 3);
-            this.BtnMsSignup.Name = "BtnMsSignup";
-            this.BtnMsSignup.Size = new System.Drawing.Size(44, 62);
-            this.BtnMsSignup.TabIndex = 0;
-            this.BtnMsSignup.Text = "会员注册";
-            this.BtnMsSignup.UseVisualStyleBackColor = true;
-            // 
-            // BtnMsUpdate
-            // 
-            this.BtnMsUpdate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnMsUpdate.Location = new System.Drawing.Point(3, 71);
-            this.BtnMsUpdate.Name = "BtnMsUpdate";
-            this.BtnMsUpdate.Size = new System.Drawing.Size(44, 62);
-            this.BtnMsUpdate.TabIndex = 1;
-            this.BtnMsUpdate.Text = "信息修改";
-            this.BtnMsUpdate.UseVisualStyleBackColor = true;
-            // 
-            // BtnMsPoint
-            // 
-            this.BtnMsPoint.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnMsPoint.Location = new System.Drawing.Point(3, 139);
-            this.BtnMsPoint.Name = "BtnMsPoint";
-            this.BtnMsPoint.Size = new System.Drawing.Size(44, 62);
-            this.BtnMsPoint.TabIndex = 2;
-            this.BtnMsPoint.Text = "积分查询";
-            this.BtnMsPoint.UseVisualStyleBackColor = true;
+            this.BtnProfitTable.Click += new System.EventHandler(this.BtnProfitTable_Click);
             // 
             // TlpSaleMenu
             // 
@@ -528,7 +399,7 @@
             this.TlpSaleMenu.Controls.Add(this.BtnSaleGood, 0, 0);
             this.TlpSaleMenu.Controls.Add(this.BtnSaleSearch, 0, 1);
             this.TlpSaleMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.TlpSaleMenu.Location = new System.Drawing.Point(238, 0);
+            this.TlpSaleMenu.Location = new System.Drawing.Point(194, 0);
             this.TlpSaleMenu.Name = "TlpSaleMenu";
             this.TlpSaleMenu.RowCount = 4;
             this.TlpSaleMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66876F));
@@ -584,7 +455,7 @@
             this.TlpMainMenu.Controls.Add(this.BtnTable, 0, 4);
             this.TlpMainMenu.Controls.Add(this.BtnExit, 0, 5);
             this.TlpMainMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.TlpMainMenu.Location = new System.Drawing.Point(94, 0);
+            this.TlpMainMenu.Location = new System.Drawing.Point(50, 0);
             this.TlpMainMenu.Name = "TlpMainMenu";
             this.TlpMainMenu.RowCount = 6;
             this.TlpMainMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.67668F));
@@ -595,6 +466,644 @@
             this.TlpMainMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.61662F));
             this.TlpMainMenu.Size = new System.Drawing.Size(144, 410);
             this.TlpMainMenu.TabIndex = 18;
+            // 
+            // TlpWarehouseMenu
+            // 
+            this.TlpWarehouseMenu.BackColor = System.Drawing.Color.Transparent;
+            this.TlpWarehouseMenu.ColumnCount = 1;
+            this.TlpWarehouseMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TlpWarehouseMenu.Controls.Add(this.BtnWarehouseBack, 0, 5);
+            this.TlpWarehouseMenu.Controls.Add(this.BtnGoodIncome, 0, 0);
+            this.TlpWarehouseMenu.Controls.Add(this.BtnGoodManager, 0, 1);
+            this.TlpWarehouseMenu.Controls.Add(this.BtnWarehouseWarning, 0, 2);
+            this.TlpWarehouseMenu.Controls.Add(this.BtnWareSearch, 0, 3);
+            this.TlpWarehouseMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.TlpWarehouseMenu.Location = new System.Drawing.Point(0, 0);
+            this.TlpWarehouseMenu.Name = "TlpWarehouseMenu";
+            this.TlpWarehouseMenu.RowCount = 6;
+            this.TlpWarehouseMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66907F));
+            this.TlpWarehouseMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66907F));
+            this.TlpWarehouseMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66907F));
+            this.TlpWarehouseMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66907F));
+            this.TlpWarehouseMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66185F));
+            this.TlpWarehouseMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66185F));
+            this.TlpWarehouseMenu.Size = new System.Drawing.Size(50, 410);
+            this.TlpWarehouseMenu.TabIndex = 17;
+            this.TlpWarehouseMenu.Visible = false;
+            // 
+            // BtnWarehouseBack
+            // 
+            this.BtnWarehouseBack.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnWarehouseBack.Location = new System.Drawing.Point(3, 343);
+            this.BtnWarehouseBack.Name = "BtnWarehouseBack";
+            this.BtnWarehouseBack.Size = new System.Drawing.Size(44, 64);
+            this.BtnWarehouseBack.TabIndex = 23;
+            this.BtnWarehouseBack.Text = "返回";
+            this.BtnWarehouseBack.UseVisualStyleBackColor = true;
+            this.BtnWarehouseBack.Click += new System.EventHandler(this.BtnWarehouseBack_Click);
+            // 
+            // BtnGoodIncome
+            // 
+            this.BtnGoodIncome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnGoodIncome.Location = new System.Drawing.Point(3, 3);
+            this.BtnGoodIncome.Name = "BtnGoodIncome";
+            this.BtnGoodIncome.Size = new System.Drawing.Size(44, 62);
+            this.BtnGoodIncome.TabIndex = 0;
+            this.BtnGoodIncome.Text = "入库";
+            this.BtnGoodIncome.UseVisualStyleBackColor = true;
+            this.BtnGoodIncome.Click += new System.EventHandler(this.BtnGoodIncome_Click);
+            // 
+            // BtnGoodManager
+            // 
+            this.BtnGoodManager.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnGoodManager.Location = new System.Drawing.Point(3, 71);
+            this.BtnGoodManager.Name = "BtnGoodManager";
+            this.BtnGoodManager.Size = new System.Drawing.Size(44, 62);
+            this.BtnGoodManager.TabIndex = 1;
+            this.BtnGoodManager.Text = "商品管理";
+            this.BtnGoodManager.UseVisualStyleBackColor = true;
+            this.BtnGoodManager.Click += new System.EventHandler(this.BtnGoodManager_Click);
+            // 
+            // BtnWarehouseWarning
+            // 
+            this.BtnWarehouseWarning.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnWarehouseWarning.Location = new System.Drawing.Point(3, 139);
+            this.BtnWarehouseWarning.Name = "BtnWarehouseWarning";
+            this.BtnWarehouseWarning.Size = new System.Drawing.Size(44, 62);
+            this.BtnWarehouseWarning.TabIndex = 2;
+            this.BtnWarehouseWarning.Text = "库存预警";
+            this.BtnWarehouseWarning.UseVisualStyleBackColor = true;
+            this.BtnWarehouseWarning.Click += new System.EventHandler(this.BtnWarehouseWarning_Click);
+            // 
+            // BtnWareSearch
+            // 
+            this.BtnWareSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnWareSearch.Location = new System.Drawing.Point(3, 207);
+            this.BtnWareSearch.Name = "BtnWareSearch";
+            this.BtnWareSearch.Size = new System.Drawing.Size(44, 62);
+            this.BtnWareSearch.TabIndex = 3;
+            this.BtnWareSearch.Text = "库存查询";
+            this.BtnWareSearch.UseVisualStyleBackColor = true;
+            this.BtnWareSearch.Click += new System.EventHandler(this.BtnWareSearch_Click);
+            // 
+            // TlpMsMenu
+            // 
+            this.TlpMsMenu.ColumnCount = 1;
+            this.TlpMsMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpMsMenu.Controls.Add(this.TlpMsControllerMenu, 0, 0);
+            this.TlpMsMenu.Controls.Add(this.DgvMembership, 0, 1);
+            this.TlpMsMenu.Location = new System.Drawing.Point(183, 199);
+            this.TlpMsMenu.Name = "TlpMsMenu";
+            this.TlpMsMenu.RowCount = 2;
+            this.TlpMsMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41F));
+            this.TlpMsMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59F));
+            this.TlpMsMenu.Size = new System.Drawing.Size(286, 100);
+            this.TlpMsMenu.TabIndex = 5;
+            this.TlpMsMenu.Visible = false;
+            // 
+            // TlpMsControllerMenu
+            // 
+            this.TlpMsControllerMenu.ColumnCount = 4;
+            this.TlpMsControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TlpMsControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TlpMsControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TlpMsControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.TlpMsControllerMenu.Controls.Add(this.button4, 3, 0);
+            this.TlpMsControllerMenu.Controls.Add(this.button3, 2, 0);
+            this.TlpMsControllerMenu.Controls.Add(this.button2, 1, 0);
+            this.TlpMsControllerMenu.Controls.Add(this.button1, 0, 0);
+            this.TlpMsControllerMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TlpMsControllerMenu.Location = new System.Drawing.Point(3, 3);
+            this.TlpMsControllerMenu.Name = "TlpMsControllerMenu";
+            this.TlpMsControllerMenu.RowCount = 1;
+            this.TlpMsControllerMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TlpMsControllerMenu.Size = new System.Drawing.Size(280, 35);
+            this.TlpMsControllerMenu.TabIndex = 0;
+            // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button4.Location = new System.Drawing.Point(213, 3);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(64, 29);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "销户";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.Location = new System.Drawing.Point(143, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(64, 29);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "积分查询";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.Location = new System.Drawing.Point(73, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(64, 29);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "信息修改";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(64, 29);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "会员注册";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // DgvMembership
+            // 
+            this.DgvMembership.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvMembership.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvMembership.Location = new System.Drawing.Point(3, 44);
+            this.DgvMembership.Name = "DgvMembership";
+            this.DgvMembership.RowTemplate.Height = 23;
+            this.DgvMembership.Size = new System.Drawing.Size(280, 53);
+            this.DgvMembership.TabIndex = 1;
+            // 
+            // TlpSaleSearchMenu
+            // 
+            this.TlpSaleSearchMenu.ColumnCount = 1;
+            this.TlpSaleSearchMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpSaleSearchMenu.Controls.Add(this.DgvSaleResult, 0, 0);
+            this.TlpSaleSearchMenu.Controls.Add(this.DgvGoodInfo, 0, 1);
+            this.TlpSaleSearchMenu.Location = new System.Drawing.Point(269, 100);
+            this.TlpSaleSearchMenu.Name = "TlpSaleSearchMenu";
+            this.TlpSaleSearchMenu.RowCount = 2;
+            this.TlpSaleSearchMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpSaleSearchMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.TlpSaleSearchMenu.Size = new System.Drawing.Size(200, 100);
+            this.TlpSaleSearchMenu.TabIndex = 4;
+            this.TlpSaleSearchMenu.Visible = false;
+            // 
+            // DgvSaleResult
+            // 
+            this.DgvSaleResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvSaleResult.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvSaleResult.Location = new System.Drawing.Point(3, 3);
+            this.DgvSaleResult.Name = "DgvSaleResult";
+            this.DgvSaleResult.RowTemplate.Height = 23;
+            this.DgvSaleResult.Size = new System.Drawing.Size(194, 47);
+            this.DgvSaleResult.TabIndex = 0;
+            // 
+            // DgvGoodInfo
+            // 
+            this.DgvGoodInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvGoodInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvGoodInfo.Location = new System.Drawing.Point(3, 56);
+            this.DgvGoodInfo.Name = "DgvGoodInfo";
+            this.DgvGoodInfo.RowTemplate.Height = 23;
+            this.DgvGoodInfo.Size = new System.Drawing.Size(194, 41);
+            this.DgvGoodInfo.TabIndex = 1;
+            // 
+            // TlpSaleEmptyMenu
+            // 
+            this.TlpSaleEmptyMenu.ColumnCount = 1;
+            this.TlpSaleEmptyMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpSaleEmptyMenu.Controls.Add(this.TlpSaleSubmitMenu, 0, 2);
+            this.TlpSaleEmptyMenu.Controls.Add(this.BtnSaleInsert, 0, 0);
+            this.TlpSaleEmptyMenu.Controls.Add(this.DgvSaleInsert, 0, 1);
+            this.TlpSaleEmptyMenu.Location = new System.Drawing.Point(269, 0);
+            this.TlpSaleEmptyMenu.Name = "TlpSaleEmptyMenu";
+            this.TlpSaleEmptyMenu.RowCount = 3;
+            this.TlpSaleEmptyMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.13044F));
+            this.TlpSaleEmptyMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.86956F));
+            this.TlpSaleEmptyMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.TlpSaleEmptyMenu.Size = new System.Drawing.Size(200, 100);
+            this.TlpSaleEmptyMenu.TabIndex = 3;
+            this.TlpSaleEmptyMenu.Visible = false;
+            // 
+            // TlpSaleSubmitMenu
+            // 
+            this.TlpSaleSubmitMenu.ColumnCount = 2;
+            this.TlpSaleSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpSaleSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpSaleSubmitMenu.Controls.Add(this.BtnSaleCancel, 1, 0);
+            this.TlpSaleSubmitMenu.Controls.Add(this.BtnSaleSubmit, 0, 0);
+            this.TlpSaleSubmitMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TlpSaleSubmitMenu.Location = new System.Drawing.Point(3, 72);
+            this.TlpSaleSubmitMenu.Name = "TlpSaleSubmitMenu";
+            this.TlpSaleSubmitMenu.RowCount = 1;
+            this.TlpSaleSubmitMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpSaleSubmitMenu.Size = new System.Drawing.Size(194, 25);
+            this.TlpSaleSubmitMenu.TabIndex = 7;
+            // 
+            // BtnSaleCancel
+            // 
+            this.BtnSaleCancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnSaleCancel.Location = new System.Drawing.Point(100, 3);
+            this.BtnSaleCancel.Name = "BtnSaleCancel";
+            this.BtnSaleCancel.Size = new System.Drawing.Size(91, 19);
+            this.BtnSaleCancel.TabIndex = 5;
+            this.BtnSaleCancel.Text = "清空修改";
+            this.BtnSaleCancel.UseVisualStyleBackColor = true;
+            // 
+            // BtnSaleSubmit
+            // 
+            this.BtnSaleSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnSaleSubmit.Location = new System.Drawing.Point(3, 3);
+            this.BtnSaleSubmit.Name = "BtnSaleSubmit";
+            this.BtnSaleSubmit.Size = new System.Drawing.Size(91, 19);
+            this.BtnSaleSubmit.TabIndex = 4;
+            this.BtnSaleSubmit.Text = "提交修改";
+            this.BtnSaleSubmit.UseVisualStyleBackColor = true;
+            // 
+            // BtnSaleInsert
+            // 
+            this.BtnSaleInsert.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnSaleInsert.Location = new System.Drawing.Point(3, 3);
+            this.BtnSaleInsert.Name = "BtnSaleInsert";
+            this.BtnSaleInsert.Size = new System.Drawing.Size(194, 21);
+            this.BtnSaleInsert.TabIndex = 0;
+            this.BtnSaleInsert.Text = "添加销售记录";
+            this.BtnSaleInsert.UseVisualStyleBackColor = true;
+            // 
+            // DgvSaleInsert
+            // 
+            this.DgvSaleInsert.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvSaleInsert.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvSaleInsert.Location = new System.Drawing.Point(3, 30);
+            this.DgvSaleInsert.Name = "DgvSaleInsert";
+            this.DgvSaleInsert.RowTemplate.Height = 23;
+            this.DgvSaleInsert.Size = new System.Drawing.Size(194, 36);
+            this.DgvSaleInsert.TabIndex = 1;
+            // 
+            // TlpIncomeEmptyMenu
+            // 
+            this.TlpIncomeEmptyMenu.ColumnCount = 1;
+            this.TlpIncomeEmptyMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpIncomeEmptyMenu.Controls.Add(this.TlpIncomeSubmitMenu, 0, 2);
+            this.TlpIncomeEmptyMenu.Controls.Add(this.TlpIncomeControllerMenu, 0, 0);
+            this.TlpIncomeEmptyMenu.Controls.Add(this.DgvCategoryInsert, 0, 1);
+            this.TlpIncomeEmptyMenu.Location = new System.Drawing.Point(3, 231);
+            this.TlpIncomeEmptyMenu.Name = "TlpIncomeEmptyMenu";
+            this.TlpIncomeEmptyMenu.RowCount = 3;
+            this.TlpIncomeEmptyMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.10526F));
+            this.TlpIncomeEmptyMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.89474F));
+            this.TlpIncomeEmptyMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.TlpIncomeEmptyMenu.Size = new System.Drawing.Size(178, 110);
+            this.TlpIncomeEmptyMenu.TabIndex = 2;
+            this.TlpIncomeEmptyMenu.Visible = false;
+            // 
+            // TlpIncomeSubmitMenu
+            // 
+            this.TlpIncomeSubmitMenu.ColumnCount = 2;
+            this.TlpIncomeSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpIncomeSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpIncomeSubmitMenu.Controls.Add(this.BtnIncomeCancel, 1, 0);
+            this.TlpIncomeSubmitMenu.Controls.Add(this.BtnIncomeSubmit, 0, 0);
+            this.TlpIncomeSubmitMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TlpIncomeSubmitMenu.Location = new System.Drawing.Point(3, 79);
+            this.TlpIncomeSubmitMenu.Name = "TlpIncomeSubmitMenu";
+            this.TlpIncomeSubmitMenu.RowCount = 1;
+            this.TlpIncomeSubmitMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpIncomeSubmitMenu.Size = new System.Drawing.Size(172, 28);
+            this.TlpIncomeSubmitMenu.TabIndex = 6;
+            // 
+            // BtnIncomeCancel
+            // 
+            this.BtnIncomeCancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnIncomeCancel.Location = new System.Drawing.Point(89, 3);
+            this.BtnIncomeCancel.Name = "BtnIncomeCancel";
+            this.BtnIncomeCancel.Size = new System.Drawing.Size(80, 22);
+            this.BtnIncomeCancel.TabIndex = 5;
+            this.BtnIncomeCancel.Text = "清空修改";
+            this.BtnIncomeCancel.UseVisualStyleBackColor = true;
+            // 
+            // BtnIncomeSubmit
+            // 
+            this.BtnIncomeSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnIncomeSubmit.Location = new System.Drawing.Point(3, 3);
+            this.BtnIncomeSubmit.Name = "BtnIncomeSubmit";
+            this.BtnIncomeSubmit.Size = new System.Drawing.Size(80, 22);
+            this.BtnIncomeSubmit.TabIndex = 4;
+            this.BtnIncomeSubmit.Text = "提交修改";
+            this.BtnIncomeSubmit.UseVisualStyleBackColor = true;
+            // 
+            // TlpIncomeControllerMenu
+            // 
+            this.TlpIncomeControllerMenu.ColumnCount = 2;
+            this.TlpIncomeControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.65116F));
+            this.TlpIncomeControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.34884F));
+            this.TlpIncomeControllerMenu.Controls.Add(this.BtnFIncome, 0, 0);
+            this.TlpIncomeControllerMenu.Controls.Add(this.BtnSIncome, 0, 0);
+            this.TlpIncomeControllerMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TlpIncomeControllerMenu.Location = new System.Drawing.Point(3, 3);
+            this.TlpIncomeControllerMenu.Name = "TlpIncomeControllerMenu";
+            this.TlpIncomeControllerMenu.RowCount = 1;
+            this.TlpIncomeControllerMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpIncomeControllerMenu.Size = new System.Drawing.Size(172, 26);
+            this.TlpIncomeControllerMenu.TabIndex = 0;
+            // 
+            // BtnFIncome
+            // 
+            this.BtnFIncome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnFIncome.Location = new System.Drawing.Point(96, 3);
+            this.BtnFIncome.Name = "BtnFIncome";
+            this.BtnFIncome.Size = new System.Drawing.Size(73, 20);
+            this.BtnFIncome.TabIndex = 2;
+            this.BtnFIncome.Text = "批量入库";
+            this.BtnFIncome.UseVisualStyleBackColor = true;
+            // 
+            // BtnSIncome
+            // 
+            this.BtnSIncome.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnSIncome.Location = new System.Drawing.Point(3, 3);
+            this.BtnSIncome.Name = "BtnSIncome";
+            this.BtnSIncome.Size = new System.Drawing.Size(87, 20);
+            this.BtnSIncome.TabIndex = 1;
+            this.BtnSIncome.Text = "单例商品入库";
+            this.BtnSIncome.UseVisualStyleBackColor = true;
+            // 
+            // DgvCategoryInsert
+            // 
+            this.DgvCategoryInsert.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvCategoryInsert.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvCategoryInsert.Location = new System.Drawing.Point(3, 35);
+            this.DgvCategoryInsert.Name = "DgvCategoryInsert";
+            this.DgvCategoryInsert.RowTemplate.Height = 23;
+            this.DgvCategoryInsert.Size = new System.Drawing.Size(172, 38);
+            this.DgvCategoryInsert.TabIndex = 1;
+            // 
+            // TlpWarehouseSubmenu
+            // 
+            this.TlpWarehouseSubmenu.ColumnCount = 1;
+            this.TlpWarehouseSubmenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpWarehouseSubmenu.Controls.Add(this.DgvWarehouseData, 0, 1);
+            this.TlpWarehouseSubmenu.Controls.Add(this.TlpWarehouseSubmitMenu, 0, 2);
+            this.TlpWarehouseSubmenu.Controls.Add(this.TlpWarehouseControllerMenu, 0, 0);
+            this.TlpWarehouseSubmenu.Location = new System.Drawing.Point(3, 123);
+            this.TlpWarehouseSubmenu.Name = "TlpWarehouseSubmenu";
+            this.TlpWarehouseSubmenu.RowCount = 3;
+            this.TlpWarehouseSubmenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.57143F));
+            this.TlpWarehouseSubmenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.42857F));
+            this.TlpWarehouseSubmenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.TlpWarehouseSubmenu.Size = new System.Drawing.Size(178, 105);
+            this.TlpWarehouseSubmenu.TabIndex = 1;
+            this.TlpWarehouseSubmenu.Visible = false;
+            // 
+            // DgvWarehouseData
+            // 
+            this.DgvWarehouseData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvWarehouseData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvWarehouseData.Location = new System.Drawing.Point(3, 37);
+            this.DgvWarehouseData.Name = "DgvWarehouseData";
+            this.DgvWarehouseData.RowTemplate.Height = 23;
+            this.DgvWarehouseData.Size = new System.Drawing.Size(172, 30);
+            this.DgvWarehouseData.TabIndex = 4;
+            // 
+            // TlpWarehouseSubmitMenu
+            // 
+            this.TlpWarehouseSubmitMenu.ColumnCount = 2;
+            this.TlpWarehouseSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpWarehouseSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpWarehouseSubmitMenu.Controls.Add(this.BtnWarehouseCancel, 1, 0);
+            this.TlpWarehouseSubmitMenu.Controls.Add(this.BtnWarehouseSubmit, 0, 0);
+            this.TlpWarehouseSubmitMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TlpWarehouseSubmitMenu.Location = new System.Drawing.Point(3, 73);
+            this.TlpWarehouseSubmitMenu.Name = "TlpWarehouseSubmitMenu";
+            this.TlpWarehouseSubmitMenu.RowCount = 1;
+            this.TlpWarehouseSubmitMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpWarehouseSubmitMenu.Size = new System.Drawing.Size(172, 29);
+            this.TlpWarehouseSubmitMenu.TabIndex = 5;
+            // 
+            // BtnWarehouseCancel
+            // 
+            this.BtnWarehouseCancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnWarehouseCancel.Location = new System.Drawing.Point(89, 3);
+            this.BtnWarehouseCancel.Name = "BtnWarehouseCancel";
+            this.BtnWarehouseCancel.Size = new System.Drawing.Size(80, 23);
+            this.BtnWarehouseCancel.TabIndex = 5;
+            this.BtnWarehouseCancel.Text = "清空修改";
+            this.BtnWarehouseCancel.UseVisualStyleBackColor = true;
+            this.BtnWarehouseCancel.Click += new System.EventHandler(this.BtnWarehouseCancel_Click);
+            // 
+            // BtnWarehouseSubmit
+            // 
+            this.BtnWarehouseSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnWarehouseSubmit.Location = new System.Drawing.Point(3, 3);
+            this.BtnWarehouseSubmit.Name = "BtnWarehouseSubmit";
+            this.BtnWarehouseSubmit.Size = new System.Drawing.Size(80, 23);
+            this.BtnWarehouseSubmit.TabIndex = 4;
+            this.BtnWarehouseSubmit.Text = "提交修改";
+            this.BtnWarehouseSubmit.UseVisualStyleBackColor = true;
+            this.BtnWarehouseSubmit.Click += new System.EventHandler(this.BtnWarehouseSubmit_Click);
+            // 
+            // TlpWarehouseControllerMenu
+            // 
+            this.TlpWarehouseControllerMenu.ColumnCount = 3;
+            this.TlpWarehouseControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.77483F));
+            this.TlpWarehouseControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.22517F));
+            this.TlpWarehouseControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.TlpWarehouseControllerMenu.Controls.Add(this.BtnWarehouseSearch, 0, 0);
+            this.TlpWarehouseControllerMenu.Controls.Add(this.TxtWarehouseSearch, 0, 0);
+            this.TlpWarehouseControllerMenu.Controls.Add(this.BtnWarehouseUpdate, 0, 0);
+            this.TlpWarehouseControllerMenu.Location = new System.Drawing.Point(3, 3);
+            this.TlpWarehouseControllerMenu.Name = "TlpWarehouseControllerMenu";
+            this.TlpWarehouseControllerMenu.RowCount = 1;
+            this.TlpWarehouseControllerMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpWarehouseControllerMenu.Size = new System.Drawing.Size(172, 28);
+            this.TlpWarehouseControllerMenu.TabIndex = 6;
+            // 
+            // BtnWarehouseSearch
+            // 
+            this.BtnWarehouseSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnWarehouseSearch.Location = new System.Drawing.Point(129, 3);
+            this.BtnWarehouseSearch.Name = "BtnWarehouseSearch";
+            this.BtnWarehouseSearch.Size = new System.Drawing.Size(40, 22);
+            this.BtnWarehouseSearch.TabIndex = 6;
+            this.BtnWarehouseSearch.Text = "查询";
+            this.BtnWarehouseSearch.UseVisualStyleBackColor = true;
+            // 
+            // TxtWarehouseSearch
+            // 
+            this.TxtWarehouseSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TxtWarehouseSearch.Location = new System.Drawing.Point(45, 3);
+            this.TxtWarehouseSearch.Name = "TxtWarehouseSearch";
+            this.TxtWarehouseSearch.Size = new System.Drawing.Size(78, 21);
+            this.TxtWarehouseSearch.TabIndex = 5;
+            // 
+            // BtnWarehouseUpdate
+            // 
+            this.BtnWarehouseUpdate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnWarehouseUpdate.Location = new System.Drawing.Point(3, 3);
+            this.BtnWarehouseUpdate.Name = "BtnWarehouseUpdate";
+            this.BtnWarehouseUpdate.Size = new System.Drawing.Size(36, 22);
+            this.BtnWarehouseUpdate.TabIndex = 4;
+            this.BtnWarehouseUpdate.Text = "修改";
+            this.BtnWarehouseUpdate.UseVisualStyleBackColor = true;
+            // 
+            // TlpStaffMenu
+            // 
+            this.TlpStaffMenu.ColumnCount = 1;
+            this.TlpStaffMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpStaffMenu.Controls.Add(this.TlpStaffSubmitMenu, 0, 2);
+            this.TlpStaffMenu.Controls.Add(this.TlpStaffControllerMenu, 0, 0);
+            this.TlpStaffMenu.Controls.Add(this.DgvStaffData, 0, 1);
+            this.TlpStaffMenu.Location = new System.Drawing.Point(3, 3);
+            this.TlpStaffMenu.Name = "TlpStaffMenu";
+            this.TlpStaffMenu.RowCount = 3;
+            this.TlpStaffMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.03798F));
+            this.TlpStaffMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.96202F));
+            this.TlpStaffMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
+            this.TlpStaffMenu.Size = new System.Drawing.Size(266, 120);
+            this.TlpStaffMenu.TabIndex = 0;
+            this.TlpStaffMenu.Visible = false;
+            // 
+            // TlpStaffSubmitMenu
+            // 
+            this.TlpStaffSubmitMenu.ColumnCount = 2;
+            this.TlpStaffSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpStaffSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpStaffSubmitMenu.Controls.Add(this.BtnStaffCancel, 1, 0);
+            this.TlpStaffSubmitMenu.Controls.Add(this.BtnStaffSubmit, 0, 0);
+            this.TlpStaffSubmitMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TlpStaffSubmitMenu.Location = new System.Drawing.Point(3, 89);
+            this.TlpStaffSubmitMenu.Name = "TlpStaffSubmitMenu";
+            this.TlpStaffSubmitMenu.RowCount = 1;
+            this.TlpStaffSubmitMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.TlpStaffSubmitMenu.Size = new System.Drawing.Size(260, 28);
+            this.TlpStaffSubmitMenu.TabIndex = 6;
+            // 
+            // BtnStaffCancel
+            // 
+            this.BtnStaffCancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnStaffCancel.Location = new System.Drawing.Point(133, 3);
+            this.BtnStaffCancel.Name = "BtnStaffCancel";
+            this.BtnStaffCancel.Size = new System.Drawing.Size(124, 22);
+            this.BtnStaffCancel.TabIndex = 5;
+            this.BtnStaffCancel.Text = "清空修改";
+            this.BtnStaffCancel.UseVisualStyleBackColor = true;
+            // 
+            // BtnStaffSubmit
+            // 
+            this.BtnStaffSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnStaffSubmit.Location = new System.Drawing.Point(3, 3);
+            this.BtnStaffSubmit.Name = "BtnStaffSubmit";
+            this.BtnStaffSubmit.Size = new System.Drawing.Size(124, 22);
+            this.BtnStaffSubmit.TabIndex = 4;
+            this.BtnStaffSubmit.Text = "提交修改";
+            this.BtnStaffSubmit.UseVisualStyleBackColor = true;
+            // 
+            // TlpStaffControllerMenu
+            // 
+            this.TlpStaffControllerMenu.ColumnCount = 5;
+            this.TlpStaffControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.TlpStaffControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.TlpStaffControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.TlpStaffControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.TlpStaffControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.TlpStaffControllerMenu.Controls.Add(this.BtnStaffInsert, 0, 0);
+            this.TlpStaffControllerMenu.Controls.Add(this.BtnStaffUpdate, 1, 0);
+            this.TlpStaffControllerMenu.Controls.Add(this.TxtStaffSearch, 2, 0);
+            this.TlpStaffControllerMenu.Controls.Add(this.BtnStaffSearch, 3, 0);
+            this.TlpStaffControllerMenu.Controls.Add(this.BtnStaffDelete, 4, 0);
+            this.TlpStaffControllerMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TlpStaffControllerMenu.Location = new System.Drawing.Point(3, 3);
+            this.TlpStaffControllerMenu.Name = "TlpStaffControllerMenu";
+            this.TlpStaffControllerMenu.RowCount = 1;
+            this.TlpStaffControllerMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.TlpStaffControllerMenu.Size = new System.Drawing.Size(260, 31);
+            this.TlpStaffControllerMenu.TabIndex = 0;
+            // 
+            // DgvStaffData
+            // 
+            this.DgvStaffData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvStaffData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvStaffData.Location = new System.Drawing.Point(3, 40);
+            this.DgvStaffData.Name = "DgvStaffData";
+            this.DgvStaffData.RowTemplate.Height = 23;
+            this.DgvStaffData.Size = new System.Drawing.Size(260, 43);
+            this.DgvStaffData.TabIndex = 1;
+            // 
+            // BtnStaffInsert
+            // 
+            this.BtnStaffInsert.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnStaffInsert.Location = new System.Drawing.Point(3, 3);
+            this.BtnStaffInsert.Name = "BtnStaffInsert";
+            this.BtnStaffInsert.Size = new System.Drawing.Size(46, 25);
+            this.BtnStaffInsert.TabIndex = 0;
+            this.BtnStaffInsert.Text = "添加员工";
+            this.BtnStaffInsert.UseVisualStyleBackColor = true;
+            // 
+            // BtnStaffUpdate
+            // 
+            this.BtnStaffUpdate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnStaffUpdate.Location = new System.Drawing.Point(55, 3);
+            this.BtnStaffUpdate.Name = "BtnStaffUpdate";
+            this.BtnStaffUpdate.Size = new System.Drawing.Size(46, 25);
+            this.BtnStaffUpdate.TabIndex = 1;
+            this.BtnStaffUpdate.Text = "信息修改";
+            this.BtnStaffUpdate.UseVisualStyleBackColor = true;
+            // 
+            // TxtStaffSearch
+            // 
+            this.TxtStaffSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TxtStaffSearch.Location = new System.Drawing.Point(107, 3);
+            this.TxtStaffSearch.Name = "TxtStaffSearch";
+            this.TxtStaffSearch.Size = new System.Drawing.Size(46, 21);
+            this.TxtStaffSearch.TabIndex = 2;
+            // 
+            // BtnStaffSearch
+            // 
+            this.BtnStaffSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnStaffSearch.Location = new System.Drawing.Point(159, 3);
+            this.BtnStaffSearch.Name = "BtnStaffSearch";
+            this.BtnStaffSearch.Size = new System.Drawing.Size(46, 25);
+            this.BtnStaffSearch.TabIndex = 3;
+            this.BtnStaffSearch.Text = "查询";
+            this.BtnStaffSearch.UseVisualStyleBackColor = true;
+            // 
+            // BtnStaffDelete
+            // 
+            this.BtnStaffDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnStaffDelete.Location = new System.Drawing.Point(211, 3);
+            this.BtnStaffDelete.Name = "BtnStaffDelete";
+            this.BtnStaffDelete.Size = new System.Drawing.Size(46, 25);
+            this.BtnStaffDelete.TabIndex = 4;
+            this.BtnStaffDelete.Text = "删除员工";
+            this.BtnStaffDelete.UseVisualStyleBackColor = true;
+            // 
+            // TabPurchase
+            // 
+            this.TabPurchase.Controls.Add(this.TapPurchaseBar);
+            this.TabPurchase.Controls.Add(this.TapPurchaseLine);
+            this.TabPurchase.Controls.Add(this.TapPurchasePie);
+            this.TabPurchase.Location = new System.Drawing.Point(478, 0);
+            this.TabPurchase.Name = "TabPurchase";
+            this.TabPurchase.SelectedIndex = 0;
+            this.TabPurchase.Size = new System.Drawing.Size(200, 100);
+            this.TabPurchase.TabIndex = 6;
+            this.TabPurchase.Visible = false;
+            // 
+            // TapPurchaseBar
+            // 
+            this.TapPurchaseBar.Location = new System.Drawing.Point(4, 22);
+            this.TapPurchaseBar.Name = "TapPurchaseBar";
+            this.TapPurchaseBar.Padding = new System.Windows.Forms.Padding(3);
+            this.TapPurchaseBar.Size = new System.Drawing.Size(192, 74);
+            this.TapPurchaseBar.TabIndex = 1;
+            this.TapPurchaseBar.Text = "柱状图";
+            this.TapPurchaseBar.UseVisualStyleBackColor = true;
+            // 
+            // TapPurchaseLine
+            // 
+            this.TapPurchaseLine.Location = new System.Drawing.Point(4, 22);
+            this.TapPurchaseLine.Name = "TapPurchaseLine";
+            this.TapPurchaseLine.Padding = new System.Windows.Forms.Padding(3);
+            this.TapPurchaseLine.Size = new System.Drawing.Size(192, 74);
+            this.TapPurchaseLine.TabIndex = 2;
+            this.TapPurchaseLine.Text = "折线图";
+            this.TapPurchaseLine.UseVisualStyleBackColor = true;
             // 
             // BtnStaff
             // 
@@ -669,661 +1178,107 @@
             this.BtnExit.UseVisualStyleBackColor = true;
             this.BtnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
-            // TlpWarehouseMenu
-            // 
-            this.TlpWarehouseMenu.BackColor = System.Drawing.Color.Transparent;
-            this.TlpWarehouseMenu.ColumnCount = 1;
-            this.TlpWarehouseMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TlpWarehouseMenu.Controls.Add(this.BtnWarehouseBack, 0, 5);
-            this.TlpWarehouseMenu.Controls.Add(this.BtnGoodIncome, 0, 0);
-            this.TlpWarehouseMenu.Controls.Add(this.BtnGoodManager, 0, 1);
-            this.TlpWarehouseMenu.Controls.Add(this.BtnWarehouseWarning, 0, 2);
-            this.TlpWarehouseMenu.Controls.Add(this.BtnWareSearch, 0, 3);
-            this.TlpWarehouseMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.TlpWarehouseMenu.Location = new System.Drawing.Point(44, 0);
-            this.TlpWarehouseMenu.Name = "TlpWarehouseMenu";
-            this.TlpWarehouseMenu.RowCount = 6;
-            this.TlpWarehouseMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66907F));
-            this.TlpWarehouseMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66907F));
-            this.TlpWarehouseMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66907F));
-            this.TlpWarehouseMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66907F));
-            this.TlpWarehouseMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66185F));
-            this.TlpWarehouseMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66185F));
-            this.TlpWarehouseMenu.Size = new System.Drawing.Size(50, 410);
-            this.TlpWarehouseMenu.TabIndex = 17;
-            this.TlpWarehouseMenu.Visible = false;
-            // 
-            // BtnWarehouseBack
-            // 
-            this.BtnWarehouseBack.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnWarehouseBack.Location = new System.Drawing.Point(3, 343);
-            this.BtnWarehouseBack.Name = "BtnWarehouseBack";
-            this.BtnWarehouseBack.Size = new System.Drawing.Size(44, 64);
-            this.BtnWarehouseBack.TabIndex = 23;
-            this.BtnWarehouseBack.Text = "返回";
-            this.BtnWarehouseBack.UseVisualStyleBackColor = true;
-            this.BtnWarehouseBack.Click += new System.EventHandler(this.BtnWarehouseBack_Click);
-            // 
-            // BtnGoodIncome
-            // 
-            this.BtnGoodIncome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnGoodIncome.Location = new System.Drawing.Point(3, 3);
-            this.BtnGoodIncome.Name = "BtnGoodIncome";
-            this.BtnGoodIncome.Size = new System.Drawing.Size(44, 62);
-            this.BtnGoodIncome.TabIndex = 0;
-            this.BtnGoodIncome.Text = "入库";
-            this.BtnGoodIncome.UseVisualStyleBackColor = true;
-            this.BtnGoodIncome.Click += new System.EventHandler(this.BtnGoodIncome_Click);
-            // 
-            // BtnGoodManager
-            // 
-            this.BtnGoodManager.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnGoodManager.Location = new System.Drawing.Point(3, 71);
-            this.BtnGoodManager.Name = "BtnGoodManager";
-            this.BtnGoodManager.Size = new System.Drawing.Size(44, 62);
-            this.BtnGoodManager.TabIndex = 1;
-            this.BtnGoodManager.Text = "商品管理";
-            this.BtnGoodManager.UseVisualStyleBackColor = true;
-            this.BtnGoodManager.Click += new System.EventHandler(this.BtnGoodManager_Click);
-            // 
-            // BtnWarehouseWarning
-            // 
-            this.BtnWarehouseWarning.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnWarehouseWarning.Location = new System.Drawing.Point(3, 139);
-            this.BtnWarehouseWarning.Name = "BtnWarehouseWarning";
-            this.BtnWarehouseWarning.Size = new System.Drawing.Size(44, 62);
-            this.BtnWarehouseWarning.TabIndex = 2;
-            this.BtnWarehouseWarning.Text = "库存预警";
-            this.BtnWarehouseWarning.UseVisualStyleBackColor = true;
-            this.BtnWarehouseWarning.Click += new System.EventHandler(this.BtnWarehouseWarning_Click);
-            // 
-            // BtnWareSearch
-            // 
-            this.BtnWareSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnWareSearch.Location = new System.Drawing.Point(3, 207);
-            this.BtnWareSearch.Name = "BtnWareSearch";
-            this.BtnWareSearch.Size = new System.Drawing.Size(44, 62);
-            this.BtnWareSearch.TabIndex = 3;
-            this.BtnWareSearch.Text = "库存查询";
-            this.BtnWareSearch.UseVisualStyleBackColor = true;
-            this.BtnWareSearch.Click += new System.EventHandler(this.BtnWareSearch_Click);
-            // 
-            // TlpStaffMenu
-            // 
-            this.TlpStaffMenu.BackColor = System.Drawing.Color.Transparent;
-            this.TlpStaffMenu.ColumnCount = 1;
-            this.TlpStaffMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TlpStaffMenu.Controls.Add(this.BtnStaffBack, 0, 3);
-            this.TlpStaffMenu.Controls.Add(this.BtnStaffDelete, 0, 2);
-            this.TlpStaffMenu.Controls.Add(this.BtnStaffInsert, 0, 0);
-            this.TlpStaffMenu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.TlpStaffMenu.Location = new System.Drawing.Point(0, 0);
-            this.TlpStaffMenu.Name = "TlpStaffMenu";
-            this.TlpStaffMenu.RowCount = 4;
-            this.TlpStaffMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66333F));
-            this.TlpStaffMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.01F));
-            this.TlpStaffMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66333F));
-            this.TlpStaffMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66333F));
-            this.TlpStaffMenu.Size = new System.Drawing.Size(44, 410);
-            this.TlpStaffMenu.TabIndex = 16;
-            this.TlpStaffMenu.Visible = false;
-            // 
-            // BtnStaffBack
-            // 
-            this.BtnStaffBack.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnStaffBack.Location = new System.Drawing.Point(3, 344);
-            this.BtnStaffBack.Name = "BtnStaffBack";
-            this.BtnStaffBack.Size = new System.Drawing.Size(38, 63);
-            this.BtnStaffBack.TabIndex = 22;
-            this.BtnStaffBack.Text = "返回";
-            this.BtnStaffBack.UseVisualStyleBackColor = true;
-            this.BtnStaffBack.Click += new System.EventHandler(this.BtnStaffBack_Click);
-            // 
-            // BtnStaffDelete
-            // 
-            this.BtnStaffDelete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnStaffDelete.Location = new System.Drawing.Point(3, 276);
-            this.BtnStaffDelete.Name = "BtnStaffDelete";
-            this.BtnStaffDelete.Size = new System.Drawing.Size(38, 62);
-            this.BtnStaffDelete.TabIndex = 2;
-            this.BtnStaffDelete.Text = "删除员工";
-            this.BtnStaffDelete.UseVisualStyleBackColor = true;
-            this.BtnStaffDelete.Click += new System.EventHandler(this.BtnStaffDelete_Click);
-            // 
-            // BtnStaffInsert
-            // 
-            this.BtnStaffInsert.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnStaffInsert.Location = new System.Drawing.Point(3, 3);
-            this.BtnStaffInsert.Name = "BtnStaffInsert";
-            this.BtnStaffInsert.Size = new System.Drawing.Size(38, 62);
-            this.BtnStaffInsert.TabIndex = 0;
-            this.BtnStaffInsert.Text = "添加员工";
-            this.BtnStaffInsert.UseVisualStyleBackColor = true;
-            this.BtnStaffInsert.Click += new System.EventHandler(this.BtnStaffInsert_Click);
-            // 
-            // TlpStaffSubmenu
-            // 
-            this.TlpStaffSubmenu.ColumnCount = 1;
-            this.TlpStaffSubmenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TlpStaffSubmenu.Controls.Add(this.tableLayoutPanel1, 0, 2);
-            this.TlpStaffSubmenu.Controls.Add(this.TlpStaffControllerMenu, 0, 0);
-            this.TlpStaffSubmenu.Controls.Add(this.DgvStaffData, 0, 1);
-            this.TlpStaffSubmenu.Location = new System.Drawing.Point(3, 3);
-            this.TlpStaffSubmenu.Name = "TlpStaffSubmenu";
-            this.TlpStaffSubmenu.RowCount = 3;
-            this.TlpStaffSubmenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.03798F));
-            this.TlpStaffSubmenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.96202F));
-            this.TlpStaffSubmenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.TlpStaffSubmenu.Size = new System.Drawing.Size(178, 120);
-            this.TlpStaffSubmenu.TabIndex = 0;
-            this.TlpStaffSubmenu.Visible = false;
-            // 
-            // TlpStaffControllerMenu
-            // 
-            this.TlpStaffControllerMenu.ColumnCount = 3;
-            this.TlpStaffControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.09662F));
-            this.TlpStaffControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.90338F));
-            this.TlpStaffControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
-            this.TlpStaffControllerMenu.Controls.Add(this.BtnStaffUpdate, 0, 0);
-            this.TlpStaffControllerMenu.Controls.Add(this.TxtStaffSearch, 1, 0);
-            this.TlpStaffControllerMenu.Controls.Add(this.BtnStaffSearch, 2, 0);
-            this.TlpStaffControllerMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TlpStaffControllerMenu.Location = new System.Drawing.Point(3, 3);
-            this.TlpStaffControllerMenu.Name = "TlpStaffControllerMenu";
-            this.TlpStaffControllerMenu.RowCount = 1;
-            this.TlpStaffControllerMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TlpStaffControllerMenu.Size = new System.Drawing.Size(172, 31);
-            this.TlpStaffControllerMenu.TabIndex = 0;
-            // 
-            // BtnStaffUpdate
-            // 
-            this.BtnStaffUpdate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnStaffUpdate.Location = new System.Drawing.Point(3, 3);
-            this.BtnStaffUpdate.Name = "BtnStaffUpdate";
-            this.BtnStaffUpdate.Size = new System.Drawing.Size(44, 25);
-            this.BtnStaffUpdate.TabIndex = 1;
-            this.BtnStaffUpdate.Text = "修改";
-            this.BtnStaffUpdate.UseVisualStyleBackColor = true;
-            this.BtnStaffUpdate.Click += new System.EventHandler(this.BtnStaffUpdate_Click);
-            // 
-            // TxtStaffSearch
-            // 
-            this.TxtStaffSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TxtStaffSearch.Location = new System.Drawing.Point(53, 3);
-            this.TxtStaffSearch.Name = "TxtStaffSearch";
-            this.TxtStaffSearch.Size = new System.Drawing.Size(69, 21);
-            this.TxtStaffSearch.TabIndex = 2;
-            // 
-            // BtnStaffSearch
-            // 
-            this.BtnStaffSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnStaffSearch.Location = new System.Drawing.Point(128, 3);
-            this.BtnStaffSearch.Name = "BtnStaffSearch";
-            this.BtnStaffSearch.Size = new System.Drawing.Size(41, 25);
-            this.BtnStaffSearch.TabIndex = 3;
-            this.BtnStaffSearch.Text = "查找";
-            this.BtnStaffSearch.UseVisualStyleBackColor = true;
-            // 
-            // DgvStaffData
-            // 
-            this.DgvStaffData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvStaffData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvStaffData.Location = new System.Drawing.Point(3, 40);
-            this.DgvStaffData.Name = "DgvStaffData";
-            this.DgvStaffData.RowTemplate.Height = 23;
-            this.DgvStaffData.Size = new System.Drawing.Size(172, 43);
-            this.DgvStaffData.TabIndex = 1;
-            // 
-            // PicMainBackground
-            // 
-            this.PicMainBackground.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PicMainBackground.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PicMainBackground.Image = ((System.Drawing.Image)(resources.GetObject("PicMainBackground.Image")));
-            this.PicMainBackground.Location = new System.Drawing.Point(0, 0);
-            this.PicMainBackground.Margin = new System.Windows.Forms.Padding(2);
-            this.PicMainBackground.Name = "PicMainBackground";
-            this.PicMainBackground.Size = new System.Drawing.Size(1031, 410);
-            this.PicMainBackground.TabIndex = 14;
-            this.PicMainBackground.TabStop = false;
-            // 
-            // TlpWarehouseSubmitMenu
-            // 
-            this.TlpWarehouseSubmitMenu.ColumnCount = 2;
-            this.TlpWarehouseSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TlpWarehouseSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TlpWarehouseSubmitMenu.Controls.Add(this.BtnWarehouseCancel, 1, 0);
-            this.TlpWarehouseSubmitMenu.Controls.Add(this.BtnWarehouseSubmit, 0, 0);
-            this.TlpWarehouseSubmitMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TlpWarehouseSubmitMenu.Location = new System.Drawing.Point(3, 73);
-            this.TlpWarehouseSubmitMenu.Name = "TlpWarehouseSubmitMenu";
-            this.TlpWarehouseSubmitMenu.RowCount = 1;
-            this.TlpWarehouseSubmitMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TlpWarehouseSubmitMenu.Size = new System.Drawing.Size(172, 29);
-            this.TlpWarehouseSubmitMenu.TabIndex = 5;
-            // 
-            // BtnWarehouseSubmit
-            // 
-            this.BtnWarehouseSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnWarehouseSubmit.Location = new System.Drawing.Point(3, 3);
-            this.BtnWarehouseSubmit.Name = "BtnWarehouseSubmit";
-            this.BtnWarehouseSubmit.Size = new System.Drawing.Size(80, 23);
-            this.BtnWarehouseSubmit.TabIndex = 4;
-            this.BtnWarehouseSubmit.Text = "提交修改";
-            this.BtnWarehouseSubmit.UseVisualStyleBackColor = true;
-            this.BtnWarehouseSubmit.Click += new System.EventHandler(this.BtnWarehouseSubmit_Click);
-            // 
-            // BtnWarehouseCancel
-            // 
-            this.BtnWarehouseCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnWarehouseCancel.Location = new System.Drawing.Point(89, 3);
-            this.BtnWarehouseCancel.Name = "BtnWarehouseCancel";
-            this.BtnWarehouseCancel.Size = new System.Drawing.Size(80, 23);
-            this.BtnWarehouseCancel.TabIndex = 5;
-            this.BtnWarehouseCancel.Text = "清空修改";
-            this.BtnWarehouseCancel.UseVisualStyleBackColor = true;
-            this.BtnWarehouseCancel.Click += new System.EventHandler(this.BtnWarehouseCancel_Click);
-            // 
-            // DgvWarehouseData
-            // 
-            this.DgvWarehouseData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvWarehouseData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvWarehouseData.Location = new System.Drawing.Point(3, 37);
-            this.DgvWarehouseData.Name = "DgvWarehouseData";
-            this.DgvWarehouseData.RowTemplate.Height = 23;
-            this.DgvWarehouseData.Size = new System.Drawing.Size(172, 30);
-            this.DgvWarehouseData.TabIndex = 4;
-            // 
-            // TlpWarehouseSubmenu
-            // 
-            this.TlpWarehouseSubmenu.ColumnCount = 1;
-            this.TlpWarehouseSubmenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TlpWarehouseSubmenu.Controls.Add(this.DgvWarehouseData, 0, 1);
-            this.TlpWarehouseSubmenu.Controls.Add(this.TlpWarehouseSubmitMenu, 0, 2);
-            this.TlpWarehouseSubmenu.Controls.Add(this.TlpWarehouseControllerMenu, 0, 0);
-            this.TlpWarehouseSubmenu.Location = new System.Drawing.Point(3, 123);
-            this.TlpWarehouseSubmenu.Name = "TlpWarehouseSubmenu";
-            this.TlpWarehouseSubmenu.RowCount = 3;
-            this.TlpWarehouseSubmenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.57143F));
-            this.TlpWarehouseSubmenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.42857F));
-            this.TlpWarehouseSubmenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.TlpWarehouseSubmenu.Size = new System.Drawing.Size(178, 105);
-            this.TlpWarehouseSubmenu.TabIndex = 1;
-            this.TlpWarehouseSubmenu.Visible = false;
-            // 
-            // TlpWarehouseControllerMenu
-            // 
-            this.TlpWarehouseControllerMenu.ColumnCount = 3;
-            this.TlpWarehouseControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.77483F));
-            this.TlpWarehouseControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.22517F));
-            this.TlpWarehouseControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 43F));
-            this.TlpWarehouseControllerMenu.Controls.Add(this.BtnWarehouseSearch, 0, 0);
-            this.TlpWarehouseControllerMenu.Controls.Add(this.TxtWarehouseSearch, 0, 0);
-            this.TlpWarehouseControllerMenu.Controls.Add(this.BtnWarehouseUpdate, 0, 0);
-            this.TlpWarehouseControllerMenu.Location = new System.Drawing.Point(3, 3);
-            this.TlpWarehouseControllerMenu.Name = "TlpWarehouseControllerMenu";
-            this.TlpWarehouseControllerMenu.RowCount = 1;
-            this.TlpWarehouseControllerMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TlpWarehouseControllerMenu.Size = new System.Drawing.Size(172, 28);
-            this.TlpWarehouseControllerMenu.TabIndex = 6;
-            // 
-            // BtnWarehouseUpdate
-            // 
-            this.BtnWarehouseUpdate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnWarehouseUpdate.Location = new System.Drawing.Point(3, 3);
-            this.BtnWarehouseUpdate.Name = "BtnWarehouseUpdate";
-            this.BtnWarehouseUpdate.Size = new System.Drawing.Size(37, 22);
-            this.BtnWarehouseUpdate.TabIndex = 4;
-            this.BtnWarehouseUpdate.Text = "修改";
-            this.BtnWarehouseUpdate.UseVisualStyleBackColor = true;
-            // 
-            // TxtWarehouseSearch
-            // 
-            this.TxtWarehouseSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TxtWarehouseSearch.Location = new System.Drawing.Point(46, 3);
-            this.TxtWarehouseSearch.Name = "TxtWarehouseSearch";
-            this.TxtWarehouseSearch.Size = new System.Drawing.Size(79, 21);
-            this.TxtWarehouseSearch.TabIndex = 5;
-            // 
-            // BtnWarehouseSearch
-            // 
-            this.BtnWarehouseSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnWarehouseSearch.Location = new System.Drawing.Point(131, 3);
-            this.BtnWarehouseSearch.Name = "BtnWarehouseSearch";
-            this.BtnWarehouseSearch.Size = new System.Drawing.Size(38, 22);
-            this.BtnWarehouseSearch.TabIndex = 6;
-            this.BtnWarehouseSearch.Text = "查找";
-            this.BtnWarehouseSearch.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.BtnStaffCancel, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.BtnStaffSubmit, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 89);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(172, 28);
-            this.tableLayoutPanel1.TabIndex = 6;
-            // 
-            // BtnStaffCancel
-            // 
-            this.BtnStaffCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnStaffCancel.Location = new System.Drawing.Point(89, 3);
-            this.BtnStaffCancel.Name = "BtnStaffCancel";
-            this.BtnStaffCancel.Size = new System.Drawing.Size(80, 22);
-            this.BtnStaffCancel.TabIndex = 5;
-            this.BtnStaffCancel.Text = "清空修改";
-            this.BtnStaffCancel.UseVisualStyleBackColor = true;
-            // 
-            // BtnStaffSubmit
-            // 
-            this.BtnStaffSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnStaffSubmit.Location = new System.Drawing.Point(3, 3);
-            this.BtnStaffSubmit.Name = "BtnStaffSubmit";
-            this.BtnStaffSubmit.Size = new System.Drawing.Size(80, 22);
-            this.BtnStaffSubmit.TabIndex = 4;
-            this.BtnStaffSubmit.Text = "提交修改";
-            this.BtnStaffSubmit.UseVisualStyleBackColor = true;
-            // 
-            // TlpIncomeEmptyMenu
-            // 
-            this.TlpIncomeEmptyMenu.ColumnCount = 1;
-            this.TlpIncomeEmptyMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TlpIncomeEmptyMenu.Controls.Add(this.TlpIncomeSubmitMenu, 0, 2);
-            this.TlpIncomeEmptyMenu.Controls.Add(this.TlpIncomeControllerMenu, 0, 0);
-            this.TlpIncomeEmptyMenu.Controls.Add(this.DgvCategoryInsert, 0, 1);
-            this.TlpIncomeEmptyMenu.Location = new System.Drawing.Point(3, 228);
-            this.TlpIncomeEmptyMenu.Name = "TlpIncomeEmptyMenu";
-            this.TlpIncomeEmptyMenu.RowCount = 3;
-            this.TlpIncomeEmptyMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 42.10526F));
-            this.TlpIncomeEmptyMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.89474F));
-            this.TlpIncomeEmptyMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.TlpIncomeEmptyMenu.Size = new System.Drawing.Size(178, 110);
-            this.TlpIncomeEmptyMenu.TabIndex = 2;
-            this.TlpIncomeEmptyMenu.Visible = false;
-            // 
-            // TlpIncomeControllerMenu
-            // 
-            this.TlpIncomeControllerMenu.ColumnCount = 2;
-            this.TlpIncomeControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.65116F));
-            this.TlpIncomeControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.34884F));
-            this.TlpIncomeControllerMenu.Controls.Add(this.BtnFIncome, 0, 0);
-            this.TlpIncomeControllerMenu.Controls.Add(this.BtnSIncome, 0, 0);
-            this.TlpIncomeControllerMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TlpIncomeControllerMenu.Location = new System.Drawing.Point(3, 3);
-            this.TlpIncomeControllerMenu.Name = "TlpIncomeControllerMenu";
-            this.TlpIncomeControllerMenu.RowCount = 1;
-            this.TlpIncomeControllerMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TlpIncomeControllerMenu.Size = new System.Drawing.Size(172, 26);
-            this.TlpIncomeControllerMenu.TabIndex = 0;
-            // 
-            // BtnSIncome
-            // 
-            this.BtnSIncome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnSIncome.Location = new System.Drawing.Point(3, 3);
-            this.BtnSIncome.Name = "BtnSIncome";
-            this.BtnSIncome.Size = new System.Drawing.Size(87, 20);
-            this.BtnSIncome.TabIndex = 1;
-            this.BtnSIncome.Text = "单例商品入库";
-            this.BtnSIncome.UseVisualStyleBackColor = true;
-            // 
-            // BtnFIncome
-            // 
-            this.BtnFIncome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnFIncome.Location = new System.Drawing.Point(96, 3);
-            this.BtnFIncome.Name = "BtnFIncome";
-            this.BtnFIncome.Size = new System.Drawing.Size(73, 20);
-            this.BtnFIncome.TabIndex = 2;
-            this.BtnFIncome.Text = "批量入库";
-            this.BtnFIncome.UseVisualStyleBackColor = true;
-            // 
-            // DgvCategoryInsert
-            // 
-            this.DgvCategoryInsert.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvCategoryInsert.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvCategoryInsert.Location = new System.Drawing.Point(3, 35);
-            this.DgvCategoryInsert.Name = "DgvCategoryInsert";
-            this.DgvCategoryInsert.RowTemplate.Height = 23;
-            this.DgvCategoryInsert.Size = new System.Drawing.Size(172, 38);
-            this.DgvCategoryInsert.TabIndex = 1;
-            // 
-            // TlpIncomeSubmitMenu
-            // 
-            this.TlpIncomeSubmitMenu.ColumnCount = 2;
-            this.TlpIncomeSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TlpIncomeSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TlpIncomeSubmitMenu.Controls.Add(this.BtnIncomeCancel, 1, 0);
-            this.TlpIncomeSubmitMenu.Controls.Add(this.BtnIncomeSubmit, 0, 0);
-            this.TlpIncomeSubmitMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TlpIncomeSubmitMenu.Location = new System.Drawing.Point(3, 79);
-            this.TlpIncomeSubmitMenu.Name = "TlpIncomeSubmitMenu";
-            this.TlpIncomeSubmitMenu.RowCount = 1;
-            this.TlpIncomeSubmitMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TlpIncomeSubmitMenu.Size = new System.Drawing.Size(172, 28);
-            this.TlpIncomeSubmitMenu.TabIndex = 6;
-            // 
-            // BtnIncomeCancel
-            // 
-            this.BtnIncomeCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnIncomeCancel.Location = new System.Drawing.Point(89, 3);
-            this.BtnIncomeCancel.Name = "BtnIncomeCancel";
-            this.BtnIncomeCancel.Size = new System.Drawing.Size(80, 22);
-            this.BtnIncomeCancel.TabIndex = 5;
-            this.BtnIncomeCancel.Text = "清空修改";
-            this.BtnIncomeCancel.UseVisualStyleBackColor = true;
-            // 
-            // BtnIncomeSubmit
-            // 
-            this.BtnIncomeSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnIncomeSubmit.Location = new System.Drawing.Point(3, 3);
-            this.BtnIncomeSubmit.Name = "BtnIncomeSubmit";
-            this.BtnIncomeSubmit.Size = new System.Drawing.Size(80, 22);
-            this.BtnIncomeSubmit.TabIndex = 4;
-            this.BtnIncomeSubmit.Text = "提交修改";
-            this.BtnIncomeSubmit.UseVisualStyleBackColor = true;
-            // 
-            // TlpSaleEmptyMenu
-            // 
-            this.TlpSaleEmptyMenu.ColumnCount = 1;
-            this.TlpSaleEmptyMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TlpSaleEmptyMenu.Controls.Add(this.TlpSaleSubmitMenu, 0, 2);
-            this.TlpSaleEmptyMenu.Controls.Add(this.BtnSaleInsert, 0, 0);
-            this.TlpSaleEmptyMenu.Controls.Add(this.DgvSaleInsert, 0, 1);
-            this.TlpSaleEmptyMenu.Location = new System.Drawing.Point(181, 3);
-            this.TlpSaleEmptyMenu.Name = "TlpSaleEmptyMenu";
-            this.TlpSaleEmptyMenu.RowCount = 3;
-            this.TlpSaleEmptyMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.13044F));
-            this.TlpSaleEmptyMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.86956F));
-            this.TlpSaleEmptyMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.TlpSaleEmptyMenu.Size = new System.Drawing.Size(200, 100);
-            this.TlpSaleEmptyMenu.TabIndex = 3;
-            this.TlpSaleEmptyMenu.Visible = false;
-            // 
-            // BtnSaleInsert
-            // 
-            this.BtnSaleInsert.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnSaleInsert.Location = new System.Drawing.Point(3, 3);
-            this.BtnSaleInsert.Name = "BtnSaleInsert";
-            this.BtnSaleInsert.Size = new System.Drawing.Size(194, 21);
-            this.BtnSaleInsert.TabIndex = 0;
-            this.BtnSaleInsert.Text = "添加销售记录";
-            this.BtnSaleInsert.UseVisualStyleBackColor = true;
-            // 
-            // DgvSaleInsert
-            // 
-            this.DgvSaleInsert.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvSaleInsert.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvSaleInsert.Location = new System.Drawing.Point(3, 30);
-            this.DgvSaleInsert.Name = "DgvSaleInsert";
-            this.DgvSaleInsert.RowTemplate.Height = 23;
-            this.DgvSaleInsert.Size = new System.Drawing.Size(194, 36);
-            this.DgvSaleInsert.TabIndex = 1;
-            // 
-            // TlpSaleSubmitMenu
-            // 
-            this.TlpSaleSubmitMenu.ColumnCount = 2;
-            this.TlpSaleSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TlpSaleSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TlpSaleSubmitMenu.Controls.Add(this.BtnSaleCancel, 1, 0);
-            this.TlpSaleSubmitMenu.Controls.Add(this.BtnSaleSubmit, 0, 0);
-            this.TlpSaleSubmitMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TlpSaleSubmitMenu.Location = new System.Drawing.Point(3, 72);
-            this.TlpSaleSubmitMenu.Name = "TlpSaleSubmitMenu";
-            this.TlpSaleSubmitMenu.RowCount = 1;
-            this.TlpSaleSubmitMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TlpSaleSubmitMenu.Size = new System.Drawing.Size(194, 25);
-            this.TlpSaleSubmitMenu.TabIndex = 7;
-            // 
-            // BtnSaleCancel
-            // 
-            this.BtnSaleCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnSaleCancel.Location = new System.Drawing.Point(100, 3);
-            this.BtnSaleCancel.Name = "BtnSaleCancel";
-            this.BtnSaleCancel.Size = new System.Drawing.Size(91, 19);
-            this.BtnSaleCancel.TabIndex = 5;
-            this.BtnSaleCancel.Text = "清空修改";
-            this.BtnSaleCancel.UseVisualStyleBackColor = true;
-            // 
-            // BtnSaleSubmit
-            // 
-            this.BtnSaleSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnSaleSubmit.Location = new System.Drawing.Point(3, 3);
-            this.BtnSaleSubmit.Name = "BtnSaleSubmit";
-            this.BtnSaleSubmit.Size = new System.Drawing.Size(91, 19);
-            this.BtnSaleSubmit.TabIndex = 4;
-            this.BtnSaleSubmit.Text = "提交修改";
-            this.BtnSaleSubmit.UseVisualStyleBackColor = true;
-            // 
-            // TlpSaleSearchMenu
-            // 
-            this.TlpSaleSearchMenu.ColumnCount = 1;
-            this.TlpSaleSearchMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TlpSaleSearchMenu.Controls.Add(this.DgvSaleResult, 0, 0);
-            this.TlpSaleSearchMenu.Controls.Add(this.DgvGoodInfo, 0, 1);
-            this.TlpSaleSearchMenu.Location = new System.Drawing.Point(181, 103);
-            this.TlpSaleSearchMenu.Name = "TlpSaleSearchMenu";
-            this.TlpSaleSearchMenu.RowCount = 2;
-            this.TlpSaleSearchMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TlpSaleSearchMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
-            this.TlpSaleSearchMenu.Size = new System.Drawing.Size(200, 100);
-            this.TlpSaleSearchMenu.TabIndex = 4;
-            this.TlpSaleSearchMenu.Visible = false;
-            // 
-            // DgvSaleResult
-            // 
-            this.DgvSaleResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvSaleResult.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvSaleResult.Location = new System.Drawing.Point(3, 3);
-            this.DgvSaleResult.Name = "DgvSaleResult";
-            this.DgvSaleResult.RowTemplate.Height = 23;
-            this.DgvSaleResult.Size = new System.Drawing.Size(194, 47);
-            this.DgvSaleResult.TabIndex = 0;
-            // 
-            // DgvGoodInfo
-            // 
-            this.DgvGoodInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvGoodInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvGoodInfo.Location = new System.Drawing.Point(3, 56);
-            this.DgvGoodInfo.Name = "DgvGoodInfo";
-            this.DgvGoodInfo.RowTemplate.Height = 23;
-            this.DgvGoodInfo.Size = new System.Drawing.Size(194, 41);
-            this.DgvGoodInfo.TabIndex = 1;
-            // 
-            // TlpMsMenu
-            // 
-            this.TlpMsMenu.ColumnCount = 1;
-            this.TlpMsMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TlpMsMenu.Controls.Add(this.tableLayoutPanel3, 0, 0);
-            this.TlpMsMenu.Controls.Add(this.DgvMembership, 0, 1);
-            this.TlpMsMenu.Location = new System.Drawing.Point(181, 201);
-            this.TlpMsMenu.Name = "TlpMsMenu";
-            this.TlpMsMenu.RowCount = 2;
-            this.TlpMsMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41F));
-            this.TlpMsMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 59F));
-            this.TlpMsMenu.Size = new System.Drawing.Size(200, 100);
-            this.TlpMsMenu.TabIndex = 5;
-            this.TlpMsMenu.Visible = false;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 4;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.26804F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.73196F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
-            this.tableLayoutPanel3.Controls.Add(this.button4, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button3, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(194, 35);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 29);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "会员注册";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(41, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(46, 29);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "信息修改";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(93, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(44, 29);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "积分查询";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.Location = new System.Drawing.Point(143, 3);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(48, 29);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "销户";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // DgvMembership
-            // 
-            this.DgvMembership.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvMembership.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvMembership.Location = new System.Drawing.Point(3, 44);
-            this.DgvMembership.Name = "DgvMembership";
-            this.DgvMembership.RowTemplate.Height = 23;
-            this.DgvMembership.Size = new System.Drawing.Size(194, 53);
-            this.DgvMembership.TabIndex = 1;
+            // TapPurchasePie
+            // 
+            this.TapPurchasePie.Location = new System.Drawing.Point(4, 22);
+            this.TapPurchasePie.Name = "TapPurchasePie";
+            this.TapPurchasePie.Padding = new System.Windows.Forms.Padding(3);
+            this.TapPurchasePie.Size = new System.Drawing.Size(192, 74);
+            this.TapPurchasePie.TabIndex = 3;
+            this.TapPurchasePie.Text = "饼图";
+            this.TapPurchasePie.UseVisualStyleBackColor = true;
+            // 
+            // TabSale
+            // 
+            this.TabSale.Controls.Add(this.TapSaleBar);
+            this.TabSale.Controls.Add(this.TapSaleLine);
+            this.TabSale.Controls.Add(this.TapSalePie);
+            this.TabSale.Location = new System.Drawing.Point(478, 129);
+            this.TabSale.Name = "TabSale";
+            this.TabSale.SelectedIndex = 0;
+            this.TabSale.Size = new System.Drawing.Size(200, 100);
+            this.TabSale.TabIndex = 7;
+            this.TabSale.Visible = false;
+            // 
+            // TapSaleBar
+            // 
+            this.TapSaleBar.Location = new System.Drawing.Point(4, 22);
+            this.TapSaleBar.Name = "TapSaleBar";
+            this.TapSaleBar.Padding = new System.Windows.Forms.Padding(3);
+            this.TapSaleBar.Size = new System.Drawing.Size(192, 74);
+            this.TapSaleBar.TabIndex = 1;
+            this.TapSaleBar.Text = "柱状图";
+            this.TapSaleBar.UseVisualStyleBackColor = true;
+            // 
+            // TapSaleLine
+            // 
+            this.TapSaleLine.Location = new System.Drawing.Point(4, 22);
+            this.TapSaleLine.Name = "TapSaleLine";
+            this.TapSaleLine.Padding = new System.Windows.Forms.Padding(3);
+            this.TapSaleLine.Size = new System.Drawing.Size(192, 74);
+            this.TapSaleLine.TabIndex = 2;
+            this.TapSaleLine.Text = "折线图";
+            this.TapSaleLine.UseVisualStyleBackColor = true;
+            // 
+            // TapSalePie
+            // 
+            this.TapSalePie.Location = new System.Drawing.Point(4, 22);
+            this.TapSalePie.Name = "TapSalePie";
+            this.TapSalePie.Padding = new System.Windows.Forms.Padding(3);
+            this.TapSalePie.Size = new System.Drawing.Size(192, 74);
+            this.TapSalePie.TabIndex = 3;
+            this.TapSalePie.Text = "饼图";
+            this.TapSalePie.UseVisualStyleBackColor = true;
+            // 
+            // TabProfit
+            // 
+            this.TabProfit.Controls.Add(this.TapProfitBar);
+            this.TabProfit.Controls.Add(this.TapProfitLine);
+            this.TabProfit.Controls.Add(this.TapProfitPie);
+            this.TabProfit.Location = new System.Drawing.Point(478, 252);
+            this.TabProfit.Name = "TabProfit";
+            this.TabProfit.SelectedIndex = 0;
+            this.TabProfit.Size = new System.Drawing.Size(200, 100);
+            this.TabProfit.TabIndex = 8;
+            this.TabProfit.Visible = false;
+            // 
+            // TapProfitBar
+            // 
+            this.TapProfitBar.Location = new System.Drawing.Point(4, 22);
+            this.TapProfitBar.Name = "TapProfitBar";
+            this.TapProfitBar.Padding = new System.Windows.Forms.Padding(3);
+            this.TapProfitBar.Size = new System.Drawing.Size(192, 74);
+            this.TapProfitBar.TabIndex = 1;
+            this.TapProfitBar.Text = "柱状图";
+            this.TapProfitBar.UseVisualStyleBackColor = true;
+            // 
+            // TapProfitLine
+            // 
+            this.TapProfitLine.Location = new System.Drawing.Point(4, 22);
+            this.TapProfitLine.Name = "TapProfitLine";
+            this.TapProfitLine.Padding = new System.Windows.Forms.Padding(3);
+            this.TapProfitLine.Size = new System.Drawing.Size(192, 74);
+            this.TapProfitLine.TabIndex = 2;
+            this.TapProfitLine.Text = "折线图";
+            this.TapProfitLine.UseVisualStyleBackColor = true;
+            // 
+            // TapProfitPie
+            // 
+            this.TapProfitPie.Location = new System.Drawing.Point(4, 22);
+            this.TapProfitPie.Name = "TapProfitPie";
+            this.TapProfitPie.Padding = new System.Windows.Forms.Padding(3);
+            this.TapProfitPie.Size = new System.Drawing.Size(192, 74);
+            this.TapProfitPie.TabIndex = 3;
+            this.TapProfitPie.Text = "饼图";
+            this.TapProfitPie.UseVisualStyleBackColor = true;
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1031, 410);
             this.Controls.Add(this.SplMainInterface);
-            this.Controls.Add(this.PicMainBackground);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmMain";
@@ -1332,38 +1287,37 @@
             this.SplMainInterface.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SplMainInterface)).EndInit();
             this.SplMainInterface.ResumeLayout(false);
-            this.TlpWarehouseSSubmenu.ResumeLayout(false);
             this.TlpTableMenu.ResumeLayout(false);
-            this.TlpMembershipMenu.ResumeLayout(false);
             this.TlpSaleMenu.ResumeLayout(false);
             this.TlpMainMenu.ResumeLayout(false);
             this.TlpMainMenu.PerformLayout();
             this.TlpWarehouseMenu.ResumeLayout(false);
-            this.TlpStaffMenu.ResumeLayout(false);
-            this.TlpStaffSubmenu.ResumeLayout(false);
-            this.TlpStaffControllerMenu.ResumeLayout(false);
-            this.TlpStaffControllerMenu.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvStaffData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PicMainBackground)).EndInit();
-            this.TlpWarehouseSubmitMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DgvWarehouseData)).EndInit();
-            this.TlpWarehouseSubmenu.ResumeLayout(false);
-            this.TlpWarehouseControllerMenu.ResumeLayout(false);
-            this.TlpWarehouseControllerMenu.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.TlpIncomeEmptyMenu.ResumeLayout(false);
-            this.TlpIncomeControllerMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DgvCategoryInsert)).EndInit();
-            this.TlpIncomeSubmitMenu.ResumeLayout(false);
-            this.TlpSaleEmptyMenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DgvSaleInsert)).EndInit();
-            this.TlpSaleSubmitMenu.ResumeLayout(false);
+            this.TlpMsMenu.ResumeLayout(false);
+            this.TlpMsControllerMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvMembership)).EndInit();
             this.TlpSaleSearchMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvSaleResult)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvGoodInfo)).EndInit();
-            this.TlpMsMenu.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DgvMembership)).EndInit();
+            this.TlpSaleEmptyMenu.ResumeLayout(false);
+            this.TlpSaleSubmitMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvSaleInsert)).EndInit();
+            this.TlpIncomeEmptyMenu.ResumeLayout(false);
+            this.TlpIncomeSubmitMenu.ResumeLayout(false);
+            this.TlpIncomeControllerMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvCategoryInsert)).EndInit();
+            this.TlpWarehouseSubmenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvWarehouseData)).EndInit();
+            this.TlpWarehouseSubmitMenu.ResumeLayout(false);
+            this.TlpWarehouseControllerMenu.ResumeLayout(false);
+            this.TlpWarehouseControllerMenu.PerformLayout();
+            this.TlpStaffMenu.ResumeLayout(false);
+            this.TlpStaffSubmitMenu.ResumeLayout(false);
+            this.TlpStaffControllerMenu.ResumeLayout(false);
+            this.TlpStaffControllerMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvStaffData)).EndInit();
+            this.TabPurchase.ResumeLayout(false);
+            this.TabSale.ResumeLayout(false);
+            this.TabProfit.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1392,14 +1346,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column23;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column24;
         private System.Windows.Forms.SplitContainer SplMainInterface;
-        private System.Windows.Forms.PictureBox PicMainBackground;
         private System.Windows.Forms.TableLayoutPanel TlpWarehouseMenu;
         private System.Windows.Forms.Button BtnGoodIncome;
         private System.Windows.Forms.Button BtnGoodManager;
         private System.Windows.Forms.Button BtnWarehouseWarning;
         private System.Windows.Forms.Button BtnWareSearch;
-        private System.Windows.Forms.TableLayoutPanel TlpStaffMenu;
-        private System.Windows.Forms.Button BtnStaffInsert;
         private System.Windows.Forms.TableLayoutPanel TlpMainMenu;
         private System.Windows.Forms.Button BtnStaff;
         private System.Windows.Forms.Button BtnWarehouse;
@@ -1414,27 +1365,12 @@
         private System.Windows.Forms.Button BtnPurchaseTable;
         private System.Windows.Forms.Button BtnSaleTable;
         private System.Windows.Forms.Button BtnProfitTable;
-        private System.Windows.Forms.TableLayoutPanel TlpMembershipMenu;
-        private System.Windows.Forms.Button BtnMsDelete;
-        private System.Windows.Forms.Button BtnMsSignup;
-        private System.Windows.Forms.Button BtnMsUpdate;
-        private System.Windows.Forms.Button BtnMsPoint;
-        private System.Windows.Forms.Button BtnStaffDelete;
         private System.Windows.Forms.Button BtnTableBack;
-        private System.Windows.Forms.Button BtnMsBack;
         private System.Windows.Forms.Button BtnSaleBack;
         private System.Windows.Forms.Button BtnWarehouseBack;
-        private System.Windows.Forms.Button BtnStaffBack;
-        private System.Windows.Forms.TableLayoutPanel TlpStaffSubmenu;
+        private System.Windows.Forms.TableLayoutPanel TlpStaffMenu;
         private System.Windows.Forms.TableLayoutPanel TlpStaffControllerMenu;
-        private System.Windows.Forms.Button BtnStaffUpdate;
-        private System.Windows.Forms.TextBox TxtStaffSearch;
-        private System.Windows.Forms.Button BtnStaffSearch;
         private System.Windows.Forms.DataGridView DgvStaffData;
-        private System.Windows.Forms.TableLayoutPanel TlpWarehouseSSubmenu;
-        private System.Windows.Forms.Button BtnWarehouseSubmenu;
-        private System.Windows.Forms.Button BtnSingleIncome;
-        private System.Windows.Forms.Button BtnFileIncome;
         private System.Windows.Forms.TableLayoutPanel TlpWarehouseSubmenu;
         private System.Windows.Forms.DataGridView DgvWarehouseData;
         private System.Windows.Forms.TableLayoutPanel TlpWarehouseSubmitMenu;
@@ -1444,7 +1380,7 @@
         private System.Windows.Forms.Button BtnWarehouseSearch;
         private System.Windows.Forms.TextBox TxtWarehouseSearch;
         private System.Windows.Forms.Button BtnWarehouseUpdate;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel TlpStaffSubmitMenu;
         private System.Windows.Forms.Button BtnStaffCancel;
         private System.Windows.Forms.Button BtnStaffSubmit;
         private System.Windows.Forms.TableLayoutPanel TlpIncomeEmptyMenu;
@@ -1465,11 +1401,28 @@
         private System.Windows.Forms.DataGridView DgvSaleResult;
         private System.Windows.Forms.DataGridView DgvGoodInfo;
         private System.Windows.Forms.TableLayoutPanel TlpMsMenu;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel TlpMsControllerMenu;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView DgvMembership;
+        private System.Windows.Forms.Button BtnStaffInsert;
+        private System.Windows.Forms.Button BtnStaffUpdate;
+        private System.Windows.Forms.TextBox TxtStaffSearch;
+        private System.Windows.Forms.Button BtnStaffSearch;
+        private System.Windows.Forms.Button BtnStaffDelete;
+        private System.Windows.Forms.TabControl TabPurchase;
+        private System.Windows.Forms.TabPage TapPurchaseBar;
+        private System.Windows.Forms.TabPage TapPurchaseLine;
+        private System.Windows.Forms.TabControl TabProfit;
+        private System.Windows.Forms.TabPage TapProfitBar;
+        private System.Windows.Forms.TabPage TapProfitLine;
+        private System.Windows.Forms.TabPage TapProfitPie;
+        private System.Windows.Forms.TabControl TabSale;
+        private System.Windows.Forms.TabPage TapSaleBar;
+        private System.Windows.Forms.TabPage TapSaleLine;
+        private System.Windows.Forms.TabPage TapSalePie;
+        private System.Windows.Forms.TabPage TapPurchasePie;
     }
 }

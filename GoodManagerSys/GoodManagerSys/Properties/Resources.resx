@@ -121,6 +121,9 @@
   <data name="Exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Interface" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Interface.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Membership" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Membership.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
