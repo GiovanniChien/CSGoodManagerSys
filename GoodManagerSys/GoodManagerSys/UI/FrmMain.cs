@@ -15,63 +15,60 @@ namespace GoodManagerSys {
         }
 
         private void BtnStaff_Click(object sender, EventArgs e) {
-            TlpMainMenu.Visible = false;
+            TlpMsMenu.Visible = false;
             TlpStaffMenu.Visible = true;
-            TlpStaffSubmenu.Visible = true;
-            TlpMsMenu.Visible = true;
         }
 
         private void BtnWarehouse_Click(object sender, EventArgs e) {
             TlpMainMenu.Visible = false;
-            TlpWarehouseMenu.Visible = true;
+            TlpStaffMenu.Visible = false;
             TlpMsMenu.Visible = false;
+            TlpWarehouseMenu.Visible = true;
         }
 
         private void BtnSale_Click(object sender, EventArgs e) {
             TlpMainMenu.Visible = false;
-            TlpSaleMenu.Visible = true;
+            TlpStaffMenu.Visible = false;
             TlpMsMenu.Visible = false;
+            TlpSaleMenu.Visible = true;
         }
 
         private void BtnMembership_Click(object sender, EventArgs e) {
-            TlpMainMenu.Visible = false;
-            TlpMembershipMenu.Visible = true;
+            TlpStaffMenu.Visible = false;
             TlpMsMenu.Visible = true;
         }
 
         private void BtnTable_Click(object sender, EventArgs e) {
             TlpMainMenu.Visible = false;
-            TlpTableMenu.Visible = true;
+            TlpStaffMenu.Visible = false;
             TlpMsMenu.Visible = false;
+            TlpTableMenu.Visible = true;
         }
 
         private void BtnStaffBack_Click(object sender, EventArgs e) {
             TlpStaffMenu.Visible = false;
             TlpMainMenu.Visible = true;
-            TlpStaffSubmenu.Visible = false;
         }
 
         private void BtnWarehouseBack_Click(object sender, EventArgs e) {
             TlpWarehouseMenu.Visible = false;
-            TlpMainMenu.Visible = true;
             TlpWarehouseSubmenu.Visible = false;
             TlpIncomeEmptyMenu.Visible = false;
+            TlpMainMenu.Visible = true;
         }
 
         private void BtnSaleBack_Click(object sender, EventArgs e) {
             TlpSaleMenu.Visible = false;
-            TlpMainMenu.Visible = true;
             TlpSaleEmptyMenu.Visible = false;
-            TlpSaleSearchMenu.Visible = true;
-        }
-
-        private void BtnMsBack_Click(object sender, EventArgs e) {
-            TlpMembershipMenu.Visible = false;
+            TlpSaleSearchMenu.Visible = false;
             TlpMainMenu.Visible = true;
         }
 
         private void BtnTableBack_Click(object sender, EventArgs e) {
             TlpTableMenu.Visible = false;
+            TabPurchase.Visible = false;
+            TabSale.Visible = false;
+            TabProfit.Visible = false;
             TlpMainMenu.Visible = true;
         }
 
@@ -88,16 +85,13 @@ namespace GoodManagerSys {
         }
 
         private void BtnGoodIncome_Click(object sender, EventArgs e) {
-            TlpWarehouseMenu.Visible = false;
-            TlpWarehouseSSubmenu.Visible = true;
             TlpWarehouseSubmenu.Visible = false;
             TlpIncomeEmptyMenu.Visible = true;
         }
 
         private void BtnWarehouseSubmenu_Click(object sender, EventArgs e) {
-            TlpWarehouseSSubmenu.Visible = false;
-            TlpWarehouseMenu.Visible = true;
             TlpIncomeEmptyMenu.Visible = false;
+            TlpWarehouseMenu.Visible = true;
         }
 
         private void BtnStaffUpdate_Click(object sender, EventArgs e) {
@@ -128,8 +122,8 @@ namespace GoodManagerSys {
         }
 
         private void BtnSaleGood_Click(object sender, EventArgs e) {
-            TlpSaleEmptyMenu.Visible = true;
             TlpSaleSearchMenu.Visible = false;
+            TlpSaleEmptyMenu.Visible = true;
             //FrmSaleInsert
         }
 
@@ -141,7 +135,7 @@ namespace GoodManagerSys {
 
         private void BtnWarehouseWarning_Click(object sender, EventArgs e) {
             TlpIncomeEmptyMenu.Visible = false;
-                TlpWarehouseSubmenu.Visible = true;
+            TlpWarehouseSubmenu.Visible = true;
             //按数量<minStock查询
         }
 
@@ -149,6 +143,24 @@ namespace GoodManagerSys {
             TlpSaleEmptyMenu.Visible = false;
             TlpSaleSearchMenu.Visible = true;
             //刷新数据
+        }
+
+        private void BtnPurchaseTable_Click(object sender, EventArgs e) {
+            TabSale.Visible = false;
+            TabProfit.Visible = false;
+            TabPurchase.Visible = true;
+        }
+
+        private void BtnSaleTable_Click(object sender, EventArgs e) {
+            TabProfit.Visible = false;
+            TabPurchase.Visible = false;
+            TabSale.Visible = true;
+        }
+
+        private void BtnProfitTable_Click(object sender, EventArgs e) {
+            TabSale.Visible = false;
+            TabPurchase.Visible = false;
+            TabProfit.Visible = true;
         }
     }
 }
