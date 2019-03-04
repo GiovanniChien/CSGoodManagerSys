@@ -31,12 +31,6 @@
             this.BtnSIncome = new System.Windows.Forms.Button();
             this.BtnMIncome = new System.Windows.Forms.Button();
             this.DgvGoodIncome = new System.Windows.Forms.DataGridView();
-            this.BtnComfirm = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.DtpPurchaseDate = new System.Windows.Forms.DateTimePicker();
-            this.BtnCancel = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.CmbOperator = new System.Windows.Forms.ComboBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +41,14 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnComfirm = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.DtpPurchaseDate = new System.Windows.Forms.DateTimePicker();
+            this.BtnCancel = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.CmbOperator = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.TxtPurchaseID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DgvGoodIncome)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,59 +90,6 @@
             this.DgvGoodIncome.RowTemplate.Height = 37;
             this.DgvGoodIncome.Size = new System.Drawing.Size(967, 437);
             this.DgvGoodIncome.TabIndex = 2;
-            // 
-            // BtnComfirm
-            // 
-            this.BtnComfirm.Location = new System.Drawing.Point(711, 542);
-            this.BtnComfirm.Name = "BtnComfirm";
-            this.BtnComfirm.Size = new System.Drawing.Size(117, 50);
-            this.BtnComfirm.TabIndex = 3;
-            this.BtnComfirm.Text = "确定";
-            this.BtnComfirm.UseVisualStyleBackColor = true;
-            this.BtnComfirm.Click += new System.EventHandler(this.BtnComfirm_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(661, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 24);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "进货日期";
-            // 
-            // DtpPurchaseDate
-            // 
-            this.DtpPurchaseDate.Location = new System.Drawing.Point(791, 26);
-            this.DtpPurchaseDate.Name = "DtpPurchaseDate";
-            this.DtpPurchaseDate.Size = new System.Drawing.Size(200, 35);
-            this.DtpPurchaseDate.TabIndex = 5;
-            // 
-            // BtnCancel
-            // 
-            this.BtnCancel.Location = new System.Drawing.Point(848, 542);
-            this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(117, 50);
-            this.BtnCancel.TabIndex = 6;
-            this.BtnCancel.Text = "取消";
-            this.BtnCancel.UseVisualStyleBackColor = true;
-            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(98, 555);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 24);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "经办人";
-            // 
-            // CmbOperator
-            // 
-            this.CmbOperator.FormattingEnabled = true;
-            this.CmbOperator.Location = new System.Drawing.Point(195, 552);
-            this.CmbOperator.Name = "CmbOperator";
-            this.CmbOperator.Size = new System.Drawing.Size(202, 32);
-            this.CmbOperator.TabIndex = 8;
             // 
             // Column1
             // 
@@ -222,11 +171,82 @@
             this.Column9.ReadOnly = true;
             this.Column9.Width = 103;
             // 
+            // BtnComfirm
+            // 
+            this.BtnComfirm.Location = new System.Drawing.Point(711, 542);
+            this.BtnComfirm.Name = "BtnComfirm";
+            this.BtnComfirm.Size = new System.Drawing.Size(117, 50);
+            this.BtnComfirm.TabIndex = 3;
+            this.BtnComfirm.Text = "确定";
+            this.BtnComfirm.UseVisualStyleBackColor = true;
+            this.BtnComfirm.Click += new System.EventHandler(this.BtnComfirm_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(661, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(106, 24);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "进货日期";
+            // 
+            // DtpPurchaseDate
+            // 
+            this.DtpPurchaseDate.Location = new System.Drawing.Point(791, 26);
+            this.DtpPurchaseDate.Name = "DtpPurchaseDate";
+            this.DtpPurchaseDate.Size = new System.Drawing.Size(200, 35);
+            this.DtpPurchaseDate.TabIndex = 5;
+            // 
+            // BtnCancel
+            // 
+            this.BtnCancel.Location = new System.Drawing.Point(848, 542);
+            this.BtnCancel.Name = "BtnCancel";
+            this.BtnCancel.Size = new System.Drawing.Size(117, 50);
+            this.BtnCancel.TabIndex = 6;
+            this.BtnCancel.Text = "取消";
+            this.BtnCancel.UseVisualStyleBackColor = true;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(27, 555);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(82, 24);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "经办人";
+            // 
+            // CmbOperator
+            // 
+            this.CmbOperator.FormattingEnabled = true;
+            this.CmbOperator.Location = new System.Drawing.Point(124, 552);
+            this.CmbOperator.Name = "CmbOperator";
+            this.CmbOperator.Size = new System.Drawing.Size(202, 32);
+            this.CmbOperator.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(357, 555);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(106, 24);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "初始单号";
+            // 
+            // TxtPurchaseID
+            // 
+            this.TxtPurchaseID.Location = new System.Drawing.Point(469, 552);
+            this.TxtPurchaseID.Name = "TxtPurchaseID";
+            this.TxtPurchaseID.Size = new System.Drawing.Size(195, 35);
+            this.TxtPurchaseID.TabIndex = 10;
+            // 
             // FrmGoodIncome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1012, 631);
+            this.Controls.Add(this.TxtPurchaseID);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.CmbOperator);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.BtnCancel);
@@ -265,5 +285,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox TxtPurchaseID;
     }
 }

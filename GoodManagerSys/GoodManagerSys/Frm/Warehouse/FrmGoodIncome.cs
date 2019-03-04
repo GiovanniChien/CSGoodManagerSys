@@ -1,4 +1,5 @@
-﻿using GoodManagerSys.Entities;
+﻿using GoodManagerSys.Dao;
+using GoodManagerSys.Entities;
 using GoodManagerSys.Enums;
 using GoodManagerSys.Utils;
 using System;
@@ -25,6 +26,11 @@ namespace GoodManagerSys.Frm
             Goods = new List<ClsGood>();
             goodsPreSize = 0;
             goodsCurSize = 0;
+            List<EtStaff> staffs = StaffDao.QueryByRole((int)ERole.eBuyer);
+            foreach(EtStaff staff in staffs)
+            {
+                CmbOperator.Items.Add(staff.StaffName);
+            }
         }
 
         private void BtnSIncome_Click(object sender, EventArgs e)
@@ -72,23 +78,71 @@ namespace GoodManagerSys.Frm
             return res;
         }
 
-        private bool SavePurchaseOrder()
+        private bool Save()
         {
             EtPurchase purchase;
-            foreach(ClsGood good in Goods)
+            if (CmbOperator.SelectedIndex == -1)
+            {
+                MsgBoxUtil.ErrMsgBox("经办人不能为空！");
+                return false;
+            }
+            if (TxtPurchaseID.Text == "")
+            {
+                MsgBoxUtil.ErrMsgBox("初始单号不能为空！");
+                return false;
+            }
+            int purchaseId = int.Parse(TxtPurchaseID.Text);
+            if (PurchaseDao.QueryByPurchaseID(purchaseId).Count > 0)
+            {
+                MsgBoxUtil.ErrMsgBox("单号重复！");
+                return false;
+            }
+            int staffId = StaffDao.QueryByStaffName(CmbOperator.SelectedItem.ToString())[0].StaffID;
+            int res = 0;
+            foreach (ClsGood good in Goods)
             {
                 purchase = new EtPurchase
                 {
+                    PurchaseID = purchaseId,
                     Category = good.Good.Category,
                     PurchaseDate = DtpPurchaseDate.Value.ToString("yyyyMMdd"),
+                    Quantity = good.Count,
+                    Cost = good.Good.Cost,
+                    StaffID = staffId
                 };
+                res += PurchaseDao.InsertPurchase(purchase);
+                EtGood g = new EtGood
+                {
+                    Category = good.Good.Category,
+                    ProductionDate = good.Good.ProductionDate,
+                    PurchaseDate = purchase.PurchaseDate,
+                    Cost = good.Good.Cost,
+                    Price = good.Good.Price,
+                    State = good.Good.State
+                };
+                for (int i = 0; i < good.Count; i++)
+                {
+                    GoodDao.InsertGood(g);
+                }
             }
-            return false;
+            if (res == Goods.Count) return true;
+            else return false;
         }
 
         private void BtnComfirm_Click(object sender, EventArgs e)
         {
-
+            if(Goods.Count==0)
+            {
+                MsgBoxUtil.ErrMsgBox("没有待插入的表单!");
+            }
+            else
+            {
+                DialogResult res = MsgBoxUtil.QuestionMsgBox("确认提交？");
+                if (res == DialogResult.OK)
+                {
+                    if(Save()) this.Close();
+                }
+            }
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -102,7 +156,7 @@ namespace GoodManagerSys.Frm
                 }
                 else if (res == DialogResult.Yes)
                 {
-                    //保存
+                    if (Save()) this.Close();
                 }
             }
         }
