@@ -48,8 +48,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.0.0.999, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.0.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data">
       <HintPath>bin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.4.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.4.1\lib\net45\NPOI.OpenXmlFormats.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -86,6 +101,12 @@
     </Compile>
     <Compile Include="Frm\Warehouse\FrmGoodIncome.Designer.cs">
       <DependentUpon>FrmGoodIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Warehouse\FrmPurchaseFromExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Warehouse\FrmPurchaseFromExcel.Designer.cs">
+      <DependentUpon>FrmPurchaseFromExcel.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -136,6 +157,9 @@
     <EmbeddedResource Include="Frm\Warehouse\FrmGoodIncome.resx">
       <DependentUpon>FrmGoodIncome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Warehouse\FrmPurchaseFromExcel.resx">
+      <DependentUpon>FrmPurchaseFromExcel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +191,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

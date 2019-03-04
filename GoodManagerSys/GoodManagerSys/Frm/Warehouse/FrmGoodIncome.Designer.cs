@@ -70,6 +70,7 @@
             this.BtnMIncome.TabIndex = 1;
             this.BtnMIncome.Text = "批量商品入库";
             this.BtnMIncome.UseVisualStyleBackColor = true;
+            this.BtnMIncome.Click += new System.EventHandler(this.BtnMIncome_Click);
             // 
             // DgvGoodIncome
             // 

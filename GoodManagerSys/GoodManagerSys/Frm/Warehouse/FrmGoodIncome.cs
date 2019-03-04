@@ -1,15 +1,11 @@
 ﻿using GoodManagerSys.Dao;
 using GoodManagerSys.Entities;
 using GoodManagerSys.Enums;
+using GoodManagerSys.Frm.Warehouse;
 using GoodManagerSys.Utils;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GoodManagerSys.Frm
@@ -33,6 +29,19 @@ namespace GoodManagerSys.Frm
             }
         }
 
+
+        private void BtnMIncome_Click(object sender, EventArgs e)
+        {
+            goodsPreSize = Goods.Count;
+            FrmPurchaseFromExcel frmPurchaseFromExcel = new FrmPurchaseFromExcel
+            {
+                StartPosition = FormStartPosition.CenterParent
+            };
+            frmPurchaseFromExcel.ShowDialog();
+            goodsCurSize = Goods.Count;
+            DgvAdd();
+        }
+
         private void BtnSIncome_Click(object sender, EventArgs e)
         {
             goodsPreSize = Goods.Count;
@@ -47,10 +56,11 @@ namespace GoodManagerSys.Frm
 
         private void DgvAdd()
         {
+            if (goodsPreSize == goodsCurSize) return;
             for (int i = goodsPreSize; i < goodsCurSize; i++)
             {
                 EtGood etGood = Goods[i].Good;
-                DgvGoodIncome.Rows.Add(new object[] { i,
+                DgvGoodIncome.Rows.Add(new object[] { i+1,
                         etGood.Category.CategoryName,
                         etGood.Category.ParentCategoryName,
                         etGood.Category.Unit,etGood.Category.Firm,
@@ -58,6 +68,8 @@ namespace GoodManagerSys.Frm
                         Goods[i].Count,etGood.Cost,etGood.Price,
                         EStateToString(etGood.State)});
             }
+            DgvGoodIncome.RowsDefaultCellStyle.BackColor = Color.LightCyan;
+            DgvGoodIncome.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
         }
 
         private string EStateToString(EState state)
@@ -70,9 +82,6 @@ namespace GoodManagerSys.Frm
                     break;
                 case EState.eUnsaled:
                     res = "未销售";
-                    break;
-                case EState.eSaled:
-                    res = "已销售";
                     break;
             }
             return res;
@@ -140,26 +149,16 @@ namespace GoodManagerSys.Frm
                 DialogResult res = MsgBoxUtil.QuestionMsgBox("确认提交？");
                 if (res == DialogResult.OK)
                 {
-                    if(Save()) this.Close();
+                    if(Save()) Close();
                 }
             }
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
-            if (Goods.Count > 0)
-            {
-                DialogResult res = MsgBoxUtil.YesNoCancelMsgBox("当前单据未保存，是否保存？");
-                if(res==DialogResult.No)
-                {
-                    this.Close();
-                }
-                else if (res == DialogResult.Yes)
-                {
-                    if (Save()) this.Close();
-                }
-            }
+            Close();
         }
+
     }
 
     public class ClsGood

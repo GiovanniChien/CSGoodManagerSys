@@ -49,8 +49,7 @@
             this.CmbIsValid.FormattingEnabled = true;
             this.CmbIsValid.Items.AddRange(new object[] {
             "未上架",
-            "未出售",
-            "已出售"});
+            "未出售"});
             this.CmbIsValid.Location = new System.Drawing.Point(254, 384);
             this.CmbIsValid.Margin = new System.Windows.Forms.Padding(4);
             this.CmbIsValid.Name = "CmbIsValid";
