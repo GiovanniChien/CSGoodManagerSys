@@ -15,7 +15,7 @@ namespace GoodManagerSys.Utils {
          * @user:用户名,一般root
          * @password:密码
          */
-        private static String ConnStr = "server=172.22.29.192;port=3306;database=goodmanagesys;user=root;password=root;SslMode=none;";
+        private static string ConnStr = "server=localhost;port=3306;database=goodmanagesys;user=root;password=root;SslMode=none;";
         private MySqlConnection conn = null;
 
         public DBHelper() {
@@ -24,7 +24,7 @@ namespace GoodManagerSys.Utils {
         }
 
         //无参查找
-        public MySqlDataReader RunQuerySQL(String sql) {
+        public MySqlDataReader RunQuerySQL(string sql) {
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             MySqlDataReader dr = null;
             try {
@@ -37,7 +37,7 @@ namespace GoodManagerSys.Utils {
         }
 
         //有参查找，详见demo.cs
-        public MySqlDataReader RunQuerySQL(String sql, MySqlParameter[] prams) {
+        public MySqlDataReader RunQuerySQL(string sql, MySqlParameter[] prams) {
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             MySqlDataReader dr = null;
             try {
@@ -53,7 +53,7 @@ namespace GoodManagerSys.Utils {
         }
 
         //无参增删改
-        public int RunNonQuerySQL(String sql) {
+        public int RunNonQuerySQL(string sql) {
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int res = 0;
             MySqlTransaction transaction = conn.BeginTransaction();
@@ -69,7 +69,7 @@ namespace GoodManagerSys.Utils {
         }
 
         //有参增删改
-        public int RunNonQuerySQL(String sql, MySqlParameter[] prams) {
+        public int RunNonQuerySQL(string sql, MySqlParameter[] prams) {
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int res = 0;
             MySqlTransaction transaction = conn.BeginTransaction();
