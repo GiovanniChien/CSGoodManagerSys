@@ -81,7 +81,7 @@ namespace GoodManagerSys.Frm
                 {
                     Category = good.Good.Category,
                     PurchaseDate = DtpPurchaseDate.Value.ToString("yyyyMMdd"),
-                };
+                }
             }
             return false;
         }

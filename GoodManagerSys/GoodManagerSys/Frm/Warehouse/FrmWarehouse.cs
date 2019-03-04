@@ -37,18 +37,17 @@ namespace GoodManagerSys.UI
                 list1 = CategoryDao.QueryByParentCategoryID((ECategory)index);
             string idOrName = TxtIdOrName.Text;
             string RegexStr = "^[0-9]+$";
-            //list2 = new List<EtCategory>();
+            list2 = new List<EtCategory>();
             if (Regex.IsMatch(idOrName, RegexStr))
                 list2 = CategoryDao.QueryByCategoryID(int.Parse(idOrName));
-            else
-                list2 = CategoryDao.QueryByCategoryName(idOrName);
+            list3 = CategoryDao.QueryByCategoryName(idOrName);
             Console.WriteLine(list1.Count());
             Console.WriteLine(list2.Count());
-            //Console.WriteLine(list3.Count());
-            var categories = list1.Union(list2);
+            Console.WriteLine(list3.Count());
+            var union = list3.Union(list2);
+            Console.WriteLine(union.Count());
+            var categories = list1.Intersect(union);
             Console.WriteLine(categories.Count());
-            //var categories = list1.Intersect(union);
-            //Console.WriteLine(categories.Count());
             for (int i=0;i< categories.Count();i++)
             {
                 Console.WriteLine(categories.ElementAt(i).ToString());
