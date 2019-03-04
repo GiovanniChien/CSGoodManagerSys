@@ -70,6 +70,7 @@
     <Compile Include="Dao\PurchaseDao.cs" />
     <Compile Include="Dao\SaleDao.cs" />
     <Compile Include="Dao\StaffDao.cs" />
+    <Compile Include="Encrypt.cs" />
     <Compile Include="Entities\EtCategory.cs" />
     <Compile Include="Entities\EtGood.cs" />
     <Compile Include="Entities\EtMembership.cs" />
