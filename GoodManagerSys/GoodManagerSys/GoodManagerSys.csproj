@@ -80,16 +80,28 @@
     <Compile Include="Enums\ERole.cs" />
     <Compile Include="Enums\EState.cs" />
     <Compile Include="Enums\EValid.cs" />
+    <Compile Include="Frm\Membership\FrmMembership.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Membership\FrmMembership.Designer.cs">
+      <DependentUpon>FrmMembership.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Staff\FrmStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Staff\FrmStaff.Designer.cs">
+      <DependentUpon>FrmStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\FrmMsInsert.cs">
+    <Compile Include="Frm\Membership\FrmMsInsert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\FrmMsInsert.designer.cs">
+    <Compile Include="Frm\Membership\FrmMsInsert.designer.cs">
       <DependentUpon>FrmMsInsert.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FrmMain.cs">
@@ -98,23 +110,17 @@
     <Compile Include="UI\FrmMain.designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\FrmStaffInsert.cs">
+    <Compile Include="Frm\Staff\FrmStaffInsert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\FrmStaffInsert.designer.cs">
+    <Compile Include="Frm\Staff\FrmStaffInsert.designer.cs">
       <DependentUpon>FrmStaffInsert.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\FrmStaffUpdate.cs">
+    <Compile Include="Frm\Staff\FrmStaffUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\FrmStaffUpdate.designer.cs">
+    <Compile Include="Frm\Staff\FrmStaffUpdate.designer.cs">
       <DependentUpon>FrmStaffUpdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\FrmStaffDelete.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\FrmStaffDelete.designer.cs">
-      <DependentUpon>FrmStaffDelete.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FrmGoodInsert.cs">
       <SubType>Form</SubType>
@@ -143,23 +149,26 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\DBHelper.cs" />
+    <EmbeddedResource Include="Frm\Membership\FrmMembership.resx">
+      <DependentUpon>FrmMembership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Staff\FrmStaff.resx">
+      <DependentUpon>FrmStaff.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\FrmMsInsert.resx">
+    <EmbeddedResource Include="Frm\Membership\FrmMsInsert.resx">
       <DependentUpon>FrmMsInsert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\FrmStaffInsert.resx">
+    <EmbeddedResource Include="Frm\Staff\FrmStaffInsert.resx">
       <DependentUpon>FrmStaffInsert.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\FrmStaffUpdate.resx">
+    <EmbeddedResource Include="Frm\Staff\FrmStaffUpdate.resx">
       <DependentUpon>FrmStaffUpdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\FrmStaffDelete.resx">
-      <DependentUpon>FrmStaffDelete.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmGoodInsert.resx">
       <DependentUpon>FrmGoodInsert.cs</DependentUpon>

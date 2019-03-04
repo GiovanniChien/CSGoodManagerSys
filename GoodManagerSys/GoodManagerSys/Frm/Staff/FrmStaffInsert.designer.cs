@@ -1,7 +1,5 @@
-﻿namespace GoodManagerSys
-{
-    partial class FrmStaffInsert
-    {
+﻿namespace GoodManagerSys {
+    partial class FrmStaffInsert {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -11,10 +9,8 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -26,13 +22,10 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
-            this.TxtStaffID = new System.Windows.Forms.TextBox();
+        private void InitializeComponent() {
             this.TxtStaffName = new System.Windows.Forms.TextBox();
             this.TxtStaffPwd = new System.Windows.Forms.TextBox();
             this.TxtStaffPhone = new System.Windows.Forms.TextBox();
-            this.LblStaffID = new System.Windows.Forms.Label();
             this.LblStaffName = new System.Windows.Forms.Label();
             this.LblStaffPwd = new System.Windows.Forms.Label();
             this.LblStaffPhone = new System.Windows.Forms.Label();
@@ -41,14 +34,6 @@
             this.CmbStaffRole = new System.Windows.Forms.ComboBox();
             this.BtnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // TxtStaffID
-            // 
-            this.TxtStaffID.Location = new System.Drawing.Point(121, 43);
-            this.TxtStaffID.Margin = new System.Windows.Forms.Padding(2);
-            this.TxtStaffID.Name = "TxtStaffID";
-            this.TxtStaffID.Size = new System.Drawing.Size(110, 21);
-            this.TxtStaffID.TabIndex = 0;
             // 
             // TxtStaffName
             // 
@@ -73,16 +58,6 @@
             this.TxtStaffPhone.Name = "TxtStaffPhone";
             this.TxtStaffPhone.Size = new System.Drawing.Size(110, 21);
             this.TxtStaffPhone.TabIndex = 3;
-            // 
-            // LblStaffID
-            // 
-            this.LblStaffID.AutoSize = true;
-            this.LblStaffID.Location = new System.Drawing.Point(64, 46);
-            this.LblStaffID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.LblStaffID.Name = "LblStaffID";
-            this.LblStaffID.Size = new System.Drawing.Size(53, 12);
-            this.LblStaffID.TabIndex = 5;
-            this.LblStaffID.Text = "员工编号";
             // 
             // LblStaffName
             // 
@@ -134,11 +109,13 @@
             this.BtnInsert.TabIndex = 10;
             this.BtnInsert.Text = "添加";
             this.BtnInsert.UseVisualStyleBackColor = true;
+            this.BtnInsert.Click += new System.EventHandler(this.BtnInsert_Click);
             // 
             // CmbStaffRole
             // 
             this.CmbStaffRole.FormattingEnabled = true;
             this.CmbStaffRole.Items.AddRange(new object[] {
+            "--请选择--",
             "收银员",
             "采购员",
             "管理员"});
@@ -158,6 +135,7 @@
             this.BtnBack.TabIndex = 10;
             this.BtnBack.Text = "返回";
             this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // FrmStaffInsert
             // 
@@ -171,11 +149,9 @@
             this.Controls.Add(this.LblStaffPhone);
             this.Controls.Add(this.LblStaffPwd);
             this.Controls.Add(this.LblStaffName);
-            this.Controls.Add(this.LblStaffID);
             this.Controls.Add(this.TxtStaffPhone);
             this.Controls.Add(this.TxtStaffPwd);
             this.Controls.Add(this.TxtStaffName);
-            this.Controls.Add(this.TxtStaffID);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmStaffInsert";
             this.Text = "添加员工";
@@ -185,12 +161,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox TxtStaffID;
         private System.Windows.Forms.TextBox TxtStaffName;
         private System.Windows.Forms.TextBox TxtStaffPwd;
         private System.Windows.Forms.TextBox TxtStaffPhone;
-        private System.Windows.Forms.Label LblStaffID;
         private System.Windows.Forms.Label LblStaffName;
         private System.Windows.Forms.Label LblStaffPwd;
         private System.Windows.Forms.Label LblStaffPhone;
