@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,11 +27,14 @@ namespace GoodManagerSys.Utils {
         public MySqlDataReader RunQuerySQL(String sql) {
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             MySqlDataReader dr = null;
+            MySqlTransaction transaction=conn.BeginTransaction();
             try {
                 dr = cmd.ExecuteReader();
+                transaction.Commit();
             }
             catch (Exception e) {
                 Console.WriteLine(e.ToString());
+                transaction.Rollback();
             }
             return dr;
         }
@@ -39,14 +43,17 @@ namespace GoodManagerSys.Utils {
         public MySqlDataReader RunQuerySQL(String sql, MySqlParameter[] prams) {
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             MySqlDataReader dr = null;
+            MySqlTransaction transaction = conn.BeginTransaction();
             try {
                 foreach (MySqlParameter pram in prams) {
                     cmd.Parameters.Add(pram);
                 }
                 dr = cmd.ExecuteReader();
+                transaction.Commit();
             }
             catch (Exception e) {
                 Console.WriteLine(e.ToString());
+                transaction.Rollback();
             }
             return dr;
         }
@@ -55,11 +62,14 @@ namespace GoodManagerSys.Utils {
         public int RunNonQuerySQL(String sql) {
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int res = 0;
+            MySqlTransaction transaction = conn.BeginTransaction();
             try {
                 res = cmd.ExecuteNonQuery();
+                transaction.Commit();
             }
             catch (Exception e) {
                 Console.WriteLine(e.ToString());
+                transaction.Rollback();
             }
             return res;
         }
@@ -68,14 +78,17 @@ namespace GoodManagerSys.Utils {
         public int RunNonQuerySQL(String sql, MySqlParameter[] prams) {
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             int res = 0;
+            MySqlTransaction transaction = conn.BeginTransaction();
             try {
                 foreach (MySqlParameter pram in prams) {
                     cmd.Parameters.Add(pram);
                 }
                 res = cmd.ExecuteNonQuery();
+                transaction.Commit();
             }
             catch (Exception e) {
                 Console.WriteLine(e.ToString());
+                transaction.Rollback();
             }
             return res;
         }
