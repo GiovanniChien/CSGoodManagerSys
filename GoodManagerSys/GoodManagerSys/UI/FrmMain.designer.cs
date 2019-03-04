@@ -1219,6 +1219,7 @@
             this.TlpWarehouseControllerMenu.Controls.Add(this.BtnWarehouseSearch, 0, 0);
             this.TlpWarehouseControllerMenu.Controls.Add(this.TxtWarehouseSearch, 0, 0);
             this.TlpWarehouseControllerMenu.Controls.Add(this.BtnWarehouseUpdate, 0, 0);
+            this.TlpWarehouseControllerMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TlpWarehouseControllerMenu.Location = new System.Drawing.Point(6, 6);
             this.TlpWarehouseControllerMenu.Margin = new System.Windows.Forms.Padding(6);
             this.TlpWarehouseControllerMenu.Name = "TlpWarehouseControllerMenu";
