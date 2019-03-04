@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using GoodManagerSys;
+using GoodManagerSys.UI;
 
 namespace GoodManagerSys
 {
@@ -17,7 +18,7 @@ namespace GoodManagerSys
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogin());
+            Application.Run(new FrmWarehouse());
         }
     }
 }

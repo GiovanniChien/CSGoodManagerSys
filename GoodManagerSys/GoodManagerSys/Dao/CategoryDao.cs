@@ -24,7 +24,7 @@ namespace GoodManagerSys.Dao {
 
         public static List<EtCategory> QueryByCategoryName(string categoryName) {
             DBHelper helper = new DBHelper();
-            string sql = "SELECT * FROM category WHERE categoryName = @categoryName";
+            string sql = "SELECT * FROM category WHERE categoryName like '%@categoryName%'";
             MySqlParameter[] prams = { new MySqlParameter("@categoryName", categoryName) };
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);

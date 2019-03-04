@@ -129,6 +129,12 @@
     <Compile Include="UI\FrmCategory.designer.cs">
       <DependentUpon>FrmCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm\Warehouse\FrmWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Warehouse\FrmWarehouse.Designer.cs">
+      <DependentUpon>FrmWarehouse.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FrmWarehouseWarning.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmCategory.resx">
       <DependentUpon>FrmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Warehouse\FrmWarehouse.resx">
+      <DependentUpon>FrmWarehouse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmWarehouseWarning.resx">
       <DependentUpon>FrmWarehouseWarning.cs</DependentUpon>
@@ -262,8 +271,6 @@
   <ItemGroup>
     <None Include="Properties\Button.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Form\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
