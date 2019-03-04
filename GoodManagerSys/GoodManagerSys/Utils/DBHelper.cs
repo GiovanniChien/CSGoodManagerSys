@@ -27,14 +27,11 @@ namespace GoodManagerSys.Utils {
         public MySqlDataReader RunQuerySQL(String sql) {
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             MySqlDataReader dr = null;
-            MySqlTransaction transaction=conn.BeginTransaction();
             try {
                 dr = cmd.ExecuteReader();
-                transaction.Commit();
             }
             catch (Exception e) {
                 Console.WriteLine(e.ToString());
-                transaction.Rollback();
             }
             return dr;
         }
@@ -43,17 +40,14 @@ namespace GoodManagerSys.Utils {
         public MySqlDataReader RunQuerySQL(String sql, MySqlParameter[] prams) {
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             MySqlDataReader dr = null;
-            MySqlTransaction transaction = conn.BeginTransaction();
             try {
                 foreach (MySqlParameter pram in prams) {
                     cmd.Parameters.Add(pram);
                 }
                 dr = cmd.ExecuteReader();
-                transaction.Commit();
             }
             catch (Exception e) {
                 Console.WriteLine(e.ToString());
-                transaction.Rollback();
             }
             return dr;
         }
