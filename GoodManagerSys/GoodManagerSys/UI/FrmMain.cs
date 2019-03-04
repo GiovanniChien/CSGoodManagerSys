@@ -118,6 +118,8 @@ namespace GoodManagerSys {
         private void BtnGoodManager_Click(object sender, EventArgs e) {
             TlpIncomeEmptyMenu.Visible = false;
             TlpWarehouseSubmenu.Visible = true;
+            TlpWarehouseSubmenu.Dock = DockStyle.Fill;
+            //TlpWarehouseMenu.Dock = DockStyle.Fill;
             //刷新数据
         }
 

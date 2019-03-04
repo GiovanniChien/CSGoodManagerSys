@@ -262,5 +262,8 @@
   <ItemGroup>
     <None Include="Properties\Button.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Form\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
