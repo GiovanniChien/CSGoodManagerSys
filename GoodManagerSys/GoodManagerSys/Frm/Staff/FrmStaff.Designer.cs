@@ -177,6 +177,7 @@
             this.BtnStaffUpdate.TabIndex = 1;
             this.BtnStaffUpdate.Text = "信息修改";
             this.BtnStaffUpdate.UseVisualStyleBackColor = true;
+            this.BtnStaffUpdate.Click += new System.EventHandler(this.BtnStaffUpdate_Click);
             // 
             // label1
             // 
@@ -224,7 +225,9 @@
             this.ClnStaffRole});
             this.DgvStaffData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvStaffData.Location = new System.Drawing.Point(3, 35);
+            this.DgvStaffData.MultiSelect = false;
             this.DgvStaffData.Name = "DgvStaffData";
+            this.DgvStaffData.ReadOnly = true;
             this.DgvStaffData.RowTemplate.Height = 23;
             this.DgvStaffData.Size = new System.Drawing.Size(706, 250);
             this.DgvStaffData.TabIndex = 1;

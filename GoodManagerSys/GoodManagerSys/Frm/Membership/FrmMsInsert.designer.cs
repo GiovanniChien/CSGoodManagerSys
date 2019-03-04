@@ -154,6 +154,7 @@
             this.Controls.Add(this.TxtMsPoint);
             this.Controls.Add(this.TxtMsPhone);
             this.Controls.Add(this.TxtMsName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmMsInsert";
             this.Text = "会员添加";

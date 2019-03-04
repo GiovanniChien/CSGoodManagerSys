@@ -1,6 +1,7 @@
 ﻿using GoodManagerSys.Entities;
 using GoodManagerSys.Enums;
 using GoodManagerSys.Frm.Staff;
+using GoodManagerSys.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,26 +23,30 @@ namespace GoodManagerSys
         }
 
         private void BtnBack_Click(object sender, EventArgs e) {
-            Dispose();
+            Close();
         }
 
         private void BtnInsert_Click(object sender, EventArgs e) {
             try {
-                string StaffName = TxtStaffName.Text;
-                string Pwd = TxtStaffPwd.Text;
-                string StaffPhone = TxtStaffPhone.Text;
-                int Role = CmbStaffRole.SelectedIndex;
-                EtStaff newStaff = new EtStaff {
-                    StaffName = StaffName,
-                    Pwd=Pwd,
-                    StaffPhone=StaffPhone,
-                    Role=Role
-                };
-                FrmStaff.Staffs.Add(newStaff);
-                Dispose();
+                if (TxtStaffName.Text != "") {
+                    string StaffName = TxtStaffName.Text;
+                    string Pwd = Encrypt.GetMD5(TxtStaffPwd.Text);
+                    string StaffPhone = TxtStaffPhone.Text;
+                    ERole Role = (ERole)CmbStaffRole.SelectedIndex;
+                    FrmStaff.Staff = new EtStaff {
+                        StaffName = StaffName,
+                        Pwd = Pwd,
+                        StaffPhone = StaffPhone,
+                        Role = Role
+                    };
+                    Close();
+                }
+                else {
+                    MsgBoxUtil.ErrMsgBox("员工姓名不得为空！");
+                }
             }
             catch (Exception) {
-                MessageBox.Show("员工信息输入错误！", "非法输入", MessageBoxButtons.OK);
+                MsgBoxUtil.ErrMsgBox("员工信息输入错误！");
             }
         }
     }

@@ -1,4 +1,5 @@
 ﻿using GoodManagerSys.Entities;
+using GoodManagerSys.Enums;
 using GoodManagerSys.Utils;
 using MySql.Data.MySqlClient;
 using System;
@@ -93,7 +94,7 @@ namespace GoodManagerSys.Dao {
                         StaffName = dr["staffName"] is DBNull ? null : dr.GetString("staffName"),
                         Pwd = dr["pwd"] is DBNull ? null : dr.GetString("pwd"),
                         StaffPhone = dr["staffPhone"] is DBNull ? null : dr.GetString("staffPhone"),
-                        Role = dr["role"] is DBNull ? 0 : dr.GetInt32("role")
+                        Role = (ERole)(dr["role"] is DBNull ? 0 : dr.GetInt32("role"))
                     };
                     staffs.Add(staff);
                 }
