@@ -96,17 +96,41 @@
     <Compile Include="Enums\ERole.cs" />
     <Compile Include="Enums\EState.cs" />
     <Compile Include="Enums\EValid.cs" />
+    <Compile Include="Frm\Membership\FrmMembership.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Membership\FrmMembership.Designer.cs">
+      <DependentUpon>FrmMembership.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Membership\FrmMsInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Membership\FrmMsInsert.designer.cs">
+      <DependentUpon>FrmMsInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Staff\FrmStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Staff\FrmStaff.Designer.cs">
+      <DependentUpon>FrmStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Staff\FrmStaffInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Staff\FrmStaffInsert.designer.cs">
+      <DependentUpon>FrmStaffInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Staff\FrmStaffUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Staff\FrmStaffUpdate.designer.cs">
+      <DependentUpon>FrmStaffUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm\Warehouse\FrmGoodIncome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm\Warehouse\FrmGoodIncome.Designer.cs">
       <DependentUpon>FrmGoodIncome.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm\Warehouse\FrmPurchaseFromExcel.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm\Warehouse\FrmPurchaseFromExcel.Designer.cs">
-      <DependentUpon>FrmPurchaseFromExcel.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -120,23 +144,11 @@
     <Compile Include="UI\FrmMain.designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm\Warehouse\FrmGoodInsert.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm\Warehouse\FrmGoodInsert.designer.cs">
-      <DependentUpon>FrmGoodInsert.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\FrmCategory.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\FrmCategory.designer.cs">
       <DependentUpon>FrmCategory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm\Warehouse\FrmWarehouse.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm\Warehouse\FrmWarehouse.Designer.cs">
-      <DependentUpon>FrmWarehouse.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FrmWarehouseWarning.cs">
       <SubType>Form</SubType>
@@ -154,11 +166,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\DBHelper.cs" />
     <Compile Include="Utils\MsgBoxUtil.cs" />
+    <EmbeddedResource Include="Frm\Membership\FrmMembership.resx">
+      <DependentUpon>FrmMembership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Membership\FrmMsInsert.resx">
+      <DependentUpon>FrmMsInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Staff\FrmStaff.resx">
+      <DependentUpon>FrmStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Staff\FrmStaffInsert.resx">
+      <DependentUpon>FrmStaffInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Staff\FrmStaffUpdate.resx">
+      <DependentUpon>FrmStaffUpdate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm\Warehouse\FrmGoodIncome.resx">
       <DependentUpon>FrmGoodIncome.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm\Warehouse\FrmPurchaseFromExcel.resx">
-      <DependentUpon>FrmPurchaseFromExcel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -166,14 +190,8 @@
     <EmbeddedResource Include="UI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm\Warehouse\FrmGoodInsert.resx">
-      <DependentUpon>FrmGoodInsert.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmCategory.resx">
       <DependentUpon>FrmCategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm\Warehouse\FrmWarehouse.resx">
-      <DependentUpon>FrmWarehouse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmWarehouseWarning.resx">
       <DependentUpon>FrmWarehouseWarning.cs</DependentUpon>

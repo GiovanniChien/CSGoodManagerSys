@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GoodManagerSys.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace GoodManagerSys.Entities {
         public string StaffName { get; set; }
         public string Pwd { get; set; }
         public string StaffPhone { get; set; }
-        public int Role { get; set; }
+        public ERole Role { get; set; }
 
         public override string ToString() {
             StringBuilder sb = new StringBuilder();
