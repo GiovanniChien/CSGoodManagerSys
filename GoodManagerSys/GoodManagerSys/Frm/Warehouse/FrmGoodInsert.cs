@@ -2,10 +2,10 @@
 using GoodManagerSys.Entities;
 using GoodManagerSys.Enums;
 using GoodManagerSys.Frm;
+using GoodManagerSys.Utils;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using GoodManagerSys.Utils;
 
 namespace GoodManagerSys {
     public partial class FrmGoodInsert : Form {

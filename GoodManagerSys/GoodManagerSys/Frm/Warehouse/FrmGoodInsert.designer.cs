@@ -201,6 +201,7 @@
             this.Controls.Add(this.LblProductionID);
             this.Controls.Add(this.LblCategoryID);
             this.Controls.Add(this.TxtCategoryID);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmGoodInsert";
             this.Text = "商品采购";

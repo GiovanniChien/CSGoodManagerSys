@@ -20,9 +20,8 @@ namespace GoodManagerSys.Frm {
             goodsPreSize = 0;
             goodsCurSize = 0;
             List<EtStaff> staffs = StaffDao.QueryByRole((int)ERole.采购员);
-            foreach (EtStaff staff in staffs) {
+            foreach (EtStaff staff in staffs) 
                 CmbOperator.Items.Add(staff.StaffName);
-            }
         }
 
         private void BtnMIncome_Click(object sender, EventArgs e) {

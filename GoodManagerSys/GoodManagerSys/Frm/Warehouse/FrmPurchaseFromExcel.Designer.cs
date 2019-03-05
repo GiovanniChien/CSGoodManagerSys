@@ -77,6 +77,8 @@
             // 
             // DgvGoodFromExcel
             // 
+            this.DgvGoodFromExcel.AllowUserToAddRows = false;
+            this.DgvGoodFromExcel.AllowUserToDeleteRows = false;
             this.DgvGoodFromExcel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvGoodFromExcel.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,

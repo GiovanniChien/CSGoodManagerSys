@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using GoodManagerSys;
 using GoodManagerSys.Frm;
 using GoodManagerSys.Frm.Membership;
+using GoodManagerSys.Frm.Sale;
 using GoodManagerSys.Frm.Staff;
 using GoodManagerSys.UI;
 
@@ -21,7 +22,7 @@ namespace GoodManagerSys
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMembership());
+            Application.Run(new FrmSaleQuery());
         }
     }
 }

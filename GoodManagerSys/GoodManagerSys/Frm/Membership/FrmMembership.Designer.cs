@@ -46,6 +46,8 @@
             // 
             // DgvMembership
             // 
+            this.DgvMembership.AllowUserToAddRows = false;
+            this.DgvMembership.AllowUserToDeleteRows = false;
             this.DgvMembership.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvMembership.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ClnMsID,
@@ -190,7 +192,7 @@
             // BtnSubmit
             // 
             this.BtnSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnSubmit.Location = new System.Drawing.Point(258, 3);
+            this.BtnSubmit.Location = new System.Drawing.Point(257, 3);
             this.BtnSubmit.Name = "BtnSubmit";
             this.BtnSubmit.Size = new System.Drawing.Size(79, 33);
             this.BtnSubmit.TabIndex = 7;
@@ -201,7 +203,7 @@
             // BtnCancel
             // 
             this.BtnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnCancel.Location = new System.Drawing.Point(343, 3);
+            this.BtnCancel.Location = new System.Drawing.Point(342, 3);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(79, 33);
             this.BtnCancel.TabIndex = 8;
@@ -212,9 +214,9 @@
             // BtnBack
             // 
             this.BtnBack.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnBack.Location = new System.Drawing.Point(428, 3);
+            this.BtnBack.Location = new System.Drawing.Point(427, 3);
             this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(79, 33);
+            this.BtnBack.Size = new System.Drawing.Size(80, 33);
             this.BtnBack.TabIndex = 9;
             this.BtnBack.Text = "退出";
             this.BtnBack.UseVisualStyleBackColor = true;
