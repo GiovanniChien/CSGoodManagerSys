@@ -30,6 +30,30 @@ namespace GoodManagerSys.Dao {
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
+        public static List<EtPurchase> QueryByPurchaseDate(string dateBegin, string dateEnd)
+        {
+            DBHelper helper = new DBHelper();
+            string sql = "SELECT * FROM purchase LEFT JOIN category ON purchase.categoryID = category.categoryID " +
+                "WHERE purchaseDate BETWEEN @dateBegin AND @dateEnd;";
+            MySqlParameter[] prams = {
+                new MySqlParameter("@dateBegin",dateBegin),
+                new MySqlParameter("@dateEnd",dateEnd)};
+            MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
+            return GetListByDataReader(dr);
+        }
+        public static List<EtPurchase> QueryByPurchaseDate(string dateBegin, string dateEnd,ECategory parentCategoryID)
+        {
+            DBHelper helper = new DBHelper();
+            string sql = "SELECT * FROM purchase LEFT JOIN category ON purchase.categoryID = category.categoryID " +
+                "WHERE purchaseDate BETWEEN @dateBegin AND @dateEnd " +
+                "AND parentCategoryID=@parentCategoryID;";
+            MySqlParameter[] prams = {
+                new MySqlParameter("@dateBegin",dateBegin),
+                new MySqlParameter("@dateEnd",dateEnd),
+                new MySqlParameter("@parentCategoryID",parentCategoryID)};
+            MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
+            return GetListByDataReader(dr);
+        }
         public static List<EtPurchase> QueryByPurchaseDate(string purchaseDate) {
             DBHelper helper = new DBHelper();
             string sql = "SELECT * FROM purchase LEFT JOIN category ON purchase.categoryID = category.categoryID WHERE purchaseDate = @purchaseDate";
@@ -37,6 +61,7 @@ namespace GoodManagerSys.Dao {
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
+        
         public static List<EtPurchase> QueryByStaffID(int staffID) {
             DBHelper helper = new DBHelper();
             string sql = "SELECT * FROM purchase LEFT JOIN category ON purchase.categoryID = category.categoryID WHERE staffID = @staffID";

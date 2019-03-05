@@ -68,6 +68,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -108,6 +109,12 @@
     <Compile Include="Frm\Membership\FrmMsInsert.designer.cs">
       <DependentUpon>FrmMsInsert.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm\ReportForm\FrmPurchaseReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\ReportForm\FrmPurchaseReport.Designer.cs">
+      <DependentUpon>FrmPurchaseReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm\Staff\FrmStaff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +138,24 @@
     </Compile>
     <Compile Include="Frm\Warehouse\FrmGoodIncome.Designer.cs">
       <DependentUpon>FrmGoodIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Warehouse\FrmGoodInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Warehouse\FrmGoodInsert.designer.cs">
+      <DependentUpon>FrmGoodInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Warehouse\FrmPurchaseFromExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Warehouse\FrmPurchaseFromExcel.Designer.cs">
+      <DependentUpon>FrmPurchaseFromExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Warehouse\FrmWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Warehouse\FrmWarehouse.Designer.cs">
+      <DependentUpon>FrmWarehouse.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -172,6 +197,9 @@
     <EmbeddedResource Include="Frm\Membership\FrmMsInsert.resx">
       <DependentUpon>FrmMsInsert.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm\ReportForm\FrmPurchaseReport.resx">
+      <DependentUpon>FrmPurchaseReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm\Staff\FrmStaff.resx">
       <DependentUpon>FrmStaff.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +211,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\Warehouse\FrmGoodIncome.resx">
       <DependentUpon>FrmGoodIncome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Warehouse\FrmGoodInsert.resx">
+      <DependentUpon>FrmGoodInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Warehouse\FrmPurchaseFromExcel.resx">
+      <DependentUpon>FrmPurchaseFromExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Warehouse\FrmWarehouse.resx">
+      <DependentUpon>FrmWarehouse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
