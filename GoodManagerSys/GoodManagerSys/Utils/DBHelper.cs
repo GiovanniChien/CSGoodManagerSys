@@ -1,10 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GoodManagerSys.Utils {
     class DBHelper {
@@ -15,6 +10,7 @@ namespace GoodManagerSys.Utils {
          * @user:用户名,一般root
          * @password:密码
          */
+        //private static string ConnStr = "server=172.22.29.192;port=3306;database=goodmanagesys;user=root;password=root;SslMode=none;";
         private static string ConnStr = "server=localhost;port=3306;database=goodmanagesys;user=root;password=root;SslMode=none;";
         private MySqlConnection conn = null;
 
@@ -41,9 +37,8 @@ namespace GoodManagerSys.Utils {
             MySqlCommand cmd = new MySqlCommand(sql, conn);
             MySqlDataReader dr = null;
             try {
-                foreach (MySqlParameter pram in prams) {
+                foreach (MySqlParameter pram in prams) 
                     cmd.Parameters.Add(pram);
-                }
                 dr = cmd.ExecuteReader();
             }
             catch (Exception e) {
@@ -74,9 +69,8 @@ namespace GoodManagerSys.Utils {
             int res = 0;
             MySqlTransaction transaction = conn.BeginTransaction();
             try {
-                foreach (MySqlParameter pram in prams) {
+                foreach (MySqlParameter pram in prams) 
                     cmd.Parameters.Add(pram);
-                }
                 res = cmd.ExecuteNonQuery();
                 transaction.Commit();
             }

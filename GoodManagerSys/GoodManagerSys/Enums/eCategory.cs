@@ -1,12 +1,12 @@
 ﻿namespace GoodManagerSys.Enums {
     enum ECategory {
-        eUndefined,
-        eDrink,
-        eWine,
-        eCigarette,
-        eCake,
-        eCandy,
-        eDairyProduct,
-        eSnack
+        未定义,
+        饮料,
+        酒,
+        香烟,
+        糕饼,
+        糖果,
+        奶制品,
+        休闲食品
     }
 }

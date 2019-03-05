@@ -1,9 +1,5 @@
 ﻿using GoodManagerSys.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace GoodManagerSys.Entities {
     class EtStaff {
@@ -19,7 +15,7 @@ namespace GoodManagerSys.Entities {
             sb.Append(StaffName + "\t");
             sb.Append(Pwd + "\t");
             sb.Append(StaffPhone + "\t");
-            sb.Append(Role + "\t");
+            sb.Append(Role);
             return sb.ToString();
         }
     }

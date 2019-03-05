@@ -4,12 +4,9 @@ using GoodManagerSys.Utils;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GoodManagerSys.Dao {
-    class MemberShipDao {
+    class MembershipDao {
         public static List<EtMembership> QueryAll() {
             DBHelper helper = new DBHelper();
             string sql = "SELECT * FROM membership";
@@ -72,11 +69,11 @@ namespace GoodManagerSys.Dao {
         public static int DeleteByMsID(int msID) {
             List<EtMembership> memberships = QueryByMsID(msID);
             if (memberships.Count == 0) return 0;
-            if (memberships[0].IsValid == EValid.eDeleted) return -2;
+            if (memberships[0].IsValid == EValid.已删除) return -2;
             DBHelper helper = new DBHelper();
             string sql = "UPDATE membership SET isValid = @isValid WHERE msID = @msID;";
             MySqlParameter[] prams = {
-                new MySqlParameter("@isValid",EValid.eDeleted),
+                new MySqlParameter("@isValid",EValid.已删除),
                 new MySqlParameter("@msID",msID)
             };
             return helper.RunNonQuerySQL(sql, prams);

@@ -1,9 +1,5 @@
 ﻿using GoodManagerSys.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace GoodManagerSys.Entities {
     class EtMembership {
@@ -19,7 +15,7 @@ namespace GoodManagerSys.Entities {
             sb.Append(MsName + "\t");
             sb.Append(MsPhone + "\t");
             sb.Append(MsPoint + "\t");
-            sb.Append(IsValid + "\t");
+            sb.Append(IsValid);
             return sb.ToString();
         }
     }

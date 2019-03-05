@@ -8,33 +8,26 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace GoodManagerSys.Frm
-{
-    public partial class FrmGoodIncome : Form
-    {
+namespace GoodManagerSys.Frm {
+    public partial class FrmGoodIncome : Form {
         internal static List<ClsGood> Goods { get; set; }
         private int goodsPreSize;
         private int goodsCurSize;
 
-        public FrmGoodIncome()
-        {
+        public FrmGoodIncome() {
             InitializeComponent();
             Goods = new List<ClsGood>();
             goodsPreSize = 0;
             goodsCurSize = 0;
-            List<EtStaff> staffs = StaffDao.QueryByRole((int)ERole.eBuyer);
-            foreach(EtStaff staff in staffs)
-            {
+            List<EtStaff> staffs = StaffDao.QueryByRole((int)ERole.采购员);
+            foreach (EtStaff staff in staffs) {
                 CmbOperator.Items.Add(staff.StaffName);
             }
         }
 
-
-        private void BtnMIncome_Click(object sender, EventArgs e)
-        {
+        private void BtnMIncome_Click(object sender, EventArgs e) {
             goodsPreSize = Goods.Count;
-            FrmPurchaseFromExcel frmPurchaseFromExcel = new FrmPurchaseFromExcel
-            {
+            FrmPurchaseFromExcel frmPurchaseFromExcel = new FrmPurchaseFromExcel {
                 StartPosition = FormStartPosition.CenterParent
             };
             frmPurchaseFromExcel.ShowDialog();
@@ -42,11 +35,9 @@ namespace GoodManagerSys.Frm
             DgvAdd();
         }
 
-        private void BtnSIncome_Click(object sender, EventArgs e)
-        {
+        private void BtnSIncome_Click(object sender, EventArgs e) {
             goodsPreSize = Goods.Count;
-            FrmGoodInsert frmGoodInsert = new FrmGoodInsert
-            {
+            FrmGoodInsert frmGoodInsert = new FrmGoodInsert {
                 StartPosition = FormStartPosition.CenterParent
             };
             frmGoodInsert.ShowDialog();
@@ -54,64 +45,46 @@ namespace GoodManagerSys.Frm
             DgvAdd();
         }
 
-        private void DgvAdd()
-        {
+        private void DgvAdd() {
             if (goodsPreSize == goodsCurSize) return;
-            for (int i = goodsPreSize; i < goodsCurSize; i++)
-            {
+            for (int i = goodsPreSize; i < goodsCurSize; i++) {
                 EtGood etGood = Goods[i].Good;
-                DgvGoodIncome.Rows.Add(new object[] { i+1,
-                        etGood.Category.CategoryName,
-                        etGood.Category.ParentCategoryName,
-                        etGood.Category.Unit,etGood.Category.Firm,
-                        etGood.ProductionDate,
-                        Goods[i].Count,etGood.Cost,etGood.Price,
-                        EStateToString(etGood.State)});
+                DgvGoodIncome.Rows.Add(new object[] {
+                    i +1,
+                    etGood.Category.CategoryName,
+                    etGood.Category.ParentCategoryName,
+                    etGood.Category.Unit,
+                    etGood.Category.Firm,
+                    etGood.ProductionDate,
+                    Goods[i].Count,
+                    etGood.Cost,
+                    etGood.Price,
+                    etGood.State
+                });
             }
             DgvGoodIncome.RowsDefaultCellStyle.BackColor = Color.LightCyan;
             DgvGoodIncome.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
         }
 
-        private string EStateToString(EState state)
-        {
-            string res = "";
-            switch (state)
-            {
-                case EState.ePrePutaway:
-                    res = "未上架";
-                    break;
-                case EState.eUnsaled:
-                    res = "未销售";
-                    break;
-            }
-            return res;
-        }
-
-        private bool Save()
-        {
+        private bool Save() {
             EtPurchase purchase;
-            if (CmbOperator.SelectedIndex == -1)
-            {
+            if (CmbOperator.SelectedIndex == -1) {
                 MsgBoxUtil.ErrMsgBox("经办人不能为空！");
                 return false;
             }
-            if (TxtPurchaseID.Text == "")
-            {
+            if (TxtPurchaseID.Text == "") {
                 MsgBoxUtil.ErrMsgBox("初始单号不能为空！");
                 return false;
             }
             int purchaseId = int.Parse(TxtPurchaseID.Text);
-            if (PurchaseDao.QueryByPurchaseID(purchaseId).Count > 0)
-            {
+            if (PurchaseDao.QueryByPurchaseID(purchaseId).Count > 0) {
                 MsgBoxUtil.ErrMsgBox("单号重复！");
                 return false;
             }
             int staffId = StaffDao.QueryByStaffName(CmbOperator.SelectedItem.ToString())[0].StaffID;
             int res = 0;
-            foreach (ClsGood good in Goods)
-            {
-                purchase = new EtPurchase
-                {
+            foreach (ClsGood good in Goods) {
+                purchase = new EtPurchase {
                     PurchaseID = purchaseId,
                     Category = good.Good.Category,
                     PurchaseDate = DtpPurchaseDate.Value.ToString("yyyyMMdd"),
@@ -120,8 +93,7 @@ namespace GoodManagerSys.Frm
                     StaffID = staffId
                 };
                 res += PurchaseDao.InsertPurchase(purchase);
-                EtGood g = new EtGood
-                {
+                EtGood g = new EtGood {
                     Category = good.Good.Category,
                     ProductionDate = good.Good.ProductionDate,
                     PurchaseDate = purchase.PurchaseDate,
@@ -130,39 +102,29 @@ namespace GoodManagerSys.Frm
                     State = good.Good.State
                 };
                 for (int i = 0; i < good.Count; i++)
-                {
                     GoodDao.InsertGood(g);
-                }
             }
             if (res == Goods.Count) return true;
             else return false;
         }
 
-        private void BtnComfirm_Click(object sender, EventArgs e)
-        {
-            if(Goods.Count==0)
-            {
+        private void BtnComfirm_Click(object sender, EventArgs e) {
+            if (Goods.Count == 0)
                 MsgBoxUtil.ErrMsgBox("没有待插入的表单!");
-            }
-            else
-            {
+            else {
                 DialogResult res = MsgBoxUtil.QuestionMsgBox("确认提交？");
                 if (res == DialogResult.OK)
-                {
-                    if(Save()) Close();
-                }
+                    if (Save())
+                        Close();
             }
         }
 
-        private void BtnCancel_Click(object sender, EventArgs e)
-        {
+        private void BtnCancel_Click(object sender, EventArgs e) {
             Close();
         }
-
     }
 
-    public class ClsGood
-    {
+    public class ClsGood {
         internal EtGood Good { get; set; }
         internal int Count { get; set; }
     }

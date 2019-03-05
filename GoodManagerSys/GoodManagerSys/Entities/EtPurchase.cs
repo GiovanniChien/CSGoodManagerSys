@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace GoodManagerSys.Entities {
     class EtPurchase {
@@ -20,7 +16,7 @@ namespace GoodManagerSys.Entities {
             sb.Append(PurchaseDate + "\t");
             sb.Append(Quantity + "\t");
             sb.Append(Cost + "\t");
-            sb.Append(StaffID + "\t");
+            sb.Append(StaffID);
             return sb.ToString();
         }
     }

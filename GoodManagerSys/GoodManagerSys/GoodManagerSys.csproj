@@ -81,7 +81,7 @@
   <ItemGroup>
     <Compile Include="Dao\CategoryDao.cs" />
     <Compile Include="Dao\GoodDao.cs" />
-    <Compile Include="Dao\MemberShipDao.cs" />
+    <Compile Include="Dao\MembershipDao.cs" />
     <Compile Include="Dao\PurchaseDao.cs" />
     <Compile Include="Dao\SaleDao.cs" />
     <Compile Include="Dao\StaffDao.cs" />
@@ -108,6 +108,18 @@
     <Compile Include="Frm\Membership\FrmMsInsert.designer.cs">
       <DependentUpon>FrmMsInsert.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm\Membership\FrmMsUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Membership\FrmMsUpdate.Designer.cs">
+      <DependentUpon>FrmMsUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Sale\FrmSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Sale\FrmSale.Designer.cs">
+      <DependentUpon>FrmSale.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm\Staff\FrmStaff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +143,24 @@
     </Compile>
     <Compile Include="Frm\Warehouse\FrmGoodIncome.Designer.cs">
       <DependentUpon>FrmGoodIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Warehouse\FrmGoodInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Warehouse\FrmGoodInsert.designer.cs">
+      <DependentUpon>FrmGoodInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Warehouse\FrmPurchaseFromExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Warehouse\FrmPurchaseFromExcel.Designer.cs">
+      <DependentUpon>FrmPurchaseFromExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Warehouse\FrmWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Warehouse\FrmWarehouse.Designer.cs">
+      <DependentUpon>FrmWarehouse.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -156,10 +186,10 @@
     <Compile Include="UI\FrmWarehouseWarning.designer.cs">
       <DependentUpon>FrmWarehouseWarning.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\FrmSaleInsert.cs">
+    <Compile Include="Frm\Sale\FrmSaleInsert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\FrmSaleInsert.designer.cs">
+    <Compile Include="Frm\Sale\FrmSaleInsert.designer.cs">
       <DependentUpon>FrmSaleInsert.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -171,6 +201,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\Membership\FrmMsInsert.resx">
       <DependentUpon>FrmMsInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Membership\FrmMsUpdate.resx">
+      <DependentUpon>FrmMsUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Sale\FrmSale.resx">
+      <DependentUpon>FrmSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\Staff\FrmStaff.resx">
       <DependentUpon>FrmStaff.cs</DependentUpon>
@@ -184,6 +220,15 @@
     <EmbeddedResource Include="Frm\Warehouse\FrmGoodIncome.resx">
       <DependentUpon>FrmGoodIncome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Warehouse\FrmGoodInsert.resx">
+      <DependentUpon>FrmGoodInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Warehouse\FrmPurchaseFromExcel.resx">
+      <DependentUpon>FrmPurchaseFromExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Warehouse\FrmWarehouse.resx">
+      <DependentUpon>FrmWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,7 +241,7 @@
     <EmbeddedResource Include="UI\FrmWarehouseWarning.resx">
       <DependentUpon>FrmWarehouseWarning.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\FrmSaleInsert.resx">
+    <EmbeddedResource Include="Frm\Sale\FrmSaleInsert.resx">
       <DependentUpon>FrmSaleInsert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -50,19 +50,19 @@
             this.CmbIsValid.Items.AddRange(new object[] {
             "未上架",
             "未出售"});
-            this.CmbIsValid.Location = new System.Drawing.Point(254, 384);
-            this.CmbIsValid.Margin = new System.Windows.Forms.Padding(4);
+            this.CmbIsValid.Location = new System.Drawing.Point(90, 152);
+            this.CmbIsValid.Margin = new System.Windows.Forms.Padding(2);
             this.CmbIsValid.Name = "CmbIsValid";
-            this.CmbIsValid.Size = new System.Drawing.Size(216, 32);
+            this.CmbIsValid.Size = new System.Drawing.Size(110, 20);
             this.CmbIsValid.TabIndex = 24;
             // 
             // BtnBack
             // 
             this.BtnBack.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BtnBack.Location = new System.Drawing.Point(306, 458);
-            this.BtnBack.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnBack.Location = new System.Drawing.Point(122, 196);
+            this.BtnBack.Margin = new System.Windows.Forms.Padding(2);
             this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(164, 52);
+            this.BtnBack.Size = new System.Drawing.Size(82, 26);
             this.BtnBack.TabIndex = 22;
             this.BtnBack.Text = "返回";
             this.BtnBack.UseVisualStyleBackColor = true;
@@ -71,10 +71,10 @@
             // BtnInsert
             // 
             this.BtnInsert.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BtnInsert.Location = new System.Drawing.Point(132, 458);
-            this.BtnInsert.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnInsert.Location = new System.Drawing.Point(35, 196);
+            this.BtnInsert.Margin = new System.Windows.Forms.Padding(2);
             this.BtnInsert.Name = "BtnInsert";
-            this.BtnInsert.Size = new System.Drawing.Size(166, 52);
+            this.BtnInsert.Size = new System.Drawing.Size(83, 26);
             this.BtnInsert.TabIndex = 23;
             this.BtnInsert.Text = "添加";
             this.BtnInsert.UseVisualStyleBackColor = true;
@@ -83,109 +83,110 @@
             // LblIsValid
             // 
             this.LblIsValid.AutoSize = true;
-            this.LblIsValid.Location = new System.Drawing.Point(140, 392);
-            this.LblIsValid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblIsValid.Location = new System.Drawing.Point(33, 156);
+            this.LblIsValid.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblIsValid.Name = "LblIsValid";
-            this.LblIsValid.Size = new System.Drawing.Size(106, 24);
+            this.LblIsValid.Size = new System.Drawing.Size(53, 12);
             this.LblIsValid.TabIndex = 21;
             this.LblIsValid.Text = "有效状态";
             // 
             // LblProductionID
             // 
             this.LblProductionID.AutoSize = true;
-            this.LblProductionID.Location = new System.Drawing.Point(140, 171);
-            this.LblProductionID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblProductionID.Location = new System.Drawing.Point(33, 46);
+            this.LblProductionID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblProductionID.Name = "LblProductionID";
-            this.LblProductionID.Size = new System.Drawing.Size(106, 24);
+            this.LblProductionID.Size = new System.Drawing.Size(53, 12);
             this.LblProductionID.TabIndex = 19;
             this.LblProductionID.Text = "生产日期";
             // 
             // LblCategoryID
             // 
             this.LblCategoryID.AutoSize = true;
-            this.LblCategoryID.Location = new System.Drawing.Point(140, 119);
-            this.LblCategoryID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblCategoryID.Location = new System.Drawing.Point(33, 20);
+            this.LblCategoryID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblCategoryID.Name = "LblCategoryID";
-            this.LblCategoryID.Size = new System.Drawing.Size(106, 24);
+            this.LblCategoryID.Size = new System.Drawing.Size(53, 12);
             this.LblCategoryID.TabIndex = 18;
             this.LblCategoryID.Text = "商品类别";
             // 
             // TxtCategoryID
             // 
-            this.TxtCategoryID.Location = new System.Drawing.Point(254, 111);
-            this.TxtCategoryID.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtCategoryID.Location = new System.Drawing.Point(90, 16);
+            this.TxtCategoryID.Margin = new System.Windows.Forms.Padding(2);
             this.TxtCategoryID.Name = "TxtCategoryID";
-            this.TxtCategoryID.Size = new System.Drawing.Size(216, 35);
+            this.TxtCategoryID.Size = new System.Drawing.Size(110, 21);
             this.TxtCategoryID.TabIndex = 14;
             // 
             // LblCost
             // 
             this.LblCost.AutoSize = true;
-            this.LblCost.Location = new System.Drawing.Point(140, 228);
-            this.LblCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblCost.Location = new System.Drawing.Point(33, 74);
+            this.LblCost.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblCost.Name = "LblCost";
-            this.LblCost.Size = new System.Drawing.Size(106, 24);
+            this.LblCost.Size = new System.Drawing.Size(53, 12);
             this.LblCost.TabIndex = 26;
             this.LblCost.Text = "采购单价";
             // 
             // TxtCost
             // 
-            this.TxtCost.Location = new System.Drawing.Point(254, 220);
-            this.TxtCost.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtCost.Location = new System.Drawing.Point(90, 70);
+            this.TxtCost.Margin = new System.Windows.Forms.Padding(2);
             this.TxtCost.Name = "TxtCost";
-            this.TxtCost.Size = new System.Drawing.Size(216, 35);
+            this.TxtCost.Size = new System.Drawing.Size(110, 21);
             this.TxtCost.TabIndex = 25;
             // 
             // LblPrice
             // 
             this.LblPrice.AutoSize = true;
-            this.LblPrice.Location = new System.Drawing.Point(140, 280);
-            this.LblPrice.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblPrice.Location = new System.Drawing.Point(33, 100);
+            this.LblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblPrice.Name = "LblPrice";
-            this.LblPrice.Size = new System.Drawing.Size(58, 24);
+            this.LblPrice.Size = new System.Drawing.Size(29, 12);
             this.LblPrice.TabIndex = 28;
             this.LblPrice.Text = "售价";
             // 
             // TxtPrice
             // 
-            this.TxtPrice.Location = new System.Drawing.Point(254, 272);
-            this.TxtPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtPrice.Location = new System.Drawing.Point(90, 96);
+            this.TxtPrice.Margin = new System.Windows.Forms.Padding(2);
             this.TxtPrice.Name = "TxtPrice";
-            this.TxtPrice.Size = new System.Drawing.Size(216, 35);
+            this.TxtPrice.Size = new System.Drawing.Size(110, 21);
             this.TxtPrice.TabIndex = 27;
             // 
             // DtpProductionID
             // 
             this.DtpProductionID.CustomFormat = "yyyy-MM-dd";
             this.DtpProductionID.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DtpProductionID.Location = new System.Drawing.Point(254, 164);
+            this.DtpProductionID.Location = new System.Drawing.Point(90, 42);
+            this.DtpProductionID.Margin = new System.Windows.Forms.Padding(2);
             this.DtpProductionID.Name = "DtpProductionID";
-            this.DtpProductionID.Size = new System.Drawing.Size(216, 35);
+            this.DtpProductionID.Size = new System.Drawing.Size(110, 21);
             this.DtpProductionID.TabIndex = 29;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(140, 335);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(33, 128);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 24);
+            this.label1.Size = new System.Drawing.Size(29, 12);
             this.label1.TabIndex = 31;
             this.label1.Text = "数量";
             // 
             // TxtCount
             // 
-            this.TxtCount.Location = new System.Drawing.Point(254, 327);
-            this.TxtCount.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtCount.Location = new System.Drawing.Point(90, 124);
+            this.TxtCount.Margin = new System.Windows.Forms.Padding(2);
             this.TxtCount.Name = "TxtCount";
-            this.TxtCount.Size = new System.Drawing.Size(216, 35);
+            this.TxtCount.Size = new System.Drawing.Size(110, 21);
             this.TxtCount.TabIndex = 30;
             // 
             // FrmGoodInsert
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 600);
+            this.ClientSize = new System.Drawing.Size(231, 245);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtCount);
             this.Controls.Add(this.DtpProductionID);
@@ -200,7 +201,7 @@
             this.Controls.Add(this.LblProductionID);
             this.Controls.Add(this.LblCategoryID);
             this.Controls.Add(this.TxtCategoryID);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmGoodInsert";
             this.Text = "商品采购";
             this.ResumeLayout(false);

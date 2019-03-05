@@ -1,7 +1,7 @@
 ﻿namespace GoodManagerSys.Enums {
     enum EState {
-        ePrePutaway,
-        eUnsaled,
-        eSaled
+        未上架,
+        未出售,
+        已出售
     }
 }

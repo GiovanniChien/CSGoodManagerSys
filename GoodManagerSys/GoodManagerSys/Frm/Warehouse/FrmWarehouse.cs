@@ -3,34 +3,22 @@ using GoodManagerSys.Entities;
 using GoodManagerSys.Enums;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GoodManagerSys.UI
-{
-    public partial class FrmWarehouse : Form
-    {
+namespace GoodManagerSys.UI {
+    public partial class FrmWarehouse : Form {
         private List<EtCategory> categories;
-        public FrmWarehouse()
-        {
+        public FrmWarehouse() {
             InitializeComponent();
-        }
-
-        private void FrmWarehouse_Load(object sender, EventArgs e)
-        {
             CmbCategory.SelectedIndex = 0;
             categories = CategoryDao.QueryAll();
             DgvShow();
         }
 
-        private void BtnQuery_Click(object sender, EventArgs e)
-        {
+        private void BtnQuery_Click(object sender, EventArgs e) {
             List<EtCategory> list1, list2;
             int index = CmbCategory.SelectedIndex;
             if (index == 0)
@@ -43,26 +31,22 @@ namespace GoodManagerSys.UI
                 list2 = CategoryDao.QueryByCategoryID(int.Parse(idOrName));
             else
                 list2 = CategoryDao.QueryByCategoryName(idOrName);
-            Console.WriteLine(list1.Count());
-            Console.WriteLine(list2.Count());
+            //Console.WriteLine(list1.Count());
+            //Console.WriteLine(list2.Count());
             categories = list1.Intersect(list2, new MyCompare()).ToList();
-            Console.WriteLine(list1.Count());
-            for (int i = 0; i < categories.Count(); i++)
-            {
-                Console.WriteLine(categories.ElementAt(i).ToString());
-            }
+            //Console.WriteLine(list1.Count());
+            //for (int i = 0; i < categories.Count(); i++) 
+                //Console.WriteLine(categories.ElementAt(i).ToString());
             DgvShow();
         }
 
-        private void DgvShow()
-        {
+        private void DgvShow() {
             DgvWarehouse.Rows.Clear();
             DgvWarehouse.RowsDefaultCellStyle.BackColor = Color.White;
             DgvWarehouse.AlternatingRowsDefaultCellStyle.BackColor = Color.LightCyan;
             DgvWarehouse.AllowUserToAddRows = false;
             DgvWarehouse.RowHeadersVisible = false;
-            for (int i=0;i<categories.Count;i++)
-            {
+            for (int i = 0; i < categories.Count; i++) {
                 int currentStock = GetCurrentStock(categories[i].CategoryID);
                 DgvWarehouse.Rows.Add(new object[]
                 {
@@ -83,27 +67,22 @@ namespace GoodManagerSys.UI
             }
         }
 
-        private int GetCurrentStock(int categoryID)
-        {
+        private int GetCurrentStock(int categoryID) {
             List<EtGood> goods = GoodDao.QueryByCategoryID(categoryID);
             return goods.Count;
         }
 
-        private void BtnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
+        private void BtnExit_Click(object sender, EventArgs e) {
+            Close();
         }
     }
 
-    class MyCompare : IEqualityComparer<EtCategory>
-    {
-        public bool Equals(EtCategory x, EtCategory y)
-        {
+    class MyCompare : IEqualityComparer<EtCategory> {
+        public bool Equals(EtCategory x, EtCategory y) {
             return x.CategoryID == y.CategoryID;
         }
 
-        public int GetHashCode(EtCategory obj)
-        {
+        public int GetHashCode(EtCategory obj) {
             return obj.ToString().GetHashCode();
         }
     }

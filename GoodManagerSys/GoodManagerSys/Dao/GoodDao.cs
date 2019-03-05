@@ -1,12 +1,9 @@
 ﻿using GoodManagerSys.Entities;
-using GoodManagerSys.Utils;
 using GoodManagerSys.Enums;
+using GoodManagerSys.Utils;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GoodManagerSys.Dao {
     class GoodDao {
@@ -70,17 +67,16 @@ namespace GoodManagerSys.Dao {
         public static int DeleteByGoodID(int goodID) {
             List<EtGood> goods = QueryByGoodID(goodID);
             if (goods.Count == 0) return -1;
-            if (goods[0].State == EState.ePrePutaway) return -2;
+            if (goods[0].State == EState.未上架) return -2;
             DBHelper helper = new DBHelper();
             string sql = "UPDATE good SET state = @state WHERE goodID = @goodID;";
             MySqlParameter[] prams = {
-                new MySqlParameter("@state",EState.ePrePutaway),
+                new MySqlParameter("@state",EState.未上架),
                 new MySqlParameter("@goodID",goodID)
             };
             return helper.RunNonQuerySQL(sql, prams);
         }
-        public static int UpdateGood(EtGood good)
-        {
+        public static int UpdateGood(EtGood good) {
             List<EtGood> goods = QueryByGoodID(good.GoodID);
             if (goods.Count == 0) return -1;
             DBHelper helper = new DBHelper();
@@ -100,18 +96,14 @@ namespace GoodManagerSys.Dao {
         }
         private static List<EtGood> GetListByDataReader(MySqlDataReader dr) {
             List<EtGood> goods = new List<EtGood>();
-            try
-            {
-                while (dr.Read())
-                {
-                    EtGood good = new EtGood
-                    {
+            try {
+                while (dr.Read()) {
+                    EtGood good = new EtGood {
                         GoodID = dr.GetInt32("goodID"),
-                        Category = new EtCategory
-                        {
+                        Category = new EtCategory {
                             CategoryID = dr.GetInt32("categoryID"),
                             CategoryName = dr["categoryName"] is DBNull ? null : dr.GetString("categoryName"),
-                            ParentCategoryID = dr["parentCategoryID"] is DBNull ? ECategory.eUndefined : (ECategory)dr.GetInt16("parentCategoryID"),
+                            ParentCategoryID = dr["parentCategoryID"] is DBNull ? ECategory.未定义 : (ECategory)dr.GetInt16("parentCategoryID"),
                             ParentCategoryName = dr["parentCategoryName"] is DBNull ? null : dr.GetString("parentCategoryName"),
                             Unit = dr["unit"] is DBNull ? null : dr.GetString("unit"),
                             Color = dr["color"] is DBNull ? null : dr.GetString("color"),
@@ -119,7 +111,7 @@ namespace GoodManagerSys.Dao {
                             MinStock = dr["minStock"] is DBNull ? 0 : dr.GetInt32("minStock"),
                             MaxStock = dr["maxStock"] is DBNull ? 0 : dr.GetInt32("maxStock"),
                             ExpirationDate = dr["expirationDate"] is DBNull ? 0 : dr.GetInt32("expirationDate"),
-                            IsValid = dr["isValid"] is DBNull ? EValid.eDeleted : (EValid)dr.GetInt16("isValid")
+                            IsValid = dr["isValid"] is DBNull ? EValid.已删除 : (EValid)dr.GetInt16("isValid")
                         },
                         ProductionDate = dr["productionDate"] is DBNull ? null : dr.GetString("productionDate"),
                         PurchaseDate = dr["purchaseDate"] is DBNull ? null : dr.GetString("purchaseDate"),
@@ -130,8 +122,7 @@ namespace GoodManagerSys.Dao {
                     goods.Add(good);
                 }
             }
-            catch(Exception e)
-            {
+            catch (Exception e) {
                 Console.WriteLine(e.ToString());
             }
             return goods;
