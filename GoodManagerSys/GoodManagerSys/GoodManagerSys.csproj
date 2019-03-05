@@ -109,13 +109,12 @@
     <Compile Include="Frm\Membership\FrmMsInsert.designer.cs">
       <DependentUpon>FrmMsInsert.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="Frm\ReportForm\FrmPurchaseReport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm\ReportForm\FrmPurchaseReport.Designer.cs">
       <DependentUpon>FrmPurchaseReport.cs</DependentUpon>
-=======
+    </Compile>
     <Compile Include="Frm\Membership\FrmMsUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,7 +126,6 @@
     </Compile>
     <Compile Include="Frm\Sale\FrmSale.Designer.cs">
       <DependentUpon>FrmSale.cs</DependentUpon>
->>>>>>> 272d693a5b5c7b2f6947538fd9ce89527e015145
     </Compile>
     <Compile Include="Frm\Staff\FrmStaff.cs">
       <SubType>Form</SubType>
@@ -211,16 +209,14 @@
     <EmbeddedResource Include="Frm\Membership\FrmMsInsert.resx">
       <DependentUpon>FrmMsInsert.cs</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="Frm\ReportForm\FrmPurchaseReport.resx">
       <DependentUpon>FrmPurchaseReport.cs</DependentUpon>
-=======
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm\Membership\FrmMsUpdate.resx">
       <DependentUpon>FrmMsUpdate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\Sale\FrmSale.resx">
       <DependentUpon>FrmSale.cs</DependentUpon>
->>>>>>> 272d693a5b5c7b2f6947538fd9ce89527e015145
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\Staff\FrmStaff.resx">
       <DependentUpon>FrmStaff.cs</DependentUpon>

@@ -10,8 +10,8 @@ using System.Windows.Forms;
 
 namespace GoodManagerSys.Frm.Sale {
     public partial class FrmSale : Form {
-        internal static 
-        public FrmSale() {
+        public FrmSale()
+        {
             InitializeComponent();
         }
 
