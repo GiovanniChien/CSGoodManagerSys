@@ -1150,7 +1150,7 @@
             this.TlpWarehouseControllerMenu.ColumnCount = 3;
             this.TlpWarehouseControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.77483F));
             this.TlpWarehouseControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.22517F));
-            this.TlpWarehouseControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.TlpWarehouseControllerMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 55F));
             this.TlpWarehouseControllerMenu.Controls.Add(this.BtnWarehouseSearch, 0, 0);
             this.TlpWarehouseControllerMenu.Controls.Add(this.TxtWarehouseSearch, 0, 0);
             this.TlpWarehouseControllerMenu.Controls.Add(this.BtnWarehouseUpdate, 0, 0);
@@ -1164,9 +1164,9 @@
             // BtnWarehouseSearch
             // 
             this.BtnWarehouseSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnWarehouseSearch.Location = new System.Drawing.Point(121, 3);
+            this.BtnWarehouseSearch.Location = new System.Drawing.Point(119, 3);
             this.BtnWarehouseSearch.Name = "BtnWarehouseSearch";
-            this.BtnWarehouseSearch.Size = new System.Drawing.Size(48, 22);
+            this.BtnWarehouseSearch.Size = new System.Drawing.Size(50, 22);
             this.BtnWarehouseSearch.TabIndex = 6;
             this.BtnWarehouseSearch.Text = "查询";
             this.BtnWarehouseSearch.UseVisualStyleBackColor = true;
@@ -1174,9 +1174,9 @@
             // TxtWarehouseSearch
             // 
             this.TxtWarehouseSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TxtWarehouseSearch.Location = new System.Drawing.Point(43, 3);
+            this.TxtWarehouseSearch.Location = new System.Drawing.Point(42, 3);
             this.TxtWarehouseSearch.Name = "TxtWarehouseSearch";
-            this.TxtWarehouseSearch.Size = new System.Drawing.Size(72, 21);
+            this.TxtWarehouseSearch.Size = new System.Drawing.Size(71, 21);
             this.TxtWarehouseSearch.TabIndex = 5;
             // 
             // BtnWarehouseUpdate
@@ -1184,7 +1184,7 @@
             this.BtnWarehouseUpdate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BtnWarehouseUpdate.Location = new System.Drawing.Point(3, 3);
             this.BtnWarehouseUpdate.Name = "BtnWarehouseUpdate";
-            this.BtnWarehouseUpdate.Size = new System.Drawing.Size(34, 22);
+            this.BtnWarehouseUpdate.Size = new System.Drawing.Size(33, 22);
             this.BtnWarehouseUpdate.TabIndex = 4;
             this.BtnWarehouseUpdate.Text = "修改";
             this.BtnWarehouseUpdate.UseVisualStyleBackColor = true;

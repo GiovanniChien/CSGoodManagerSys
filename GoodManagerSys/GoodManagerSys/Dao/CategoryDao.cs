@@ -72,11 +72,11 @@ namespace GoodManagerSys.Dao {
             //未查到
             if (categories.Count == 0) return -1;
             //之前已经删除了
-            if (categories[0].IsValid == EValid.eDeleted) return -2;
+            if (categories[0].IsValid == EValid.已删除) return -2;
             DBHelper helper = new DBHelper();
             string sql = "UPDATE category SET isValid = @isValid WHERE categoryID = @categoryID;";
             MySqlParameter[] prams ={
-                new MySqlParameter("@isValid",EValid.eDeleted),
+                new MySqlParameter("@isValid",EValid.已删除),
                 new MySqlParameter("@categoryID",categoryID),
             };
             return helper.RunNonQuerySQL(sql, prams);
@@ -119,7 +119,7 @@ namespace GoodManagerSys.Dao {
                     {
                         CategoryID = dr.GetInt32("categoryID"),
                         CategoryName = dr["categoryName"] is DBNull ? null : dr.GetString("categoryName"),
-                        ParentCategoryID = dr["parentCategoryID"] is DBNull ? ECategory.eUndefined : (ECategory)dr.GetInt16("parentCategoryID"),
+                        ParentCategoryID = dr["parentCategoryID"] is DBNull ? ECategory.未定义 : (ECategory)dr.GetInt16("parentCategoryID"),
                         ParentCategoryName = dr["parentCategoryName"] is DBNull ? null : dr.GetString("parentCategoryName"),
                         Unit = dr["unit"] is DBNull ? null : dr.GetString("unit"),
                         Color = dr["color"] is DBNull ? null : dr.GetString("color"),
@@ -127,7 +127,7 @@ namespace GoodManagerSys.Dao {
                         MinStock = dr["minStock"] is DBNull ? 0 : dr.GetInt32("minStock"),
                         MaxStock = dr["maxStock"] is DBNull ? 0 : dr.GetInt32("maxStock"),
                         ExpirationDate = dr["expirationDate"] is DBNull ? 0 : dr.GetInt32("expirationDate"),
-                        IsValid = dr["isValid"] is DBNull ? EValid.eDeleted : (EValid)dr.GetInt16("isValid")
+                        IsValid = dr["isValid"] is DBNull ? EValid.已删除 : (EValid)dr.GetInt16("isValid")
                     };
                     categories.Add(category);
                 }

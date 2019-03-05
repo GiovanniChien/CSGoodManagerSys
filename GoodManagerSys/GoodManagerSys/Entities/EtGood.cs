@@ -1,8 +1,7 @@
 ﻿using GoodManagerSys.Enums;
 using System.Text;
 
-namespace GoodManagerSys.Entities
-{
+namespace GoodManagerSys.Entities {
     class EtGood {
         public int GoodID { get; set; }
         public EtCategory Category { get; set; }
@@ -20,7 +19,7 @@ namespace GoodManagerSys.Entities
             sb.Append(PurchaseDate + "\t");
             sb.Append(Cost + "\t");
             sb.Append(Price + "\t");
-            sb.Append(State + "\t");
+            sb.Append(State);
             return sb.ToString();
         }
     }

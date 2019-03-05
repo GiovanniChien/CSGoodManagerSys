@@ -37,7 +37,7 @@
             // 
             // TxtStaffName
             // 
-            this.TxtStaffName.Location = new System.Drawing.Point(121, 68);
+            this.TxtStaffName.Location = new System.Drawing.Point(82, 21);
             this.TxtStaffName.Margin = new System.Windows.Forms.Padding(2);
             this.TxtStaffName.Name = "TxtStaffName";
             this.TxtStaffName.Size = new System.Drawing.Size(110, 21);
@@ -45,7 +45,7 @@
             // 
             // TxtStaffPwd
             // 
-            this.TxtStaffPwd.Location = new System.Drawing.Point(121, 93);
+            this.TxtStaffPwd.Location = new System.Drawing.Point(82, 46);
             this.TxtStaffPwd.Margin = new System.Windows.Forms.Padding(2);
             this.TxtStaffPwd.Name = "TxtStaffPwd";
             this.TxtStaffPwd.Size = new System.Drawing.Size(110, 21);
@@ -53,7 +53,7 @@
             // 
             // TxtStaffPhone
             // 
-            this.TxtStaffPhone.Location = new System.Drawing.Point(121, 118);
+            this.TxtStaffPhone.Location = new System.Drawing.Point(82, 71);
             this.TxtStaffPhone.Margin = new System.Windows.Forms.Padding(2);
             this.TxtStaffPhone.Name = "TxtStaffPhone";
             this.TxtStaffPhone.Size = new System.Drawing.Size(110, 21);
@@ -62,7 +62,7 @@
             // LblStaffName
             // 
             this.LblStaffName.AutoSize = true;
-            this.LblStaffName.Location = new System.Drawing.Point(64, 70);
+            this.LblStaffName.Location = new System.Drawing.Point(25, 23);
             this.LblStaffName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblStaffName.Name = "LblStaffName";
             this.LblStaffName.Size = new System.Drawing.Size(41, 12);
@@ -72,7 +72,7 @@
             // LblStaffPwd
             // 
             this.LblStaffPwd.AutoSize = true;
-            this.LblStaffPwd.Location = new System.Drawing.Point(64, 95);
+            this.LblStaffPwd.Location = new System.Drawing.Point(25, 48);
             this.LblStaffPwd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblStaffPwd.Name = "LblStaffPwd";
             this.LblStaffPwd.Size = new System.Drawing.Size(29, 12);
@@ -82,7 +82,7 @@
             // LblStaffPhone
             // 
             this.LblStaffPhone.AutoSize = true;
-            this.LblStaffPhone.Location = new System.Drawing.Point(64, 120);
+            this.LblStaffPhone.Location = new System.Drawing.Point(25, 73);
             this.LblStaffPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblStaffPhone.Name = "LblStaffPhone";
             this.LblStaffPhone.Size = new System.Drawing.Size(41, 12);
@@ -92,7 +92,7 @@
             // LblStaffRole
             // 
             this.LblStaffRole.AutoSize = true;
-            this.LblStaffRole.Location = new System.Drawing.Point(64, 145);
+            this.LblStaffRole.Location = new System.Drawing.Point(25, 98);
             this.LblStaffRole.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblStaffRole.Name = "LblStaffRole";
             this.LblStaffRole.Size = new System.Drawing.Size(53, 12);
@@ -102,7 +102,7 @@
             // BtnInsert
             // 
             this.BtnInsert.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BtnInsert.Location = new System.Drawing.Point(67, 182);
+            this.BtnInsert.Location = new System.Drawing.Point(28, 135);
             this.BtnInsert.Margin = new System.Windows.Forms.Padding(2);
             this.BtnInsert.Name = "BtnInsert";
             this.BtnInsert.Size = new System.Drawing.Size(83, 26);
@@ -115,11 +115,10 @@
             // 
             this.CmbStaffRole.FormattingEnabled = true;
             this.CmbStaffRole.Items.AddRange(new object[] {
-            "--请选择--",
-            "收银员",
-            "采购员",
-            "管理员"});
-            this.CmbStaffRole.Location = new System.Drawing.Point(121, 145);
+            "管理员",
+            "销售员",
+            "采购员"});
+            this.CmbStaffRole.Location = new System.Drawing.Point(82, 98);
             this.CmbStaffRole.Margin = new System.Windows.Forms.Padding(2);
             this.CmbStaffRole.Name = "CmbStaffRole";
             this.CmbStaffRole.Size = new System.Drawing.Size(110, 20);
@@ -128,7 +127,7 @@
             // BtnBack
             // 
             this.BtnBack.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.BtnBack.Location = new System.Drawing.Point(154, 182);
+            this.BtnBack.Location = new System.Drawing.Point(115, 135);
             this.BtnBack.Margin = new System.Windows.Forms.Padding(2);
             this.BtnBack.Name = "BtnBack";
             this.BtnBack.Size = new System.Drawing.Size(82, 26);
@@ -141,7 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(315, 277);
+            this.ClientSize = new System.Drawing.Size(221, 191);
             this.Controls.Add(this.CmbStaffRole);
             this.Controls.Add(this.BtnBack);
             this.Controls.Add(this.BtnInsert);

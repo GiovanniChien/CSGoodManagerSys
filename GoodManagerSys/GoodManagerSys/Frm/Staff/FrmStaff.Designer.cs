@@ -28,6 +28,7 @@
             this.BtnStaffCancel = new System.Windows.Forms.Button();
             this.BtnStaffSubmit = new System.Windows.Forms.Button();
             this.BtnStaffDelete = new System.Windows.Forms.Button();
+            this.BtnBack = new System.Windows.Forms.Button();
             this.TlpStaffControllerMenu = new System.Windows.Forms.TableLayoutPanel();
             this.BtnStaffSearch = new System.Windows.Forms.Button();
             this.TxtStaffSearch = new System.Windows.Forms.TextBox();
@@ -66,14 +67,16 @@
             // 
             // TlpStaffSubmitMenu
             // 
-            this.TlpStaffSubmitMenu.ColumnCount = 4;
-            this.TlpStaffSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TlpStaffSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.TlpStaffSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.TlpStaffSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.TlpStaffSubmitMenu.ColumnCount = 5;
+            this.TlpStaffSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.TlpStaffSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.TlpStaffSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.TlpStaffSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.TlpStaffSubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.TlpStaffSubmitMenu.Controls.Add(this.BtnStaffCancel, 3, 0);
             this.TlpStaffSubmitMenu.Controls.Add(this.BtnStaffSubmit, 2, 0);
             this.TlpStaffSubmitMenu.Controls.Add(this.BtnStaffDelete, 0, 0);
+            this.TlpStaffSubmitMenu.Controls.Add(this.BtnBack, 4, 0);
             this.TlpStaffSubmitMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TlpStaffSubmitMenu.Location = new System.Drawing.Point(3, 291);
             this.TlpStaffSubmitMenu.Name = "TlpStaffSubmitMenu";
@@ -85,19 +88,20 @@
             // BtnStaffCancel
             // 
             this.BtnStaffCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnStaffCancel.Location = new System.Drawing.Point(567, 3);
+            this.BtnStaffCancel.Location = new System.Drawing.Point(472, 3);
             this.BtnStaffCancel.Name = "BtnStaffCancel";
-            this.BtnStaffCancel.Size = new System.Drawing.Size(136, 21);
+            this.BtnStaffCancel.Size = new System.Drawing.Size(111, 21);
             this.BtnStaffCancel.TabIndex = 20;
             this.BtnStaffCancel.Text = "清空修改";
             this.BtnStaffCancel.UseVisualStyleBackColor = true;
+            this.BtnStaffCancel.Click += new System.EventHandler(this.BtnStaffCancel_Click);
             // 
             // BtnStaffSubmit
             // 
             this.BtnStaffSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnStaffSubmit.Location = new System.Drawing.Point(426, 3);
+            this.BtnStaffSubmit.Location = new System.Drawing.Point(355, 3);
             this.BtnStaffSubmit.Name = "BtnStaffSubmit";
-            this.BtnStaffSubmit.Size = new System.Drawing.Size(135, 21);
+            this.BtnStaffSubmit.Size = new System.Drawing.Size(111, 21);
             this.BtnStaffSubmit.TabIndex = 18;
             this.BtnStaffSubmit.Text = "提交修改";
             this.BtnStaffSubmit.UseVisualStyleBackColor = true;
@@ -108,10 +112,22 @@
             this.BtnStaffDelete.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BtnStaffDelete.Location = new System.Drawing.Point(3, 3);
             this.BtnStaffDelete.Name = "BtnStaffDelete";
-            this.BtnStaffDelete.Size = new System.Drawing.Size(135, 21);
+            this.BtnStaffDelete.Size = new System.Drawing.Size(111, 21);
             this.BtnStaffDelete.TabIndex = 11;
             this.BtnStaffDelete.Text = "删除员工";
             this.BtnStaffDelete.UseVisualStyleBackColor = true;
+            this.BtnStaffDelete.Click += new System.EventHandler(this.BtnStaffDelete_Click);
+            // 
+            // BtnBack
+            // 
+            this.BtnBack.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnBack.Location = new System.Drawing.Point(589, 3);
+            this.BtnBack.Name = "BtnBack";
+            this.BtnBack.Size = new System.Drawing.Size(114, 21);
+            this.BtnBack.TabIndex = 21;
+            this.BtnBack.Text = "退出";
+            this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // TlpStaffControllerMenu
             // 
@@ -148,6 +164,7 @@
             this.BtnStaffSearch.TabIndex = 8;
             this.BtnStaffSearch.Text = "查询";
             this.BtnStaffSearch.UseVisualStyleBackColor = true;
+            this.BtnStaffSearch.Click += new System.EventHandler(this.BtnStaffSearch_Click);
             // 
             // TxtStaffSearch
             // 
@@ -195,7 +212,7 @@
             this.CmbStaffRole.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CmbStaffRole.FormattingEnabled = true;
             this.CmbStaffRole.Items.AddRange(new object[] {
-            "--请选择--",
+            "未定义",
             "管理员",
             "销售员",
             "采购员"});
@@ -203,6 +220,7 @@
             this.CmbStaffRole.Name = "CmbStaffRole";
             this.CmbStaffRole.Size = new System.Drawing.Size(94, 20);
             this.CmbStaffRole.TabIndex = 7;
+            this.CmbStaffRole.SelectedIndexChanged += new System.EventHandler(this.CmbStaffRole_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -212,7 +230,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 26);
             this.label2.TabIndex = 9;
-            this.label2.Text = "输入查询的员工编号或名称：";
+            this.label2.Text = "输入查询的员工编号或姓名：";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DgvStaffData
@@ -229,6 +247,7 @@
             this.DgvStaffData.Name = "DgvStaffData";
             this.DgvStaffData.ReadOnly = true;
             this.DgvStaffData.RowTemplate.Height = 23;
+            this.DgvStaffData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvStaffData.Size = new System.Drawing.Size(706, 250);
             this.DgvStaffData.TabIndex = 1;
             // 
@@ -304,5 +323,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ClnStaffName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClnStaffPhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClnStaffRole;
+        private System.Windows.Forms.Button BtnBack;
     }
 }

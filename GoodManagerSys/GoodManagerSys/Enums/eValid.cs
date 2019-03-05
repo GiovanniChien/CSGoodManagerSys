@@ -1,6 +1,6 @@
 ﻿namespace GoodManagerSys.Enums {
     enum EValid {
-        eDeleted,
-        eExist
+        有效,
+        已删除
     }
 }

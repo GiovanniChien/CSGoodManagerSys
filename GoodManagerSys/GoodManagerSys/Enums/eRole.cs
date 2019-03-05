@@ -1,8 +1,8 @@
 ﻿namespace GoodManagerSys.Enums {
     enum ERole {
-        eUndefined,
-        eAdmin,
-        eSalesman,
-        eBuyer
+        未定义,
+        管理员,
+        销售员,
+        采购员
     }
 }

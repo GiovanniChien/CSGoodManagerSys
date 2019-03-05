@@ -45,7 +45,7 @@
             this.CmbIsValid.FormattingEnabled = true;
             this.CmbIsValid.Items.AddRange(new object[] {
             "有效",
-            "无效"});
+            "已删除"});
             this.CmbIsValid.Location = new System.Drawing.Point(79, 104);
             this.CmbIsValid.Margin = new System.Windows.Forms.Padding(2);
             this.CmbIsValid.Name = "CmbIsValid";
@@ -62,6 +62,7 @@
             this.BtnBack.TabIndex = 38;
             this.BtnBack.Text = "返回";
             this.BtnBack.UseVisualStyleBackColor = true;
+            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // BtnInsert
             // 
@@ -122,6 +123,7 @@
             this.TxtMsPoint.Name = "TxtMsPoint";
             this.TxtMsPoint.Size = new System.Drawing.Size(110, 21);
             this.TxtMsPoint.TabIndex = 32;
+            this.TxtMsPoint.Text = "0";
             // 
             // TxtMsPhone
             // 

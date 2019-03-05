@@ -2,6 +2,7 @@
 using GoodManagerSys.Entities;
 using GoodManagerSys.Enums;
 using GoodManagerSys.Utils;
+using GoodManagerSys.Frm.Staff;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,17 +12,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace GoodManagerSys.Frm.Staff {
     public partial class FrmStaff : Form {
         internal static EtStaff Staff;
         private List<EtStaff> staffs;
+        private bool hasUpdated;
         public FrmStaff() {
             InitializeComponent();
             CmbStaffRole.SelectedIndex = 0;
             Staff = null;
-            //staffs = new List<EtStaff>();
             staffs = StaffDao.QueryAll();
+            hasUpdated = false;
             foreach (EtStaff staff in staffs)
                 DgvStaffData.Rows.Add(new object[] {
                     staff.StaffID,
@@ -47,13 +50,14 @@ namespace GoodManagerSys.Frm.Staff {
                     staffs[staffs.Count - 1].StaffPhone,
                     staffs[staffs.Count - 1].Role
                 });
+                hasUpdated = true;
             }
         }
 
         private void BtnStaffSubmit_Click(object sender, EventArgs e) {
-            foreach (EtStaff staff in staffs) {
+            foreach (EtStaff staff in staffs)
                 StaffDao.InsertStaff(staff);
-            }
+            hasUpdated = false;
         }
 
         private void BtnStaffUpdate_Click(object sender, EventArgs e) {
@@ -70,10 +74,97 @@ namespace GoodManagerSys.Frm.Staff {
                     DgvStaffData.Rows[index].Cells["ClnStaffRole"].Value = Staff.Role;
                     Staff = null;
                 }
+                hasUpdated = true;
             }
-            else {
-                MsgBoxUtil.ErrMsgBox("请选择要修改信息的员工！");
+            else 
+                MsgBoxUtil.ErrMsgBox("请选择要修改的员工信息！");
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e) {
+            if (hasUpdated) {
+                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗口有修改未保存，是否要退出？"))
+                    Close();
             }
+            else
+                Close();
+        }
+
+        private void BtnStaffCancel_Click(object sender, EventArgs e) {
+            DgvStaffData.Rows.Clear();
+            staffs = StaffDao.QueryAll();
+            foreach (EtStaff staff in staffs)
+                DgvStaffData.Rows.Add(new object[] {
+                    staff.StaffID,
+                    staff.StaffName,
+                    staff.StaffPhone,
+                    staff.Role
+                });
+            hasUpdated = false;
+        }
+
+        private void BtnStaffDelete_Click(object sender, EventArgs e) {
+            if (DgvStaffData.SelectedRows.Count == 1) {
+                int index = DgvStaffData.SelectedRows[0].Index;
+                Staff = staffs[index];
+                StringBuilder sb = new StringBuilder();
+                sb.Append("确定删除当前员工？\n");
+                sb.Append("员工编号：" + Staff.StaffID.ToString() + "\n");
+                sb.Append("员工姓名：" + Staff.StaffName + "\n");
+                sb.Append("联系方式：" + Staff.StaffPhone + "\n");
+                sb.Append("员工职称：" + Staff.Role);
+                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox(sb.ToString())) {
+                    StaffDao.DeleteByStaffID(Staff.StaffID);
+                    staffs.RemoveAt(index);
+                    DgvStaffData.Rows.RemoveAt(index);
+                    Staff = null;
+                }
+            }
+            else
+                MsgBoxUtil.ErrMsgBox("请选择要删除的员工！");
+        }
+
+        private void CmbStaffRole_SelectedIndexChanged(object sender, EventArgs e) {
+            if (CmbStaffRole.SelectedIndex == -1)
+                staffs = StaffDao.QueryAll();
+            else
+                staffs = StaffDao.QueryByRole(CmbStaffRole.SelectedIndex);
+            DgvStaffData.Rows.Clear();
+            foreach (EtStaff staff in staffs)
+                DgvStaffData.Rows.Add(new object[] {
+                    staff.StaffID,
+                    staff.StaffName,
+                    staff.StaffPhone,
+                    staff.Role
+                });
+            TxtStaffSearch.Text = "";
+        }
+
+        private void BtnStaffSearch_Click(object sender, EventArgs e) {
+            List<EtStaff> newStaffs;
+            string idOrName = TxtStaffSearch.Text;
+            string RegexStr = "^[0-9]+$";
+            if (Regex.IsMatch(idOrName, RegexStr))
+                newStaffs = StaffDao.QueryByStaffID(int.Parse(idOrName));
+            else
+                newStaffs = StaffDao.QueryByStaffName(idOrName);
+            staffs = staffs.Intersect(newStaffs, new MyCompare()).ToList();
+            DgvStaffData.Rows.Clear();
+            foreach (EtStaff staff in staffs)
+                DgvStaffData.Rows.Add(new object[] {
+                    staff.StaffID,
+                    staff.StaffName,
+                    staff.StaffPhone,
+                    staff.Role
+                });
+        }
+    }
+    class MyCompare : IEqualityComparer<EtStaff> {
+        public bool Equals(EtStaff x, EtStaff y) {
+            return x.StaffID == y.StaffID;
+        }
+
+        public int GetHashCode(EtStaff obj) {
+            return obj.ToString().GetHashCode();
         }
     }
 }

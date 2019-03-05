@@ -82,7 +82,7 @@
   <ItemGroup>
     <Compile Include="Dao\CategoryDao.cs" />
     <Compile Include="Dao\GoodDao.cs" />
-    <Compile Include="Dao\MemberShipDao.cs" />
+    <Compile Include="Dao\MembershipDao.cs" />
     <Compile Include="Dao\PurchaseDao.cs" />
     <Compile Include="Dao\SaleDao.cs" />
     <Compile Include="Dao\StaffDao.cs" />
@@ -109,11 +109,25 @@
     <Compile Include="Frm\Membership\FrmMsInsert.designer.cs">
       <DependentUpon>FrmMsInsert.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Frm\ReportForm\FrmPurchaseReport.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm\ReportForm\FrmPurchaseReport.Designer.cs">
       <DependentUpon>FrmPurchaseReport.cs</DependentUpon>
+=======
+    <Compile Include="Frm\Membership\FrmMsUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Membership\FrmMsUpdate.Designer.cs">
+      <DependentUpon>FrmMsUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Sale\FrmSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Sale\FrmSale.Designer.cs">
+      <DependentUpon>FrmSale.cs</DependentUpon>
+>>>>>>> 272d693a5b5c7b2f6947538fd9ce89527e015145
     </Compile>
     <Compile Include="Frm\Staff\FrmStaff.cs">
       <SubType>Form</SubType>
@@ -181,10 +195,10 @@
     <Compile Include="UI\FrmWarehouseWarning.designer.cs">
       <DependentUpon>FrmWarehouseWarning.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\FrmSaleInsert.cs">
+    <Compile Include="Frm\Sale\FrmSaleInsert.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\FrmSaleInsert.designer.cs">
+    <Compile Include="Frm\Sale\FrmSaleInsert.designer.cs">
       <DependentUpon>FrmSaleInsert.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -197,8 +211,16 @@
     <EmbeddedResource Include="Frm\Membership\FrmMsInsert.resx">
       <DependentUpon>FrmMsInsert.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Frm\ReportForm\FrmPurchaseReport.resx">
       <DependentUpon>FrmPurchaseReport.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Frm\Membership\FrmMsUpdate.resx">
+      <DependentUpon>FrmMsUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Sale\FrmSale.resx">
+      <DependentUpon>FrmSale.cs</DependentUpon>
+>>>>>>> 272d693a5b5c7b2f6947538fd9ce89527e015145
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\Staff\FrmStaff.resx">
       <DependentUpon>FrmStaff.cs</DependentUpon>
@@ -233,7 +255,7 @@
     <EmbeddedResource Include="UI\FrmWarehouseWarning.resx">
       <DependentUpon>FrmWarehouseWarning.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\FrmSaleInsert.resx">
+    <EmbeddedResource Include="Frm\Sale\FrmSaleInsert.resx">
       <DependentUpon>FrmSaleInsert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
