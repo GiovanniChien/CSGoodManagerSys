@@ -86,7 +86,8 @@
     <Compile Include="Dao\PurchaseDao.cs" />
     <Compile Include="Dao\SaleDao.cs" />
     <Compile Include="Dao\StaffDao.cs" />
-    <Compile Include="Encrypt.cs" />
+    <Compile Include="Utils\CalcDateUtil.cs" />
+    <Compile Include="Utils\Encrypt.cs" />
     <Compile Include="Entities\EtCategory.cs" />
     <Compile Include="Entities\EtGood.cs" />
     <Compile Include="Entities\EtMembership.cs" />
@@ -211,29 +212,23 @@
     <Compile Include="Frm\Warehouse\FrmWarehouse.Designer.cs">
       <DependentUpon>FrmWarehouse.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm\Warehouse\FrmWarehouseWarning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Warehouse\FrmWarehouseWarning.Designer.cs">
+      <DependentUpon>FrmWarehouseWarning.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\FrmCategory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\FrmCategory.designer.cs">
-      <DependentUpon>FrmCategory.cs</DependentUpon>
-    </Compile>
     <Compile Include="Frm\Main\FrmMainAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm\Main\FrmMainAdmin.Designer.cs">
       <DependentUpon>FrmMainAdmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\FrmWarehouseWarning.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UI\FrmWarehouseWarning.designer.cs">
-      <DependentUpon>FrmWarehouseWarning.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm\Sale\FrmSaleInsert.cs">
       <SubType>Form</SubType>
@@ -305,14 +300,11 @@
     <EmbeddedResource Include="Frm\Warehouse\FrmWarehouse.resx">
       <DependentUpon>FrmWarehouse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Warehouse\FrmWarehouseWarning.resx">
+      <DependentUpon>FrmWarehouseWarning.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\FrmCategory.resx">
-      <DependentUpon>FrmCategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\FrmWarehouseWarning.resx">
-      <DependentUpon>FrmWarehouseWarning.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\Sale\FrmSaleInsert.resx">
       <DependentUpon>FrmSaleInsert.cs</DependentUpon>

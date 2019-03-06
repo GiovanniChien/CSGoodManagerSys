@@ -77,8 +77,8 @@
             this.Column9,
             this.Column11});
             this.DgvWarehouse.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvWarehouse.Location = new System.Drawing.Point(2, 38);
-            this.DgvWarehouse.Margin = new System.Windows.Forms.Padding(2);
+            this.DgvWarehouse.Location = new System.Drawing.Point(3, 47);
+            this.DgvWarehouse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvWarehouse.Name = "DgvWarehouse";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -89,7 +89,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DgvWarehouse.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DgvWarehouse.RowTemplate.Height = 20;
-            this.DgvWarehouse.Size = new System.Drawing.Size(733, 284);
+            this.DgvWarehouse.Size = new System.Drawing.Size(977, 356);
             this.DgvWarehouse.TabIndex = 0;
             // 
             // Column1
@@ -97,85 +97,85 @@
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column1.HeaderText = "编号";
             this.Column1.Name = "Column1";
-            this.Column1.Width = 54;
+            this.Column1.Width = 66;
             // 
             // Column2
             // 
             this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column2.HeaderText = "名称";
             this.Column2.Name = "Column2";
-            this.Column2.Width = 54;
+            this.Column2.Width = 66;
             // 
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column3.HeaderText = "大类";
             this.Column3.Name = "Column3";
-            this.Column3.Width = 54;
+            this.Column3.Width = 66;
             // 
             // Column6
             // 
             this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column6.HeaderText = "厂商";
             this.Column6.Name = "Column6";
-            this.Column6.Width = 54;
+            this.Column6.Width = 66;
             // 
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column4.HeaderText = "单位";
             this.Column4.Name = "Column4";
-            this.Column4.Width = 54;
+            this.Column4.Width = 66;
             // 
             // Column5
             // 
             this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column5.HeaderText = "颜色";
             this.Column5.Name = "Column5";
-            this.Column5.Width = 54;
+            this.Column5.Width = 66;
             // 
             // Column8
             // 
             this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column8.HeaderText = "保质期";
             this.Column8.Name = "Column8";
-            this.Column8.Width = 66;
+            this.Column8.Width = 81;
             // 
             // Column10
             // 
             this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column10.HeaderText = "当前库存";
             this.Column10.Name = "Column10";
-            this.Column10.Width = 78;
+            this.Column10.Width = 96;
             // 
             // Column7
             // 
             this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column7.HeaderText = "最小库存";
             this.Column7.Name = "Column7";
-            this.Column7.Width = 78;
+            this.Column7.Width = 96;
             // 
             // Column9
             // 
             this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column9.HeaderText = "最大库存";
             this.Column9.Name = "Column9";
-            this.Column9.Width = 78;
+            this.Column9.Width = 96;
             // 
             // Column11
             // 
             this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.Column11.HeaderText = "有效状态";
             this.Column11.Name = "Column11";
-            this.Column11.Width = 78;
+            this.Column11.Width = 96;
             // 
             // BtnExit
             // 
             this.BtnExit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnExit.Location = new System.Drawing.Point(659, 2);
-            this.BtnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnExit.Location = new System.Drawing.Point(880, 2);
+            this.BtnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(70, 26);
+            this.BtnExit.Size = new System.Drawing.Size(92, 33);
             this.BtnExit.TabIndex = 1;
             this.BtnExit.Text = "退出";
             this.BtnExit.UseVisualStyleBackColor = true;
@@ -184,19 +184,19 @@
             // TxtIdOrName
             // 
             this.TxtIdOrName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TxtIdOrName.Location = new System.Drawing.Point(456, 2);
-            this.TxtIdOrName.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtIdOrName.Location = new System.Drawing.Point(609, 2);
+            this.TxtIdOrName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtIdOrName.Name = "TxtIdOrName";
-            this.TxtIdOrName.Size = new System.Drawing.Size(133, 21);
+            this.TxtIdOrName.Size = new System.Drawing.Size(177, 25);
             this.TxtIdOrName.TabIndex = 3;
             // 
             // BtnQuery
             // 
             this.BtnQuery.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnQuery.Location = new System.Drawing.Point(593, 2);
-            this.BtnQuery.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnQuery.Location = new System.Drawing.Point(792, 2);
+            this.BtnQuery.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnQuery.Name = "BtnQuery";
-            this.BtnQuery.Size = new System.Drawing.Size(136, 26);
+            this.BtnQuery.Size = new System.Drawing.Size(180, 33);
             this.BtnQuery.TabIndex = 4;
             this.BtnQuery.Text = "查询";
             this.BtnQuery.UseVisualStyleBackColor = true;
@@ -215,10 +215,10 @@
             "糖果",
             "奶制品",
             "休闲食品"});
-            this.CmbCategory.Location = new System.Drawing.Point(139, 2);
-            this.CmbCategory.Margin = new System.Windows.Forms.Padding(2);
+            this.CmbCategory.Location = new System.Drawing.Point(186, 2);
+            this.CmbCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CmbCategory.Name = "CmbCategory";
-            this.CmbCategory.Size = new System.Drawing.Size(133, 20);
+            this.CmbCategory.Size = new System.Drawing.Size(177, 23);
             this.CmbCategory.TabIndex = 5;
             // 
             // label1
@@ -226,10 +226,9 @@
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(2, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 30);
+            this.label1.Size = new System.Drawing.Size(177, 37);
             this.label1.TabIndex = 6;
             this.label1.Text = "商品大类";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -239,10 +238,9 @@
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(276, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(369, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(176, 30);
+            this.label2.Size = new System.Drawing.Size(234, 37);
             this.label2.TabIndex = 7;
             this.label2.Text = "商品类别编号或名称";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -256,12 +254,13 @@
             this.TlpWarehouse.Controls.Add(this.TlpWControllerMenu, 0, 0);
             this.TlpWarehouse.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TlpWarehouse.Location = new System.Drawing.Point(0, 0);
+            this.TlpWarehouse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TlpWarehouse.Name = "TlpWarehouse";
             this.TlpWarehouse.RowCount = 3;
             this.TlpWarehouse.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.TlpWarehouse.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.TlpWarehouse.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.TlpWarehouse.Size = new System.Drawing.Size(737, 360);
+            this.TlpWarehouse.Size = new System.Drawing.Size(983, 450);
             this.TlpWarehouse.TabIndex = 8;
             // 
             // TlpWExit
@@ -271,11 +270,12 @@
             this.TlpWExit.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.TlpWExit.Controls.Add(this.BtnExit, 1, 0);
             this.TlpWExit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TlpWExit.Location = new System.Drawing.Point(3, 327);
+            this.TlpWExit.Location = new System.Drawing.Point(4, 409);
+            this.TlpWExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TlpWExit.Name = "TlpWExit";
             this.TlpWExit.RowCount = 1;
             this.TlpWExit.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TlpWExit.Size = new System.Drawing.Size(731, 30);
+            this.TlpWExit.Size = new System.Drawing.Size(975, 37);
             this.TlpWExit.TabIndex = 1;
             // 
             // TlpWControllerMenu
@@ -292,20 +292,21 @@
             this.TlpWControllerMenu.Controls.Add(this.TxtIdOrName, 3, 0);
             this.TlpWControllerMenu.Controls.Add(this.CmbCategory, 1, 0);
             this.TlpWControllerMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TlpWControllerMenu.Location = new System.Drawing.Point(3, 3);
+            this.TlpWControllerMenu.Location = new System.Drawing.Point(4, 4);
+            this.TlpWControllerMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TlpWControllerMenu.Name = "TlpWControllerMenu";
             this.TlpWControllerMenu.RowCount = 1;
             this.TlpWControllerMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TlpWControllerMenu.Size = new System.Drawing.Size(731, 30);
+            this.TlpWControllerMenu.Size = new System.Drawing.Size(975, 37);
             this.TlpWControllerMenu.TabIndex = 2;
             // 
             // FrmWarehouse
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(737, 360);
+            this.ClientSize = new System.Drawing.Size(983, 450);
             this.Controls.Add(this.TlpWarehouse);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmWarehouse";
             this.Text = "FrmWarehouse";
             ((System.ComponentModel.ISupportInitialize)(this.DgvWarehouse)).EndInit();
