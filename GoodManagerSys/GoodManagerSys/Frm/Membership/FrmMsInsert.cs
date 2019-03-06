@@ -1,14 +1,13 @@
 ﻿using GoodManagerSys.Entities;
 using GoodManagerSys.Enums;
 using GoodManagerSys.Frm.Membership;
+using GoodManagerSys.Utils;
 using System;
 using System.Windows.Forms;
 
 namespace GoodManagerSys {
-    public partial class FrmMsInsert : Form
-    {
-        public FrmMsInsert()
-        {
+    public partial class FrmMsInsert : Form {
+        public FrmMsInsert() {
             InitializeComponent();
             CmbIsValid.SelectedIndex = 0;
         }
@@ -17,23 +16,33 @@ namespace GoodManagerSys {
             try {
                 string MsName = TxtMsName.Text;
                 string MsPhone = TxtMsPhone.Text;
-                int MsPoint = int.Parse(TxtMsPoint.Text);
+                int MsPoint = "" == TxtMsPoint.Text ? 0 : int.Parse(TxtMsPoint.Text);
                 EValid IsValid = (EValid)CmbIsValid.SelectedIndex;
                 FrmMembership.Ms = new EtMembership {
                     MsName = MsName,
-                    MsPhone=MsPhone,
-                    MsPoint=MsPoint,
-                    IsValid=IsValid
+                    MsPhone = MsPhone,
+                    MsPoint = MsPoint,
+                    IsValid = IsValid
                 };
                 Close();
             }
             catch (Exception) {
-                MessageBox.Show("员工信息输入错误！", "非法输入", MessageBoxButtons.OK);
+                MsgBoxUtil.ErrMsgBox("员工信息输入错误！");
             }
         }
 
         private void BtnBack_Click(object sender, EventArgs e) {
-            Close();
+            if ("" == TxtMsName.Text && "" == TxtMsPhone.Text && "" == TxtMsPoint.Text)
+                Close();
+            else if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗口有修改未保存，是否要退出？"))
+                Close();
+        }
+
+        private void FrmMsInsert_FormClosing(object sender, FormClosingEventArgs e) {
+            if ("" == TxtMsName.Text && "" == TxtMsPhone.Text && "" == TxtMsPoint.Text)
+                Close();
+            else if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗口有修改未保存，是否要退出？"))
+                Close();
         }
     }
 }

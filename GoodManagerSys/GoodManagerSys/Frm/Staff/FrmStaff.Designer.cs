@@ -168,7 +168,7 @@
             // 
             // TxtStaffSearch
             // 
-            this.TxtStaffSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TxtStaffSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.TxtStaffSearch.Location = new System.Drawing.Point(503, 3);
             this.TxtStaffSearch.Name = "TxtStaffSearch";
             this.TxtStaffSearch.Size = new System.Drawing.Size(94, 21);
@@ -209,7 +209,7 @@
             // 
             // CmbStaffRole
             // 
-            this.CmbStaffRole.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CmbStaffRole.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.CmbStaffRole.FormattingEnabled = true;
             this.CmbStaffRole.Items.AddRange(new object[] {
             "未定义",

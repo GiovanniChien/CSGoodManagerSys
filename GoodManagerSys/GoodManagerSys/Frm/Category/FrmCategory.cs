@@ -62,9 +62,12 @@ namespace GoodManagerSys {
         }
 
         private void BtnExit_Click(object sender, EventArgs e) {
-            if(hasUpdated)
-                MsgBoxUtil.ErrMsgBox("")
-            Close();
+            if (hasUpdated) {
+                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
+                    Close();
+            }
+            else
+                Close();
         }
 
         private void BtnAdd_Click(object sender, EventArgs e) {
@@ -122,6 +125,15 @@ namespace GoodManagerSys {
                 DgvShow();
                 hasUpdated = false;
             }
+        }
+
+        private void FrmCategory_FormClosing(object sender, FormClosingEventArgs e) {
+            if (hasUpdated) {
+                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
+                    Close();
+            }
+            else
+                Close();
         }
     }
 

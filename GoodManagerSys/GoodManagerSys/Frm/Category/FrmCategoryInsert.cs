@@ -3,13 +3,6 @@ using GoodManagerSys.Entities;
 using GoodManagerSys.Enums;
 using GoodManagerSys.Utils;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GoodManagerSys.Frm.Category {
@@ -52,11 +45,21 @@ namespace GoodManagerSys.Frm.Category {
         }
 
         private void BtnBack_Click(object sender, EventArgs e) {
-            Close();
+            if ("" == TxtCategoryName.Text && -1 == CmbParentCategoryName.SelectedIndex && "" == TxtFirm.Text &&
+                "" == TxtUnit.Text && "" == TxtColor.Text && "" == TxtExpirationDate.Text &&
+                "" == TxtMinStock.Text && "" == TxtMaxStock.Text)
+                Close();
+            else if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
+                Close();
         }
 
         private void FrmCategoryInsert_FormClosing(object sender, FormClosingEventArgs e) {
-            Close();
+            if ("" == TxtCategoryName.Text && -1 == CmbParentCategoryName.SelectedIndex && "" == TxtFirm.Text &&
+                "" == TxtUnit.Text && "" == TxtColor.Text && "" == TxtExpirationDate.Text &&
+                "" == TxtMinStock.Text && "" == TxtMaxStock.Text)
+                Close();
+            else if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
+                Close();
         }
     }
 }

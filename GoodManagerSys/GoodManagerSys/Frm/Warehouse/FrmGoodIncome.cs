@@ -1,7 +1,6 @@
 ﻿using GoodManagerSys.Dao;
 using GoodManagerSys.Entities;
 using GoodManagerSys.Enums;
-using GoodManagerSys.Frm.Warehouse;
 using GoodManagerSys.Utils;
 using System;
 using System.Collections.Generic;
@@ -20,7 +19,7 @@ namespace GoodManagerSys.Frm.Warehouse {
             goodsPreSize = 0;
             goodsCurSize = 0;
             List<EtStaff> staffs = StaffDao.QueryByRole((int)ERole.采购员);
-            foreach (EtStaff staff in staffs) 
+            foreach (EtStaff staff in staffs)
                 CmbOperator.Items.Add(staff.StaffName);
         }
 
@@ -67,11 +66,11 @@ namespace GoodManagerSys.Frm.Warehouse {
 
         private bool Save() {
             EtPurchase purchase;
-            if (CmbOperator.SelectedIndex == -1) {
+            if (-1 == CmbOperator.SelectedIndex) {
                 MsgBoxUtil.ErrMsgBox("经办人不能为空！");
                 return false;
             }
-            if (TxtPurchaseID.Text == "") {
+            if ("" == TxtPurchaseID.Text) {
                 MsgBoxUtil.ErrMsgBox("初始单号不能为空！");
                 return false;
             }
@@ -108,29 +107,25 @@ namespace GoodManagerSys.Frm.Warehouse {
         }
 
         private void BtnComfirm_Click(object sender, EventArgs e) {
-            if (Goods.Count == 0)
+            if (0 == Goods.Count)
                 MsgBoxUtil.ErrMsgBox("没有待插入的表单!");
-            else {
-                DialogResult res = MsgBoxUtil.QuestionMsgBox("确认提交？");
-                if (res == DialogResult.OK)
-                    if (Save())
-                        Close();
-            }
+            else if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("确认提交？"))
+                if (Save())
+                    Close();
+
         }
 
         private void BtnCancel_Click(object sender, EventArgs e) {
             if (0 == DgvGoodIncome.Rows.Count)
                 Close();
-            else
-                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
+            else if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
                 Close();
         }
 
         private void FrmGoodIncome_FormClosing(object sender, FormClosingEventArgs e) {
             if (0 == DgvGoodIncome.Rows.Count)
                 Close();
-            else
-                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
+            else if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
                 Close();
         }
     }

@@ -388,6 +388,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmCategory";
             this.Text = "商品类别";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCategory_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.DgvCategory)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);

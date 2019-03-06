@@ -10,12 +10,9 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 
-namespace GoodManagerSys.Frm.ReportForm
-{
-    public partial class FrmSaleReport : Form
-    {
-        private class ClsSaleDetail
-        {
+namespace GoodManagerSys.Frm.ReportForm {
+    public partial class FrmSaleReport : Form {
+        private class ClsSaleDetail {
             public int CategoryID { get; set; }
             public string CategoryName { get; set; }
             public int Count { get; set; }
@@ -23,8 +20,7 @@ namespace GoodManagerSys.Frm.ReportForm
             public double Profits { get; set; }
         }
 
-        private class ClsCategorySale
-        {
+        private class ClsCategorySale {
             public string ParentCategoryName { get; set; }
             public int Count { get; set; }
             public double GrossSales { get; set; }
@@ -36,40 +32,32 @@ namespace GoodManagerSys.Frm.ReportForm
         private bool btnSearchClicked;
         private DataTable dt;
 
-        public FrmSaleReport()
-        {
+        public FrmSaleReport() {
             InitializeComponent();
             CmbCategory.SelectedIndex = 0;
             saleDetails = new Dictionary<int, ClsSaleDetail>();
             categorySales = new Dictionary<int, ClsCategorySale>();
             btnSearchClicked = false;
             dt = default(DataTable);
-            
+
         }
 
-        private List<EtSale> QuerySalesFromDB()
-        {
+        private List<EtSale> QuerySalesFromDB() {
             List<EtSale> sales = new List<EtSale>();
             string beginDate = DtpBegin.Value.ToString("yyyyMMdd");
             string endDate = DtpEnd.Value.ToString("yyyyMMdd");
-            if (CmbCategory.SelectedIndex != 0)
-            {
+            if (CmbCategory.SelectedIndex != 0) {
                 ECategory parentCategoryID = (ECategory)(CmbCategory.SelectedIndex - 1);
                 sales = SaleDao.QueryBySaleDate(beginDate, endDate, parentCategoryID);
             }
-            else
-            {
+            else 
                 sales = SaleDao.QueryBySaleDate(beginDate, endDate);
-            }
-            if (sales.Count == 0)
-            {
+            if (sales.Count == 0) 
                 MsgBoxUtil.ErrMsgBox("没有符合条件的记录");
-            }
             return sales;
         }
 
-        private void ShowSaleDetail()
-        {
+        private void ShowSaleDetail() {
             List<EtSale> sales = QuerySalesFromDB();
             SetSaleDetailsFromEtSales(sales);
             DgvSaleDetail.Rows.Clear();
@@ -77,8 +65,7 @@ namespace GoodManagerSys.Frm.ReportForm
             DgvSaleDetail.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
             DgvSaleDetail.AllowUserToAddRows = false;
             DgvSaleDetail.RowHeadersVisible = false;
-            foreach (KeyValuePair<int, ClsSaleDetail> kvp in saleDetails)
-            {
+            foreach (KeyValuePair<int, ClsSaleDetail> kvp in saleDetails) {
                 ClsSaleDetail saleDetail = kvp.Value;
                 DgvSaleDetail.Rows.Add(new object[]
                 {
@@ -91,8 +78,7 @@ namespace GoodManagerSys.Frm.ReportForm
             }
         }
 
-        private void ShowCategorySale()
-        {
+        private void ShowCategorySale() {
             List<EtSale> sales = QuerySalesFromDB();
             SetCategorySalesFromEtSales(sales);
             DgvCategorySale.Rows.Clear();
@@ -100,8 +86,7 @@ namespace GoodManagerSys.Frm.ReportForm
             DgvCategorySale.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
             DgvCategorySale.AllowUserToAddRows = false;
             DgvCategorySale.RowHeadersVisible = false;
-            foreach(KeyValuePair<int,ClsCategorySale> kvp in categorySales)
-            {
+            foreach (KeyValuePair<int, ClsCategorySale> kvp in categorySales) {
                 ClsCategorySale categorySale = kvp.Value;
                 DgvCategorySale.Rows.Add(new object[]
                 {
@@ -113,48 +98,38 @@ namespace GoodManagerSys.Frm.ReportForm
             }
         }
 
-        private void SetSaleDetailsFromEtSales(List<EtSale> sales)
-        {
+        private void SetSaleDetailsFromEtSales(List<EtSale> sales) {
             saleDetails.Clear();
-            foreach(EtSale sale in sales)
-            {
+            foreach (EtSale sale in sales) {
                 int categoryID = sale.Good.Category.CategoryID;
-                if (saleDetails.ContainsKey(categoryID))
-                {
+                if (saleDetails.ContainsKey(categoryID)) {
                     saleDetails[categoryID].Count++;
                     saleDetails[categoryID].Profits += sale.Profit;
                     saleDetails[categoryID].GrossSales += sale.Good.Price;
                 }
-                else
-                {
-                    saleDetails.Add(categoryID, new ClsSaleDetail
-                    {
+                else {
+                    saleDetails.Add(categoryID, new ClsSaleDetail {
                         CategoryID = categoryID,
                         CategoryName = sale.Good.Category.CategoryName,
                         Count = 1,
-                        GrossSales=sale.Good.Price,
-                        Profits=sale.Profit
+                        GrossSales = sale.Good.Price,
+                        Profits = sale.Profit
                     });
                 }
             }
         }
 
-        private void SetCategorySalesFromEtSales(List<EtSale> sales)
-        {
+        private void SetCategorySalesFromEtSales(List<EtSale> sales) {
             categorySales.Clear();
-            foreach(EtSale sale in sales)
-            {
+            foreach (EtSale sale in sales) {
                 int parentCategoryID = (int)sale.Good.Category.ParentCategoryID;
-                if (categorySales.ContainsKey(parentCategoryID))
-                {
+                if (categorySales.ContainsKey(parentCategoryID)) {
                     categorySales[parentCategoryID].Count++;
                     categorySales[parentCategoryID].Profits += sale.Profit;
                     categorySales[parentCategoryID].GrossSales += sale.Good.Price;
                 }
-                else
-                {
-                    categorySales.Add(parentCategoryID, new ClsCategorySale
-                    {
+                else {
+                    categorySales.Add(parentCategoryID, new ClsCategorySale {
                         ParentCategoryName = sale.Good.Category.ParentCategoryName,
                         Count = 1,
                         GrossSales = sale.Good.Price,
@@ -164,8 +139,7 @@ namespace GoodManagerSys.Frm.ReportForm
             }
         }
 
-        private DataTable CreateDataTable()
-        {
+        private DataTable CreateDataTable() {
             List<EtSale> sales = QuerySalesFromDB();
             SetCategorySalesFromEtSales(sales);
             DataTable dt = new DataTable();
@@ -173,8 +147,7 @@ namespace GoodManagerSys.Frm.ReportForm
             dt.Columns.Add("Count");
             dt.Columns.Add("GrossSales");
             dt.Columns.Add("Profits");
-            foreach (KeyValuePair<int, ClsCategorySale> kvp in categorySales)
-            {
+            foreach (KeyValuePair<int, ClsCategorySale> kvp in categorySales) {
                 DataRow dr = dt.NewRow();
                 ClsCategorySale categorySale = kvp.Value;
                 dr["ParentCategoryName"] = categorySale.ParentCategoryName;
@@ -186,8 +159,7 @@ namespace GoodManagerSys.Frm.ReportForm
             return dt;
         }
 
-        private void DrawBarGraph()
-        {
+        private void DrawBarGraph() {
             dt = CreateDataTable();
             ChartBar.DataSource = dt;
             ChartBar.Series[0].YValueMembers = "Count";
@@ -197,8 +169,7 @@ namespace GoodManagerSys.Frm.ReportForm
             ChartBar.DataBind();
         }
 
-        private void DrawPieCount()
-        {
+        private void DrawPieCount() {
             dt = CreateDataTable();
             ChartPieCount.Series[0]["PieLabelStyle"] = "Outside";//将文字移到外侧
             ChartPieCount.Series[0]["PieLineColor"] = "Black";//绘制黑色的连线。
@@ -206,32 +177,27 @@ namespace GoodManagerSys.Frm.ReportForm
             ChartPieCount.Series[0].Points.DataBind(dt.AsEnumerable(), "ParentCategoryName", "Count", "");
         }
 
-        private void DrawPieGrosssale()
-        {
+        private void DrawPieGrosssale() {
             ChartPieGrosssale.Series[0]["PieLabelStyle"] = "Outside";//将文字移到外侧
             ChartPieGrosssale.Series[0]["PieLineColor"] = "Black";//绘制黑色的连线。
             ChartPieGrosssale.Series[0].XValueType = ChartValueType.String;
             ChartPieGrosssale.Series[0].Points.DataBind(dt.AsEnumerable(), "ParentCategoryName", "GrossSales", "");
         }
 
-        private void DrawPieProfit()
-        {
+        private void DrawPieProfit() {
             ChartPieProfit.Series[0]["PieLabelStyle"] = "Outside";//将文字移到外侧
             ChartPieProfit.Series[0]["PieLineColor"] = "Black";//绘制黑色的连线。
             ChartPieProfit.Series[0].XValueType = ChartValueType.String;
             ChartPieProfit.Series[0].Points.DataBind(dt.AsEnumerable(), "ParentCategoryName", "Profits", "");
         }
 
-        private void BtnQuit_Click(object sender, EventArgs e)
-        {
+        private void BtnQuit_Click(object sender, EventArgs e) {
             Close();
         }
 
-        private void BtnSearch_Click(object sender, EventArgs e)
-        {
+        private void BtnSearch_Click(object sender, EventArgs e) {
             btnSearchClicked = true;
-            switch (TabSaleReport.SelectedIndex)
-            {
+            switch (TabSaleReport.SelectedIndex) {
                 case 0:
                     ShowSaleDetail();
                     break;
@@ -239,16 +205,14 @@ namespace GoodManagerSys.Frm.ReportForm
                     ShowCategorySale();
                     break;
                 case 2:
-                    if (RdoBarGraph.Checked)
-                    {
+                    if (RdoBarGraph.Checked) {
                         ChartBar.Visible = true;
                         ChartPieCount.Visible = false;
                         ChartPieGrosssale.Visible = false;
                         ChartPieProfit.Visible = false;
                         DrawBarGraph();
                     }
-                    else
-                    {
+                    else {
                         ChartBar.Visible = false;
                         ChartPieCount.Visible = true;
                         ChartPieGrosssale.Visible = true;
@@ -261,10 +225,8 @@ namespace GoodManagerSys.Frm.ReportForm
             }
         }
 
-        private void RdoBarGraph_CheckedChanged(object sender, EventArgs e)
-        {
-            if (RdoBarGraph.Checked && btnSearchClicked)
-            {
+        private void RdoBarGraph_CheckedChanged(object sender, EventArgs e) {
+            if (RdoBarGraph.Checked && btnSearchClicked) {
                 ChartBar.Visible = true;
                 ChartPieCount.Visible = false;
                 ChartPieGrosssale.Visible = false;
@@ -273,10 +235,8 @@ namespace GoodManagerSys.Frm.ReportForm
             }
         }
 
-        private void RdoPieGraph_CheckedChanged(object sender, EventArgs e)
-        {
-            if(RdoPieGraph.Checked&& btnSearchClicked)
-            {
+        private void RdoPieGraph_CheckedChanged(object sender, EventArgs e) {
+            if (RdoPieGraph.Checked && btnSearchClicked) {
                 ChartBar.Visible = false;
                 ChartPieCount.Visible = true;
                 ChartPieGrosssale.Visible = true;

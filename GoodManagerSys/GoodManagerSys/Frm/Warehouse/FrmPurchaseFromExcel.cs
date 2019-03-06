@@ -87,15 +87,15 @@ namespace GoodManagerSys.Frm.Warehouse {
                 return null;
             }
             string productionDate = row.GetCell(1).ToString();
-            if (row.GetCell(2).ToString() == "") {
+            if ("" == row.GetCell(2).ToString()) {
                 errInfo = "进价不能为空";
                 hasErr = true;
                 return null;
             }
             double cost = double.Parse(row.GetCell(2).ToString());
-            double price = row.GetCell(3).ToString() != "" ? double.Parse(row.GetCell(3).ToString()) : 0;
-            int count = row.GetCell(4).ToString() != "" ? int.Parse(row.GetCell(4).ToString()) : 0;
-            if (count == 0) {
+            double price = "" != row.GetCell(3).ToString() ? double.Parse(row.GetCell(3).ToString()) : 0;
+            int count = "" != row.GetCell(4).ToString() ? int.Parse(row.GetCell(4).ToString()) : 0;
+            if (0 == count) {
                 errInfo = "数量不能为空";
                 hasErr = true;
                 return null;
@@ -115,8 +115,7 @@ namespace GoodManagerSys.Frm.Warehouse {
         }
 
         private void BtnSubmit_Click(object sender, EventArgs e) {
-            DialogResult dr = MsgBoxUtil.QuestionMsgBox("确定提交？");
-            if (dr == DialogResult.OK)
+            if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("确定提交？"))
                 if (!hasErr) {
                     FrmGoodIncome.Goods.AddRange(excelGoods);
                     Close();
@@ -128,8 +127,8 @@ namespace GoodManagerSys.Frm.Warehouse {
         private void BtnCancel_Click(object sender, EventArgs e) {
             if (0 == DgvGoodFromExcel.Rows.Count)
                 Close();
-            else
-                MsgBoxUtil.ErrMsgBox("当前窗体有未保存的数据，是否确定要退出？");
+            else if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未保存的数据，是否确定退出？"))
+                Close();
         }
 
         private EState StringToEState(string s) {
@@ -140,8 +139,8 @@ namespace GoodManagerSys.Frm.Warehouse {
         private void FrmPurchaseFromExcel_FormClosing(object sender, FormClosingEventArgs e) {
             if (0 == DgvGoodFromExcel.Rows.Count)
                 Close();
-            else
-                MsgBoxUtil.ErrMsgBox("当前窗体有未保存的数据，是否确定要退出？");
+            else if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未保存的数据，是否确定退出？"))
+                Close();
         }
     }
 }

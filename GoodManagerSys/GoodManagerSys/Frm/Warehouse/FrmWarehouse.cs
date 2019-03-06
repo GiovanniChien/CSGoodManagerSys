@@ -21,7 +21,7 @@ namespace GoodManagerSys.Frm.Warehouse {
         private void BtnQuery_Click(object sender, EventArgs e) {
             List<EtCategory> list1, list2;
             int index = CmbCategory.SelectedIndex;
-            if (index == 0)
+            if (0==index)
                 list1 = CategoryDao.QueryAll();
             else
                 list1 = CategoryDao.QueryByParentCategoryID((ECategory)index);
@@ -31,12 +31,7 @@ namespace GoodManagerSys.Frm.Warehouse {
                 list2 = CategoryDao.QueryByCategoryID(int.Parse(idOrName));
             else
                 list2 = CategoryDao.QueryByCategoryName(idOrName);
-            //Console.WriteLine(list1.Count());
-            //Console.WriteLine(list2.Count());
             categories = list1.Intersect(list2, new MyCompare()).ToList();
-            //Console.WriteLine(list1.Count());
-            //for (int i = 0; i < categories.Count(); i++) 
-                //Console.WriteLine(categories.ElementAt(i).ToString());
             DgvShow();
         }
 

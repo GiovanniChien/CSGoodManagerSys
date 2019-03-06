@@ -38,7 +38,7 @@ namespace GoodManagerSys {
         }
 
         private void BtnBack_Click(object sender, EventArgs e) {
-            if ("" == TxtStaffName.Text ||""==TxtStaffPwd.Text || "" == TxtStaffPhone.Text)
+            if ("" == TxtStaffName.Text && "" == TxtStaffPwd.Text && "" == TxtStaffPhone.Text)
                 Close();
             else
                 if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
@@ -46,7 +46,7 @@ namespace GoodManagerSys {
         }
 
         private void FrmStaffInsert_FormClosing(object sender, FormClosingEventArgs e) {
-            if ("" == TxtStaffName.Text || "" == TxtStaffPwd.Text || "" == TxtStaffPhone.Text)
+            if ("" == TxtStaffName.Text && "" == TxtStaffPwd.Text && "" == TxtStaffPhone.Text)
                 Close();
             else
                 if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))

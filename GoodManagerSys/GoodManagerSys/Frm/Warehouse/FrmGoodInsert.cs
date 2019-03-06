@@ -17,13 +17,11 @@ namespace GoodManagerSys.Frm.Warehouse {
 
         private void BtnInsert_Click(object sender, EventArgs e) {
             ClsGood good = GetGoodFromInput();
-            if (good != null) {
-                DialogResult res = MsgBoxUtil.QuestionMsgBox("确认提交？");
-                if (res == DialogResult.OK) {
+            if (good != null)
+                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("确认提交？")) {
                     FrmGoodIncome.Goods.Add(good);
                     Close();
                 }
-            }
         }
 
         private ClsGood GetGoodFromInput() {
@@ -36,10 +34,10 @@ namespace GoodManagerSys.Frm.Warehouse {
                 int count = TxtCount.Text != "" ? int.Parse(TxtCount.Text) : 0;
                 EState state = (EState)CmbIsValid.SelectedIndex;
                 List<EtCategory> categories = CategoryDao.QueryByCategoryID(categoryID);
-                if (count == 0)
+                if (0 == count)
                     MsgBoxUtil.ErrMsgBox("商品数量不能为0！");
                 else {
-                    if (categories.Count == 0)
+                    if (0 == categories.Count)
                         MsgBoxUtil.ErrMsgBox("不存在该商品！");
                     else
                         good = new ClsGood {
@@ -62,18 +60,16 @@ namespace GoodManagerSys.Frm.Warehouse {
 
 
         private void BtnBack_Click(object sender, EventArgs e) {
-            if (-1 == CmbCategoryID.SelectedIndex || "" == TxtCost.Text || "" == TxtPrice.Text || "" == TxtCount.Text)
+            if (-1 == CmbCategoryID.SelectedIndex && "" == TxtCost.Text && "" == TxtPrice.Text && "" == TxtCount.Text)
                 Close();
-            else
-                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定要退出？"))
+            else if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定要退出？"))
                 Close();
         }
 
         private void FrmGoodInsert_FormClosing(object sender, FormClosingEventArgs e) {
-            if (-1 == CmbCategoryID.SelectedIndex || "" == TxtCost.Text || "" == TxtPrice.Text || "" == TxtCount.Text)
+            if (-1 == CmbCategoryID.SelectedIndex && "" == TxtCost.Text && "" == TxtPrice.Text && "" == TxtCount.Text)
                 Close();
-            else
-                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定要退出？"))
+            else if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定要退出？"))
                 Close();
         }
     }

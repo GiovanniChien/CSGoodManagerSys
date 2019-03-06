@@ -49,9 +49,15 @@ namespace GoodManagerSys.Frm.Staff {
         }
 
         private void BtnStaffSubmit_Click(object sender, EventArgs e) {
-            foreach (EtStaff staff in staffs)
-                StaffDao.InsertStaff(staff);
-            hasUpdated = false;
+            if (hasUpdated) {
+                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("确认提交？")) {
+                    foreach (EtStaff staff in staffs)
+                        StaffDao.InsertStaff(staff);
+                    hasUpdated = false;
+                }
+            }
+            else
+                MsgBoxUtil.ErrMsgBox("没有待添加的员工！");
         }
 
         private void BtnStaffUpdate_Click(object sender, EventArgs e) {

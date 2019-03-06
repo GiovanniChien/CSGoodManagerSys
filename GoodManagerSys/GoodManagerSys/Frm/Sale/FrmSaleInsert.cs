@@ -34,17 +34,17 @@ namespace GoodManagerSys {
         }
 
         private void BtnBack_Click(object sender, EventArgs e) {
-            if (CmbGoodID.SelectedIndex == -1 && TxtPrice.Text == "")
+            if (-1 == CmbGoodID.SelectedIndex && "" == TxtPrice.Text)
                 Close();
             else if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体还有未保存的数据，是否要退出？"))
-                    Close();
+                Close();
         }
 
         private void FrmSaleInsert_FormClosing(object sender, FormClosingEventArgs e) {
-            if (CmbGoodID.SelectedIndex == -1 && TxtPrice.Text == "")
+            if (-1 == CmbGoodID.SelectedIndex && "" == TxtPrice.Text)
                 Close();
             else if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体还有未保存的数据，是否要退出？"))
-                    Close();
+                Close();
         }
     }
 }

@@ -56,8 +56,8 @@
             // 
             // TxtExcelPath
             // 
-            this.TxtExcelPath.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TxtExcelPath.Location = new System.Drawing.Point(2, 2);
+            this.TxtExcelPath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtExcelPath.Location = new System.Drawing.Point(2, 3);
             this.TxtExcelPath.Margin = new System.Windows.Forms.Padding(2);
             this.TxtExcelPath.Name = "TxtExcelPath";
             this.TxtExcelPath.Size = new System.Drawing.Size(570, 21);
@@ -69,7 +69,7 @@
             this.BtnBrowse.Location = new System.Drawing.Point(576, 2);
             this.BtnBrowse.Margin = new System.Windows.Forms.Padding(2);
             this.BtnBrowse.Name = "BtnBrowse";
-            this.BtnBrowse.Size = new System.Drawing.Size(140, 39);
+            this.BtnBrowse.Size = new System.Drawing.Size(140, 23);
             this.BtnBrowse.TabIndex = 1;
             this.BtnBrowse.Text = "浏览";
             this.BtnBrowse.UseVisualStyleBackColor = true;
@@ -90,11 +90,11 @@
             this.Column7,
             this.Column8});
             this.DgvGoodFromExcel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvGoodFromExcel.Location = new System.Drawing.Point(2, 51);
+            this.DgvGoodFromExcel.Location = new System.Drawing.Point(2, 35);
             this.DgvGoodFromExcel.Margin = new System.Windows.Forms.Padding(2);
             this.DgvGoodFromExcel.Name = "DgvGoodFromExcel";
             this.DgvGoodFromExcel.RowTemplate.Height = 37;
-            this.DgvGoodFromExcel.Size = new System.Drawing.Size(720, 178);
+            this.DgvGoodFromExcel.Size = new System.Drawing.Size(720, 227);
             this.DgvGoodFromExcel.TabIndex = 2;
             // 
             // Column1
@@ -167,7 +167,7 @@
             this.BtnSubmit.Location = new System.Drawing.Point(504, 2);
             this.BtnSubmit.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSubmit.Name = "BtnSubmit";
-            this.BtnSubmit.Size = new System.Drawing.Size(103, 41);
+            this.BtnSubmit.Size = new System.Drawing.Size(103, 24);
             this.BtnSubmit.TabIndex = 4;
             this.BtnSubmit.Text = "提交";
             this.BtnSubmit.UseVisualStyleBackColor = true;
@@ -179,7 +179,7 @@
             this.BtnCancel.Location = new System.Drawing.Point(611, 2);
             this.BtnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(105, 41);
+            this.BtnCancel.Size = new System.Drawing.Size(105, 24);
             this.BtnCancel.TabIndex = 5;
             this.BtnCancel.Text = "取消";
             this.BtnCancel.UseVisualStyleBackColor = true;
@@ -192,7 +192,7 @@
             this.label1.Location = new System.Drawing.Point(2, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(355, 43);
+            this.label1.Size = new System.Drawing.Size(355, 27);
             this.label1.TabIndex = 6;
             this.label1.Text = "\"√\"表示能够正确导入";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -205,7 +205,7 @@
             this.label2.Location = new System.Drawing.Point(361, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(355, 43);
+            this.label2.Size = new System.Drawing.Size(355, 27);
             this.label2.TabIndex = 7;
             this.label2.Text = "\"×\"表示不能够正确导入，请见错误提示";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -222,10 +222,10 @@
             this.TlpPurchaseFomExcel.Location = new System.Drawing.Point(0, 0);
             this.TlpPurchaseFomExcel.Name = "TlpPurchaseFomExcel";
             this.TlpPurchaseFomExcel.RowCount = 4;
-            this.TlpPurchaseFomExcel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.TlpPurchaseFomExcel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55F));
-            this.TlpPurchaseFomExcel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.TlpPurchaseFomExcel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.TlpPurchaseFomExcel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.TlpPurchaseFomExcel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.TlpPurchaseFomExcel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.TlpPurchaseFomExcel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.TlpPurchaseFomExcel.Size = new System.Drawing.Size(724, 331);
             this.TlpPurchaseFomExcel.TabIndex = 8;
             // 
@@ -241,7 +241,7 @@
             this.TlpPFEControllerMenu.Name = "TlpPFEControllerMenu";
             this.TlpPFEControllerMenu.RowCount = 1;
             this.TlpPFEControllerMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TlpPFEControllerMenu.Size = new System.Drawing.Size(718, 43);
+            this.TlpPFEControllerMenu.Size = new System.Drawing.Size(718, 27);
             this.TlpPFEControllerMenu.TabIndex = 3;
             // 
             // TlpPFETip
@@ -252,11 +252,11 @@
             this.TlpPFETip.Controls.Add(this.label2, 1, 0);
             this.TlpPFETip.Controls.Add(this.label1, 0, 0);
             this.TlpPFETip.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TlpPFETip.Location = new System.Drawing.Point(3, 234);
+            this.TlpPFETip.Location = new System.Drawing.Point(3, 267);
             this.TlpPFETip.Name = "TlpPFETip";
             this.TlpPFETip.RowCount = 1;
             this.TlpPFETip.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.TlpPFETip.Size = new System.Drawing.Size(718, 43);
+            this.TlpPFETip.Size = new System.Drawing.Size(718, 27);
             this.TlpPFETip.TabIndex = 4;
             // 
             // TlpPFESubmitMenu
@@ -268,11 +268,11 @@
             this.TlpPFESubmitMenu.Controls.Add(this.BtnSubmit, 1, 0);
             this.TlpPFESubmitMenu.Controls.Add(this.BtnCancel, 2, 0);
             this.TlpPFESubmitMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TlpPFESubmitMenu.Location = new System.Drawing.Point(3, 283);
+            this.TlpPFESubmitMenu.Location = new System.Drawing.Point(3, 300);
             this.TlpPFESubmitMenu.Name = "TlpPFESubmitMenu";
             this.TlpPFESubmitMenu.RowCount = 1;
             this.TlpPFESubmitMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TlpPFESubmitMenu.Size = new System.Drawing.Size(718, 45);
+            this.TlpPFESubmitMenu.Size = new System.Drawing.Size(718, 28);
             this.TlpPFESubmitMenu.TabIndex = 5;
             // 
             // FrmPurchaseFromExcel

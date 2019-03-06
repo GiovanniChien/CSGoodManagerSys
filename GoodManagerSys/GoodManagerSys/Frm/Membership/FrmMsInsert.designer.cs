@@ -123,7 +123,6 @@
             this.TxtMsPoint.Name = "TxtMsPoint";
             this.TxtMsPoint.Size = new System.Drawing.Size(110, 21);
             this.TxtMsPoint.TabIndex = 32;
-            this.TxtMsPoint.Text = "0";
             // 
             // TxtMsPhone
             // 
@@ -162,6 +161,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmMsInsert";
             this.Text = "会员添加";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMsInsert_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
