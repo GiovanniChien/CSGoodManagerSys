@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace GoodManagerSys.Frm {
+namespace GoodManagerSys.Frm.Warehouse {
     public partial class FrmGoodIncome : Form {
         internal static List<ClsGood> Goods { get; set; }
         private int goodsPreSize;

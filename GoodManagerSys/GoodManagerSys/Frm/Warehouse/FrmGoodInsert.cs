@@ -7,7 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace GoodManagerSys {
+namespace GoodManagerSys.Frm.Warehouse{
     public partial class FrmGoodInsert : Form {
         public FrmGoodInsert() {
             InitializeComponent();

@@ -1,4 +1,4 @@
-﻿namespace GoodManagerSys.Frm
+﻿namespace GoodManagerSys.Frm.Warehouse
 {
     partial class FrmGoodIncome
     {

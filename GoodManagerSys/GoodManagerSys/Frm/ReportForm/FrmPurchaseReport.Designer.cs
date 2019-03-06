@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend9 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title9 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title8 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title7 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.TabPurchaseReport = new System.Windows.Forms.TabControl();
             this.TabPurchaseTable = new System.Windows.Forms.TabPage();
             this.DgvPurchaseDetail = new System.Windows.Forms.DataGridView();
@@ -55,12 +55,12 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TabCategoryTable = new System.Windows.Forms.TabPage();
             this.DgvCategoryDetail = new System.Windows.Forms.DataGridView();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TabChart = new System.Windows.Forms.TabPage();
-            this.RdoBarGraph = new System.Windows.Forms.RadioButton();
             this.RdoPieGraph = new System.Windows.Forms.RadioButton();
+            this.RdoBarGraph = new System.Windows.Forms.RadioButton();
+            this.ChartPieCount = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.ChartPieCosts = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.ChartBar = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
             this.DtpBegin = new System.Windows.Forms.DateTimePicker();
             this.DtpEnd = new System.Windows.Forms.DateTimePicker();
@@ -69,18 +69,24 @@
             this.CmbCategory = new System.Windows.Forms.ComboBox();
             this.BtnSearch = new System.Windows.Forms.Button();
             this.BtnQuit = new System.Windows.Forms.Button();
-            this.ChartBar = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.ChartPieCosts = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.ChartPieCount = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.TabPurchaseReport.SuspendLayout();
             this.TabPurchaseTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvPurchaseDetail)).BeginInit();
             this.TabCategoryTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCategoryDetail)).BeginInit();
             this.TabChart.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ChartBar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChartPieCosts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartPieCount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChartPieCosts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChartBar)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabPurchaseReport
@@ -88,25 +94,30 @@
             this.TabPurchaseReport.Controls.Add(this.TabPurchaseTable);
             this.TabPurchaseReport.Controls.Add(this.TabCategoryTable);
             this.TabPurchaseReport.Controls.Add(this.TabChart);
-            this.TabPurchaseReport.Location = new System.Drawing.Point(12, 90);
+            this.TabPurchaseReport.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TabPurchaseReport.Location = new System.Drawing.Point(2, 33);
+            this.TabPurchaseReport.Margin = new System.Windows.Forms.Padding(2);
             this.TabPurchaseReport.Name = "TabPurchaseReport";
             this.TabPurchaseReport.SelectedIndex = 0;
-            this.TabPurchaseReport.Size = new System.Drawing.Size(1177, 658);
+            this.TabPurchaseReport.Size = new System.Drawing.Size(712, 339);
             this.TabPurchaseReport.TabIndex = 0;
             // 
             // TabPurchaseTable
             // 
             this.TabPurchaseTable.Controls.Add(this.DgvPurchaseDetail);
-            this.TabPurchaseTable.Location = new System.Drawing.Point(8, 39);
+            this.TabPurchaseTable.Location = new System.Drawing.Point(4, 22);
+            this.TabPurchaseTable.Margin = new System.Windows.Forms.Padding(2);
             this.TabPurchaseTable.Name = "TabPurchaseTable";
-            this.TabPurchaseTable.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPurchaseTable.Size = new System.Drawing.Size(1161, 611);
+            this.TabPurchaseTable.Padding = new System.Windows.Forms.Padding(2);
+            this.TabPurchaseTable.Size = new System.Drawing.Size(704, 313);
             this.TabPurchaseTable.TabIndex = 0;
             this.TabPurchaseTable.Text = "采购商品明细";
             this.TabPurchaseTable.UseVisualStyleBackColor = true;
             // 
             // DgvPurchaseDetail
             // 
+            this.DgvPurchaseDetail.AllowUserToAddRows = false;
+            this.DgvPurchaseDetail.AllowUserToDeleteRows = false;
             this.DgvPurchaseDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvPurchaseDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -119,10 +130,11 @@
             this.Column8,
             this.Column9});
             this.DgvPurchaseDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvPurchaseDetail.Location = new System.Drawing.Point(3, 3);
+            this.DgvPurchaseDetail.Location = new System.Drawing.Point(2, 2);
+            this.DgvPurchaseDetail.Margin = new System.Windows.Forms.Padding(2);
             this.DgvPurchaseDetail.Name = "DgvPurchaseDetail";
             this.DgvPurchaseDetail.RowTemplate.Height = 37;
-            this.DgvPurchaseDetail.Size = new System.Drawing.Size(1155, 605);
+            this.DgvPurchaseDetail.Size = new System.Drawing.Size(700, 309);
             this.DgvPurchaseDetail.TabIndex = 0;
             // 
             // Column1
@@ -195,48 +207,31 @@
             // TabCategoryTable
             // 
             this.TabCategoryTable.Controls.Add(this.DgvCategoryDetail);
-            this.TabCategoryTable.Location = new System.Drawing.Point(8, 39);
+            this.TabCategoryTable.Location = new System.Drawing.Point(4, 22);
+            this.TabCategoryTable.Margin = new System.Windows.Forms.Padding(2);
             this.TabCategoryTable.Name = "TabCategoryTable";
-            this.TabCategoryTable.Padding = new System.Windows.Forms.Padding(3);
-            this.TabCategoryTable.Size = new System.Drawing.Size(1161, 611);
+            this.TabCategoryTable.Padding = new System.Windows.Forms.Padding(2);
+            this.TabCategoryTable.Size = new System.Drawing.Size(704, 313);
             this.TabCategoryTable.TabIndex = 1;
             this.TabCategoryTable.Text = "采购商品分类统计表";
             this.TabCategoryTable.UseVisualStyleBackColor = true;
             // 
             // DgvCategoryDetail
             // 
+            this.DgvCategoryDetail.AllowUserToAddRows = false;
+            this.DgvCategoryDetail.AllowUserToDeleteRows = false;
             this.DgvCategoryDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvCategoryDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column10,
             this.Column11,
             this.Column12});
             this.DgvCategoryDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvCategoryDetail.Location = new System.Drawing.Point(3, 3);
+            this.DgvCategoryDetail.Location = new System.Drawing.Point(2, 2);
+            this.DgvCategoryDetail.Margin = new System.Windows.Forms.Padding(2);
             this.DgvCategoryDetail.Name = "DgvCategoryDetail";
             this.DgvCategoryDetail.RowTemplate.Height = 37;
-            this.DgvCategoryDetail.Size = new System.Drawing.Size(1155, 605);
+            this.DgvCategoryDetail.Size = new System.Drawing.Size(700, 309);
             this.DgvCategoryDetail.TabIndex = 0;
-            // 
-            // Column10
-            // 
-            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column10.HeaderText = "类别名称";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column11.HeaderText = "采购数量";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            // 
-            // Column12
-            // 
-            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column12.HeaderText = "采购金额";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
             // 
             // TabChart
             // 
@@ -245,81 +240,179 @@
             this.TabChart.Controls.Add(this.ChartPieCount);
             this.TabChart.Controls.Add(this.ChartPieCosts);
             this.TabChart.Controls.Add(this.ChartBar);
-            this.TabChart.Location = new System.Drawing.Point(8, 39);
+            this.TabChart.Location = new System.Drawing.Point(4, 22);
+            this.TabChart.Margin = new System.Windows.Forms.Padding(2);
             this.TabChart.Name = "TabChart";
-            this.TabChart.Padding = new System.Windows.Forms.Padding(3);
-            this.TabChart.Size = new System.Drawing.Size(1161, 611);
+            this.TabChart.Padding = new System.Windows.Forms.Padding(2);
+            this.TabChart.Size = new System.Drawing.Size(704, 313);
             this.TabChart.TabIndex = 2;
             this.TabChart.Text = "采购商品分类统计图表";
             this.TabChart.UseVisualStyleBackColor = true;
+            // 
+            // RdoPieGraph
+            // 
+            this.RdoPieGraph.AutoSize = true;
+            this.RdoPieGraph.Location = new System.Drawing.Point(514, 12);
+            this.RdoPieGraph.Margin = new System.Windows.Forms.Padding(2);
+            this.RdoPieGraph.Name = "RdoPieGraph";
+            this.RdoPieGraph.Size = new System.Drawing.Size(59, 16);
+            this.RdoPieGraph.TabIndex = 1;
+            this.RdoPieGraph.Text = "饼状图";
+            this.RdoPieGraph.UseVisualStyleBackColor = true;
+            this.RdoPieGraph.CheckedChanged += new System.EventHandler(this.RdoPieGraph_CheckedChanged);
             // 
             // RdoBarGraph
             // 
             this.RdoBarGraph.AutoSize = true;
             this.RdoBarGraph.Checked = true;
-            this.RdoBarGraph.Location = new System.Drawing.Point(881, 23);
+            this.RdoBarGraph.Location = new System.Drawing.Point(440, 12);
+            this.RdoBarGraph.Margin = new System.Windows.Forms.Padding(2);
             this.RdoBarGraph.Name = "RdoBarGraph";
-            this.RdoBarGraph.Size = new System.Drawing.Size(113, 28);
+            this.RdoBarGraph.Size = new System.Drawing.Size(59, 16);
             this.RdoBarGraph.TabIndex = 0;
             this.RdoBarGraph.TabStop = true;
             this.RdoBarGraph.Text = "柱状图";
             this.RdoBarGraph.UseVisualStyleBackColor = true;
             this.RdoBarGraph.CheckedChanged += new System.EventHandler(this.RdoBarGraph_CheckedChanged);
             // 
-            // RdoPieGraph
+            // ChartPieCount
             // 
-            this.RdoPieGraph.AutoSize = true;
-            this.RdoPieGraph.Location = new System.Drawing.Point(1028, 23);
-            this.RdoPieGraph.Name = "RdoPieGraph";
-            this.RdoPieGraph.Size = new System.Drawing.Size(113, 28);
-            this.RdoPieGraph.TabIndex = 1;
-            this.RdoPieGraph.Text = "饼状图";
-            this.RdoPieGraph.UseVisualStyleBackColor = true;
-            this.RdoPieGraph.CheckedChanged += new System.EventHandler(this.RdoPieGraph_CheckedChanged);
+            chartArea4.Name = "ChartArea1";
+            this.ChartPieCount.ChartAreas.Add(chartArea4);
+            legend4.Enabled = false;
+            legend4.Name = "Legend1";
+            this.ChartPieCount.Legends.Add(legend4);
+            this.ChartPieCount.Location = new System.Drawing.Point(24, 36);
+            this.ChartPieCount.Margin = new System.Windows.Forms.Padding(2);
+            this.ChartPieCount.Name = "ChartPieCount";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series5.IsValueShownAsLabel = true;
+            series5.Label = "#VALX ：#VAL";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.ChartPieCount.Series.Add(series5);
+            this.ChartPieCount.Size = new System.Drawing.Size(273, 252);
+            this.ChartPieCount.TabIndex = 8;
+            this.ChartPieCount.Text = "chart1";
+            this.ChartPieCount.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.Normal;
+            title4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title4.Name = "Title1";
+            title4.Text = "分类采购数量统计图";
+            this.ChartPieCount.Titles.Add(title4);
+            this.ChartPieCount.Visible = false;
+            // 
+            // ChartPieCosts
+            // 
+            chartArea5.Name = "ChartArea1";
+            this.ChartPieCosts.ChartAreas.Add(chartArea5);
+            legend5.Enabled = false;
+            legend5.Name = "Legend1";
+            this.ChartPieCosts.Legends.Add(legend5);
+            this.ChartPieCosts.Location = new System.Drawing.Point(298, 34);
+            this.ChartPieCosts.Margin = new System.Windows.Forms.Padding(2);
+            this.ChartPieCosts.Name = "ChartPieCosts";
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series6.IsValueShownAsLabel = true;
+            series6.Label = "#VALX ：#VAL";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.ChartPieCosts.Series.Add(series6);
+            this.ChartPieCosts.Size = new System.Drawing.Size(273, 252);
+            this.ChartPieCosts.TabIndex = 7;
+            this.ChartPieCosts.Text = "chart2";
+            title5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title5.Name = "Title1";
+            title5.Text = "分类采购成本统计图";
+            this.ChartPieCosts.Titles.Add(title5);
+            this.ChartPieCosts.Visible = false;
+            // 
+            // ChartBar
+            // 
+            chartArea6.Name = "ChartArea1";
+            this.ChartBar.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.ChartBar.Legends.Add(legend6);
+            this.ChartBar.Location = new System.Drawing.Point(18, 37);
+            this.ChartBar.Margin = new System.Windows.Forms.Padding(2);
+            this.ChartBar.Name = "ChartBar";
+            series7.ChartArea = "ChartArea1";
+            series7.IsValueShownAsLabel = true;
+            series7.Legend = "Legend1";
+            series7.Name = "采购数量";
+            series8.ChartArea = "ChartArea1";
+            series8.IsValueShownAsLabel = true;
+            series8.Legend = "Legend1";
+            series8.Name = "采购成本";
+            this.ChartBar.Series.Add(series7);
+            this.ChartBar.Series.Add(series8);
+            this.ChartBar.Size = new System.Drawing.Size(552, 252);
+            this.ChartBar.TabIndex = 4;
+            this.ChartBar.Text = "chart1";
+            title6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title6.Name = "Title";
+            title6.Text = "分类采购统计图";
+            this.ChartBar.Titles.Add(title6);
+            this.ChartBar.Visible = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 29);
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(2, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 24);
+            this.label1.Size = new System.Drawing.Size(128, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "采购日期：";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // DtpBegin
             // 
-            this.DtpBegin.Location = new System.Drawing.Point(131, 22);
+            this.DtpBegin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DtpBegin.Location = new System.Drawing.Point(134, 2);
+            this.DtpBegin.Margin = new System.Windows.Forms.Padding(2);
             this.DtpBegin.Name = "DtpBegin";
-            this.DtpBegin.Size = new System.Drawing.Size(200, 35);
+            this.DtpBegin.Size = new System.Drawing.Size(128, 21);
             this.DtpBegin.TabIndex = 2;
             // 
             // DtpEnd
             // 
-            this.DtpEnd.Location = new System.Drawing.Point(432, 22);
+            this.DtpEnd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DtpEnd.Location = new System.Drawing.Point(313, 2);
+            this.DtpEnd.Margin = new System.Windows.Forms.Padding(2);
             this.DtpEnd.Name = "DtpEnd";
-            this.DtpEnd.Size = new System.Drawing.Size(200, 35);
+            this.DtpEnd.Size = new System.Drawing.Size(128, 21);
             this.DtpEnd.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(362, 28);
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(266, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 24);
+            this.label2.Size = new System.Drawing.Size(43, 25);
             this.label2.TabIndex = 4;
             this.label2.Text = "至";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(867, 24);
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Location = new System.Drawing.Point(445, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(130, 24);
+            this.label3.Size = new System.Drawing.Size(128, 25);
             this.label3.TabIndex = 5;
             this.label3.Text = "商品类别：";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CmbCategory
             // 
+            this.CmbCategory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CmbCategory.FormattingEnabled = true;
             this.CmbCategory.Items.AddRange(new object[] {
             "不限",
@@ -331,16 +424,19 @@
             "糖果",
             "奶制品",
             "休闲食品"});
-            this.CmbCategory.Location = new System.Drawing.Point(1027, 21);
+            this.CmbCategory.Location = new System.Drawing.Point(577, 2);
+            this.CmbCategory.Margin = new System.Windows.Forms.Padding(2);
             this.CmbCategory.Name = "CmbCategory";
-            this.CmbCategory.Size = new System.Drawing.Size(151, 32);
+            this.CmbCategory.Size = new System.Drawing.Size(131, 20);
             this.CmbCategory.TabIndex = 6;
             // 
             // BtnSearch
             // 
-            this.BtnSearch.Location = new System.Drawing.Point(861, 754);
+            this.BtnSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnSearch.Location = new System.Drawing.Point(570, 2);
+            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(153, 46);
+            this.BtnSearch.Size = new System.Drawing.Size(67, 23);
             this.BtnSearch.TabIndex = 9;
             this.BtnSearch.Text = "查询";
             this.BtnSearch.UseVisualStyleBackColor = true;
@@ -348,106 +444,103 @@
             // 
             // BtnQuit
             // 
-            this.BtnQuit.Location = new System.Drawing.Point(1036, 754);
+            this.BtnQuit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnQuit.Location = new System.Drawing.Point(641, 2);
+            this.BtnQuit.Margin = new System.Windows.Forms.Padding(2);
             this.BtnQuit.Name = "BtnQuit";
-            this.BtnQuit.Size = new System.Drawing.Size(142, 46);
+            this.BtnQuit.Size = new System.Drawing.Size(67, 23);
             this.BtnQuit.TabIndex = 10;
             this.BtnQuit.Text = "退出";
             this.BtnQuit.UseVisualStyleBackColor = true;
             this.BtnQuit.Click += new System.EventHandler(this.BtnQuit_Click);
             // 
-            // ChartBar
+            // tableLayoutPanel1
             // 
-            chartArea9.Name = "ChartArea1";
-            this.ChartBar.ChartAreas.Add(chartArea9);
-            legend9.Name = "Legend1";
-            this.ChartBar.Legends.Add(legend9);
-            this.ChartBar.Location = new System.Drawing.Point(37, 74);
-            this.ChartBar.Name = "ChartBar";
-            series11.ChartArea = "ChartArea1";
-            series11.IsValueShownAsLabel = true;
-            series11.Legend = "Legend1";
-            series11.Name = "采购数量";
-            series12.ChartArea = "ChartArea1";
-            series12.IsValueShownAsLabel = true;
-            series12.Legend = "Legend1";
-            series12.Name = "采购成本";
-            this.ChartBar.Series.Add(series11);
-            this.ChartBar.Series.Add(series12);
-            this.ChartBar.Size = new System.Drawing.Size(1104, 505);
-            this.ChartBar.TabIndex = 4;
-            this.ChartBar.Text = "chart1";
-            title9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title9.Name = "Title";
-            title9.Text = "分类采购统计图";
-            this.ChartBar.Titles.Add(title9);
-            this.ChartBar.Visible = false;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.TabPurchaseReport, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 2);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.66666F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(716, 407);
+            this.tableLayoutPanel1.TabIndex = 11;
             // 
-            // ChartPieCosts
+            // tableLayoutPanel2
             // 
-            chartArea8.Name = "ChartArea1";
-            this.ChartPieCosts.ChartAreas.Add(chartArea8);
-            legend8.Enabled = false;
-            legend8.Name = "Legend1";
-            this.ChartPieCosts.Legends.Add(legend8);
-            this.ChartPieCosts.Location = new System.Drawing.Point(595, 69);
-            this.ChartPieCosts.Name = "ChartPieCosts";
-            series10.ChartArea = "ChartArea1";
-            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series10.IsValueShownAsLabel = true;
-            series10.Label = "#VALX ：#VAL";
-            series10.Legend = "Legend1";
-            series10.Name = "Series1";
-            this.ChartPieCosts.Series.Add(series10);
-            this.ChartPieCosts.Size = new System.Drawing.Size(546, 505);
-            this.ChartPieCosts.TabIndex = 7;
-            this.ChartPieCosts.Text = "chart2";
-            title8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title8.Name = "Title1";
-            title8.Text = "分类采购成本统计图";
-            this.ChartPieCosts.Titles.Add(title8);
-            this.ChartPieCosts.Visible = false;
+            this.tableLayoutPanel2.ColumnCount = 6;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.65672F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.65672F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.716418F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.65672F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.65672F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.65672F));
+            this.tableLayoutPanel2.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.DtpBegin, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.CmbCategory, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.DtpEnd, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label3, 4, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(710, 25);
+            this.tableLayoutPanel2.TabIndex = 1;
             // 
-            // ChartPieCount
+            // Column10
             // 
-            chartArea7.Name = "ChartArea1";
-            this.ChartPieCount.ChartAreas.Add(chartArea7);
-            legend7.Enabled = false;
-            legend7.Name = "Legend1";
-            this.ChartPieCount.Legends.Add(legend7);
-            this.ChartPieCount.Location = new System.Drawing.Point(49, 73);
-            this.ChartPieCount.Name = "ChartPieCount";
-            series9.ChartArea = "ChartArea1";
-            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series9.IsValueShownAsLabel = true;
-            series9.Label = "#VALX ：#VAL";
-            series9.Legend = "Legend1";
-            series9.Name = "Series1";
-            this.ChartPieCount.Series.Add(series9);
-            this.ChartPieCount.Size = new System.Drawing.Size(546, 505);
-            this.ChartPieCount.TabIndex = 8;
-            this.ChartPieCount.Text = "chart1";
-            this.ChartPieCount.TextAntiAliasingQuality = System.Windows.Forms.DataVisualization.Charting.TextAntiAliasingQuality.Normal;
-            title7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title7.Name = "Title1";
-            title7.Text = "分类采购数量统计图";
-            this.ChartPieCount.Titles.Add(title7);
-            this.ChartPieCount.Visible = false;
+            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column10.HeaderText = "类别名称";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column11
+            // 
+            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column11.HeaderText = "采购数量";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column12
+            // 
+            this.Column12.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column12.HeaderText = "采购金额";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel3.Controls.Add(this.BtnQuit, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.BtnSearch, 1, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 377);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(710, 27);
+            this.tableLayoutPanel3.TabIndex = 2;
             // 
             // FrmPurchaseReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1203, 812);
-            this.Controls.Add(this.BtnQuit);
-            this.Controls.Add(this.BtnSearch);
-            this.Controls.Add(this.CmbCategory);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.DtpEnd);
-            this.Controls.Add(this.DtpBegin);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.TabPurchaseReport);
+            this.ClientSize = new System.Drawing.Size(716, 407);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmPurchaseReport";
             this.Text = "FrmPurchaseReport";
             this.TabPurchaseReport.ResumeLayout(false);
@@ -457,11 +550,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvCategoryDetail)).EndInit();
             this.TabChart.ResumeLayout(false);
             this.TabChart.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ChartBar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ChartPieCosts)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ChartPieCount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChartPieCosts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ChartBar)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -490,13 +586,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridView DgvCategoryDetail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.RadioButton RdoBarGraph;
         private System.Windows.Forms.RadioButton RdoPieGraph;
         private System.Windows.Forms.DataVisualization.Charting.Chart ChartBar;
         private System.Windows.Forms.DataVisualization.Charting.Chart ChartPieCosts;
         private System.Windows.Forms.DataVisualization.Charting.Chart ChartPieCount;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
     }
 }
