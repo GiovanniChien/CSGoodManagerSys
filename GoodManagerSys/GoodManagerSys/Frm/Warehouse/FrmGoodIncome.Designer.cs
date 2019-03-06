@@ -1,4 +1,4 @@
-﻿namespace GoodManagerSys.Frm
+﻿namespace GoodManagerSys.Frm.Warehouse
 {
     partial class FrmGoodIncome
     {
@@ -60,6 +60,8 @@
             // 
             // DgvGoodIncome
             // 
+            this.DgvGoodIncome.AllowUserToAddRows = false;
+            this.DgvGoodIncome.AllowUserToDeleteRows = false;
             this.DgvGoodIncome.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvGoodIncome.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,

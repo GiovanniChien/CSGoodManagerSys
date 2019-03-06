@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace GoodManagerSys.Frm {
+namespace GoodManagerSys.Frm.Warehouse {
     public partial class FrmGoodIncome : Form {
         internal static List<ClsGood> Goods { get; set; }
         private int goodsPreSize;
@@ -20,9 +20,8 @@ namespace GoodManagerSys.Frm {
             goodsPreSize = 0;
             goodsCurSize = 0;
             List<EtStaff> staffs = StaffDao.QueryByRole((int)ERole.采购员);
-            foreach (EtStaff staff in staffs) {
+            foreach (EtStaff staff in staffs) 
                 CmbOperator.Items.Add(staff.StaffName);
-            }
         }
 
         private void BtnMIncome_Click(object sender, EventArgs e) {

@@ -151,6 +151,7 @@
             this.Controls.Add(this.TxtStaffPhone);
             this.Controls.Add(this.TxtStaffPwd);
             this.Controls.Add(this.TxtStaffName);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmStaffInsert";
             this.Text = "添加员工";
