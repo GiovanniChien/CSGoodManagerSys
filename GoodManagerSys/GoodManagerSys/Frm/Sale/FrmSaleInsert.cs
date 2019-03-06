@@ -7,21 +7,20 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace GoodManagerSys {
-    public partial class FrmSaleInsert : Form
-    {
-        public FrmSaleInsert()
-        {
+    public partial class FrmSaleInsert : Form {
+        public FrmSaleInsert() {
             InitializeComponent();
             CmbGoodID.Items.Clear();
             List<EtGood> goods = GoodDao.QueryByState(Enums.EState.未出售);
             foreach (EtGood good in goods)
-                CmbGoodID.Items.Add(good.GoodID.ToString() + " " + good.Category.CategoryName);
+                if (null == FrmSale.Sales.Find(delegate (EtSale sale) { return sale.Good.GoodID.Equals(good.GoodID); }))
+                    CmbGoodID.Items.Add(good.GoodID.ToString() + " " + good.Category.CategoryName);
         }
 
         private void BtnInsert_Click(object sender, EventArgs e) {
             try {
                 EtSale sale = new EtSale {
-                    SaleID=0,
+                    SaleID = 0,
                     Good = GoodDao.QueryByGoodID(int.Parse(CmbGoodID.SelectedItem.ToString().Split(' ')[0]))[0]
                 };
                 sale.Profit = int.Parse(TxtPrice.Text) - sale.Good.Cost;
@@ -35,8 +34,8 @@ namespace GoodManagerSys {
         }
 
         private void BtnBack_Click(object sender, EventArgs e) {
-            if(CmbGoodID.SelectedIndex==-1&&TxtPrice.Text=="")
-            Close();
+            if (CmbGoodID.SelectedIndex == -1 && TxtPrice.Text == "")
+                Close();
             else {
                 if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体还有未保存的数据，是否要退出？"))
                     Close();

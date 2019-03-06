@@ -16,23 +16,28 @@ namespace GoodManagerSys.Frm.Sale {
         private bool hasUpdated;
         public FrmSale() {
             InitializeComponent();
-            Sales = SaleDao.QueryAll();
+            Sales = new List<EtSale>();
             salesPreSize = 0;
-            salesCurSize = Sales.Count;
+            salesCurSize = 0;
             hasUpdated = false;
             List<EtStaff> staffs = StaffDao.QueryByRole((int)ERole.销售员);
             LblSaleID.Text = (SaleDao.QueryAll().Last().SaleID + 1).ToString();
             foreach (EtStaff staff in staffs)
                 CmbOperator.Items.Add(staff.StaffName);
-            DgvAdd();
         }
 
         private void BtnBack_Click(object sender, EventArgs e) {
-            Close();
+            if (hasUpdated) {
+                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有尚未保存的数据，确定要退出吗？"))
+                    Close();
+            }
+            else
+                Close();
         }
 
         private void BtnSingleSaleInsert_Click(object sender, EventArgs e) {
             if (CmbOperator.SelectedIndex != -1) {
+                salesPreSize = Sales.Count;
                 FrmSaleInsert fsi = new FrmSaleInsert {
                     StartPosition = FormStartPosition.CenterParent
                 };
@@ -43,25 +48,6 @@ namespace GoodManagerSys.Frm.Sale {
             }
             else
                 MsgBoxUtil.ErrMsgBox("请先选择经办人！");
-        }
-
-        private void DgvAdd() {
-            if (salesPreSize == salesCurSize) return;
-            for (int i = salesPreSize; i < salesCurSize; i++) {
-                Sales[i].SaleID = Sales[i].SaleID != 0 ? Sales[i].SaleID : int.Parse(LblSaleID.Text);
-                Sales[i].StaffID= 18001 + CmbOperator.SelectedIndex;
-                Sales[i].SaleDate = DtpSaleDate.Value.ToString("yyyyMMdd");
-                Sales[i].Good.State = EState.已出售;
-                DgvSaleInsert.Rows.Add(new object[] {
-                    Sales[i].SaleID,
-                    Sales[i].Good.GoodID,
-                    Sales[i].Good.Category.CategoryName,
-                    Sales[i].Good.Category.Unit,
-                    Sales[i].Profit
-                });
-            }
-            DgvSaleInsert.RowsDefaultCellStyle.BackColor = Color.LightCyan;
-            DgvSaleInsert.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
         }
 
         private void BtnMultiSaleInsert_Click(object sender, EventArgs e) {
@@ -91,6 +77,36 @@ namespace GoodManagerSys.Frm.Sale {
                 MsgBoxUtil.ErrMsgBox("没有待插入的表单！");
         }
 
+        private void BtnSaleCancel_Click(object sender, EventArgs e) {
+            if (hasUpdated) {
+                Sales = SaleDao.QueryAll();
+                salesPreSize = 0;
+                salesCurSize = Sales.Count;
+                DgvSaleInsert.Rows.Clear();
+                DgvAdd();
+                hasUpdated = false;
+            }
+        }
+
+        private void DgvAdd() {
+            if (salesPreSize == salesCurSize) return;
+            for (int i = salesPreSize; i < salesCurSize; i++) {
+                Sales[i].SaleID = Sales[i].SaleID != 0 ? Sales[i].SaleID : int.Parse(LblSaleID.Text);
+                Sales[i].StaffID = 18001 + CmbOperator.SelectedIndex;
+                Sales[i].SaleDate = DtpSaleDate.Value.ToString("yyyyMMdd");
+                Sales[i].Good.State = EState.已出售;
+                DgvSaleInsert.Rows.Add(new object[] {
+                    Sales[i].SaleID,
+                    Sales[i].Good.GoodID,
+                    Sales[i].Good.Category.CategoryName,
+                    Sales[i].Good.Category.Unit,
+                    Sales[i].Profit
+                });
+            }
+            DgvSaleInsert.RowsDefaultCellStyle.BackColor = Color.LightCyan;
+            DgvSaleInsert.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+        }
+
         private bool Save() {
             if (CmbOperator.SelectedIndex == -1) {
                 MsgBoxUtil.ErrMsgBox("经办人不能为空！");
@@ -103,17 +119,6 @@ namespace GoodManagerSys.Frm.Sale {
             }
             if (res == Sales.Count) return true;
             else return false;
-        }
-
-        private void BtnSaleCancel_Click(object sender, EventArgs e) {
-            if (hasUpdated) {
-                Sales = SaleDao.QueryAll();
-                salesPreSize = 0;
-                salesCurSize = Sales.Count;
-                DgvSaleInsert.Rows.Clear();
-                DgvAdd();
-                hasUpdated = false;
-            }
         }
     }
 }

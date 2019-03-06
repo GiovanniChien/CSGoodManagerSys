@@ -107,6 +107,7 @@
             this.Controls.Add(this.LblPrice);
             this.Controls.Add(this.LblGoodID);
             this.Controls.Add(this.TxtPrice);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmSaleInsert";
             this.Text = "销售单添加";
