@@ -151,10 +151,13 @@
             this.Controls.Add(this.TxtStaffPhone);
             this.Controls.Add(this.TxtStaffPwd);
             this.Controls.Add(this.TxtStaffName);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmStaffInsert";
             this.Text = "添加员工";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmStaffInsert_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

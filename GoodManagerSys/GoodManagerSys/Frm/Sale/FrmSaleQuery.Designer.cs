@@ -38,13 +38,10 @@
             this.RdoGood = new System.Windows.Forms.RadioButton();
             this.TxtQuery = new System.Windows.Forms.TextBox();
             this.BtnQuery = new System.Windows.Forms.Button();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.BtnBack = new System.Windows.Forms.Button();
             this.TlpSaleQuery.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvGoodInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvSaleResult)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // TlpSaleQuery
@@ -54,15 +51,13 @@
             this.TlpSaleQuery.Controls.Add(this.DgvGoodInfo, 0, 2);
             this.TlpSaleQuery.Controls.Add(this.DgvSaleResult, 0, 1);
             this.TlpSaleQuery.Controls.Add(this.tableLayoutPanel1, 0, 0);
-            this.TlpSaleQuery.Controls.Add(this.tableLayoutPanel2, 0, 3);
             this.TlpSaleQuery.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TlpSaleQuery.Location = new System.Drawing.Point(0, 0);
             this.TlpSaleQuery.Name = "TlpSaleQuery";
-            this.TlpSaleQuery.RowCount = 4;
+            this.TlpSaleQuery.RowCount = 3;
             this.TlpSaleQuery.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
             this.TlpSaleQuery.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.90909F));
             this.TlpSaleQuery.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40.90909F));
-            this.TlpSaleQuery.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.090909F));
             this.TlpSaleQuery.Size = new System.Drawing.Size(572, 362);
             this.TlpSaleQuery.TabIndex = 5;
             // 
@@ -76,11 +71,11 @@
             this.dataGridViewTextBoxColumn3,
             this.Column4});
             this.DgvGoodInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvGoodInfo.Location = new System.Drawing.Point(3, 183);
+            this.DgvGoodInfo.Location = new System.Drawing.Point(3, 201);
             this.DgvGoodInfo.Name = "DgvGoodInfo";
             this.DgvGoodInfo.RowTemplate.Height = 23;
             this.DgvGoodInfo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvGoodInfo.Size = new System.Drawing.Size(566, 142);
+            this.DgvGoodInfo.Size = new System.Drawing.Size(566, 158);
             this.DgvGoodInfo.TabIndex = 1;
             this.DgvGoodInfo.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGoodInfo_CellClick);
             // 
@@ -125,11 +120,11 @@
             this.Column2,
             this.Column3});
             this.DgvSaleResult.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvSaleResult.Location = new System.Drawing.Point(3, 35);
+            this.DgvSaleResult.Location = new System.Drawing.Point(3, 39);
             this.DgvSaleResult.Name = "DgvSaleResult";
             this.DgvSaleResult.RowTemplate.Height = 23;
             this.DgvSaleResult.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvSaleResult.Size = new System.Drawing.Size(566, 142);
+            this.DgvSaleResult.Size = new System.Drawing.Size(566, 156);
             this.DgvSaleResult.TabIndex = 0;
             this.DgvSaleResult.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSaleResult_CellClick);
             // 
@@ -173,7 +168,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(566, 26);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(566, 30);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // RdoSale
@@ -182,7 +177,7 @@
             this.RdoSale.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RdoSale.Location = new System.Drawing.Point(3, 3);
             this.RdoSale.Name = "RdoSale";
-            this.RdoSale.Size = new System.Drawing.Size(135, 20);
+            this.RdoSale.Size = new System.Drawing.Size(135, 24);
             this.RdoSale.TabIndex = 0;
             this.RdoSale.TabStop = true;
             this.RdoSale.Text = "查询销售单";
@@ -194,7 +189,7 @@
             this.RdoGood.Dock = System.Windows.Forms.DockStyle.Fill;
             this.RdoGood.Location = new System.Drawing.Point(144, 3);
             this.RdoGood.Name = "RdoGood";
-            this.RdoGood.Size = new System.Drawing.Size(135, 20);
+            this.RdoGood.Size = new System.Drawing.Size(135, 24);
             this.RdoGood.TabIndex = 1;
             this.RdoGood.TabStop = true;
             this.RdoGood.Text = "查询商品";
@@ -213,36 +208,11 @@
             this.BtnQuery.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BtnQuery.Location = new System.Drawing.Point(426, 3);
             this.BtnQuery.Name = "BtnQuery";
-            this.BtnQuery.Size = new System.Drawing.Size(137, 20);
+            this.BtnQuery.Size = new System.Drawing.Size(137, 24);
             this.BtnQuery.TabIndex = 3;
             this.BtnQuery.Text = "查询";
             this.BtnQuery.UseVisualStyleBackColor = true;
             this.BtnQuery.Click += new System.EventHandler(this.BtnQuery_Click);
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Controls.Add(this.BtnBack, 1, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 331);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(566, 28);
-            this.tableLayoutPanel2.TabIndex = 3;
-            // 
-            // BtnBack
-            // 
-            this.BtnBack.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnBack.Location = new System.Drawing.Point(455, 3);
-            this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(108, 22);
-            this.BtnBack.TabIndex = 0;
-            this.BtnBack.Text = "退出";
-            this.BtnBack.UseVisualStyleBackColor = true;
-            this.BtnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // FrmSaleQuery
             // 
@@ -250,7 +220,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(572, 362);
             this.Controls.Add(this.TlpSaleQuery);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmSaleQuery";
@@ -261,7 +231,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvSaleResult)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -283,7 +252,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button BtnBack;
     }
 }

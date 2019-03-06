@@ -52,14 +52,14 @@
             // 入库ToolStripMenuItem
             // 
             this.入库ToolStripMenuItem.Name = "入库ToolStripMenuItem";
-            this.入库ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.入库ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.入库ToolStripMenuItem.Text = "入库";
             this.入库ToolStripMenuItem.Click += new System.EventHandler(this.入库ToolStripMenuItem_Click);
             // 
             // 库存查询ToolStripMenuItem
             // 
             this.库存查询ToolStripMenuItem.Name = "库存查询ToolStripMenuItem";
-            this.库存查询ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.库存查询ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.库存查询ToolStripMenuItem.Text = "库存查询";
             this.库存查询ToolStripMenuItem.Click += new System.EventHandler(this.库存查询ToolStripMenuItem_Click);
             // 
@@ -71,7 +71,10 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(630, 321);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmMainPurchase";
             this.Text = "FrmMainPurchase";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

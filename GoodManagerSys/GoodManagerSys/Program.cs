@@ -10,7 +10,6 @@ using GoodManagerSys.Frm.Membership;
 using GoodManagerSys.Frm.Sale;
 using GoodManagerSys.Frm.Staff;
 using GoodManagerSys.Frm.Main;
-using GoodManagerSys.Frm.Warehouse;
 
 namespace GoodManagerSys
 {
@@ -24,7 +23,7 @@ namespace GoodManagerSys
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmWarehouseWarning());
+            Application.Run(new FrmSaleReport());
         }
     }
 }

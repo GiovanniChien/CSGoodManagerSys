@@ -152,6 +152,12 @@
     <Compile Include="Frm\Membership\FrmMsUpdate.Designer.cs">
       <DependentUpon>FrmMsUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm\ReportForm\FrmSaleReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\ReportForm\FrmSaleReport.Designer.cs">
+      <DependentUpon>FrmSaleReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm\Sale\FrmSale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +275,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\Membership\FrmMsUpdate.resx">
       <DependentUpon>FrmMsUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\ReportForm\FrmSaleReport.resx">
+      <DependentUpon>FrmSaleReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\Sale\FrmSale.resx">
       <DependentUpon>FrmSale.cs</DependentUpon>

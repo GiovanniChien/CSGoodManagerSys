@@ -292,10 +292,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(712, 321);
             this.Controls.Add(this.TlpStaffMenu);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmStaff";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmStaff_FormClosing);
             this.TlpStaffMenu.ResumeLayout(false);
             this.TlpStaffSubmitMenu.ResumeLayout(false);
             this.TlpStaffControllerMenu.ResumeLayout(false);

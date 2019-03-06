@@ -29,7 +29,6 @@
             this.LblIsValid = new System.Windows.Forms.Label();
             this.LblProductionID = new System.Windows.Forms.Label();
             this.LblCategoryID = new System.Windows.Forms.Label();
-            this.TxtCategoryID = new System.Windows.Forms.TextBox();
             this.LblCost = new System.Windows.Forms.Label();
             this.TxtCost = new System.Windows.Forms.TextBox();
             this.LblPrice = new System.Windows.Forms.Label();
@@ -37,6 +36,7 @@
             this.DtpProductionID = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtCount = new System.Windows.Forms.TextBox();
+            this.CmbCategoryID = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // CmbIsValid
@@ -45,7 +45,7 @@
             this.CmbIsValid.Items.AddRange(new object[] {
             "未上架",
             "未出售"});
-            this.CmbIsValid.Location = new System.Drawing.Point(90, 152);
+            this.CmbIsValid.Location = new System.Drawing.Point(90, 151);
             this.CmbIsValid.Margin = new System.Windows.Forms.Padding(2);
             this.CmbIsValid.Name = "CmbIsValid";
             this.CmbIsValid.Size = new System.Drawing.Size(110, 20);
@@ -78,7 +78,7 @@
             // LblIsValid
             // 
             this.LblIsValid.AutoSize = true;
-            this.LblIsValid.Location = new System.Drawing.Point(33, 156);
+            this.LblIsValid.Location = new System.Drawing.Point(33, 155);
             this.LblIsValid.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblIsValid.Name = "LblIsValid";
             this.LblIsValid.Size = new System.Drawing.Size(53, 12);
@@ -88,7 +88,7 @@
             // LblProductionID
             // 
             this.LblProductionID.AutoSize = true;
-            this.LblProductionID.Location = new System.Drawing.Point(33, 46);
+            this.LblProductionID.Location = new System.Drawing.Point(33, 47);
             this.LblProductionID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblProductionID.Name = "LblProductionID";
             this.LblProductionID.Size = new System.Drawing.Size(53, 12);
@@ -104,14 +104,6 @@
             this.LblCategoryID.Size = new System.Drawing.Size(53, 12);
             this.LblCategoryID.TabIndex = 18;
             this.LblCategoryID.Text = "商品类别";
-            // 
-            // TxtCategoryID
-            // 
-            this.TxtCategoryID.Location = new System.Drawing.Point(90, 16);
-            this.TxtCategoryID.Margin = new System.Windows.Forms.Padding(2);
-            this.TxtCategoryID.Name = "TxtCategoryID";
-            this.TxtCategoryID.Size = new System.Drawing.Size(110, 21);
-            this.TxtCategoryID.TabIndex = 14;
             // 
             // LblCost
             // 
@@ -134,7 +126,7 @@
             // LblPrice
             // 
             this.LblPrice.AutoSize = true;
-            this.LblPrice.Location = new System.Drawing.Point(33, 100);
+            this.LblPrice.Location = new System.Drawing.Point(33, 101);
             this.LblPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblPrice.Name = "LblPrice";
             this.LblPrice.Size = new System.Drawing.Size(29, 12);
@@ -143,7 +135,7 @@
             // 
             // TxtPrice
             // 
-            this.TxtPrice.Location = new System.Drawing.Point(90, 96);
+            this.TxtPrice.Location = new System.Drawing.Point(90, 97);
             this.TxtPrice.Margin = new System.Windows.Forms.Padding(2);
             this.TxtPrice.Name = "TxtPrice";
             this.TxtPrice.Size = new System.Drawing.Size(110, 21);
@@ -153,7 +145,7 @@
             // 
             this.DtpProductionID.CustomFormat = "yyyy-MM-dd";
             this.DtpProductionID.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DtpProductionID.Location = new System.Drawing.Point(90, 42);
+            this.DtpProductionID.Location = new System.Drawing.Point(90, 43);
             this.DtpProductionID.Margin = new System.Windows.Forms.Padding(2);
             this.DtpProductionID.Name = "DtpProductionID";
             this.DtpProductionID.Size = new System.Drawing.Size(110, 21);
@@ -177,11 +169,24 @@
             this.TxtCount.Size = new System.Drawing.Size(110, 21);
             this.TxtCount.TabIndex = 30;
             // 
+            // CmbCategoryID
+            // 
+            this.CmbCategoryID.FormattingEnabled = true;
+            this.CmbCategoryID.Items.AddRange(new object[] {
+            "未上架",
+            "未出售"});
+            this.CmbCategoryID.Location = new System.Drawing.Point(90, 17);
+            this.CmbCategoryID.Margin = new System.Windows.Forms.Padding(2);
+            this.CmbCategoryID.Name = "CmbCategoryID";
+            this.CmbCategoryID.Size = new System.Drawing.Size(110, 20);
+            this.CmbCategoryID.TabIndex = 32;
+            // 
             // FrmGoodInsert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(231, 245);
+            this.Controls.Add(this.CmbCategoryID);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtCount);
             this.Controls.Add(this.DtpProductionID);
@@ -195,11 +200,13 @@
             this.Controls.Add(this.LblIsValid);
             this.Controls.Add(this.LblProductionID);
             this.Controls.Add(this.LblCategoryID);
-            this.Controls.Add(this.TxtCategoryID);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmGoodInsert";
             this.Text = "商品采购";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGoodInsert_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,7 +219,6 @@
         private System.Windows.Forms.Label LblIsValid;
         private System.Windows.Forms.Label LblProductionID;
         private System.Windows.Forms.Label LblCategoryID;
-        private System.Windows.Forms.TextBox TxtCategoryID;
         private System.Windows.Forms.Label LblCost;
         private System.Windows.Forms.TextBox TxtCost;
         private System.Windows.Forms.Label LblPrice;
@@ -220,5 +226,6 @@
         private System.Windows.Forms.DateTimePicker DtpProductionID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtCount;
+        private System.Windows.Forms.ComboBox CmbCategoryID;
     }
 }

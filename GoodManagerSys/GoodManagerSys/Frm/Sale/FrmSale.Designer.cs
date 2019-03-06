@@ -290,9 +290,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(507, 321);
             this.Controls.Add(this.TlpSale);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmSale";
             this.Text = "FrmSale";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSale_FormClosing);
             this.TlpSale.ResumeLayout(false);
             this.TlpSaleSubmitMenu.ResumeLayout(false);
             this.TlpSaleSubmitMenu.PerformLayout();

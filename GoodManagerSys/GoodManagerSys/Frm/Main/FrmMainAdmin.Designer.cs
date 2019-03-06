@@ -27,6 +27,7 @@
             this.员工管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.库存管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.入库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.商品管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.库存查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.会员管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.销售商品ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -35,7 +36,6 @@
             this.统计报表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.采购报表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.销售报表ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.商品管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +76,13 @@
             this.入库ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.入库ToolStripMenuItem.Text = "入库";
             this.入库ToolStripMenuItem.Click += new System.EventHandler(this.入库ToolStripMenuItem_Click);
+            // 
+            // 商品管理ToolStripMenuItem
+            // 
+            this.商品管理ToolStripMenuItem.Name = "商品管理ToolStripMenuItem";
+            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.商品管理ToolStripMenuItem.Text = "商品管理";
+            this.商品管理ToolStripMenuItem.Click += new System.EventHandler(this.商品管理ToolStripMenuItem_Click);
             // 
             // 库存查询ToolStripMenuItem
             // 
@@ -136,13 +143,6 @@
             this.销售报表ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.销售报表ToolStripMenuItem.Text = "销售报表";
             // 
-            // 商品管理ToolStripMenuItem
-            // 
-            this.商品管理ToolStripMenuItem.Name = "商品管理ToolStripMenuItem";
-            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.商品管理ToolStripMenuItem.Text = "商品管理";
-            this.商品管理ToolStripMenuItem.Click += new System.EventHandler(this.商品管理ToolStripMenuItem_Click);
-            // 
             // FrmMainAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -151,7 +151,10 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(670, 302);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmMainAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMain";

@@ -41,6 +41,32 @@ namespace GoodManagerSys.Dao {
             MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
             return GetListByDataReader(dr);
         }
+        public static List<EtSale> QueryBySaleDate(string dateBegin,string dateEnd)
+        {
+            DBHelper helper = new DBHelper();
+            string sql= "SELECT * FROM sale LEFT JOIN good ON sale.goodID = good.goodID " +
+                "LEFT JOIN category ON good.categoryID = category.categoryID " +
+                "WHERE saleDate BETWEEN @dateBegin AND @dateEnd;";
+            MySqlParameter[] prams = {new MySqlParameter("@dateBegin",dateBegin),
+                new MySqlParameter("@dateEnd",dateEnd)
+            };
+            MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
+            return GetListByDataReader(dr);
+        }
+        public static List<EtSale> QueryBySaleDate(string dateBegin,string dateEnd,ECategory parentCategory)
+        {
+            DBHelper helper = new DBHelper();
+            string sql = "SELECT * FROM sale LEFT JOIN good ON sale.goodID = good.goodID " +
+                "LEFT JOIN category ON good.categoryID = category.categoryID " +
+                "WHERE saleDate BETWEEN @dateBegin AND @dateEnd " +
+                "AND parentCategoryID=@parentCategoryID;";
+            MySqlParameter[] prams = {new MySqlParameter("@dateBegin",dateBegin),
+                new MySqlParameter("@dateEnd",dateEnd),
+                new MySqlParameter("parentCategoryID",parentCategory)
+            };
+            MySqlDataReader dr = helper.RunQuerySQL(sql, prams);
+            return GetListByDataReader(dr);
+        }
         public static List<EtSale> QueryByStaffID(int staffID) {
             DBHelper helper = new DBHelper();
             string sql = "SELECT * FROM sale LEFT JOIN good ON sale.goodID = good.goodID " +

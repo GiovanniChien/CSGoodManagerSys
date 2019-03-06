@@ -14,10 +14,6 @@ namespace GoodManagerSys {
             CmbStaffRole.SelectedIndex = 0;
         }
 
-        private void BtnBack_Click(object sender, EventArgs e) {
-            Close();
-        }
-
         private void BtnInsert_Click(object sender, EventArgs e) {
             try {
                 if (TxtStaffName.Text != "") {
@@ -33,13 +29,28 @@ namespace GoodManagerSys {
                     };
                     Close();
                 }
-                else {
+                else
                     MsgBoxUtil.ErrMsgBox("员工姓名不得为空！");
-                }
             }
             catch (Exception) {
                 MsgBoxUtil.ErrMsgBox("员工信息输入错误！");
             }
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e) {
+            if ("" == TxtStaffName.Text ||""==TxtStaffPwd.Text || "" == TxtStaffPhone.Text)
+                Close();
+            else
+                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
+                Close();
+        }
+
+        private void FrmStaffInsert_FormClosing(object sender, FormClosingEventArgs e) {
+            if ("" == TxtStaffName.Text || "" == TxtStaffPwd.Text || "" == TxtStaffPhone.Text)
+                Close();
+            else
+                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
+                Close();
         }
     }
 }

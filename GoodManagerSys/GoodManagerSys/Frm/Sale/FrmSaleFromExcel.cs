@@ -123,7 +123,16 @@ namespace GoodManagerSys.Frm.Sale {
 
         private void BtnCancel_Click(object sender, EventArgs e) {
             if (hasUpdated) {
-                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体留有修改信息，是否要退出？"))
+                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
+                    Close();
+            }
+            else
+                Close();
+        }
+
+        private void FrmSaleFromExcel_FormClosing(object sender, FormClosingEventArgs e) {
+            if (hasUpdated) {
+                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
                     Close();
             }
             else
