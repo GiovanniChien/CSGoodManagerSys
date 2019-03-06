@@ -19,39 +19,43 @@ namespace GoodManagerSys.Frm.Sale {
         }
 
         private void BtnQuery_Click(object sender, EventArgs e) {
-            List<EtSale> subSales = new List<EtSale>();
-            List<EtGood> subGoods = new List<EtGood>();
-            string query = TxtQuery.Text;
-            string RegexStr = "^[0-9]+$";
-            if (RdoSale.Checked) {
-                if (Regex.IsMatch(query, RegexStr)) {
-                    subSales = SaleDao.QueryBySaleID(int.Parse(query));
+            if (TxtQuery.Text != "") {
+                List<EtSale> subSales = new List<EtSale>();
+                List<EtGood> subGoods = new List<EtGood>();
+                string query = TxtQuery.Text;
+                string RegexStr = "^[0-9]+$";
+                if (RdoSale.Checked) {
+                    if (Regex.IsMatch(query, RegexStr)) {
+                        subSales = SaleDao.QueryBySaleID(int.Parse(query));
+                        if (subSales.Count == 0)
+                            subSales = SaleDao.QueryByStaffID(int.Parse(query));
+                    }
                     if (subSales.Count == 0)
-                        subSales = SaleDao.QueryByStaffID(int.Parse(query));
+                        MsgBoxUtil.ErrMsgBox("未找到销售单！");
+                    else
+                        subGoods = GoodDao.QueryByGoodID(subSales[0].Good.GoodID);
                 }
-                if (subSales.Count == 0)
-                    MsgBoxUtil.ErrMsgBox("未找到销售单！");
-                else
-                    subGoods = GoodDao.QueryByGoodID(subSales[0].Good.GoodID);
-            }
-            else {
-                if (Regex.IsMatch(query, RegexStr))
-                    subGoods = GoodDao.QueryByGoodID(int.Parse(query));
-                else
-                    subGoods = GoodDao.QueryByCategoryID(CategoryDao.QueryByCategoryName(query)[0].CategoryID);
-                if (subGoods.Count == 0)
-                    MsgBoxUtil.ErrMsgBox("未找到商品！");
                 else {
-                    for (int i = 0; i < subGoods.Count; i++)
-                        if (subGoods[i].State == Enums.EState.已出售)
-                            subSales.Add(SaleDao.QueryByGoodID(subGoods[i].GoodID)[0]);
-                        else {
-                            subGoods.RemoveAt(i);
-                            i--;
-                        }
+                    if (Regex.IsMatch(query, RegexStr))
+                        subGoods = GoodDao.QueryByGoodID(int.Parse(query));
+                    else
+                        subGoods = GoodDao.QueryByCategoryID(CategoryDao.QueryByCategoryName(query)[0].CategoryID);
+                    if (subGoods.Count == 0)
+                        MsgBoxUtil.ErrMsgBox("未找到商品！");
+                    else {
+                        for (int i = 0; i < subGoods.Count; i++)
+                            if (subGoods[i].State == Enums.EState.已出售)
+                                subSales.Add(SaleDao.QueryByGoodID(subGoods[i].GoodID)[0]);
+                            else {
+                                subGoods.RemoveAt(i);
+                                i--;
+                            }
+                    }
                 }
+                DgvAdd(subSales, subGoods);
             }
-            DgvAdd(subSales, subGoods);
+            else
+                MsgBoxUtil.ErrMsgBox("请输入查询条件！");
         }
 
         private void DgvSaleResult_CellClick(object sender, DataGridViewCellEventArgs e) {
@@ -80,6 +84,7 @@ namespace GoodManagerSys.Frm.Sale {
 
         private void DgvGoodAdd(List<EtSale> sales) {
             DgvGoodInfo.Rows.Clear();
+            sales = SaleDao.QueryBySaleID(sales[0].SaleID);
             for (int i = 0; i < sales.Count; i++) {
                 goods = GoodDao.QueryByGoodID(sales[i].Good.GoodID);
                 DgvGoodInfo.Rows.Add(new object[] {
@@ -102,6 +107,10 @@ namespace GoodManagerSys.Frm.Sale {
                     subGoods[i].Price
                 });
             }
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e) {
+            Close();
         }
     }
 }

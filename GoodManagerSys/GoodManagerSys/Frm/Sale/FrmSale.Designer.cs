@@ -126,6 +126,7 @@
             // 
             // CmbOperator
             // 
+            this.CmbOperator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.CmbOperator.FormattingEnabled = true;
             this.CmbOperator.Location = new System.Drawing.Point(74, 3);
             this.CmbOperator.Name = "CmbOperator";
@@ -277,6 +278,7 @@
             // 
             // DtpSaleDate
             // 
+            this.DtpSaleDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.DtpSaleDate.Location = new System.Drawing.Point(378, 3);
             this.DtpSaleDate.Name = "DtpSaleDate";
             this.DtpSaleDate.Size = new System.Drawing.Size(120, 21);
