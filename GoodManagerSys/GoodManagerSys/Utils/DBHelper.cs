@@ -10,8 +10,8 @@ namespace GoodManagerSys.Utils {
          * @user:用户名,一般root
          * @password:密码
          */
-        //private static string ConnStr = "server=172.22.29.192;port=3306;database=goodmanagesys;user=root;password=root;SslMode=none;";
-        private static string ConnStr = "server=localhost;port=3306;database=goodmanagesys;user=root;password=;SslMode=none;";
+        private static string ConnStr = "server=172.22.29.192;port=3306;database=goodmanagesys;user=root;password=root;SslMode=none;";
+        //private static string ConnStr = "server=localhost;port=3306;database=goodmanagesys;user=root;password=;SslMode=none;";
         private MySqlConnection conn = null;
 
         public DBHelper() {
