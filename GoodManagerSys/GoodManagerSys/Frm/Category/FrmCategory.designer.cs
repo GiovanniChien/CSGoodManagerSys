@@ -48,11 +48,23 @@
             this.BtnAdd = new System.Windows.Forms.Button();
             this.BtnUpdate = new System.Windows.Forms.Button();
             this.BtnDelete = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.BtnSubmit = new System.Windows.Forms.Button();
+            this.BtnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCategory)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // DgvCategory
             // 
+            this.DgvCategory.AllowUserToAddRows = false;
+            this.DgvCategory.AllowUserToDeleteRows = false;
             this.DgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -65,11 +77,12 @@
             this.Column8,
             this.Column9,
             this.Column11});
-            this.DgvCategory.Location = new System.Drawing.Point(38, 96);
-            this.DgvCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DgvCategory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvCategory.Location = new System.Drawing.Point(2, 72);
+            this.DgvCategory.Margin = new System.Windows.Forms.Padding(2);
             this.DgvCategory.Name = "DgvCategory";
             this.DgvCategory.RowTemplate.Height = 27;
-            this.DgvCategory.Size = new System.Drawing.Size(848, 296);
+            this.DgvCategory.Size = new System.Drawing.Size(697, 242);
             this.DgvCategory.TabIndex = 10;
             // 
             // Column1
@@ -78,7 +91,7 @@
             this.Column1.HeaderText = "编号";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 66;
+            this.Column1.Width = 54;
             // 
             // Column2
             // 
@@ -86,7 +99,7 @@
             this.Column2.HeaderText = "名称";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 66;
+            this.Column2.Width = 54;
             // 
             // Column3
             // 
@@ -94,7 +107,7 @@
             this.Column3.HeaderText = "大类";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 66;
+            this.Column3.Width = 54;
             // 
             // Column7
             // 
@@ -102,7 +115,7 @@
             this.Column7.HeaderText = "厂商";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
-            this.Column7.Width = 66;
+            this.Column7.Width = 54;
             // 
             // Column5
             // 
@@ -110,7 +123,7 @@
             this.Column5.HeaderText = "单位";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 66;
+            this.Column5.Width = 54;
             // 
             // Column6
             // 
@@ -118,7 +131,7 @@
             this.Column6.HeaderText = "颜色";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 66;
+            this.Column6.Width = 54;
             // 
             // Column10
             // 
@@ -126,7 +139,7 @@
             this.Column10.HeaderText = "保质期";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
-            this.Column10.Width = 81;
+            this.Column10.Width = 66;
             // 
             // Column8
             // 
@@ -134,7 +147,7 @@
             this.Column8.HeaderText = "最小库存";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
-            this.Column8.Width = 96;
+            this.Column8.Width = 78;
             // 
             // Column9
             // 
@@ -142,7 +155,7 @@
             this.Column9.HeaderText = "最大库存";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
-            this.Column9.Width = 96;
+            this.Column9.Width = 78;
             // 
             // Column11
             // 
@@ -150,20 +163,24 @@
             this.Column11.HeaderText = "有效状态";
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
-            this.Column11.Width = 96;
+            this.Column11.Width = 78;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(35, 59);
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(2, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 19);
+            this.label1.Size = new System.Drawing.Size(135, 29);
             this.label1.TabIndex = 11;
             this.label1.Text = "商品大类";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CmbCategory
             // 
+            this.CmbCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.CmbCategory.FormattingEnabled = true;
             this.CmbCategory.Items.AddRange(new object[] {
             "不限",
@@ -174,33 +191,41 @@
             "糖果",
             "奶制品",
             "休闲食品"});
-            this.CmbCategory.Location = new System.Drawing.Point(126, 58);
+            this.CmbCategory.Location = new System.Drawing.Point(141, 4);
+            this.CmbCategory.Margin = new System.Windows.Forms.Padding(2);
             this.CmbCategory.Name = "CmbCategory";
-            this.CmbCategory.Size = new System.Drawing.Size(121, 23);
+            this.CmbCategory.Size = new System.Drawing.Size(135, 20);
             this.CmbCategory.TabIndex = 12;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(331, 62);
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(280, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 19);
+            this.label2.Size = new System.Drawing.Size(135, 29);
             this.label2.TabIndex = 13;
             this.label2.Text = "商品类别编号或名称";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TxtIdOrName
             // 
-            this.TxtIdOrName.Location = new System.Drawing.Point(527, 58);
+            this.TxtIdOrName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtIdOrName.Location = new System.Drawing.Point(419, 4);
+            this.TxtIdOrName.Margin = new System.Windows.Forms.Padding(2);
             this.TxtIdOrName.Name = "TxtIdOrName";
-            this.TxtIdOrName.Size = new System.Drawing.Size(207, 25);
+            this.TxtIdOrName.Size = new System.Drawing.Size(135, 21);
             this.TxtIdOrName.TabIndex = 14;
             // 
             // BtnQuery
             // 
-            this.BtnQuery.Location = new System.Drawing.Point(765, 58);
+            this.BtnQuery.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnQuery.Location = new System.Drawing.Point(558, 2);
+            this.BtnQuery.Margin = new System.Windows.Forms.Padding(2);
             this.BtnQuery.Name = "BtnQuery";
-            this.BtnQuery.Size = new System.Drawing.Size(86, 26);
+            this.BtnQuery.Size = new System.Drawing.Size(135, 25);
             this.BtnQuery.TabIndex = 15;
             this.BtnQuery.Text = "查询";
             this.BtnQuery.UseVisualStyleBackColor = true;
@@ -208,9 +233,11 @@
             // 
             // BtnExit
             // 
-            this.BtnExit.Location = new System.Drawing.Point(765, 405);
+            this.BtnExit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnExit.Location = new System.Drawing.Point(626, 2);
+            this.BtnExit.Margin = new System.Windows.Forms.Padding(2);
             this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(86, 23);
+            this.BtnExit.Size = new System.Drawing.Size(67, 26);
             this.BtnExit.TabIndex = 16;
             this.BtnExit.Text = "退出";
             this.BtnExit.UseVisualStyleBackColor = true;
@@ -218,9 +245,11 @@
             // 
             // BtnAdd
             // 
-            this.BtnAdd.Location = new System.Drawing.Point(38, 13);
+            this.BtnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnAdd.Location = new System.Drawing.Point(2, 2);
+            this.BtnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.BtnAdd.Name = "BtnAdd";
-            this.BtnAdd.Size = new System.Drawing.Size(75, 23);
+            this.BtnAdd.Size = new System.Drawing.Size(65, 25);
             this.BtnAdd.TabIndex = 17;
             this.BtnAdd.Text = "添加";
             this.BtnAdd.UseVisualStyleBackColor = true;
@@ -228,9 +257,11 @@
             // 
             // BtnUpdate
             // 
-            this.BtnUpdate.Location = new System.Drawing.Point(136, 13);
+            this.BtnUpdate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnUpdate.Location = new System.Drawing.Point(71, 2);
+            this.BtnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.BtnUpdate.Name = "BtnUpdate";
-            this.BtnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.BtnUpdate.Size = new System.Drawing.Size(65, 25);
             this.BtnUpdate.TabIndex = 18;
             this.BtnUpdate.Text = "修改";
             this.BtnUpdate.UseVisualStyleBackColor = true;
@@ -238,35 +269,132 @@
             // 
             // BtnDelete
             // 
-            this.BtnDelete.Location = new System.Drawing.Point(235, 13);
+            this.BtnDelete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnDelete.Location = new System.Drawing.Point(140, 2);
+            this.BtnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.BtnDelete.Name = "BtnDelete";
-            this.BtnDelete.Size = new System.Drawing.Size(75, 23);
+            this.BtnDelete.Size = new System.Drawing.Size(65, 25);
             this.BtnDelete.TabIndex = 19;
             this.BtnDelete.Text = "删除";
             this.BtnDelete.UseVisualStyleBackColor = true;
             this.BtnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.DgvCategory, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 3);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(701, 352);
+            this.tableLayoutPanel1.TabIndex = 20;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel2.Controls.Add(this.BtnAdd, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.BtnDelete, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.BtnUpdate, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(695, 29);
+            this.tableLayoutPanel2.TabIndex = 11;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 5;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.Controls.Add(this.BtnQuery, 4, 0);
+            this.tableLayoutPanel3.Controls.Add(this.TxtIdOrName, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label2, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.CmbCategory, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 38);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(695, 29);
+            this.tableLayoutPanel3.TabIndex = 12;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 4;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel4.Controls.Add(this.BtnSubmit, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.BtnExit, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.BtnCancel, 2, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 319);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(695, 30);
+            this.tableLayoutPanel4.TabIndex = 13;
+            // 
+            // BtnSubmit
+            // 
+            this.BtnSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnSubmit.Location = new System.Drawing.Point(489, 3);
+            this.BtnSubmit.Name = "BtnSubmit";
+            this.BtnSubmit.Size = new System.Drawing.Size(63, 24);
+            this.BtnSubmit.TabIndex = 17;
+            this.BtnSubmit.Text = "提交修改";
+            this.BtnSubmit.UseVisualStyleBackColor = true;
+            this.BtnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
+            // 
+            // BtnCancel
+            // 
+            this.BtnCancel.Location = new System.Drawing.Point(558, 3);
+            this.BtnCancel.Name = "BtnCancel";
+            this.BtnCancel.Size = new System.Drawing.Size(63, 23);
+            this.BtnCancel.TabIndex = 18;
+            this.BtnCancel.Text = "清空修改";
+            this.BtnCancel.UseVisualStyleBackColor = true;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
+            // 
             // FrmCategory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(935, 440);
-            this.Controls.Add(this.BtnDelete);
-            this.Controls.Add(this.BtnUpdate);
-            this.Controls.Add(this.BtnAdd);
-            this.Controls.Add(this.BtnExit);
-            this.Controls.Add(this.BtnQuery);
-            this.Controls.Add(this.TxtIdOrName);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.CmbCategory);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.DgvCategory);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ClientSize = new System.Drawing.Size(701, 352);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmCategory";
             this.Text = "商品类别";
             ((System.ComponentModel.ISupportInitialize)(this.DgvCategory)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -302,5 +430,11 @@
         private System.Windows.Forms.Button BtnAdd;
         private System.Windows.Forms.Button BtnUpdate;
         private System.Windows.Forms.Button BtnDelete;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Button BtnSubmit;
+        private System.Windows.Forms.Button BtnCancel;
     }
 }

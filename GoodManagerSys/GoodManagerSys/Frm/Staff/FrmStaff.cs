@@ -74,15 +74,6 @@ namespace GoodManagerSys.Frm.Staff {
                 MsgBoxUtil.ErrMsgBox("请选择要修改的员工信息！");
         }
 
-        private void BtnBack_Click(object sender, EventArgs e) {
-            if (hasUpdated) {
-                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗口有修改未保存，是否要退出？"))
-                    Close();
-            }
-            else
-                Close();
-        }
-
         private void BtnStaffCancel_Click(object sender, EventArgs e) {
             DgvStaffData.Rows.Clear();
             staffs = StaffDao.QueryAll();
@@ -150,6 +141,24 @@ namespace GoodManagerSys.Frm.Staff {
                     staff.StaffPhone,
                     staff.Role
                 });
+        }
+
+        private void BtnBack_Click(object sender, EventArgs e) {
+            if (hasUpdated) {
+                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
+                    Close();
+            }
+            else
+                Close();
+        }
+
+        private void FrmStaff_FormClosing(object sender, FormClosingEventArgs e) {
+            if (hasUpdated) {
+                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
+                    Close();
+            }
+            else
+                Close();
         }
     }
     class MyCompare : IEqualityComparer<EtStaff> {

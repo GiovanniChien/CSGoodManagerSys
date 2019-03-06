@@ -52,14 +52,14 @@
             // 销售商品ToolStripMenuItem
             // 
             this.销售商品ToolStripMenuItem.Name = "销售商品ToolStripMenuItem";
-            this.销售商品ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.销售商品ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.销售商品ToolStripMenuItem.Text = "销售商品";
             this.销售商品ToolStripMenuItem.Click += new System.EventHandler(this.销售商品ToolStripMenuItem_Click);
             // 
             // 销售单查询ToolStripMenuItem
             // 
             this.销售单查询ToolStripMenuItem.Name = "销售单查询ToolStripMenuItem";
-            this.销售单查询ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.销售单查询ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.销售单查询ToolStripMenuItem.Text = "销售单查询";
             this.销售单查询ToolStripMenuItem.Click += new System.EventHandler(this.销售单查询ToolStripMenuItem_Click);
             // 
@@ -71,7 +71,10 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(542, 326);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmMainSale";
             this.Text = "FrmMainSale";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

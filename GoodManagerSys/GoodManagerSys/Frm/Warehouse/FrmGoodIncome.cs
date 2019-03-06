@@ -119,7 +119,19 @@ namespace GoodManagerSys.Frm.Warehouse {
         }
 
         private void BtnCancel_Click(object sender, EventArgs e) {
-            Close();
+            if (0 == DgvGoodIncome.Rows.Count)
+                Close();
+            else
+                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
+                Close();
+        }
+
+        private void FrmGoodIncome_FormClosing(object sender, FormClosingEventArgs e) {
+            if (0 == DgvGoodIncome.Rows.Count)
+                Close();
+            else
+                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
+                Close();
         }
     }
 

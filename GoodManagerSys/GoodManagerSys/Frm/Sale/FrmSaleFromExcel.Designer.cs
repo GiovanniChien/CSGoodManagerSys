@@ -252,8 +252,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(539, 298);
             this.Controls.Add(this.TlpPurchaseFomExcel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmSaleFromExcel";
             this.Text = "FrmSaleFromExcel";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSaleFromExcel_FormClosing);
             this.TlpPurchaseFomExcel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvSaleFromExcel)).EndInit();
             this.TlpPFEControllerMenu.ResumeLayout(false);

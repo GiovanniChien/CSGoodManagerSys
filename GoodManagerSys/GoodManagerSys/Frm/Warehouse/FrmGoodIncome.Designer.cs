@@ -340,9 +340,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(717, 316);
             this.Controls.Add(this.TlpGoodIncome);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmGoodIncome";
             this.Text = "FrmGoodIncome";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGoodIncome_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.DgvGoodIncome)).EndInit();
             this.TlpGoodIncome.ResumeLayout(false);
             this.TlpGIControllerMenu.ResumeLayout(false);

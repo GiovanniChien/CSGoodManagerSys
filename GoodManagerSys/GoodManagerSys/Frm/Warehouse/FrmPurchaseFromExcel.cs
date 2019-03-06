@@ -126,12 +126,22 @@ namespace GoodManagerSys.Frm.Warehouse {
         }
 
         private void BtnCancel_Click(object sender, EventArgs e) {
-            Close();
+            if (0 == DgvGoodFromExcel.Rows.Count)
+                Close();
+            else
+                MsgBoxUtil.ErrMsgBox("当前窗体有未保存的数据，是否确定要退出？");
         }
 
         private EState StringToEState(string s) {
             if (s.Equals("未上架")) return EState.未上架;
             return EState.未出售;
+        }
+
+        private void FrmPurchaseFromExcel_FormClosing(object sender, FormClosingEventArgs e) {
+            if (0 == DgvGoodFromExcel.Rows.Count)
+                Close();
+            else
+                MsgBoxUtil.ErrMsgBox("当前窗体有未保存的数据，是否确定要退出？");
         }
     }
 }

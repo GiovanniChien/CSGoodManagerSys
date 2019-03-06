@@ -305,7 +305,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(737, 360);
             this.Controls.Add(this.TlpWarehouse);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmWarehouse";
             this.Text = "FrmWarehouse";
             ((System.ComponentModel.ISupportInitialize)(this.DgvWarehouse)).EndInit();

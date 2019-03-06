@@ -31,5 +31,9 @@ namespace GoodManagerSys.Frm.Membership {
         private void BtnMsCancel_Click(object sender, EventArgs e) {
             Close();
         }
+
+        private void FrmMsUpdate_FormClosing(object sender, FormClosingEventArgs e) {
+            Close();
+        }
     }
 }

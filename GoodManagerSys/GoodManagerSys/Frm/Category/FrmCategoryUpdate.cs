@@ -3,21 +3,11 @@ using GoodManagerSys.Entities;
 using GoodManagerSys.Enums;
 using GoodManagerSys.Utils;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace GoodManagerSys.Frm.Category
-{
-    public partial class FrmCategoryUpdate : Form
-    {
-        public FrmCategoryUpdate()
-        {
+namespace GoodManagerSys.Frm.Category {
+    public partial class FrmCategoryUpdate : Form {
+        public FrmCategoryUpdate() {
             InitializeComponent();
             TxtCategoryName.Text = FrmCategory.category.CategoryName;
             CmbParentCategoryName.SelectedIndex = (int)FrmCategory.category.ParentCategoryID;
@@ -29,10 +19,8 @@ namespace GoodManagerSys.Frm.Category
             TxtMaxStock.Text = FrmCategory.category.MaxStock.ToString();
         }
 
-        private void BtnCommit_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void BtnCommit_Click(object sender, EventArgs e) {
+            try {
                 string CategoryName = TxtCategoryName.Text;
                 ECategory ParentCategoryEnum = (ECategory)CmbParentCategoryName.SelectedIndex;
                 string ParentCategoryName = ParentCategoryEnum.ToString();
@@ -42,9 +30,8 @@ namespace GoodManagerSys.Frm.Category
                 int ExpirationDate = int.Parse(TxtExpirationDate.Text);
                 int MinStock = int.Parse(TxtMinStock.Text);
                 int MaxStock = int.Parse(TxtMaxStock.Text);
-                EtCategory category = new EtCategory
-                {
-                    CategoryID= FrmCategory.category.CategoryID,
+                EtCategory category = new EtCategory {
+                    CategoryID = FrmCategory.category.CategoryID,
                     CategoryName = CategoryName,
                     ParentCategoryID = ParentCategoryEnum,
                     ParentCategoryName = ParentCategoryName,
@@ -61,14 +48,16 @@ namespace GoodManagerSys.Frm.Category
                 Console.WriteLine(category.ToString());
                 Close();
             }
-            catch (Exception)
-            {
+            catch (Exception) {
                 MsgBoxUtil.ErrMsgBox("商品信息输入错误！");
             }
         }
 
-        private void BtnBack_Click(object sender, EventArgs e)
-        {
+        private void BtnBack_Click(object sender, EventArgs e) {
+            Close();
+        }
+
+        private void FrmCategoryUpdate_FormClosing(object sender, FormClosingEventArgs e) {
             Close();
         }
     }

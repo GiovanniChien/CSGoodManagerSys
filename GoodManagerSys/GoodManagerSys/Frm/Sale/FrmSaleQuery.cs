@@ -108,9 +108,5 @@ namespace GoodManagerSys.Frm.Sale {
                 });
             }
         }
-
-        private void BtnBack_Click(object sender, EventArgs e) {
-            Close();
-        }
     }
 }

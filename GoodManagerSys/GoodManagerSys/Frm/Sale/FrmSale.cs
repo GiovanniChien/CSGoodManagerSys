@@ -28,7 +28,7 @@ namespace GoodManagerSys.Frm.Sale {
 
         private void BtnBack_Click(object sender, EventArgs e) {
             if (hasUpdated) {
-                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有尚未保存的数据，确定要退出吗？"))
+                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
                     Close();
             }
             else
@@ -119,6 +119,15 @@ namespace GoodManagerSys.Frm.Sale {
             }
             if (res == Sales.Count) return true;
             else return false;
+        }
+
+        private void FrmSale_FormClosing(object sender, FormClosingEventArgs e) {
+            if (hasUpdated) {
+                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
+                    Close();
+            }
+            else
+                Close();
         }
     }
 }
