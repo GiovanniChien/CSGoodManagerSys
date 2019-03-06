@@ -18,9 +18,10 @@ namespace GoodManagerSys.Frm.Warehouse {
         private bool hasErr;
 
         public FrmPurchaseFromExcel() {
-            excelGoods = new List<ClsGood>();
-            hasErr = false;
             InitializeComponent();
+            excelGoods = new List<ClsGood>();
+            errInfo = "";
+            hasErr = false;
         }
 
         private void BtnBrowse_Click(object sender, EventArgs e) {
@@ -50,9 +51,9 @@ namespace GoodManagerSys.Frm.Warehouse {
                         ClsGood good = ParseGood(row);
                         if (good != null) {
                             excelGoods.Add(good);
-                            DgvGoodFromExcel.Rows.Add(new object[]
-                            {
-                                "√  "+i,good.Good.Category.CategoryID,
+                            DgvGoodFromExcel.Rows.Add(new object[]{
+                                "√  "+i,
+                                good.Good.Category.CategoryID,
                                 good.Good.ProductionDate,
                                 good.Good.Cost,
                                 good.Good.Price,
@@ -73,14 +74,14 @@ namespace GoodManagerSys.Frm.Warehouse {
         }
 
         private ClsGood ParseGood(IRow row) {
-            if (row.GetCell(0).ToString() == "") {
+            if ("" == row.GetCell(0).ToString()) {
                 errInfo = "商品不存在";
                 hasErr = true;
                 return null;
             }
             int categoryID = int.Parse(row.GetCell(0).ToString());
             List<EtCategory> categories = CategoryDao.QueryByCategoryID(categoryID);
-            if (categories.Count == 0) {
+            if (0 == categories.Count) {
                 errInfo = "商品不存在";
                 hasErr = true;
                 return null;

@@ -235,6 +235,8 @@
             // 
             // DgvStaffData
             // 
+            this.DgvStaffData.AllowUserToAddRows = false;
+            this.DgvStaffData.AllowUserToDeleteRows = false;
             this.DgvStaffData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvStaffData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ClnStaffID,

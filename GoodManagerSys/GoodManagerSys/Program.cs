@@ -7,9 +7,9 @@ using GoodManagerSys;
 using GoodManagerSys.Frm;
 using GoodManagerSys.Frm.ReportForm;
 using GoodManagerSys.Frm.Membership;
-using GoodManagerSys.Frm.Staff;
-using GoodManagerSys.UI;
 using GoodManagerSys.Frm.Sale;
+using GoodManagerSys.Frm.Staff;
+using GoodManagerSys.Frm.Main;
 
 namespace GoodManagerSys
 {

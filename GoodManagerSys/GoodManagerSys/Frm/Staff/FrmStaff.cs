@@ -1,18 +1,12 @@
 ﻿using GoodManagerSys.Dao;
 using GoodManagerSys.Entities;
-using GoodManagerSys.Enums;
 using GoodManagerSys.Utils;
-using GoodManagerSys.Frm.Staff;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace GoodManagerSys.Frm.Staff {
     public partial class FrmStaff : Form {

@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-namespace GoodManagerSys.UI {
+namespace GoodManagerSys.Frm.Warehouse {
     public partial class FrmWarehouse : Form {
         private List<EtCategory> categories;
         public FrmWarehouse() {

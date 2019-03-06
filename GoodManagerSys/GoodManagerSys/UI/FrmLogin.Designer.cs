@@ -120,6 +120,7 @@
             this.Controls.Add(this.TxtAccount);
             this.Controls.Add(this.PicLoginBackground);
             this.Name = "FrmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FrmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PicLoginBackground)).EndInit();
             this.ResumeLayout(false);

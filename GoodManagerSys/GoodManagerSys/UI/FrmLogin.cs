@@ -1,5 +1,6 @@
 ﻿using GoodManagerSys.Dao;
 using GoodManagerSys.Entities;
+using GoodManagerSys.Frm.Main;
 using GoodManagerSys.Utils;
 using System;
 using System.Collections.Generic;
@@ -26,17 +27,29 @@ namespace GoodManagerSys
                 MsgBoxUtil.ErrMsgBox("密码错误");
             else
             {
-                FrmMain f = new FrmMain();
-                //   f.Show();
-                this.Hide();
+                Form f=null;
+                switch (staffs[0].Role) {
+                    case Enums.ERole.未定义:
+                        break;
+                    case Enums.ERole.管理员:
+                        f = new FrmMainAdmin();
+                        break;
+                    case Enums.ERole.采购员:
+                        f = new FrmMainPurchase();
+                        break;
+                    case Enums.ERole.销售员:
+                        f = new FrmMainSale();
+                        break;
+                }
+                Hide();
+                if(f!=null)
                 f.ShowDialog();
-                this.Close();
+                Close();
             }
         }
 
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-           
             LblPassword.Parent = PicLoginBackground;
             LblAccount.Parent = PicLoginBackground;
         }
