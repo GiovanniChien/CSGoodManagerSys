@@ -97,6 +97,18 @@
     <Compile Include="Enums\ERole.cs" />
     <Compile Include="Enums\EState.cs" />
     <Compile Include="Enums\EValid.cs" />
+    <Compile Include="Frm\Category\FrmCategoryInsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Category\FrmCategoryInsert.Designer.cs">
+      <DependentUpon>FrmCategoryInsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\Category\FrmCategoryUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\Category\FrmCategoryUpdate.Designer.cs">
+      <DependentUpon>FrmCategoryUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm\Membership\FrmMembership.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,10 +193,10 @@
     <Compile Include="UI\FrmMain.designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\FrmCategory.cs">
+    <Compile Include="Frm\Category\FrmCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\FrmCategory.designer.cs">
+    <Compile Include="Frm\Category\FrmCategory.designer.cs">
       <DependentUpon>FrmCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FrmWarehouseWarning.cs">
@@ -203,6 +215,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\DBHelper.cs" />
     <Compile Include="Utils\MsgBoxUtil.cs" />
+    <EmbeddedResource Include="Frm\Category\FrmCategoryInsert.resx">
+      <DependentUpon>FrmCategoryInsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\Category\FrmCategoryUpdate.resx">
+      <DependentUpon>FrmCategoryUpdate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm\Membership\FrmMembership.resx">
       <DependentUpon>FrmMembership.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,7 +263,7 @@
     <EmbeddedResource Include="UI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\FrmCategory.resx">
+    <EmbeddedResource Include="Frm\Category\FrmCategory.resx">
       <DependentUpon>FrmCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmWarehouseWarning.resx">

@@ -16,10 +16,10 @@ namespace GoodManagerSys
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            string account = TxtAccount.Text;
+            int account = int.Parse(TxtAccount.Text);
             string password = TxtPassword.Text;
             string pwd = Encrypt.GetMD5(password);
-            List<EtStaff> staffs = StaffDao.QueryByStaffName(account);
+            List<EtStaff> staffs = StaffDao.QueryByStaffID(account);
             if (staffs.Count == 0)
                 MsgBoxUtil.ErrMsgBox("用户不存在");
             else if(!pwd.Equals(staffs[0].Pwd))
