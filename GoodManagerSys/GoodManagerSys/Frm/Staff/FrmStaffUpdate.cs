@@ -19,14 +19,9 @@ namespace GoodManagerSys {
         private void BtnSubmit_Click(object sender, EventArgs e) {
             try {
                 if (TxtStaffName.Text != "") {
-                    string StaffName = TxtStaffName.Text;
-                    string StaffPhone = TxtStaffPhone.Text;
-                    ERole Role = (ERole)CmbStaffRole.SelectedIndex;
-                    FrmStaff.Staff = new EtStaff {
-                        StaffName = StaffName,
-                        StaffPhone = StaffPhone,
-                        Role = Role
-                    };
+                    FrmStaff.Staff.StaffName = TxtStaffName.Text;
+                    FrmStaff.Staff.StaffPhone = TxtStaffPhone.Text;
+                    FrmStaff.Staff.Role = (ERole)CmbStaffRole.SelectedIndex;
                     Dispose();
                 }
                 else {

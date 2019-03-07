@@ -115,6 +115,7 @@
             // 
             this.CmbStaffRole.FormattingEnabled = true;
             this.CmbStaffRole.Items.AddRange(new object[] {
+            "未定义",
             "管理员",
             "销售员",
             "采购员"});

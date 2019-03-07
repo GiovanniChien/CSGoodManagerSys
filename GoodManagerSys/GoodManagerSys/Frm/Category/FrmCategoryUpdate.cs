@@ -17,36 +17,31 @@ namespace GoodManagerSys.Frm.Category {
             TxtExpirationDate.Text = FrmCategory.category.ExpirationDate.ToString();
             TxtMinStock.Text = FrmCategory.category.MinStock.ToString();
             TxtMaxStock.Text = FrmCategory.category.MaxStock.ToString();
+            CmbIsValid.SelectedIndex = (int)FrmCategory.category.IsValid;
         }
 
         private void BtnCommit_Click(object sender, EventArgs e) {
             try {
-                string CategoryName = TxtCategoryName.Text;
-                ECategory ParentCategoryEnum = (ECategory)CmbParentCategoryName.SelectedIndex;
-                string ParentCategoryName = ParentCategoryEnum.ToString();
-                string Firm = TxtFirm.Text;
-                string Unit = TxtUnit.Text;
-                string Color = TxtColor.Text;
-                int ExpirationDate = int.Parse(TxtExpirationDate.Text);
-                int MinStock = int.Parse(TxtMinStock.Text);
-                int MaxStock = int.Parse(TxtMaxStock.Text);
-                EtCategory category = new EtCategory {
-                    CategoryID = FrmCategory.category.CategoryID,
-                    CategoryName = CategoryName,
-                    ParentCategoryID = ParentCategoryEnum,
-                    ParentCategoryName = ParentCategoryName,
-                    Unit = Unit,
-                    Color = Color,
-                    Firm = Firm,
-                    MinStock = MinStock,
-                    MaxStock = MaxStock,
-                    ExpirationDate = ExpirationDate,
-                    IsValid = FrmCategory.category.IsValid
-                };
-                CategoryDao.UpdateCategory(category);
-                FrmCategory.category = category;
-                Console.WriteLine(category.ToString());
-                Close();
+                if (TxtCategoryName.Text == "")
+                    MsgBoxUtil.ErrMsgBox("商品名称不得为空！");
+                else
+                {
+                    FrmCategory.category = new EtCategory
+                    {
+                        CategoryID = FrmCategory.category.CategoryID,
+                        CategoryName = TxtCategoryName.Text,
+                        ParentCategoryID = (ECategory)CmbParentCategoryName.SelectedIndex,
+                        ParentCategoryName = ((ECategory)CmbParentCategoryName.SelectedIndex).ToString(),
+                        Unit = TxtUnit.Text,
+                        Color = TxtColor.Text,
+                        Firm = TxtFirm.Text,
+                        MinStock = int.Parse(TxtMinStock.Text),
+                        MaxStock = int.Parse(TxtMaxStock.Text),
+                        ExpirationDate = int.Parse(TxtExpirationDate.Text),
+                        IsValid = (EValid)CmbIsValid.SelectedIndex
+                    };
+                    Close();
+                }
             }
             catch (Exception) {
                 MsgBoxUtil.ErrMsgBox("商品信息输入错误！");

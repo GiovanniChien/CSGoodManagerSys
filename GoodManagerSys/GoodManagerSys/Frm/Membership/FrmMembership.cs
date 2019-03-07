@@ -61,6 +61,7 @@ namespace GoodManagerSys.Frm.Membership {
                     DgvMembership.Rows[index].Cells["ClnMsPhone"].Value = Ms.MsPhone;
                     DgvMembership.Rows[index].Cells["ClnMsPoint"].Value = Ms.MsPoint;
                     DgvMembership.Rows[index].Cells["ClnMsIsValid"].Value = Ms.IsValid;
+                    mses[index] = Ms;
                     Ms = null;
                 }
                 hasUpdated = true;
@@ -98,7 +99,7 @@ namespace GoodManagerSys.Frm.Membership {
 
         private void BtnSubmit_Click(object sender, EventArgs e) {
             foreach (EtMembership ms in mses)
-                MembershipDao.InsertMembership(ms);
+                MembershipDao.UpdateOrInsert(ms);
             hasUpdated = false;
         }
 

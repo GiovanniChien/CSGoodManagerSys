@@ -75,12 +75,12 @@
             this.Column8,
             this.Column9});
             this.DgvGoodIncome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvGoodIncome.Location = new System.Drawing.Point(2, 33);
-            this.DgvGoodIncome.Margin = new System.Windows.Forms.Padding(2);
+            this.DgvGoodIncome.Location = new System.Drawing.Point(3, 37);
+            this.DgvGoodIncome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvGoodIncome.Name = "DgvGoodIncome";
             this.DgvGoodIncome.RowTemplate.Height = 37;
             this.DgvGoodIncome.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvGoodIncome.Size = new System.Drawing.Size(713, 248);
+            this.DgvGoodIncome.Size = new System.Drawing.Size(950, 311);
             this.DgvGoodIncome.TabIndex = 2;
             // 
             // Column1
@@ -89,7 +89,7 @@
             this.Column1.HeaderText = "编号";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 54;
+            this.Column1.Width = 66;
             // 
             // Column2
             // 
@@ -97,7 +97,7 @@
             this.Column2.HeaderText = "商品名称";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 78;
+            this.Column2.Width = 96;
             // 
             // Column3
             // 
@@ -105,7 +105,7 @@
             this.Column3.HeaderText = "类别";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 54;
+            this.Column3.Width = 66;
             // 
             // Column4
             // 
@@ -113,7 +113,7 @@
             this.Column4.HeaderText = "单位";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 54;
+            this.Column4.Width = 66;
             // 
             // Column5
             // 
@@ -121,7 +121,7 @@
             this.Column5.HeaderText = "厂商";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 54;
+            this.Column5.Width = 66;
             // 
             // Column10
             // 
@@ -129,7 +129,7 @@
             this.Column10.HeaderText = "生产日期";
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
-            this.Column10.Width = 78;
+            this.Column10.Width = 96;
             // 
             // Column6
             // 
@@ -137,7 +137,7 @@
             this.Column6.HeaderText = "数量";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 54;
+            this.Column6.Width = 66;
             // 
             // Column7
             // 
@@ -145,7 +145,7 @@
             this.Column7.HeaderText = "进价";
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
-            this.Column7.Width = 54;
+            this.Column7.Width = 66;
             // 
             // Column8
             // 
@@ -153,7 +153,7 @@
             this.Column8.HeaderText = "售价";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
-            this.Column8.Width = 54;
+            this.Column8.Width = 66;
             // 
             // Column9
             // 
@@ -161,15 +161,15 @@
             this.Column9.HeaderText = "状态";
             this.Column9.Name = "Column9";
             this.Column9.ReadOnly = true;
-            this.Column9.Width = 54;
+            this.Column9.Width = 66;
             // 
             // BtnComfirm
             // 
             this.BtnComfirm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnComfirm.Location = new System.Drawing.Point(474, 2);
-            this.BtnComfirm.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnComfirm.Location = new System.Drawing.Point(631, 2);
+            this.BtnComfirm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnComfirm.Name = "BtnComfirm";
-            this.BtnComfirm.Size = new System.Drawing.Size(114, 23);
+            this.BtnComfirm.Size = new System.Drawing.Size(151, 33);
             this.BtnComfirm.TabIndex = 3;
             this.BtnComfirm.Text = "确定";
             this.BtnComfirm.UseVisualStyleBackColor = true;
@@ -179,10 +179,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(356, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(477, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 25);
+            this.label1.Size = new System.Drawing.Size(231, 27);
             this.label1.TabIndex = 4;
             this.label1.Text = "进货日期";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -190,19 +189,19 @@
             // DtpPurchaseDate
             // 
             this.DtpPurchaseDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DtpPurchaseDate.Location = new System.Drawing.Point(533, 2);
-            this.DtpPurchaseDate.Margin = new System.Windows.Forms.Padding(2);
+            this.DtpPurchaseDate.Location = new System.Drawing.Point(714, 2);
+            this.DtpPurchaseDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DtpPurchaseDate.Name = "DtpPurchaseDate";
-            this.DtpPurchaseDate.Size = new System.Drawing.Size(176, 21);
+            this.DtpPurchaseDate.Size = new System.Drawing.Size(231, 25);
             this.DtpPurchaseDate.TabIndex = 5;
             // 
             // BtnCancel
             // 
             this.BtnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnCancel.Location = new System.Drawing.Point(592, 2);
-            this.BtnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnCancel.Location = new System.Drawing.Point(788, 2);
+            this.BtnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(117, 23);
+            this.BtnCancel.Size = new System.Drawing.Size(157, 33);
             this.BtnCancel.TabIndex = 6;
             this.BtnCancel.Text = "取消";
             this.BtnCancel.UseVisualStyleBackColor = true;
@@ -212,10 +211,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(2, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 27);
+            this.label2.Size = new System.Drawing.Size(151, 37);
             this.label2.TabIndex = 7;
             this.label2.Text = "经办人";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -224,20 +222,19 @@
             // 
             this.CmbOperator.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CmbOperator.FormattingEnabled = true;
-            this.CmbOperator.Location = new System.Drawing.Point(120, 2);
-            this.CmbOperator.Margin = new System.Windows.Forms.Padding(2);
+            this.CmbOperator.Location = new System.Drawing.Point(160, 2);
+            this.CmbOperator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CmbOperator.Name = "CmbOperator";
-            this.CmbOperator.Size = new System.Drawing.Size(114, 20);
+            this.CmbOperator.Size = new System.Drawing.Size(151, 23);
             this.CmbOperator.TabIndex = 8;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(238, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(317, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 27);
+            this.label3.Size = new System.Drawing.Size(151, 37);
             this.label3.TabIndex = 9;
             this.label3.Text = "初始单号";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -245,19 +242,19 @@
             // TxtPurchaseID
             // 
             this.TxtPurchaseID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TxtPurchaseID.Location = new System.Drawing.Point(356, 2);
-            this.TxtPurchaseID.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtPurchaseID.Location = new System.Drawing.Point(474, 2);
+            this.TxtPurchaseID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtPurchaseID.Name = "TxtPurchaseID";
-            this.TxtPurchaseID.Size = new System.Drawing.Size(114, 21);
+            this.TxtPurchaseID.Size = new System.Drawing.Size(151, 25);
             this.TxtPurchaseID.TabIndex = 10;
             // 
             // BtnMIncome
             // 
             this.BtnMIncome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnMIncome.Location = new System.Drawing.Point(179, 2);
-            this.BtnMIncome.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnMIncome.Location = new System.Drawing.Point(240, 2);
+            this.BtnMIncome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnMIncome.Name = "BtnMIncome";
-            this.BtnMIncome.Size = new System.Drawing.Size(173, 21);
+            this.BtnMIncome.Size = new System.Drawing.Size(231, 23);
             this.BtnMIncome.TabIndex = 1;
             this.BtnMIncome.Text = "批量商品入库";
             this.BtnMIncome.UseVisualStyleBackColor = true;
@@ -266,10 +263,10 @@
             // BtnSIncome
             // 
             this.BtnSIncome.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnSIncome.Location = new System.Drawing.Point(2, 2);
-            this.BtnSIncome.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnSIncome.Location = new System.Drawing.Point(3, 2);
+            this.BtnSIncome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnSIncome.Name = "BtnSIncome";
-            this.BtnSIncome.Size = new System.Drawing.Size(173, 21);
+            this.BtnSIncome.Size = new System.Drawing.Size(231, 23);
             this.BtnSIncome.TabIndex = 0;
             this.BtnSIncome.Text = "单个商品入库";
             this.BtnSIncome.UseVisualStyleBackColor = true;
@@ -284,12 +281,13 @@
             this.TlpGoodIncome.Controls.Add(this.TlpGISubmitMenu, 0, 2);
             this.TlpGoodIncome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TlpGoodIncome.Location = new System.Drawing.Point(0, 0);
+            this.TlpGoodIncome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TlpGoodIncome.Name = "TlpGoodIncome";
             this.TlpGoodIncome.RowCount = 3;
-            this.TlpGoodIncome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.TlpGoodIncome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.113924F));
             this.TlpGoodIncome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.TlpGoodIncome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.TlpGoodIncome.Size = new System.Drawing.Size(717, 316);
+            this.TlpGoodIncome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.13924F));
+            this.TlpGoodIncome.Size = new System.Drawing.Size(956, 395);
             this.TlpGoodIncome.TabIndex = 11;
             // 
             // TlpGIControllerMenu
@@ -304,11 +302,12 @@
             this.TlpGIControllerMenu.Controls.Add(this.label1, 2, 0);
             this.TlpGIControllerMenu.Controls.Add(this.DtpPurchaseDate, 3, 0);
             this.TlpGIControllerMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TlpGIControllerMenu.Location = new System.Drawing.Point(3, 3);
+            this.TlpGIControllerMenu.Location = new System.Drawing.Point(4, 4);
+            this.TlpGIControllerMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TlpGIControllerMenu.Name = "TlpGIControllerMenu";
             this.TlpGIControllerMenu.RowCount = 1;
             this.TlpGIControllerMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TlpGIControllerMenu.Size = new System.Drawing.Size(711, 25);
+            this.TlpGIControllerMenu.Size = new System.Drawing.Size(948, 27);
             this.TlpGIControllerMenu.TabIndex = 3;
             // 
             // TlpGISubmitMenu
@@ -327,26 +326,26 @@
             this.TlpGISubmitMenu.Controls.Add(this.CmbOperator, 1, 0);
             this.TlpGISubmitMenu.Controls.Add(this.label3, 2, 0);
             this.TlpGISubmitMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TlpGISubmitMenu.Location = new System.Drawing.Point(3, 286);
+            this.TlpGISubmitMenu.Location = new System.Drawing.Point(4, 354);
+            this.TlpGISubmitMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TlpGISubmitMenu.Name = "TlpGISubmitMenu";
             this.TlpGISubmitMenu.RowCount = 1;
             this.TlpGISubmitMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TlpGISubmitMenu.Size = new System.Drawing.Size(711, 27);
+            this.TlpGISubmitMenu.Size = new System.Drawing.Size(948, 37);
             this.TlpGISubmitMenu.TabIndex = 4;
             // 
             // FrmGoodIncome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(717, 316);
+            this.ClientSize = new System.Drawing.Size(956, 395);
             this.Controls.Add(this.TlpGoodIncome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmGoodIncome";
             this.Text = "FrmGoodIncome";
-//            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGoodIncome_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.DgvGoodIncome)).EndInit();
             this.TlpGoodIncome.ResumeLayout(false);
             this.TlpGIControllerMenu.ResumeLayout(false);

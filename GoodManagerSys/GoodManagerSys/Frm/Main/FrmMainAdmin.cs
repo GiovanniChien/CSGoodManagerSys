@@ -70,7 +70,12 @@ namespace GoodManagerSys.Frm.Main {
         }
 
         private void 商品管理ToolStripMenuItem_Click(object sender, EventArgs e) {
-
+            FrmCategory frmCategory = new FrmCategory
+            {
+                StartPosition = FormStartPosition.CenterParent,
+                Size = new System.Drawing.Size(Width * ratio / 100, Height * ratio / 100)
+            };
+            frmCategory.ShowDialog();
         }
 
         private void FrmMainAdmin_Load(object sender, EventArgs e) {

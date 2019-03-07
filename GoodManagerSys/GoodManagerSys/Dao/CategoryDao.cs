@@ -5,16 +5,20 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 
-namespace GoodManagerSys.Dao {
-    class CategoryDao {
-        public static List<EtCategory> QueryAll() {
+namespace GoodManagerSys.Dao
+{
+    class CategoryDao
+    {
+        public static List<EtCategory> QueryAll()
+        {
             DBHelper helper = new DBHelper();
             string sql = "SELECT * FROM category";
             MySqlDataReader dr = helper.RunQuerySQL(sql);
             return GetListByDataReader(dr);
         }
 
-        public static List<EtCategory> QueryByCategoryID(int categoryID) {
+        public static List<EtCategory> QueryByCategoryID(int categoryID)
+        {
             DBHelper helper = new DBHelper();
             string sql = "SELECT * FROM category WHERE categoryID = @categoryID";
             MySqlParameter[] prams = { new MySqlParameter("@categoryID", categoryID) };
@@ -22,14 +26,16 @@ namespace GoodManagerSys.Dao {
             return GetListByDataReader(dr);
         }
 
-        public static List<EtCategory> QueryByCategoryName(string categoryName) {
+        public static List<EtCategory> QueryByCategoryName(string categoryName)
+        {
             DBHelper helper = new DBHelper();
             string sql = string.Format("SELECT * FROM category WHERE categoryName LIKE '%{0}%';", categoryName);
             MySqlDataReader dr = helper.RunQuerySQL(sql);
             return GetListByDataReader(dr);
         }
 
-        public static List<EtCategory> QueryByParentCategoryID(ECategory cate) {
+        public static List<EtCategory> QueryByParentCategoryID(ECategory cate)
+        {
             DBHelper helper = new DBHelper();
             string sql = "SELECT * FROM category WHERE parentCategoryID = @parentCategoryID";
             MySqlParameter[] prams = { new MySqlParameter("@parentCategoryID", cate) };
@@ -37,7 +43,8 @@ namespace GoodManagerSys.Dao {
             return GetListByDataReader(dr);
         }
 
-        public static List<EtCategory> QueryByIsValid(EValid eValid) {
+        public static List<EtCategory> QueryByIsValid(EValid eValid)
+        {
             DBHelper helper = new DBHelper();
             string sql = "SELECT * FROM category WHERE isValid = @isValid;";
             MySqlParameter[] prams = { new MySqlParameter("@isValid", eValid) };
@@ -45,7 +52,58 @@ namespace GoodManagerSys.Dao {
             return GetListByDataReader(dr);
         }
 
-        public static int InsertCategory(EtCategory category) {
+        public static int UpdateOrInsert(EtCategory category)
+        {
+            List<EtCategory> categories = QueryByCategoryID(category.CategoryID);
+            if (categories.Count > 0)
+            {
+                DBHelper helper = new DBHelper();
+                string sql = "UPDATE category SET categoryName = @categoryName," +
+                    "parentCategoryID = @parentCategoryID," +
+                    "parentCategoryName = @parentCategoryName," +
+                    "unit = @unit, color = @color, firm = @firm," +
+                    "minStock = @minStock, maxStock = @maxStock, " +
+                    "expirationDate = @expirationDate, isValid = @isValid " +
+                    "WHERE categoryID = @categoryID;";
+                MySqlParameter[] prams = {
+                 new MySqlParameter("@categoryName",category.CategoryName??(object)DBNull.Value),
+                 new MySqlParameter("@parentCategoryID",category.ParentCategoryID),
+                 new MySqlParameter("@parentCategoryName",category.ParentCategoryName??(object)DBNull.Value),
+                 new MySqlParameter("@unit",category.Unit??(object)DBNull.Value),
+                 new MySqlParameter("@color",category.Color??(object)DBNull.Value),
+                 new MySqlParameter("@firm",category.Firm??(object)DBNull.Value),
+                 new MySqlParameter("@minStock",category.MinStock),
+                 new MySqlParameter("@maxStock",category.MaxStock),
+                 new MySqlParameter("@expirationDate",category.ExpirationDate),
+                 new MySqlParameter("@isValid",category.IsValid),
+                 new MySqlParameter("@categoryID",category.CategoryID)
+            };
+                return helper.RunNonQuerySQL(sql, prams);
+            }
+            else
+            {
+                DBHelper helper = new DBHelper();
+                string sql = "INSERT INTO " +
+                    "category(categoryName,parentCategoryID,parentCategoryName,unit,color,firm,minStock,maxStock,expirationDate,isValid) " +
+                    "VALUE(@categoryName,@parentCategoryID,@parentCategoryName,@unit,@color,@firm,@minStock,@maxStock,@expirationDate,@isValid)";
+                MySqlParameter[] prams = {
+                 new MySqlParameter("@categoryName",category.CategoryName??(object)DBNull.Value),
+                 new MySqlParameter("@parentCategoryID",category.ParentCategoryID),
+                 new MySqlParameter("@parentCategoryName",category.ParentCategoryName??(object)DBNull.Value),
+                 new MySqlParameter("@unit",category.Unit??(object)DBNull.Value),
+                 new MySqlParameter("@color",category.Color??(object)DBNull.Value),
+                 new MySqlParameter("@firm",category.Firm??(object)DBNull.Value),
+                 new MySqlParameter("@minStock",category.MinStock),
+                 new MySqlParameter("@maxStock",category.MaxStock),
+                 new MySqlParameter("@expirationDate",category.ExpirationDate),
+                 new MySqlParameter("@isValid",category.IsValid)
+                };
+                return helper.RunNonQuerySQL(sql, prams);
+            }
+        }
+
+        public static int InsertCategory(EtCategory category)
+        {
             List<EtCategory> categories = QueryByCategoryID(category.CategoryID);
             if (categories.Count > 0) return -1;
             DBHelper helper = new DBHelper();
@@ -67,7 +125,8 @@ namespace GoodManagerSys.Dao {
             return helper.RunNonQuerySQL(sql, prams);
         }
 
-        public static int DeleteByCategoryID(int categoryID) {
+        public static int DeleteByCategoryID(int categoryID)
+        {
             List<EtCategory> categories = QueryByCategoryID(categoryID);
             //未查到
             if (categories.Count == 0) return -1;
@@ -82,7 +141,8 @@ namespace GoodManagerSys.Dao {
             return helper.RunNonQuerySQL(sql, prams);
         }
 
-        public static int UpdateCategory(EtCategory category) {
+        public static int UpdateCategory(EtCategory category)
+        {
             List<EtCategory> categories = QueryByCategoryID(category.CategoryID);
             if (categories.Count == 0) return -1;
             DBHelper helper = new DBHelper();
@@ -109,7 +169,8 @@ namespace GoodManagerSys.Dao {
             return helper.RunNonQuerySQL(sql, prams);
         }
 
-        private static List<EtCategory> GetListByDataReader(MySqlDataReader dr) {
+        private static List<EtCategory> GetListByDataReader(MySqlDataReader dr)
+        {
             List<EtCategory> categories = new List<EtCategory>();
             try
             {
@@ -132,7 +193,7 @@ namespace GoodManagerSys.Dao {
                     categories.Add(category);
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine(e.ToString());
             }

@@ -62,9 +62,9 @@
             this.CmbStaffRole.FormattingEnabled = true;
             this.CmbStaffRole.Items.AddRange(new object[] {
             "未定义",
-            "收银员",
-            "采购员",
-            "管理员"});
+            "管理员",
+            "销售员",
+            "采购员"});
             this.CmbStaffRole.Location = new System.Drawing.Point(83, 97);
             this.CmbStaffRole.Margin = new System.Windows.Forms.Padding(2);
             this.CmbStaffRole.Name = "CmbStaffRole";

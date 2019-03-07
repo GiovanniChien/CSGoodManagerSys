@@ -24,7 +24,7 @@ namespace GoodManagerSys.Frm.Category {
                 int ExpirationDate = int.Parse(TxtExpirationDate.Text);
                 int MinStock = int.Parse(TxtMinStock.Text);
                 int MaxStock = int.Parse(TxtMaxStock.Text);
-                EtCategory category = new EtCategory {
+                FrmCategory.category = new EtCategory {
                     CategoryName = CategoryName,
                     ParentCategoryID = ParentCategoryEnum,
                     ParentCategoryName = ParentCategoryName,
@@ -36,7 +36,6 @@ namespace GoodManagerSys.Frm.Category {
                     ExpirationDate = ExpirationDate,
                     IsValid = EValid.有效
                 };
-                CategoryDao.InsertCategory(category);
                 Close();
             }
             catch (Exception) {

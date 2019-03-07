@@ -19,13 +19,13 @@ namespace GoodManagerSys.Frm.Staff {
             Staff = null;
             staffs = StaffDao.QueryAll();
             hasUpdated = false;
-            foreach (EtStaff staff in staffs)
-                DgvStaffData.Rows.Add(new object[] {
-                    staff.StaffID,
-                    staff.StaffName,
-                    staff.StaffPhone,
-                    staff.Role
-                });
+            //foreach (EtStaff staff in staffs)
+            //    DgvStaffData.Rows.Add(new object[] {
+            //        staff.StaffID,
+            //        staff.StaffName,
+            //        staff.StaffPhone,
+            //        staff.Role
+            //    });
         }
 
         private void BtnStaffInsert_Click(object sender, EventArgs e) {
@@ -114,31 +114,43 @@ namespace GoodManagerSys.Frm.Staff {
                 MsgBoxUtil.ErrMsgBox("请选择要删除的员工！");
         }
 
-        private void CmbStaffRole_SelectedIndexChanged(object sender, EventArgs e) {
-            if (CmbStaffRole.SelectedIndex == -1)
-                staffs = StaffDao.QueryAll();
-            else
-                staffs = StaffDao.QueryByRole(CmbStaffRole.SelectedIndex);
-            DgvStaffData.Rows.Clear();
-            foreach (EtStaff staff in staffs)
-                DgvStaffData.Rows.Add(new object[] {
-                    staff.StaffID,
-                    staff.StaffName,
-                    staff.StaffPhone,
-                    staff.Role
-                });
-            TxtStaffSearch.Text = "";
-        }
+        //private void CmbStaffRole_SelectedIndexChanged(object sender, EventArgs e) {
+        //    if (CmbStaffRole.SelectedIndex == 0)
+        //        staffs = StaffDao.QueryAll();
+        //    else
+        //        staffs = StaffDao.QueryByRole(CmbStaffRole.SelectedIndex-1);
+        //    DgvStaffData.Rows.Clear();
+        //    foreach (EtStaff staff in staffs)
+        //        DgvStaffData.Rows.Add(new object[] {
+        //            staff.StaffID,
+        //            staff.StaffName,
+        //            staff.StaffPhone,
+        //            staff.Role
+        //        });
+        //    TxtStaffSearch.Text = "";
+        //}
 
         private void BtnStaffSearch_Click(object sender, EventArgs e) {
-            List<EtStaff> newStaffs;
-            string idOrName = TxtStaffSearch.Text;
-            string RegexStr = "^[0-9]+$";
-            if (Regex.IsMatch(idOrName, RegexStr))
-                newStaffs = StaffDao.QueryByStaffID(int.Parse(idOrName));
+            List<EtStaff> list1, list2;
+            int index = CmbStaffRole.SelectedIndex;
+            if (0 == index)
+                list1 = StaffDao.QueryAll();
             else
-                newStaffs = StaffDao.QueryByStaffName(idOrName);
-            staffs = staffs.Intersect(newStaffs, new MyCompare()).ToList();
+                list1 = StaffDao.QueryByRole(index-1);
+            string idOrName = TxtStaffSearch.Text;
+            if("".Equals(idOrName))
+            {
+                staffs = list1;
+            }
+            else
+            {
+                string RegexStr = "^[0-9]+$";
+                if (Regex.IsMatch(idOrName, RegexStr))
+                    list2 = StaffDao.QueryByStaffID(int.Parse(idOrName));
+                else
+                    list2 = StaffDao.QueryByStaffName(idOrName);
+                staffs = list1.Intersect(list2, new MyCompare()).ToList();
+            }
             DgvStaffData.Rows.Clear();
             foreach (EtStaff staff in staffs)
                 DgvStaffData.Rows.Add(new object[] {

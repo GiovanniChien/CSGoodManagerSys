@@ -19,6 +19,7 @@ namespace GoodManagerSys.Frm.Membership {
                 MsgBoxUtil.ErrMsgBox("会员姓名不得为空！");
             else {
                 FrmMembership.Ms = new EtMembership {
+                    MsID=FrmMembership.Ms.MsID,
                     MsName = TxtMsName.Text,
                     MsPhone = TxtMsPhone.Text,
                     MsPoint = int.Parse(TxtMsPoint.Text),

@@ -75,24 +75,56 @@ namespace GoodManagerSys {
                 StartPosition = FormStartPosition.CenterParent
             };
             fci.ShowDialog();
+            if (category != null)
+            {
+                categories.Add(category);
+                category = null;
+                if (categories.Count > 1)
+                    categories[categories.Count - 1].CategoryID = categories[categories.Count - 2].CategoryID + 1;
+                DgvCategory.Rows.Add(new object[] {
+                    categories[categories.Count - 1].CategoryID,
+                    categories[categories.Count - 1].CategoryName,
+                    categories[categories.Count - 1].ParentCategoryName,
+                    categories[categories.Count - 1].Firm,
+                    categories[categories.Count - 1].Unit,
+                    categories[categories.Count - 1].Color,
+                    categories[categories.Count - 1].ExpirationDate,
+                    categories[categories.Count - 1].MinStock,
+                    categories[categories.Count - 1].MaxStock,
+                    categories[categories.Count - 1].IsValid
+                });
+                hasUpdated = true;
+            }
             hasUpdated = true;
-            DgvShow();
         }
 
         private void BtnUpdate_Click(object sender, EventArgs e) {
             if (DgvCategory.SelectedRows.Count == 1) {
                 int index = DgvCategory.SelectedRows[0].Index;
                 category = categories[index];
-                Console.WriteLine(category.ToString());
                 FrmCategoryUpdate fmu = new FrmCategoryUpdate {
                     StartPosition = FormStartPosition.CenterParent
                 };
-                categories[index] = category;
-                Console.WriteLine(category.ToString());
                 fmu.ShowDialog();
+                if (category != null)
+                {
+                    DgvCategory.Rows[index].Cells["Column1"].Value = category.CategoryID;
+                    DgvCategory.Rows[index].Cells["Column2"].Value = category.CategoryName;
+                    DgvCategory.Rows[index].Cells["Column3"].Value = category.ParentCategoryName;
+                    DgvCategory.Rows[index].Cells["Column7"].Value = category.Firm;
+                    DgvCategory.Rows[index].Cells["Column5"].Value = category.Unit;
+                    DgvCategory.Rows[index].Cells["Column6"].Value = category.Color;
+                    DgvCategory.Rows[index].Cells["Column10"].Value = category.ExpirationDate;
+                    DgvCategory.Rows[index].Cells["Column8"].Value = category.MinStock;
+                    DgvCategory.Rows[index].Cells["Column9"].Value = category.MaxStock;
+                    DgvCategory.Rows[index].Cells["Column11"].Value = category.IsValid;
+                    categories[index] = category;
+                    category = null;
+                }
                 hasUpdated = true;
-                DgvShow();
             }
+            else
+                MsgBoxUtil.ErrMsgBox("请选择要修改的商品信息！");
         }
 
         private void BtnDelete_Click(object sender, EventArgs e) {
@@ -102,19 +134,20 @@ namespace GoodManagerSys {
                 if (EValid.有效 == category.IsValid) 
                     if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("是否删除当前商品？")) {
                         CategoryDao.DeleteByCategoryID(category.CategoryID);
+                        categories[index].IsValid = EValid.已删除;
+                        DgvCategory.Rows[index].Cells["Column11"].Value = EValid.已删除;
                         category = null;
                     }
-                hasUpdated = true;
-                DgvShow();
             }
             else
                 MsgBoxUtil.ErrMsgBox("请选择要删除的商品！");
         }
 
         private void BtnSubmit_Click(object sender, EventArgs e) {
-            if (hasUpdated) {
+            DialogResult result = MsgBoxUtil.QuestionMsgBox("确定提交修改?");
+            if (hasUpdated&&result==DialogResult.OK) {
                 foreach (EtCategory category in categories)
-                    CategoryDao.InsertCategory(category);
+                    CategoryDao.UpdateOrInsert(category);
                 hasUpdated = false;
             }
         }
