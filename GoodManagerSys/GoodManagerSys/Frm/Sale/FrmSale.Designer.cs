@@ -58,12 +58,13 @@
             this.TlpSale.Controls.Add(this.TlpSaleControllerMenu, 0, 0);
             this.TlpSale.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TlpSale.Location = new System.Drawing.Point(0, 0);
+            this.TlpSale.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TlpSale.Name = "TlpSale";
             this.TlpSale.RowCount = 3;
             this.TlpSale.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.TlpSale.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.TlpSale.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.TlpSale.Size = new System.Drawing.Size(507, 321);
+            this.TlpSale.Size = new System.Drawing.Size(676, 401);
             this.TlpSale.TabIndex = 4;
             // 
             // TlpSaleSubmitMenu
@@ -84,19 +85,21 @@
             this.TlpSaleSubmitMenu.Controls.Add(this.LblSaleID, 3, 0);
             this.TlpSaleSubmitMenu.Controls.Add(this.BtnBack, 6, 0);
             this.TlpSaleSubmitMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TlpSaleSubmitMenu.Location = new System.Drawing.Point(3, 291);
+            this.TlpSaleSubmitMenu.Location = new System.Drawing.Point(4, 364);
+            this.TlpSaleSubmitMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TlpSaleSubmitMenu.Name = "TlpSaleSubmitMenu";
             this.TlpSaleSubmitMenu.RowCount = 1;
             this.TlpSaleSubmitMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TlpSaleSubmitMenu.Size = new System.Drawing.Size(501, 27);
+            this.TlpSaleSubmitMenu.Size = new System.Drawing.Size(668, 33);
             this.TlpSaleSubmitMenu.TabIndex = 7;
             // 
             // BtnSaleCancel
             // 
             this.BtnSaleCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnSaleCancel.Location = new System.Drawing.Point(358, 3);
+            this.BtnSaleCancel.Location = new System.Drawing.Point(479, 4);
+            this.BtnSaleCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnSaleCancel.Name = "BtnSaleCancel";
-            this.BtnSaleCancel.Size = new System.Drawing.Size(65, 21);
+            this.BtnSaleCancel.Size = new System.Drawing.Size(87, 25);
             this.BtnSaleCancel.TabIndex = 5;
             this.BtnSaleCancel.Text = "清空修改";
             this.BtnSaleCancel.UseVisualStyleBackColor = true;
@@ -105,9 +108,10 @@
             // BtnSaleSubmit
             // 
             this.BtnSaleSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnSaleSubmit.Location = new System.Drawing.Point(287, 3);
+            this.BtnSaleSubmit.Location = new System.Drawing.Point(384, 4);
+            this.BtnSaleSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnSaleSubmit.Name = "BtnSaleSubmit";
-            this.BtnSaleSubmit.Size = new System.Drawing.Size(65, 21);
+            this.BtnSaleSubmit.Size = new System.Drawing.Size(87, 25);
             this.BtnSaleSubmit.TabIndex = 4;
             this.BtnSaleSubmit.Text = "提交修改";
             this.BtnSaleSubmit.UseVisualStyleBackColor = true;
@@ -117,9 +121,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Location = new System.Drawing.Point(4, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 27);
+            this.label2.Size = new System.Drawing.Size(87, 33);
             this.label2.TabIndex = 6;
             this.label2.Text = "经办人";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -128,18 +133,20 @@
             // 
             this.CmbOperator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.CmbOperator.FormattingEnabled = true;
-            this.CmbOperator.Location = new System.Drawing.Point(74, 3);
+            this.CmbOperator.Location = new System.Drawing.Point(99, 5);
+            this.CmbOperator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.CmbOperator.Name = "CmbOperator";
-            this.CmbOperator.Size = new System.Drawing.Size(65, 20);
+            this.CmbOperator.Size = new System.Drawing.Size(87, 23);
             this.CmbOperator.TabIndex = 7;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(145, 0);
+            this.label3.Location = new System.Drawing.Point(194, 0);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 27);
+            this.label3.Size = new System.Drawing.Size(87, 33);
             this.label3.TabIndex = 8;
             this.label3.Text = "销售单号";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -148,9 +155,10 @@
             // 
             this.LblSaleID.AutoSize = true;
             this.LblSaleID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LblSaleID.Location = new System.Drawing.Point(216, 0);
+            this.LblSaleID.Location = new System.Drawing.Point(289, 0);
+            this.LblSaleID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblSaleID.Name = "LblSaleID";
-            this.LblSaleID.Size = new System.Drawing.Size(65, 27);
+            this.LblSaleID.Size = new System.Drawing.Size(87, 33);
             this.LblSaleID.TabIndex = 9;
             this.LblSaleID.Text = "label4";
             this.LblSaleID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -158,9 +166,10 @@
             // BtnBack
             // 
             this.BtnBack.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnBack.Location = new System.Drawing.Point(429, 3);
+            this.BtnBack.Location = new System.Drawing.Point(574, 4);
+            this.BtnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(69, 21);
+            this.BtnBack.Size = new System.Drawing.Size(90, 25);
             this.BtnBack.TabIndex = 10;
             this.BtnBack.Text = "退出";
             this.BtnBack.UseVisualStyleBackColor = true;
@@ -178,10 +187,11 @@
             this.ClnUnit,
             this.ClnProfit});
             this.DgvSaleInsert.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvSaleInsert.Location = new System.Drawing.Point(3, 35);
+            this.DgvSaleInsert.Location = new System.Drawing.Point(4, 44);
+            this.DgvSaleInsert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DgvSaleInsert.Name = "DgvSaleInsert";
             this.DgvSaleInsert.RowTemplate.Height = 23;
-            this.DgvSaleInsert.Size = new System.Drawing.Size(501, 250);
+            this.DgvSaleInsert.Size = new System.Drawing.Size(668, 312);
             this.DgvSaleInsert.TabIndex = 1;
             // 
             // ClnStaffID
@@ -236,19 +246,21 @@
             this.TlpSaleControllerMenu.Controls.Add(this.label1, 2, 0);
             this.TlpSaleControllerMenu.Controls.Add(this.DtpSaleDate, 3, 0);
             this.TlpSaleControllerMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TlpSaleControllerMenu.Location = new System.Drawing.Point(3, 3);
+            this.TlpSaleControllerMenu.Location = new System.Drawing.Point(4, 4);
+            this.TlpSaleControllerMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TlpSaleControllerMenu.Name = "TlpSaleControllerMenu";
             this.TlpSaleControllerMenu.RowCount = 1;
             this.TlpSaleControllerMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TlpSaleControllerMenu.Size = new System.Drawing.Size(501, 26);
+            this.TlpSaleControllerMenu.Size = new System.Drawing.Size(668, 32);
             this.TlpSaleControllerMenu.TabIndex = 8;
             // 
             // BtnSingleSaleInsert
             // 
             this.BtnSingleSaleInsert.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnSingleSaleInsert.Location = new System.Drawing.Point(3, 3);
+            this.BtnSingleSaleInsert.Location = new System.Drawing.Point(4, 4);
+            this.BtnSingleSaleInsert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnSingleSaleInsert.Name = "BtnSingleSaleInsert";
-            this.BtnSingleSaleInsert.Size = new System.Drawing.Size(119, 20);
+            this.BtnSingleSaleInsert.Size = new System.Drawing.Size(159, 24);
             this.BtnSingleSaleInsert.TabIndex = 1;
             this.BtnSingleSaleInsert.Text = "添加商品";
             this.BtnSingleSaleInsert.UseVisualStyleBackColor = true;
@@ -257,9 +269,10 @@
             // BtnMultiSaleInsert
             // 
             this.BtnMultiSaleInsert.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnMultiSaleInsert.Location = new System.Drawing.Point(128, 3);
+            this.BtnMultiSaleInsert.Location = new System.Drawing.Point(171, 4);
+            this.BtnMultiSaleInsert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnMultiSaleInsert.Name = "BtnMultiSaleInsert";
-            this.BtnMultiSaleInsert.Size = new System.Drawing.Size(119, 20);
+            this.BtnMultiSaleInsert.Size = new System.Drawing.Size(159, 24);
             this.BtnMultiSaleInsert.TabIndex = 2;
             this.BtnMultiSaleInsert.Text = "批量销售";
             this.BtnMultiSaleInsert.UseVisualStyleBackColor = true;
@@ -269,9 +282,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(253, 0);
+            this.label1.Location = new System.Drawing.Point(338, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 26);
+            this.label1.Size = new System.Drawing.Size(159, 32);
             this.label1.TabIndex = 3;
             this.label1.Text = "销售日期";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -279,18 +293,20 @@
             // DtpSaleDate
             // 
             this.DtpSaleDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.DtpSaleDate.Location = new System.Drawing.Point(378, 3);
+            this.DtpSaleDate.Location = new System.Drawing.Point(505, 4);
+            this.DtpSaleDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DtpSaleDate.Name = "DtpSaleDate";
-            this.DtpSaleDate.Size = new System.Drawing.Size(120, 21);
+            this.DtpSaleDate.Size = new System.Drawing.Size(159, 25);
             this.DtpSaleDate.TabIndex = 4;
             // 
             // FrmSale
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 321);
+            this.ClientSize = new System.Drawing.Size(676, 401);
             this.Controls.Add(this.TlpSale);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmSale";

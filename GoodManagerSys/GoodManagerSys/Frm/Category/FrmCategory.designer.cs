@@ -29,16 +29,6 @@
         private void InitializeComponent()
         {
             this.DgvCategory = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.CmbCategory = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,6 +44,16 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.BtnSubmit = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCategory)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -78,92 +78,12 @@
             this.Column9,
             this.Column11});
             this.DgvCategory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvCategory.Location = new System.Drawing.Point(3, 81);
+            this.DgvCategory.Location = new System.Drawing.Point(3, 80);
             this.DgvCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvCategory.Name = "DgvCategory";
             this.DgvCategory.RowTemplate.Height = 27;
             this.DgvCategory.Size = new System.Drawing.Size(929, 314);
             this.DgvCategory.TabIndex = 10;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.HeaderText = "编号";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 66;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column2.HeaderText = "名称";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 66;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column3.HeaderText = "大类";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 66;
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column7.HeaderText = "厂商";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 66;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column5.HeaderText = "单位";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 66;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column6.HeaderText = "颜色";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 66;
-            // 
-            // Column10
-            // 
-            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column10.HeaderText = "保质期";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Width = 81;
-            // 
-            // Column8
-            // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column8.HeaderText = "最小库存";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 96;
-            // 
-            // Column9
-            // 
-            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column9.HeaderText = "最大库存";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 96;
-            // 
-            // Column11
-            // 
-            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column11.HeaderText = "有效状态";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Width = 96;
             // 
             // label1
             // 
@@ -172,7 +92,7 @@
             this.label1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 27);
+            this.label1.Size = new System.Drawing.Size(179, 26);
             this.label1.TabIndex = 11;
             this.label1.Text = "商品大类";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -203,7 +123,7 @@
             this.label2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.Location = new System.Drawing.Point(373, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 27);
+            this.label2.Size = new System.Drawing.Size(179, 26);
             this.label2.TabIndex = 13;
             this.label2.Text = "商品类别编号或名称";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -223,7 +143,7 @@
             this.BtnQuery.Location = new System.Drawing.Point(743, 2);
             this.BtnQuery.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnQuery.Name = "BtnQuery";
-            this.BtnQuery.Size = new System.Drawing.Size(181, 23);
+            this.BtnQuery.Size = new System.Drawing.Size(181, 22);
             this.BtnQuery.TabIndex = 15;
             this.BtnQuery.Text = "查询";
             this.BtnQuery.UseVisualStyleBackColor = true;
@@ -235,7 +155,7 @@
             this.BtnExit.Location = new System.Drawing.Point(835, 2);
             this.BtnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnExit.Name = "BtnExit";
-            this.BtnExit.Size = new System.Drawing.Size(89, 31);
+            this.BtnExit.Size = new System.Drawing.Size(89, 32);
             this.BtnExit.TabIndex = 16;
             this.BtnExit.Text = "退出";
             this.BtnExit.UseVisualStyleBackColor = true;
@@ -287,7 +207,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -309,7 +229,7 @@
             this.tableLayoutPanel2.Controls.Add(this.BtnUpdate, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -331,11 +251,11 @@
             this.tableLayoutPanel3.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 48);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(927, 27);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(927, 26);
             this.tableLayoutPanel3.TabIndex = 12;
             // 
             // tableLayoutPanel4
@@ -349,21 +269,21 @@
             this.tableLayoutPanel4.Controls.Add(this.BtnExit, 3, 0);
             this.tableLayoutPanel4.Controls.Add(this.BtnCancel, 2, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 401);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 400);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(927, 35);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(927, 36);
             this.tableLayoutPanel4.TabIndex = 13;
             // 
             // BtnSubmit
             // 
             this.BtnSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BtnSubmit.Location = new System.Drawing.Point(652, 4);
-            this.BtnSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSubmit.Name = "BtnSubmit";
-            this.BtnSubmit.Size = new System.Drawing.Size(84, 27);
+            this.BtnSubmit.Size = new System.Drawing.Size(84, 28);
             this.BtnSubmit.TabIndex = 17;
             this.BtnSubmit.Text = "提交修改";
             this.BtnSubmit.UseVisualStyleBackColor = true;
@@ -373,13 +293,83 @@
             // 
             this.BtnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BtnCancel.Location = new System.Drawing.Point(744, 4);
-            this.BtnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(84, 27);
+            this.BtnCancel.Size = new System.Drawing.Size(84, 28);
             this.BtnCancel.TabIndex = 18;
             this.BtnCancel.Text = "清空修改";
             this.BtnCancel.UseVisualStyleBackColor = true;
             this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "编号";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "名称";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "大类";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column7.HeaderText = "厂商";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.HeaderText = "单位";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.HeaderText = "颜色";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column10.HeaderText = "保质期";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column8.HeaderText = "最小库存";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column9.HeaderText = "最大库存";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column11.HeaderText = "有效状态";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
             // 
             // FrmCategory
             // 
@@ -416,16 +406,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ClnMaxStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClnExpirationDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClnIsValid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox CmbCategory;
         private System.Windows.Forms.Label label2;
@@ -441,5 +421,15 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button BtnSubmit;
         private System.Windows.Forms.Button BtnCancel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
     }
 }

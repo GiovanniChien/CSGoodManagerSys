@@ -32,11 +32,13 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.库存管理ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(630, 25);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(840, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -46,35 +48,34 @@
             this.入库ToolStripMenuItem,
             this.库存查询ToolStripMenuItem});
             this.库存管理ToolStripMenuItem.Name = "库存管理ToolStripMenuItem";
-            this.库存管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.库存管理ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.库存管理ToolStripMenuItem.Text = "库存管理";
             // 
             // 入库ToolStripMenuItem
             // 
             this.入库ToolStripMenuItem.Name = "入库ToolStripMenuItem";
-            this.入库ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.入库ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.入库ToolStripMenuItem.Text = "入库";
             this.入库ToolStripMenuItem.Click += new System.EventHandler(this.入库ToolStripMenuItem_Click);
             // 
             // 库存查询ToolStripMenuItem
             // 
             this.库存查询ToolStripMenuItem.Name = "库存查询ToolStripMenuItem";
-            this.库存查询ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.库存查询ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.库存查询ToolStripMenuItem.Text = "库存查询";
             this.库存查询ToolStripMenuItem.Click += new System.EventHandler(this.库存查询ToolStripMenuItem_Click);
             // 
             // FrmMainPurchase
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GoodManagerSys.Properties.Resources.Interface;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(630, 321);
+            this.ClientSize = new System.Drawing.Size(840, 401);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmMainPurchase";
             this.Text = "FrmMainPurchase";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

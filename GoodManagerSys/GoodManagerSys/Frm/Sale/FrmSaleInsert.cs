@@ -24,6 +24,7 @@ namespace GoodManagerSys {
                     Good = GoodDao.QueryByGoodID(int.Parse(CmbGoodID.SelectedItem.ToString().Split(' ')[0]))[0]
                 };
                 sale.Profit = int.Parse(TxtPrice.Text) - sale.Good.Cost;
+                sale.Good.Price = int.Parse(TxtPrice.Text);
                 sale.Good.State = Enums.EState.已出售;
                 FrmSale.Sales.Add(sale);
                 Close();

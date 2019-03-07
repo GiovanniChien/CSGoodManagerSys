@@ -32,11 +32,13 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.销售管理ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(542, 25);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(723, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -46,35 +48,34 @@
             this.销售商品ToolStripMenuItem,
             this.销售单查询ToolStripMenuItem});
             this.销售管理ToolStripMenuItem.Name = "销售管理ToolStripMenuItem";
-            this.销售管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.销售管理ToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.销售管理ToolStripMenuItem.Text = "销售管理";
             // 
             // 销售商品ToolStripMenuItem
             // 
             this.销售商品ToolStripMenuItem.Name = "销售商品ToolStripMenuItem";
-            this.销售商品ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.销售商品ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.销售商品ToolStripMenuItem.Text = "销售商品";
             this.销售商品ToolStripMenuItem.Click += new System.EventHandler(this.销售商品ToolStripMenuItem_Click);
             // 
             // 销售单查询ToolStripMenuItem
             // 
             this.销售单查询ToolStripMenuItem.Name = "销售单查询ToolStripMenuItem";
-            this.销售单查询ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.销售单查询ToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.销售单查询ToolStripMenuItem.Text = "销售单查询";
             this.销售单查询ToolStripMenuItem.Click += new System.EventHandler(this.销售单查询ToolStripMenuItem_Click);
             // 
             // FrmMainSale
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GoodManagerSys.Properties.Resources.Interface;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(542, 326);
+            this.ClientSize = new System.Drawing.Size(723, 408);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmMainSale";
             this.Text = "FrmMainSale";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

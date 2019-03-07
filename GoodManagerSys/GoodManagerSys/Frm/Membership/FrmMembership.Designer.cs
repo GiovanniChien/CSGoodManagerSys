@@ -56,12 +56,13 @@
             this.ClnMsPoint,
             this.ClnMsIsValid});
             this.DgvMembership.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvMembership.Location = new System.Drawing.Point(3, 45);
+            this.DgvMembership.Location = new System.Drawing.Point(4, 47);
+            this.DgvMembership.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DgvMembership.MultiSelect = false;
             this.DgvMembership.Name = "DgvMembership";
             this.DgvMembership.RowTemplate.Height = 23;
             this.DgvMembership.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvMembership.Size = new System.Drawing.Size(510, 234);
+            this.DgvMembership.Size = new System.Drawing.Size(680, 309);
             this.DgvMembership.TabIndex = 1;
             // 
             // ClnMsID
@@ -112,19 +113,21 @@
             this.TlpMsControllerMenu.Controls.Add(this.BtnMsUpdate, 1, 0);
             this.TlpMsControllerMenu.Controls.Add(this.BtnMsInsert, 0, 0);
             this.TlpMsControllerMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TlpMsControllerMenu.Location = new System.Drawing.Point(3, 3);
+            this.TlpMsControllerMenu.Location = new System.Drawing.Point(4, 4);
+            this.TlpMsControllerMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TlpMsControllerMenu.Name = "TlpMsControllerMenu";
             this.TlpMsControllerMenu.RowCount = 1;
             this.TlpMsControllerMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TlpMsControllerMenu.Size = new System.Drawing.Size(510, 36);
+            this.TlpMsControllerMenu.Size = new System.Drawing.Size(680, 35);
             this.TlpMsControllerMenu.TabIndex = 0;
             // 
             // BtnMsUpdate
             // 
             this.BtnMsUpdate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnMsUpdate.Location = new System.Drawing.Point(258, 3);
+            this.BtnMsUpdate.Location = new System.Drawing.Point(344, 4);
+            this.BtnMsUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnMsUpdate.Name = "BtnMsUpdate";
-            this.BtnMsUpdate.Size = new System.Drawing.Size(249, 30);
+            this.BtnMsUpdate.Size = new System.Drawing.Size(332, 27);
             this.BtnMsUpdate.TabIndex = 2;
             this.BtnMsUpdate.Text = "信息修改";
             this.BtnMsUpdate.UseVisualStyleBackColor = true;
@@ -133,9 +136,10 @@
             // BtnMsInsert
             // 
             this.BtnMsInsert.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnMsInsert.Location = new System.Drawing.Point(3, 3);
+            this.BtnMsInsert.Location = new System.Drawing.Point(4, 4);
+            this.BtnMsInsert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnMsInsert.Name = "BtnMsInsert";
-            this.BtnMsInsert.Size = new System.Drawing.Size(249, 30);
+            this.BtnMsInsert.Size = new System.Drawing.Size(332, 27);
             this.BtnMsInsert.TabIndex = 1;
             this.BtnMsInsert.Text = "会员注册";
             this.BtnMsInsert.UseVisualStyleBackColor = true;
@@ -150,12 +154,13 @@
             this.TlpMembership.Controls.Add(this.TlpMsSubmitMenu, 0, 2);
             this.TlpMembership.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TlpMembership.Location = new System.Drawing.Point(0, 0);
+            this.TlpMembership.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TlpMembership.Name = "TlpMembership";
             this.TlpMembership.RowCount = 3;
-            this.TlpMembership.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.TlpMembership.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.TlpMembership.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 44F));
-            this.TlpMembership.Size = new System.Drawing.Size(516, 327);
+            this.TlpMembership.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.1813F));
+            this.TlpMembership.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.8187F));
+            this.TlpMembership.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.TlpMembership.Size = new System.Drawing.Size(688, 409);
             this.TlpMembership.TabIndex = 6;
             // 
             // TlpMsSubmitMenu
@@ -171,19 +176,21 @@
             this.TlpMsSubmitMenu.Controls.Add(this.BtnCancel, 3, 0);
             this.TlpMsSubmitMenu.Controls.Add(this.BtnBack, 4, 0);
             this.TlpMsSubmitMenu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TlpMsSubmitMenu.Location = new System.Drawing.Point(3, 285);
+            this.TlpMsSubmitMenu.Location = new System.Drawing.Point(4, 364);
+            this.TlpMsSubmitMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TlpMsSubmitMenu.Name = "TlpMsSubmitMenu";
             this.TlpMsSubmitMenu.RowCount = 1;
             this.TlpMsSubmitMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.TlpMsSubmitMenu.Size = new System.Drawing.Size(510, 39);
+            this.TlpMsSubmitMenu.Size = new System.Drawing.Size(680, 41);
             this.TlpMsSubmitMenu.TabIndex = 2;
             // 
             // BtnMsDelete
             // 
             this.BtnMsDelete.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnMsDelete.Location = new System.Drawing.Point(3, 3);
+            this.BtnMsDelete.Location = new System.Drawing.Point(4, 4);
+            this.BtnMsDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnMsDelete.Name = "BtnMsDelete";
-            this.BtnMsDelete.Size = new System.Drawing.Size(79, 33);
+            this.BtnMsDelete.Size = new System.Drawing.Size(105, 33);
             this.BtnMsDelete.TabIndex = 6;
             this.BtnMsDelete.Text = "销户";
             this.BtnMsDelete.UseVisualStyleBackColor = true;
@@ -192,9 +199,10 @@
             // BtnSubmit
             // 
             this.BtnSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnSubmit.Location = new System.Drawing.Point(257, 3);
+            this.BtnSubmit.Location = new System.Drawing.Point(343, 4);
+            this.BtnSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnSubmit.Name = "BtnSubmit";
-            this.BtnSubmit.Size = new System.Drawing.Size(79, 33);
+            this.BtnSubmit.Size = new System.Drawing.Size(105, 33);
             this.BtnSubmit.TabIndex = 7;
             this.BtnSubmit.Text = "提交修改";
             this.BtnSubmit.UseVisualStyleBackColor = true;
@@ -203,9 +211,10 @@
             // BtnCancel
             // 
             this.BtnCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnCancel.Location = new System.Drawing.Point(342, 3);
+            this.BtnCancel.Location = new System.Drawing.Point(456, 4);
+            this.BtnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(79, 33);
+            this.BtnCancel.Size = new System.Drawing.Size(105, 33);
             this.BtnCancel.TabIndex = 8;
             this.BtnCancel.Text = "清空修改";
             this.BtnCancel.UseVisualStyleBackColor = true;
@@ -214,9 +223,10 @@
             // BtnBack
             // 
             this.BtnBack.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnBack.Location = new System.Drawing.Point(427, 3);
+            this.BtnBack.Location = new System.Drawing.Point(569, 4);
+            this.BtnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnBack.Name = "BtnBack";
-            this.BtnBack.Size = new System.Drawing.Size(80, 33);
+            this.BtnBack.Size = new System.Drawing.Size(107, 33);
             this.BtnBack.TabIndex = 9;
             this.BtnBack.Text = "退出";
             this.BtnBack.UseVisualStyleBackColor = true;
@@ -224,16 +234,16 @@
             // 
             // FrmMembership
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 327);
+            this.ClientSize = new System.Drawing.Size(688, 409);
             this.Controls.Add(this.TlpMembership);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmMembership";
             this.Text = "FrmMembership";
-//            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMembership_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.DgvMembership)).EndInit();
             this.TlpMsControllerMenu.ResumeLayout(false);
             this.TlpMembership.ResumeLayout(false);

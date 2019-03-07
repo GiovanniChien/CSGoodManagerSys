@@ -5,6 +5,7 @@ using GoodManagerSys.Utils;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace GoodManagerSys.Frm.Warehouse {
@@ -18,6 +19,7 @@ namespace GoodManagerSys.Frm.Warehouse {
             Goods = new List<ClsGood>();
             goodsPreSize = 0;
             goodsCurSize = 0;
+            LblPurchaseID.Text = (PurchaseDao.QueryAll().Last().PurchaseID + 1).ToString();
             List<EtStaff> staffs = StaffDao.QueryByRole((int)ERole.采购员);
             foreach (EtStaff staff in staffs)
                 CmbOperator.Items.Add(staff.StaffName);
@@ -70,20 +72,11 @@ namespace GoodManagerSys.Frm.Warehouse {
                 MsgBoxUtil.ErrMsgBox("经办人不能为空！");
                 return false;
             }
-            if ("" == TxtPurchaseID.Text) {
-                MsgBoxUtil.ErrMsgBox("初始单号不能为空！");
-                return false;
-            }
-            int purchaseId = int.Parse(TxtPurchaseID.Text);
-            if (PurchaseDao.QueryByPurchaseID(purchaseId).Count > 0) {
-                MsgBoxUtil.ErrMsgBox("单号重复！");
-                return false;
-            }
             int staffId = StaffDao.QueryByStaffName(CmbOperator.SelectedItem.ToString())[0].StaffID;
             int res = 0;
             foreach (ClsGood good in Goods) {
                 purchase = new EtPurchase {
-                    PurchaseID = purchaseId,
+                    PurchaseID = int.Parse(LblPurchaseID.Text),
                     Category = good.Good.Category,
                     PurchaseDate = DtpPurchaseDate.Value.ToString("yyyyMMdd"),
                     Quantity = good.Count,

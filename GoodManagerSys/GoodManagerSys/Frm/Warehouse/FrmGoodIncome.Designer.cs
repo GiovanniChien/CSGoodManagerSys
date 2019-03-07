@@ -29,6 +29,19 @@
         private void InitializeComponent()
         {
             this.DgvGoodIncome = new System.Windows.Forms.DataGridView();
+            this.BtnComfirm = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.DtpPurchaseDate = new System.Windows.Forms.DateTimePicker();
+            this.BtnCancel = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.CmbOperator = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.BtnMIncome = new System.Windows.Forms.Button();
+            this.BtnSIncome = new System.Windows.Forms.Button();
+            this.TlpGoodIncome = new System.Windows.Forms.TableLayoutPanel();
+            this.TlpGIControllerMenu = new System.Windows.Forms.TableLayoutPanel();
+            this.TlpGISubmitMenu = new System.Windows.Forms.TableLayoutPanel();
+            this.LblPurchaseID = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,19 +52,6 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnComfirm = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.DtpPurchaseDate = new System.Windows.Forms.DateTimePicker();
-            this.BtnCancel = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.CmbOperator = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.TxtPurchaseID = new System.Windows.Forms.TextBox();
-            this.BtnMIncome = new System.Windows.Forms.Button();
-            this.BtnSIncome = new System.Windows.Forms.Button();
-            this.TlpGoodIncome = new System.Windows.Forms.TableLayoutPanel();
-            this.TlpGIControllerMenu = new System.Windows.Forms.TableLayoutPanel();
-            this.TlpGISubmitMenu = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.DgvGoodIncome)).BeginInit();
             this.TlpGoodIncome.SuspendLayout();
             this.TlpGIControllerMenu.SuspendLayout();
@@ -82,86 +82,6 @@
             this.DgvGoodIncome.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvGoodIncome.Size = new System.Drawing.Size(950, 311);
             this.DgvGoodIncome.TabIndex = 2;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.HeaderText = "编号";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 66;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column2.HeaderText = "商品名称";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 96;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column3.HeaderText = "类别";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 66;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column4.HeaderText = "单位";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 66;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column5.HeaderText = "厂商";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 66;
-            // 
-            // Column10
-            // 
-            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column10.HeaderText = "生产日期";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Width = 96;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column6.HeaderText = "数量";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 66;
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column7.HeaderText = "进价";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 66;
-            // 
-            // Column8
-            // 
-            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column8.HeaderText = "售价";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 66;
-            // 
-            // Column9
-            // 
-            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column9.HeaderText = "状态";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 66;
             // 
             // BtnComfirm
             // 
@@ -220,9 +140,9 @@
             // 
             // CmbOperator
             // 
-            this.CmbOperator.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CmbOperator.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.CmbOperator.FormattingEnabled = true;
-            this.CmbOperator.Location = new System.Drawing.Point(160, 2);
+            this.CmbOperator.Location = new System.Drawing.Point(160, 7);
             this.CmbOperator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.CmbOperator.Name = "CmbOperator";
             this.CmbOperator.Size = new System.Drawing.Size(151, 23);
@@ -238,15 +158,6 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "初始单号";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // TxtPurchaseID
-            // 
-            this.TxtPurchaseID.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TxtPurchaseID.Location = new System.Drawing.Point(474, 2);
-            this.TxtPurchaseID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.TxtPurchaseID.Name = "TxtPurchaseID";
-            this.TxtPurchaseID.Size = new System.Drawing.Size(151, 25);
-            this.TxtPurchaseID.TabIndex = 10;
             // 
             // BtnMIncome
             // 
@@ -281,7 +192,7 @@
             this.TlpGoodIncome.Controls.Add(this.TlpGISubmitMenu, 0, 2);
             this.TlpGoodIncome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TlpGoodIncome.Location = new System.Drawing.Point(0, 0);
-            this.TlpGoodIncome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TlpGoodIncome.Margin = new System.Windows.Forms.Padding(4);
             this.TlpGoodIncome.Name = "TlpGoodIncome";
             this.TlpGoodIncome.RowCount = 3;
             this.TlpGoodIncome.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.113924F));
@@ -303,7 +214,7 @@
             this.TlpGIControllerMenu.Controls.Add(this.DtpPurchaseDate, 3, 0);
             this.TlpGIControllerMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TlpGIControllerMenu.Location = new System.Drawing.Point(4, 4);
-            this.TlpGIControllerMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TlpGIControllerMenu.Margin = new System.Windows.Forms.Padding(4);
             this.TlpGIControllerMenu.Name = "TlpGIControllerMenu";
             this.TlpGIControllerMenu.RowCount = 1;
             this.TlpGIControllerMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -321,18 +232,98 @@
             this.TlpGISubmitMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.TlpGISubmitMenu.Controls.Add(this.label2, 0, 0);
             this.TlpGISubmitMenu.Controls.Add(this.BtnCancel, 5, 0);
-            this.TlpGISubmitMenu.Controls.Add(this.TxtPurchaseID, 3, 0);
             this.TlpGISubmitMenu.Controls.Add(this.BtnComfirm, 4, 0);
             this.TlpGISubmitMenu.Controls.Add(this.CmbOperator, 1, 0);
             this.TlpGISubmitMenu.Controls.Add(this.label3, 2, 0);
+            this.TlpGISubmitMenu.Controls.Add(this.LblPurchaseID, 3, 0);
             this.TlpGISubmitMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TlpGISubmitMenu.Location = new System.Drawing.Point(4, 354);
-            this.TlpGISubmitMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TlpGISubmitMenu.Margin = new System.Windows.Forms.Padding(4);
             this.TlpGISubmitMenu.Name = "TlpGISubmitMenu";
             this.TlpGISubmitMenu.RowCount = 1;
             this.TlpGISubmitMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.TlpGISubmitMenu.Size = new System.Drawing.Size(948, 37);
             this.TlpGISubmitMenu.TabIndex = 4;
+            // 
+            // LblPurchaseID
+            // 
+            this.LblPurchaseID.AutoSize = true;
+            this.LblPurchaseID.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LblPurchaseID.Location = new System.Drawing.Point(474, 0);
+            this.LblPurchaseID.Name = "LblPurchaseID";
+            this.LblPurchaseID.Size = new System.Drawing.Size(151, 37);
+            this.LblPurchaseID.TabIndex = 10;
+            this.LblPurchaseID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "编号";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "商品名称";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "类别";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.HeaderText = "单位";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.HeaderText = "厂商";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column10.HeaderText = "生产日期";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column6.HeaderText = "数量";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column7.HeaderText = "进价";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column8.HeaderText = "售价";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column9.HeaderText = "状态";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
             // 
             // FrmGoodIncome
             // 
@@ -364,6 +355,13 @@
         private System.Windows.Forms.Button BtnCancel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox CmbOperator;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button BtnMIncome;
+        private System.Windows.Forms.Button BtnSIncome;
+        private System.Windows.Forms.TableLayoutPanel TlpGoodIncome;
+        private System.Windows.Forms.TableLayoutPanel TlpGIControllerMenu;
+        private System.Windows.Forms.TableLayoutPanel TlpGISubmitMenu;
+        private System.Windows.Forms.Label LblPurchaseID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -374,12 +372,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TxtPurchaseID;
-        private System.Windows.Forms.Button BtnMIncome;
-        private System.Windows.Forms.Button BtnSIncome;
-        private System.Windows.Forms.TableLayoutPanel TlpGoodIncome;
-        private System.Windows.Forms.TableLayoutPanel TlpGIControllerMenu;
-        private System.Windows.Forms.TableLayoutPanel TlpGISubmitMenu;
     }
 }

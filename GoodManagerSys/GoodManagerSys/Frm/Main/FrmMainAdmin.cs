@@ -84,5 +84,15 @@ namespace GoodManagerSys.Frm.Main {
             };
             fww.ShowDialog();
         }
+
+        private void 销售报表ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmSaleReport frmSaleReport = new FrmSaleReport
+            {
+                StartPosition = FormStartPosition.CenterParent,
+                Size = new System.Drawing.Size(Width * ratio / 100, Height * ratio / 100)
+            };
+            frmSaleReport.ShowDialog();
+        }
     }
 }
