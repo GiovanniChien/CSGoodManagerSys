@@ -26,6 +26,7 @@ namespace GoodManagerSys.Frm.Sale {
 
         private void BtnBrowse_Click(object sender, EventArgs e) {
             OpenFileDialog openFileDialog = new OpenFileDialog {
+                InitialDirectory = Path.GetFullPath("../../Excel模板"),
                 Title = "选择Excel文件",
                 Filter = "excel文件(*.xls,*.xlsx)|*.xls;*.xlsx|excel03文件(*.xls)|*.xls|excel07文件(*.xlsx)|*.xlsx",
                 RestoreDirectory = true
@@ -34,6 +35,10 @@ namespace GoodManagerSys.Frm.Sale {
             if (DialogResult.OK == openFileDialog.ShowDialog()) {
                 excelPath = openFileDialog.FileName;
                 TxtExcelPath.Text = excelPath;
+            }
+            if (excelPath == null || excelPath == "") {
+                MsgBoxUtil.ErrMsgBox("路径不能为空");
+                return;
             }
             using (FileStream fs = File.OpenRead(excelPath)) {
                 IWorkbook workbook = null;

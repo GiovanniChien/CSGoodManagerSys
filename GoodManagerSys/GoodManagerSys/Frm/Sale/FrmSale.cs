@@ -42,7 +42,6 @@ namespace GoodManagerSys.Frm.Sale {
                     StartPosition = FormStartPosition.CenterParent
                 };
                 fsi.ShowDialog();
-                hasUpdated = true;
                 salesCurSize = Sales.Count;
                 DgvAdd();
             }
@@ -57,7 +56,6 @@ namespace GoodManagerSys.Frm.Sale {
                     StartPosition = FormStartPosition.CenterParent
                 };
                 frmSaleFromExcel.ShowDialog();
-                hasUpdated = true;
                 salesCurSize = Sales.Count;
                 DgvAdd();
             }
@@ -102,6 +100,7 @@ namespace GoodManagerSys.Frm.Sale {
                     Sales[i].Good.Category.Unit,
                     Sales[i].Profit
                 });
+                hasUpdated = true;
             }
             DgvSaleInsert.RowsDefaultCellStyle.BackColor = Color.LightCyan;
             DgvSaleInsert.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
