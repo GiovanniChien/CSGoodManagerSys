@@ -206,7 +206,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmGoodInsert";
             this.Text = "商品采购";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGoodInsert_FormClosing);
+//            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGoodInsert_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

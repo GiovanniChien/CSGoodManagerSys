@@ -224,10 +224,10 @@
     <Compile Include="Frm\Warehouse\FrmWarehouseWarning.Designer.cs">
       <DependentUpon>FrmWarehouseWarning.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\FrmLogin.cs">
+    <Compile Include="Frm\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\FrmLogin.Designer.cs">
+    <Compile Include="Frm\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm\Main\FrmMainAdmin.cs">
@@ -312,7 +312,7 @@
     <EmbeddedResource Include="Frm\Warehouse\FrmWarehouseWarning.resx">
       <DependentUpon>FrmWarehouseWarning.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\FrmLogin.resx">
+    <EmbeddedResource Include="Frm\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\Sale\FrmSaleInsert.resx">

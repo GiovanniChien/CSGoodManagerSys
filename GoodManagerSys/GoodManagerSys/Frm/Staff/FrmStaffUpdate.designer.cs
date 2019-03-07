@@ -136,7 +136,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmStaffUpdate";
             this.Text = "员工信息修改";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmStaffUpdate_FormClosing);
+//            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmStaffUpdate_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

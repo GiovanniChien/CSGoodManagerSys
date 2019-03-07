@@ -125,13 +125,13 @@ namespace GoodManagerSys.Frm.Membership {
                 Close();
         }
 
-        private void FrmMembership_FormClosing(object sender, FormClosingEventArgs e) {
-            if (hasUpdated) {
-                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗口有修改未保存，是否要退出？"))
-                    Close();
-            }
-            else
-                Close();
-        }
+        //private void FrmMembership_FormClosing(object sender, FormClosingEventArgs e) {
+        //    if (hasUpdated) {
+        //        if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗口有修改未保存，是否要退出？"))
+        //            Close();
+        //    }
+        //    else
+        //        Close();
+        //}
     }
 }

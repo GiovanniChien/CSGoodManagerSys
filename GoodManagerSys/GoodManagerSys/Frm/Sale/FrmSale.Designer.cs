@@ -295,7 +295,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmSale";
             this.Text = "FrmSale";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSale_FormClosing);
+//            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSale_FormClosing);
             this.TlpSale.ResumeLayout(false);
             this.TlpSaleSubmitMenu.ResumeLayout(false);
             this.TlpSaleSubmitMenu.PerformLayout();

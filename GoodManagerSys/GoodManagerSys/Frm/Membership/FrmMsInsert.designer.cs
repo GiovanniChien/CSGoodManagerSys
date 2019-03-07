@@ -161,7 +161,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmMsInsert";
             this.Text = "会员添加";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMsInsert_FormClosing);
+//            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMsInsert_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

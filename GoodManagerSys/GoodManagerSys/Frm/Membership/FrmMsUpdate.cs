@@ -35,11 +35,11 @@ namespace GoodManagerSys.Frm.Membership {
                 Close();
         }
 
-        private void FrmMsUpdate_FormClosing(object sender, FormClosingEventArgs e) {
-            if ("" == TxtMsName.Text && "" == TxtMsPhone.Text && "" == TxtMsPoint.Text)
-                Close();
-            else if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗口有修改未保存，是否要退出？"))
-                Close();
-        }
+        //private void FrmMsUpdate_FormClosing(object sender, FormClosingEventArgs e) {
+        //    if ("" == TxtMsName.Text && "" == TxtMsPhone.Text && "" == TxtMsPoint.Text)
+        //        Close();
+        //    else if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗口有修改未保存，是否要退出？"))
+        //        Close();
+        //}
     }
 }

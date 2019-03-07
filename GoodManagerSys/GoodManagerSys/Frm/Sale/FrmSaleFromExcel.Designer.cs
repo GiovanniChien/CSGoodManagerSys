@@ -257,7 +257,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmSaleFromExcel";
             this.Text = "FrmSaleFromExcel";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSaleFromExcel_FormClosing);
+//            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSaleFromExcel_FormClosing);
             this.TlpPurchaseFomExcel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvSaleFromExcel)).EndInit();
             this.TlpPFEControllerMenu.ResumeLayout(false);

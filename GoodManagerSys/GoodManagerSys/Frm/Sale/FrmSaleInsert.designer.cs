@@ -113,7 +113,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmSaleInsert";
             this.Text = "销售单添加";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSaleInsert_FormClosing);
+//            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmSaleInsert_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

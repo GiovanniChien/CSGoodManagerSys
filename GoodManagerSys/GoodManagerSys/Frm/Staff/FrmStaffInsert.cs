@@ -45,12 +45,12 @@ namespace GoodManagerSys {
                 Close();
         }
 
-        private void FrmStaffInsert_FormClosing(object sender, FormClosingEventArgs e) {
-            if ("" == TxtStaffName.Text && "" == TxtStaffPwd.Text && "" == TxtStaffPhone.Text)
-                Close();
-            else
-                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
-                Close();
-        }
+        //private void FrmStaffInsert_FormClosing(object sender, FormClosingEventArgs e) {
+        //    if ("" == TxtStaffName.Text && "" == TxtStaffPwd.Text && "" == TxtStaffPhone.Text)
+        //        Close();
+        //    else
+        //        if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
+        //        Close();
+        //}
     }
 }

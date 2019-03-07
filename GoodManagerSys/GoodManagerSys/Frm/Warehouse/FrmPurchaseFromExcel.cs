@@ -136,11 +136,11 @@ namespace GoodManagerSys.Frm.Warehouse {
             return EState.未出售;
         }
 
-        private void FrmPurchaseFromExcel_FormClosing(object sender, FormClosingEventArgs e) {
-            if (0 == DgvGoodFromExcel.Rows.Count)
-                Close();
-            else if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未保存的数据，是否确定退出？"))
-                Close();
-        }
+        //private void FrmPurchaseFromExcel_FormClosing(object sender, FormClosingEventArgs e) {
+        //    if (0 == DgvGoodFromExcel.Rows.Count)
+        //        Close();
+        //    else if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未保存的数据，是否确定退出？"))
+        //        Close();
+        //}
     }
 }

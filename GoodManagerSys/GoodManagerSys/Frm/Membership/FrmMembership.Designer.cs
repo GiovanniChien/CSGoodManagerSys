@@ -233,7 +233,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmMembership";
             this.Text = "FrmMembership";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMembership_FormClosing);
+//            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMembership_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.DgvMembership)).EndInit();
             this.TlpMsControllerMenu.ResumeLayout(false);
             this.TlpMembership.ResumeLayout(false);

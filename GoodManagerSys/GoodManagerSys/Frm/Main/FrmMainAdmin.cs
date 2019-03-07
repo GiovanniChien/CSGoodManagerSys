@@ -72,5 +72,12 @@ namespace GoodManagerSys.Frm.Main {
         private void 商品管理ToolStripMenuItem_Click(object sender, EventArgs e) {
 
         }
+
+        private void FrmMainAdmin_Load(object sender, EventArgs e) {
+            FrmWarehouseWarning fww = new FrmWarehouseWarning {
+                StartPosition = FormStartPosition.CenterParent
+            };
+            fww.ShowDialog();
+        }
     }
 }

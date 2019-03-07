@@ -263,7 +263,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmCategoryInsert";
             this.Text = "FrmCategoryInsert";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCategoryInsert_FormClosing);
+            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCategoryInsert_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -53,13 +53,13 @@ namespace GoodManagerSys.Frm.Category {
                 Close();
         }
 
-        private void FrmCategoryInsert_FormClosing(object sender, FormClosingEventArgs e) {
-            if ("" == TxtCategoryName.Text && -1 == CmbParentCategoryName.SelectedIndex && "" == TxtFirm.Text &&
-                "" == TxtUnit.Text && "" == TxtColor.Text && "" == TxtExpirationDate.Text &&
-                "" == TxtMinStock.Text && "" == TxtMaxStock.Text)
-                Close();
-            else if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
-                Close();
-        }
+        //private void FrmCategoryInsert_FormClosing(object sender, FormClosingEventArgs e) {
+        //    if ("" == TxtCategoryName.Text && -1 == CmbParentCategoryName.SelectedIndex && "" == TxtFirm.Text &&
+        //        "" == TxtUnit.Text && "" == TxtColor.Text && "" == TxtExpirationDate.Text &&
+        //        "" == TxtMinStock.Text && "" == TxtMaxStock.Text)
+        //        Close();
+        //    else if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
+        //        Close();
+        //}
     }
 }

@@ -66,11 +66,11 @@ namespace GoodManagerSys.Frm.Warehouse {
                 Close();
         }
 
-        private void FrmGoodInsert_FormClosing(object sender, FormClosingEventArgs e) {
-            if (-1 == CmbCategoryID.SelectedIndex && "" == TxtCost.Text && "" == TxtPrice.Text && "" == TxtCount.Text)
-                Close();
-            else if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定要退出？"))
-                Close();
-        }
+        //private void FrmGoodInsert_FormClosing(object sender, FormClosingEventArgs e) {
+        //    if (-1 == CmbCategoryID.SelectedIndex && "" == TxtCost.Text && "" == TxtPrice.Text && "" == TxtCount.Text)
+        //        Close();
+        //    else if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定要退出？"))
+        //        Close();
+        //}
     }
 }

@@ -263,7 +263,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmCategoryUpdate";
             this.Text = "FrmCategoryUpdate";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCategoryUpdate_FormClosing);
+            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmCategoryUpdate_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

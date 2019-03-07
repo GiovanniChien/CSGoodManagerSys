@@ -346,7 +346,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmGoodIncome";
             this.Text = "FrmGoodIncome";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGoodIncome_FormClosing);
+//            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGoodIncome_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.DgvGoodIncome)).EndInit();
             this.TlpGoodIncome.ResumeLayout(false);
             this.TlpGIControllerMenu.ResumeLayout(false);

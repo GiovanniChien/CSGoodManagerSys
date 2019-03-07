@@ -23,7 +23,7 @@ namespace GoodManagerSys
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmSaleReport());
+            Application.Run(new FrmLogin());
         }
     }
 }

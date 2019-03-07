@@ -298,7 +298,6 @@
             this.Name = "FrmStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmStaff";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmStaff_FormClosing);
             this.TlpStaffMenu.ResumeLayout(false);
             this.TlpStaffSubmitMenu.ResumeLayout(false);
             this.TlpStaffControllerMenu.ResumeLayout(false);

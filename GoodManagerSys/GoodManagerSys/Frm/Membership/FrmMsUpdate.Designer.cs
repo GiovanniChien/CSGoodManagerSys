@@ -143,7 +143,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmMsUpdate";
             this.Text = "FrmMsUpdate";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMsUpdate_FormClosing);
+//            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMsUpdate_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

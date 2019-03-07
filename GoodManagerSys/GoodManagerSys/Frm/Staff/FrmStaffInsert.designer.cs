@@ -157,7 +157,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmStaffInsert";
             this.Text = "添加员工";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmStaffInsert_FormClosing);
+            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmStaffInsert_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

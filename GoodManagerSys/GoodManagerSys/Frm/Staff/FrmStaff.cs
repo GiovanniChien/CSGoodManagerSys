@@ -76,7 +76,7 @@ namespace GoodManagerSys.Frm.Staff {
                 }
                 hasUpdated = true;
             }
-            else 
+            else
                 MsgBoxUtil.ErrMsgBox("请选择要修改的员工信息！");
         }
 
@@ -158,14 +158,15 @@ namespace GoodManagerSys.Frm.Staff {
                 Close();
         }
 
-        private void FrmStaff_FormClosing(object sender, FormClosingEventArgs e) {
-            if (hasUpdated) {
-                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
-                    Close();
-            }
-            else
-                Close();
-        }
+
+        //private void FrmStaff_FormClosing(object sender, FormClosingEventArgs e) {
+        //    if (hasUpdated) {
+        //        if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
+        //            e.Cancel = false;
+        //    }
+        //    else
+        //        e.Cancel = false;
+        //}
     }
     class MyCompare : IEqualityComparer<EtStaff> {
         public bool Equals(EtStaff x, EtStaff y) {

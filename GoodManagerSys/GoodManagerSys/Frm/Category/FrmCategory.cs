@@ -127,14 +127,14 @@ namespace GoodManagerSys {
             }
         }
 
-        private void FrmCategory_FormClosing(object sender, FormClosingEventArgs e) {
-            if (hasUpdated) {
-                if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
-                    Close();
-            }
-            else
-                Close();
-        }
+        //private void FrmCategory_FormClosing(object sender, FormClosingEventArgs e) {
+        //    if (hasUpdated) {
+        //        if (DialogResult.OK == MsgBoxUtil.QuestionMsgBox("当前窗体有未提交的数据，是否确定退出？"))
+        //            e.Cancel = false;
+        //    }
+        //    else
+        //        e.Cancel = false;
+        //}
     }
 
     class MyCompare : IEqualityComparer<EtCategory> {
